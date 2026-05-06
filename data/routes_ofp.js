@@ -607,13 +607,14 @@ const OFP_ROUTES = {
   },
 
   // ── YVR ↔ NRT ────────────────────────────────────────────────────
+  // 注意: 西経は +360° して東向きに表示 (例: -136° → 224°)
   "CYVR-RJAA": {
     label: "YVR→NRT",
     color: "#5DADE2",
     ofpSource: "JAL17 2026-05-05",
     waypoints: [
-      { name: "CYVR",  airway: "DCT",    coords: [49.194, -123.184] },
-      { name: "KATCH", airway: "NOPAC",  fir: "PAZAU", coords: [54.000, -136.001] },
+      { name: "CYVR",  airway: "DCT",    coords: [49.194, 236.816] },  // 123°W
+      { name: "KATCH", airway: "NOPAC",  fir: "PAZAU", coords: [54.000, 223.999] },  // 136°W
       { name: "FIRWPT",airway: "NOPAC",  fir: "PAZAO", coords: [53.580, 170.000] },
       { name: "NIPPI", airway: "NOPAC",  fir: "RJJJ",  coords: [49.426, 159.208] },
       { name: "RJAA",  airway: "DCT",    coords: [35.765, 140.385] },
@@ -628,23 +629,24 @@ const OFP_ROUTES = {
       { name: "RJAA",  airway: "DCT",    coords: [35.765, 140.385] },
       { name: "PASRO", airway: "NOPAC",  fir: "PAZAO", coords: [48.167, 160.409] },
       { name: "FIRWPT",airway: "NOPAC",  fir: "PAZAU", coords: [51.533, 170.000] },
-      { name: "KATCH", airway: "NOPAC",  fir: "CZVR",  coords: [54.000, -136.001] },
-      { name: "CYVR",  airway: "DCT",    coords: [49.194, -123.184] },
+      { name: "KATCH", airway: "NOPAC",  fir: "CZVR",  coords: [54.000, 223.999] },  // 136°W
+      { name: "CYVR",  airway: "DCT",    coords: [49.194, 236.816] },  // 123°W
     ]
   },
 
   // ── HNL ↔ KIX / NRT ──────────────────────────────────────────────
+  // 注意: 西経は +360° して東向きに表示
   "PHNL-RJBB": {
     label: "HNL→KIX",
     color: "#A569BD",
     ofpSource: "JAL799 2026-05-05",
     waypoints: [
-      { name: "PHNL",  airway: "DCT",    coords: [21.318, -157.920] },
-      { name: "BOOKE", airway: "BOOKE8", coords: [21.463, -158.450] },
-      { name: "LIH",   airway: "BOOKE8", coords: [21.965, -159.338] },
-      { name: "LI100", airway: "BOOKE8", coords: [23.358, -160.337] },
-      { name: "LI123", airway: "BOOKE8", coords: [23.677, -160.568] },
-      { name: "THOMA", airway: "DCT",    coords: [23.943, -160.763] },
+      { name: "PHNL",  airway: "DCT",    coords: [21.318, 202.080] },  // 158°W
+      { name: "BOOKE", airway: "BOOKE8", coords: [21.463, 201.550] },  // 158.5°W
+      { name: "LIH",   airway: "BOOKE8", coords: [21.965, 200.662] },  // 159°W
+      { name: "LI100", airway: "BOOKE8", coords: [23.358, 199.663] },  // 160°W
+      { name: "LI123", airway: "BOOKE8", coords: [23.677, 199.432] },
+      { name: "THOMA", airway: "DCT",    coords: [23.943, 199.237] },  // 161°W
       { name: "FIRWPT",airway: "DCT",    fir: "RJJJ",  coords: [29.061, 165.000] },
       { name: "RJBB",  airway: "DCT",    coords: [34.427, 135.244] },
     ]
@@ -665,20 +667,20 @@ const OFP_ROUTES = {
       { name: "FIRWPT",airway: "DCT",    fir: "KZAK",  coords: [39.107, 165.000] },
       { name: "39E70", airway: "DCT",    coords: [39.000, 170.000] },
       { name: "37E80", airway: "DCT",    coords: [37.000, 180.000] },
-      { name: "32N70", airway: "DCT",    coords: [32.000, -170.000] },
-      { name: "FIRWPT2",airway:"DCT",    fir: "PHZH",  coords: [25.335, -162.220] },
-      { name: "THOMA", airway: "DCT",    coords: [23.943, -160.763] },
-      { name: "LI123", airway: "BOOKE8", coords: [23.677, -160.568] },
-      { name: "LI100", airway: "BOOKE8", coords: [23.358, -160.337] },
-      { name: "LIH50", airway: "BOOKE8", coords: [22.662, -159.835] },
-      { name: "LIH",   airway: "BOOKE8", coords: [21.965, -159.338] },
-      { name: "BOOKE", airway: "BOOKE8", coords: [21.463, -158.450] },
-      { name: "SELIC", airway: "BOOKE8", coords: [21.325, -158.220] },
-      { name: "MAKOA", airway: "BOOKE8", coords: [21.325, -158.120] },
-      { name: "FGTRE", airway: "BOOKE8", coords: [21.325, -158.063] },
-      { name: "EWABE", airway: "BOOKE8", coords: [21.325, -158.048] },
-      { name: "EXP",   airway: "BOOKE8", coords: [21.318, -157.928] },
-      { name: "PHNL",  airway: "DCT",    coords: [21.318, -157.920] },
+      { name: "32N70", airway: "DCT",    coords: [32.000, 190.000] },  // 170°W
+      { name: "FIRWPT2",airway:"DCT",    fir: "PHZH",  coords: [25.335, 197.780] },  // 162°W
+      { name: "THOMA", airway: "DCT",    coords: [23.943, 199.237] },  // 161°W
+      { name: "LI123", airway: "BOOKE8", coords: [23.677, 199.432] },
+      { name: "LI100", airway: "BOOKE8", coords: [23.358, 199.663] },  // 160°W
+      { name: "LIH50", airway: "BOOKE8", coords: [22.662, 200.165] },
+      { name: "LIH",   airway: "BOOKE8", coords: [21.965, 200.662] },  // 159°W
+      { name: "BOOKE", airway: "BOOKE8", coords: [21.463, 201.550] },  // 158.5°W
+      { name: "SELIC", airway: "BOOKE8", coords: [21.325, 201.780] },
+      { name: "MAKOA", airway: "BOOKE8", coords: [21.325, 201.880] },
+      { name: "FGTRE", airway: "BOOKE8", coords: [21.325, 201.937] },
+      { name: "EWABE", airway: "BOOKE8", coords: [21.325, 201.952] },
+      { name: "EXP",   airway: "BOOKE8", coords: [21.318, 202.072] },
+      { name: "PHNL",  airway: "DCT",    coords: [21.318, 202.080] },  // 158°W
     ]
   },
 

@@ -28,8 +28,9 @@ const AIRPORTS = {
   // ── South Asia ────────────────────────────────────
   DEL: { name: "インディラ・ガンジー国際空港", icao: "VIDP", coords: [28.568, 77.112] },
   // ── Pacific ───────────────────────────────────────
-  YVR: { name: "バンクーバー国際空港",    icao: "CYVR", coords: [49.194, -123.184] },
-  HNL: { name: "ダニエル・K・イノウエ国際空港", icao: "PHNL", coords: [21.318, -157.920] },
+  // 西経は +360° — 日本から東向きに表示するため
+  YVR: { name: "バンクーバー国際空港",    icao: "CYVR", coords: [49.194, 236.816] },
+  HNL: { name: "ダニエル・K・イノウエ国際空港", icao: "PHNL", coords: [21.318, 202.080] },
 };
 
 // Route groups with color coding and approximate path waypoints [lat, lng]
