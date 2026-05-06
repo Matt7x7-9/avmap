@@ -263,6 +263,16 @@ const OFP_GROUPS = [
   { id: 'ofp-tsa',  shortName: 'TSA', color: '#2ECC71',
     routeIds: ['RJTT-RCSS', 'RCSS-RJTT'],
     airports: ['HND', 'TSA'] },
+  { id: 'ofp-can',  shortName: 'CAN', color: '#FFB8C9',
+    routeIds: ['RJTT-ZGGG', 'ZGGG-RJTT'],
+    airports: ['HND', 'CAN'] },
+  { id: 'ofp-mnl',  shortName: 'MNL', color: '#C9B8FF',
+    routeIds: ['RJTT-RPLL', 'RPLL-RJAA'],
+    airports: ['HND', 'NRT', 'MNL'] },
+  // ── South Asia ──────────────────────────────────────────────────
+  { id: 'ofp-del',  shortName: 'DEL', color: '#FFE5B8',
+    routeIds: ['RJTT-VIDP', 'VIDP-RJTT'],
+    airports: ['HND', 'DEL'] },
   // ── Southeast Asia ──────────────────────────────────────────────
   { id: 'ofp-hkg',  shortName: 'HKG', color: '#C0392B',
     routeIds: ['VHHH-RJAA', 'RJAA-VHHH', 'VHHH-RJTT', 'RJTT-VHHH'],
