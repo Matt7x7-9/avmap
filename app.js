@@ -41,32 +41,12 @@ let firVisible = true;
 let userNotes = JSON.parse(localStorage.getItem('fir-user-notes') || '{}');
 
 // ── FIR boundaries ────────────────────────────
-// FIRs with detailed rules get distinct colors; others use region defaults
-const FIR_COLORS = {
-  'RJJJ':   '#264f78',
-  'RJJJ-F': '#264f78',
-  'ZSHA':   '#7c2020',
-  'ZGZU':   '#7c2020',
-  'ZJSA':   '#7c2020',
-  'VHHK':   '#1a472a',
-  'RCAA':   '#1a3a5c',
-  'RPHI':   '#3a2a6a',
-  'VVHM':   '#5a4a00',
-  'VTBB':   '#2a4a2a',
-};
-
-// Region-based fallback colors
-const REGION_COLORS = {
-  'APAC':   '#1a2a3a',
-  'EMEA':   '#2a1a3a',
-  'AMAS':   '#1a3a2a',
-  'VATSSA': '#3a2a1a',
-};
+// Colors are pre-computed via graph coloring in fir-boundaries.js properties
+// Adjacent FIRs get different colors automatically
 
 FIR_BOUNDARIES.features.forEach(feature => {
   const id = feature.properties.id;
-  const region = feature.properties.region || '';
-  const color = FIR_COLORS[id] || REGION_COLORS[region] || '#1e2530';
+  const color = feature.properties.color || '#1e2530';
 
   // Convert GeoJSON [lng,lat] to Leaflet [lat,lng]
   const coords = feature.geometry.coordinates[0].map(([lng, lat]) => [lat, lng]);
