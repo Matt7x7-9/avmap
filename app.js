@@ -150,9 +150,13 @@ ROUTE_GROUPS.forEach(group => {
 });
 
 // ── OFP exact routes ──────────────────────────
+// Returns a LayerGroup containing the polyline + FIR-boundary diamond markers
 function ofpPolyline(routeId, color, dashed) {
   const route = OFP_ROUTES[routeId];
   if (!route) return null;
+
+  const group = L.layerGroup();
+
   const coords = route.waypoints.map(w => w.coords);
   const line = L.polyline(coords, {
     color,
@@ -165,24 +169,84 @@ function ofpPolyline(routeId, color, dashed) {
     `<b style="color:${color}">${route.label}</b><br>` +
     `<span style="font-size:11px;color:#8b949e">${route.ofpSource}</span>`
   );
-  return line;
+  line.addTo(group);
+
+  // FIR boundary crossing markers (diamond icons)
+  route.waypoints.forEach(w => {
+    if (!w.fir) return;
+    const firMarker = L.marker(w.coords, {
+      icon: L.divIcon({
+        className: '',
+        html: `<div class="fir-diamond"></div>`,
+        iconSize: [10, 10],
+        iconAnchor: [5, 5],
+      }),
+      interactive: true,
+      zIndexOffset: 100,
+    });
+    firMarker.bindTooltip(
+      `<span class="fir-tip-fir">${w.fir}</span> boundary<br>` +
+      `<span class="fir-tip-wpt">${w.name}</span>`,
+      { className: 'fir-tip', direction: 'top', offset: [0, -6] }
+    );
+    firMarker.addTo(group);
+  });
+
+  return group;
 }
 
-// Add HND→MNL OFP line to existing MNL layer
-const hndMnlLine = ofpPolyline('HND-MNL', '#C9B8FF', false);
-if (hndMnlLine) hndMnlLine.addTo(routeLayers['japan-mnl']);
-
 const OFP_GROUPS = [
-  { id: 'ofp-can', shortName: 'CAN', color: '#FFB8C9',
-    routeIds: ['HND-CAN', 'CAN-HND'], airports: ['HND', 'CAN'] },
-  { id: 'ofp-del', shortName: 'DEL', color: '#FFE5B8',
-    routeIds: ['HND-DEL', 'DEL-HND'], airports: ['HND', 'DEL'] },
+  // ── Northeast Asia ──────────────────────────────────────────────
+  { id: 'ofp-gmp',  shortName: 'GMP', color: '#4A90D9',
+    routeIds: ['RKSS-RJTT', 'RJTT-RKSS'],
+    airports: ['HND', 'GMP'] },
+  { id: 'ofp-pek',  shortName: 'PEK', color: '#F39C12',
+    routeIds: ['RJTT-ZBAA', 'ZBAA-RJTT'],
+    airports: ['HND', 'PEK'] },
+  { id: 'ofp-dlc',  shortName: 'DLC', color: '#8E44AD',
+    routeIds: ['RJTT-ZYTL', 'ZYTL-RJTT'],
+    airports: ['HND', 'DLC'] },
+  { id: 'ofp-sha',  shortName: 'SHA', color: '#D35400',
+    routeIds: ['RJTT-ZSSS', 'ZSSS-RJTT'],
+    airports: ['HND', 'SHA'] },
+  { id: 'ofp-pvg',  shortName: 'PVG', color: '#E67E22',
+    routeIds: ['RJTT-ZSPD', 'ZSPD-RJTT'],
+    airports: ['HND', 'PVG'] },
+  { id: 'ofp-tsa',  shortName: 'TSA', color: '#2ECC71',
+    routeIds: ['RJTT-RCSS', 'RCSS-RJTT'],
+    airports: ['HND', 'TSA'] },
+  // ── Southeast Asia ──────────────────────────────────────────────
+  { id: 'ofp-hkg',  shortName: 'HKG', color: '#C0392B',
+    routeIds: ['VHHH-RJAA', 'RJAA-VHHH', 'VHHH-RJTT', 'RJTT-VHHH'],
+    airports: ['NRT', 'HND', 'HKG'] },
+  { id: 'ofp-bkk',  shortName: 'BKK', color: '#F1C40F',
+    routeIds: ['VTBS-RJTT', 'RJTT-VTBS', 'VTBS-RJAA', 'RJAA-VTBS', 'VTBS-RJBB', 'RJBB-VTBS'],
+    airports: ['HND', 'NRT', 'KIX', 'BKK'] },
+  { id: 'ofp-sgn',  shortName: 'SGN', color: '#16A085',
+    routeIds: ['RJTT-VVTS', 'VVTS-RJTT', 'RJAA-VVTS', 'VVTS-RJAA'],
+    airports: ['HND', 'NRT', 'SGN'] },
+  { id: 'ofp-sin',  shortName: 'SIN', color: '#E74C3C',
+    routeIds: ['WSSS-RJAA', 'RJAA-WSSS', 'WSSS-RJTT', 'RJTT-WSSS'],
+    airports: ['NRT', 'HND', 'SIN'] },
+  { id: 'ofp-cgk',  shortName: 'CGK', color: '#27AE60',
+    routeIds: ['WIII-RJAA', 'RJAA-WIII'],
+    airports: ['NRT', 'CGK'] },
+  { id: 'ofp-kul',  shortName: 'KUL', color: '#1ABC9C',
+    routeIds: ['WMKK-RJAA', 'RJAA-WMKK'],
+    airports: ['NRT', 'KUL'] },
+  // ── Pacific ─────────────────────────────────────────────────────
+  { id: 'ofp-yvr',  shortName: 'YVR', color: '#5DADE2',
+    routeIds: ['CYVR-RJAA', 'RJAA-CYVR'],
+    airports: ['NRT', 'YVR'] },
+  { id: 'ofp-hnl',  shortName: 'HNL', color: '#A569BD',
+    routeIds: ['PHNL-RJBB', 'RJAA-PHNL'],
+    airports: ['KIX', 'NRT', 'HNL'] },
 ];
 
 OFP_GROUPS.forEach(group => {
   const layer = L.layerGroup();
   group.routeIds.forEach((rid, i) => {
-    const line = ofpPolyline(rid, group.color, i === 1);
+    const line = ofpPolyline(rid, group.color, i % 2 === 1);  // odd = dashed (return)
     if (line) line.addTo(layer);
   });
   group.airports.forEach(code => {

@@ -254,6 +254,43 @@ body {
 }
 #fir-hint.fade { opacity: 0; }
 
+/* ── FIR boundary markers ── */
+.fir-diamond {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid #333;
+  transform: rotate(45deg);
+  margin: 1px 0 0 1px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+
+.leaflet-tooltip.fir-tip {
+  background: rgba(13, 17, 23, 0.95);
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 11px;
+  padding: 4px 8px;
+  line-height: 1.5;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.leaflet-tooltip.fir-tip::before {
+  border-top-color: #30363d;
+}
+
+.fir-tip-fir {
+  font-weight: 700;
+  color: #58a6ff;
+}
+
+.fir-tip-wpt {
+  font-size: 10px;
+  color: #8b949e;
+}
+
 /* Leaflet overrides */
 .leaflet-popup-content-wrapper {
   background: #161b22;
