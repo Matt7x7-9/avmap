@@ -160,6 +160,33 @@ ROUTE_GROUPS.forEach(group => {
 });
 
 // ── OFP exact routes ──────────────────────────
+
+// 2点間の距離をnmで計算（簡易版）
+function distNm(lat1, lng1, lat2, lng2) {
+  const dlat = (lat2 - lat1) * 60;
+  const dlng = (lng2 - lng1) * 60 * Math.cos(lat1 * Math.PI / 180);
+  return Math.sqrt(dlat * dlat + dlng * dlng);
+}
+
+// "FIRWPT" / "FIR WPT" 等のプレースホルダ名を、同ルート内5nm以内の実在WPT名で置換
+// OFPでは "FIR WPT"（スペースあり）と書かれることもある
+const FIR_WPT_PLACEHOLDER = /^FIR[\s_]?WPT\d*$/i;
+
+function resolveFirWptName(wpts, idx) {
+  const w = wpts[idx];
+  if (!FIR_WPT_PLACEHOLDER.test(w.name)) return w.name;  // 通常WPTはそのまま
+  const [lat0, lng0] = w.coords;
+  let best = null, bestDist = 5.0;                        // 5nm上限
+  wpts.forEach((other, j) => {
+    if (j === idx) return;
+    if (FIR_WPT_PLACEHOLDER.test(other.name)) return;     // 他のプレースホルダはスキップ
+    const [lat1, lng1] = other.coords;
+    const d = distNm(lat0, lng0, lat1, lng1);
+    if (d < bestDist) { bestDist = d; best = other.name; }
+  });
+  return best || w.name;                                  // 見つかれば置換、なければ元の名前
+}
+
 // Returns a LayerGroup containing the polyline + FIR-boundary diamond markers.
 // Western Hemisphere longitudes (< -30°) are auto-shifted +360° so Pacific
 // routes appear east of Japan rather than west.
@@ -190,14 +217,15 @@ function ofpPolyline(routeId, color, dashed) {
   line.addTo(group);
 
   // FIR boundary crossing markers — diamond + WPT name label
-  waypoints.forEach(w => {
+  waypoints.forEach((w, i) => {
     if (!w.fir) return;
+    const displayName = resolveFirWptName(waypoints, i);  // FIRWPT→近傍WPT名に置換
     const firMarker = L.marker(w.coords, {
       icon: L.divIcon({
         className: '',
         html: `<div class="fir-wpt-label">
                  <div class="fir-diamond"></div>
-                 <span class="fir-wpt-name">${w.name}</span>
+                 <span class="fir-wpt-name">${displayName}</span>
                </div>`,
         iconSize: [80, 14],
         iconAnchor: [5, 7],
