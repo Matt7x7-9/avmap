@@ -235,6 +235,25 @@ body {
   margin-top: 4px;
 }
 
+/* FIR tap hint */
+#fir-hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(88, 166, 255, 0.9);
+  color: #0d1117;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  z-index: 1500;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.5s;
+}
+#fir-hint.fade { opacity: 0; }
+
 /* Leaflet overrides */
 .leaflet-popup-content-wrapper {
   background: #161b22;

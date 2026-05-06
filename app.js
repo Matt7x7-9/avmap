@@ -64,25 +64,28 @@ FIR_BOUNDARIES.features.forEach(feature => {
   const polygon = L.polygon(coords, {
     color: color,
     fillColor: color,
-    fillOpacity: 0.25,
+    fillOpacity: 0.3,
     weight: 1.5,
     dashArray: '4 3',
   });
 
   polygon.on('click', () => openFirPanel(id, feature.properties.label));
 
-  // FIR label
+  // FIR label — interactive so tapping the label also opens the panel
   const center = polygon.getBounds().getCenter();
   const label = L.divIcon({
     className: '',
     html: `<div style="color:#8b949e;font-size:10px;font-weight:700;
                        letter-spacing:0.5px;white-space:nowrap;
-                       text-shadow:0 0 4px #000,0 0 4px #000;">
-             ${feature.properties.label}
+                       text-shadow:0 0 4px #000,0 0 4px #000;
+                       cursor:pointer;padding:6px;">
+             ℹ ${feature.properties.label}
            </div>`,
     iconAnchor: [0, 0],
   });
-  L.marker(center, { icon: label, interactive: false }).addTo(firLayer);
+  const labelMarker = L.marker(center, { icon: label, interactive: true });
+  labelMarker.on('click', () => openFirPanel(id, feature.properties.label));
+  labelMarker.addTo(firLayer);
 
   polygon.addTo(firLayer);
 });
@@ -260,6 +263,20 @@ OFP_GROUPS.forEach(group => {
   routeLayers[group.id].addTo(map);
 });
 
+// FIR tap hint (shows briefly on first load)
+function showFirHint() {
+  let hint = document.getElementById('fir-hint');
+  if (!hint) {
+    hint = document.createElement('div');
+    hint.id = 'fir-hint';
+    hint.textContent = 'ℹ FIRエリアまたはラベルをタップ → 情報表示';
+    document.body.appendChild(hint);
+  }
+  hint.classList.remove('fade');
+  clearTimeout(hint._timer);
+  hint._timer = setTimeout(() => hint.classList.add('fade'), 3000);
+}
+
 // FIR toggle button
 const firBtn = document.getElementById('fir-toggle-btn');
 firBtn.addEventListener('click', () => {
@@ -269,10 +286,13 @@ firBtn.addEventListener('click', () => {
   } else {
     firLayer.addTo(map);
     firBtn.classList.add('active');
+    showFirHint();
   }
   firVisible = !firVisible;
 });
 firBtn.classList.add('active');
+// Show hint on first load
+setTimeout(showFirHint, 1500);
 
 // ── FIR Info Panel ────────────────────────────
 function openFirPanel(firId, firLabel) {
