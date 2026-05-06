@@ -8,9 +8,9 @@ fetch('data/fir-rules.json')
   .then(r => r.json())
   .then(d => { FIR_RULES = d; });
 
-// Map init
+// Map init — centered on Japan
 const map = L.map('map', {
-  center: [27, 120],
+  center: [35, 135],
   zoom: 5,
   zoomControl: true,
   attributionControl: true,
@@ -234,13 +234,13 @@ const OFP_GROUPS = [
   { id: 'ofp-kul',  shortName: 'KUL', color: '#1ABC9C',
     routeIds: ['WMKK-RJAA', 'RJAA-WMKK'],
     airports: ['NRT', 'KUL'] },
-  // ── Pacific ─────────────────────────────────────────────────────
+  // ── Pacific (日付変更線越え — 初期オフ) ─────────────────────────
   { id: 'ofp-yvr',  shortName: 'YVR', color: '#5DADE2',
     routeIds: ['CYVR-RJAA', 'RJAA-CYVR'],
-    airports: ['NRT', 'YVR'] },
+    airports: ['NRT', 'YVR'], defaultOff: true },
   { id: 'ofp-hnl',  shortName: 'HNL', color: '#A569BD',
     routeIds: ['PHNL-RJBB', 'RJAA-PHNL'],
-    airports: ['KIX', 'NRT', 'HNL'] },
+    airports: ['KIX', 'NRT', 'HNL'], defaultOff: true },
 ];
 
 OFP_GROUPS.forEach(group => {
@@ -287,14 +287,15 @@ ROUTE_GROUPS.forEach(group => {
   routeLayers[group.id].addTo(map);
 });
 
-// OFP route toggle buttons (CAN, DEL)
+// OFP route toggle buttons
 OFP_GROUPS.forEach(group => {
+  const isOn = !group.defaultOff;
   const btn = document.createElement('button');
-  btn.className = 'route-btn active';
+  btn.className = isOn ? 'route-btn active' : 'route-btn';
   btn.textContent = group.shortName;
   btn.style.borderColor = group.color;
-  btn.style.backgroundColor = group.color;
-  btn.style.color = '#0d1117';
+  btn.style.backgroundColor = isOn ? group.color : 'transparent';
+  btn.style.color = isOn ? '#0d1117' : '#c9d1d9';
 
   btn.addEventListener('click', () => {
     if (activeRoutes.has(group.id)) {
@@ -313,8 +314,10 @@ OFP_GROUPS.forEach(group => {
   });
 
   toggleContainer.appendChild(btn);
-  activeRoutes.add(group.id);
-  routeLayers[group.id].addTo(map);
+  if (isOn) {
+    activeRoutes.add(group.id);
+    routeLayers[group.id].addTo(map);
+  }
 });
 
 // FIR tap hint (shows briefly on first load)
