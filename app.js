@@ -41,6 +41,7 @@ let firVisible = true;
 let userNotes = JSON.parse(localStorage.getItem('fir-user-notes') || '{}');
 
 // ── FIR boundaries ────────────────────────────
+// FIRs with detailed rules get distinct colors; others use region defaults
 const FIR_COLORS = {
   'RJJJ':   '#264f78',
   'RJJJ-F': '#264f78',
@@ -54,9 +55,18 @@ const FIR_COLORS = {
   'VTBB':   '#2a4a2a',
 };
 
+// Region-based fallback colors
+const REGION_COLORS = {
+  'APAC':   '#1a2a3a',
+  'EMEA':   '#2a1a3a',
+  'AMAS':   '#1a3a2a',
+  'VATSSA': '#3a2a1a',
+};
+
 FIR_BOUNDARIES.features.forEach(feature => {
   const id = feature.properties.id;
-  const color = FIR_COLORS[id] || '#333';
+  const region = feature.properties.region || '';
+  const color = FIR_COLORS[id] || REGION_COLORS[region] || '#1e2530';
 
   // Convert GeoJSON [lng,lat] to Leaflet [lat,lng]
   const coords = feature.geometry.coordinates[0].map(([lng, lat]) => [lat, lng]);
@@ -297,7 +307,31 @@ setTimeout(showFirHint, 1500);
 // ── FIR Info Panel ────────────────────────────
 function openFirPanel(firId, firLabel) {
   const rules = FIR_RULES[firId];
-  if (!rules) return;
+
+  // FIRルールが未定義の場合でも基本パネルを表示
+  if (!rules) {
+    const panel = document.getElementById('fir-panel');
+    panel.innerHTML = `
+      <div class="panel-drag-handle"></div>
+      <div class="panel-header">
+        <div>
+          <div class="panel-fir-name">${firLabel}</div>
+          <div class="panel-country">${firId}</div>
+        </div>
+        <button id="panel-close">✕</button>
+      </div>
+      <div class="section">
+        <div class="section-body" style="color:#8b949e;font-size:12px;">
+          このFIRの詳細情報はまだ登録されていません。
+        </div>
+      </div>
+    `;
+    panel.classList.remove('hidden');
+    document.getElementById('panel-close').addEventListener('click', () => {
+      panel.classList.add('hidden');
+    });
+    return;
+  }
 
   const panel = document.getElementById('fir-panel');
 
