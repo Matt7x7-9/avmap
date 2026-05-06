@@ -160,14 +160,22 @@ ROUTE_GROUPS.forEach(group => {
 });
 
 // ── OFP exact routes ──────────────────────────
-// Returns a LayerGroup containing the polyline + FIR-boundary diamond markers
+// Returns a LayerGroup containing the polyline + FIR-boundary diamond markers.
+// Western Hemisphere longitudes (< -30°) are auto-shifted +360° so Pacific
+// routes appear east of Japan rather than west.
 function ofpPolyline(routeId, color, dashed) {
   const route = OFP_ROUTES[routeId];
   if (!route) return null;
 
   const group = L.layerGroup();
 
-  const coords = route.waypoints.map(w => w.coords);
+  // Shift Western Hemisphere coords to eastern map copy
+  const waypoints = route.waypoints.map(w => {
+    const [lat, lng] = w.coords;
+    return { ...w, coords: [lat, lng < -30 ? lng + 360 : lng] };
+  });
+
+  const coords = waypoints.map(w => w.coords);
   const line = L.polyline(coords, {
     color,
     weight: dashed ? 2 : 2.5,
@@ -182,7 +190,7 @@ function ofpPolyline(routeId, color, dashed) {
   line.addTo(group);
 
   // FIR boundary crossing markers — diamond + WPT name label
-  route.waypoints.forEach(w => {
+  waypoints.forEach(w => {
     if (!w.fir) return;
     const firMarker = L.marker(w.coords, {
       icon: L.divIcon({
