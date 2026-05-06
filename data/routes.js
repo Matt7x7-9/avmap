@@ -1,0 +1,152 @@
+// Route data — approximate corridors based on typical 787 routing
+// TODO: Update with actual OFP route strings when available
+
+const AIRPORTS = {
+  KIX: { name: "関西国際空港", icao: "RJBB", coords: [34.43, 135.24] },
+  NRT: { name: "成田国際空港", icao: "RJAA", coords: [35.765, 140.385] },
+  HND: { name: "羽田空港",     icao: "RJTT", coords: [35.55, 139.78] },
+  BKK: { name: "スワンナプーム", icao: "VTBS", coords: [13.69, 100.75] },
+  HKG: { name: "香港国際空港", icao: "VHHH", coords: [22.31, 113.92] },
+  SGN: { name: "タン・ソン・ニャット", icao: "VVTS", coords: [10.82, 106.65] },
+  MNL: { name: "マニラ・ニノイアキノ国際空港", icao: "RPLL", coords: [14.51, 121.013] },
+  CAN: { name: "広州白雲国際空港",             icao: "ZGGG", coords: [23.393, 113.308] },
+  DEL: { name: "インディラ・ガンジー国際空港",  icao: "VIDP", coords: [28.568, 77.112] },
+};
+
+// Route groups with color coding and approximate path waypoints [lat, lng]
+const ROUTE_GROUPS = [
+  {
+    id: "japan-bkk",
+    name: "日本 ↔ バンコク",
+    shortName: "BKK",
+    color: "#FF8C42",
+    airports: ["KIX", "NRT", "HND", "BKK"],
+    firs: ["RJJJ-F", "ZSHA", "ZGZU", "ZJSA", "VVHM", "VTBB"],
+    routes: {
+      "NRT-BKK": [
+        [35.76, 140.39],  // NRT
+        [33.5,  131.0],   // Fukuoka area
+        [30.0,  124.5],   // East China Sea
+        [26.0,  119.5],   // Entering Chinese airspace
+        [22.0,  113.5],   // Near HKG
+        [18.0,  109.0],   // South China
+        [15.0,  105.0],   // Vietnam border
+        [13.69, 100.75],  // BKK
+      ],
+      "HND-BKK": [
+        [35.55, 139.78],
+        [33.5,  131.0],
+        [30.0,  124.5],
+        [26.0,  119.5],
+        [22.0,  113.5],
+        [18.0,  109.0],
+        [15.0,  105.0],
+        [13.69, 100.75],
+      ],
+      "KIX-BKK": [
+        [34.43, 135.24],  // KIX
+        [32.5,  129.0],   // Over Kyushu
+        [29.0,  123.0],   // East China Sea
+        [25.0,  118.5],
+        [21.5,  113.0],
+        [18.0,  109.0],
+        [15.0,  105.0],
+        [13.69, 100.75],  // BKK
+      ],
+    },
+    bidirectional: true,
+  },
+  {
+    id: "japan-hkg",
+    name: "日本 ↔ 香港",
+    shortName: "HKG",
+    color: "#4ECDC4",
+    airports: ["NRT", "HND", "HKG"],
+    firs: ["RJJJ-F", "ZSHA", "ZGZU", "VHHK"],
+    routes: {
+      "NRT-HKG": [
+        [35.76, 140.39],  // NRT
+        [33.0,  130.0],   // Over Kyushu
+        [29.5,  124.0],   // East China Sea
+        [26.0,  120.0],   // Fujian area
+        [22.31, 113.92],  // HKG
+      ],
+      "HND-HKG": [
+        [35.55, 139.78],
+        [33.0,  130.0],
+        [29.5,  124.0],
+        [26.0,  120.0],
+        [22.31, 113.92],
+      ],
+    },
+    bidirectional: true,
+  },
+  {
+    id: "japan-mnl",
+    name: "日本 ↔ マニラ",
+    shortName: "MNL",
+    color: "#C9B8FF",
+    airports: ["NRT", "HND", "MNL"],
+    firs: ["RJJJ", "RPHI", "VVHM"],
+    routes: {
+      // Source: JAL746 OFP 2026-05-05 (actual coordinates)
+      "MNL-NRT": [
+        [14.510, 121.013],  // RPLL (MNL)
+        [14.557, 121.345],  // TANAY
+        [14.705, 122.330],  // JOM       A590
+        [15.637, 123.055],  // MUPOB     A590
+        [17.370, 124.427],  // VIGOR     A590
+        [21.000, 127.417],  // GURAG     A590
+        [23.005, 129.082],  // TUNTO     A590
+        [24.355, 130.122],  // AVLAS     A590
+        [25.855, 131.263],  // MDE       A590
+        [27.880, 133.138],  // BIXAK     A590
+        [28.583, 133.813],  // DOVAG     A590
+        [30.125, 135.342],  // OLDUP     A590
+        [31.432, 136.653],  // BUBDO     A590→Y83
+        [32.877, 138.167],  // GULEG     Y83
+        [33.617, 139.025],  // VIPOT     Y83
+        [34.072, 139.562],  // MOE       Y83→Y81
+        [34.345, 139.975],  // BAFFY     Y81
+        [34.460, 140.150],  // MAMAS     Y81
+        [34.730, 140.677],  // RUTAS     Y81→RUTASG
+        [35.078, 140.720],  // VENUS     RUTASG
+        [35.552, 140.828],  // COPEN     RUTASG
+        [35.765, 140.385],  // RJAA (NRT)
+      ],
+    },
+    bidirectional: true,
+    ofpSource: "JAL746 MNL-NRT 2026-05-05",
+  },
+  {
+    id: "japan-sgn",
+    name: "日本 ↔ ホーチミン",
+    shortName: "SGN",
+    color: "#A8E6CF",
+    airports: ["NRT", "HND", "SGN"],
+    firs: ["RJJJ-F", "ZSHA", "ZGZU", "ZJSA", "VVHM"],
+    routes: {
+      "NRT-SGN": [
+        [35.76, 140.39],  // NRT
+        [33.0,  130.0],
+        [29.0,  124.0],
+        [25.0,  118.5],
+        [21.0,  114.0],
+        [17.0,  110.0],
+        [13.0,  108.0],
+        [10.82, 106.65],  // SGN
+      ],
+      "HND-SGN": [
+        [35.55, 139.78],
+        [33.0,  130.0],
+        [29.0,  124.0],
+        [25.0,  118.5],
+        [21.0,  114.0],
+        [17.0,  110.0],
+        [13.0,  108.0],
+        [10.82, 106.65],
+      ],
+    },
+    bidirectional: true,
+  },
+];

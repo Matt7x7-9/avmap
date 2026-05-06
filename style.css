@@ -1,0 +1,280 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  overflow: hidden;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+#header {
+  background: rgba(13, 17, 23, 0.95);
+  border-bottom: 1px solid #30363d;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  z-index: 1000;
+  flex-shrink: 0;
+}
+
+.app-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #58a6ff;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+#route-toggles {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.route-btn {
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1.5px solid;
+  background: transparent;
+  color: #c9d1d9;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.route-btn.active {
+  color: #0d1117;
+}
+
+.route-btn:not(.active) {
+  opacity: 0.5;
+}
+
+#fir-toggle-btn {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1.5px solid #58a6ff;
+  background: transparent;
+  color: #58a6ff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+#fir-toggle-btn.active {
+  background: #58a6ff;
+  color: #0d1117;
+}
+
+/* ── Map ── */
+#map {
+  flex: 1;
+  z-index: 1;
+}
+
+/* ── FIR Info Panel ── */
+#fir-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(13, 17, 23, 0.97);
+  border-top: 2px solid #30363d;
+  padding: 14px 16px 20px;
+  z-index: 2000;
+  max-height: 60vh;
+  overflow-y: auto;
+  transition: transform 0.25s ease;
+  transform: translateY(0);
+}
+
+#fir-panel.hidden {
+  transform: translateY(100%);
+}
+
+.panel-drag-handle {
+  width: 36px;
+  height: 4px;
+  background: #30363d;
+  border-radius: 2px;
+  margin: 0 auto 12px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.panel-fir-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f0f6fc;
+}
+
+.panel-country {
+  font-size: 12px;
+  color: #8b949e;
+  margin-top: 2px;
+}
+
+#panel-close {
+  background: none;
+  border: none;
+  color: #8b949e;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+/* Tags */
+.tag-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.tag {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.tag-warn  { background: #3d2b00; color: #e3b341; border: 1px solid #e3b341; }
+.tag-ok    { background: #0a2a1a; color: #3fb950; border: 1px solid #3fb950; }
+.tag-info  { background: #0c2a4a; color: #58a6ff; border: 1px solid #58a6ff; }
+
+/* Sections */
+.section {
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #8b949e;
+  margin-bottom: 6px;
+}
+
+.section-body {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #c9d1d9;
+  background: #161b22;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.section-body.warn {
+  border-left: 3px solid #e3b341;
+}
+
+.section-body.info {
+  border-left: 3px solid #58a6ff;
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note-list li {
+  padding: 3px 0;
+  font-size: 12px;
+  color: #c9d1d9;
+}
+
+.note-list li::before {
+  content: "• ";
+  color: #e3b341;
+}
+
+/* Edit note button */
+.edit-btn {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: none;
+  color: #8b949e;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* User notes area */
+#user-note-area {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 12px;
+  color: #c9d1d9;
+  width: 100%;
+  min-height: 60px;
+  resize: vertical;
+  font-family: inherit;
+  margin-top: 4px;
+}
+
+/* Leaflet overrides */
+.leaflet-popup-content-wrapper {
+  background: #161b22;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.leaflet-popup-tip {
+  background: #161b22;
+}
+
+.leaflet-popup-content {
+  margin: 10px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.popup-airport-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: #f0f6fc;
+}
+
+.popup-icao {
+  font-size: 11px;
+  color: #8b949e;
+}
+
+.leaflet-control-zoom a {
+  background: #161b22 !important;
+  color: #c9d1d9 !important;
+  border-color: #30363d !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(13,17,23,0.7) !important;
+  color: #444 !important;
+  font-size: 9px !important;
+}
+
+.leaflet-control-attribution a { color: #555 !important; }

@@ -1,0 +1,219 @@
+{
+  "RJJJ": {
+    "name": "Tokyo FIR",
+    "icao": "RJJJ",
+    "country": "Japan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Optional",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5. Contact Tokyo Control.",
+    "special_notes": [],
+    "contacts": {
+      "main": "Tokyo Control 132.6 / 135.7",
+      "emergency": "121.5"
+    }
+  },
+  "RJJJ-F": {
+    "name": "Fukuoka FIR",
+    "icao": "RJJJ",
+    "country": "Japan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Optional",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5. Contact Fukuoka Control.",
+    "special_notes": [],
+    "contacts": {
+      "main": "Fukuoka Control 133.0 / 128.7",
+      "emergency": "121.5"
+    }
+  },
+  "ZSHA": {
+    "name": "Shanghai FIR",
+    "icao": "ZSHA",
+    "country": "People's Republic of China",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Available",
+    "position_report": "FIR境界の15〜20分前にATCへ通報し通過許可を取得すること。ただしJALフライトは通常のポジションレポートと交信が維持されていれば不要。各報告点通過時に即時報告：コールサイン・位置・時刻・FL・状況・次点ETA。",
+    "emergency_procedure": "【急降下時】右に30°旋回→20km（5NM）逸脱→元ルートに平行飛行→高度変更→元ルート復帰。121.5MHz（バックアップ：123.45MHz）で位置・FL・意図を放送。121.5をモニター。ATC連絡不能時も同手順。",
+    "special_notes": [
+      "RVSM airspace FL291〜FL411（中国はメートル制：ATCはメートルでクリアランス、パイロットはフィートで飛行）",
+      "ATCクリアランスはメートル単位（例：9200m）→ China RVSM変換表でフィートに換算",
+      "FIR境界通過時は入る側・出る側の両ACCに報告",
+      "AKARA-FUKUE回廊：SADLI以東はFukuoka ACC周波数、以西はShanghai ACC周波数を常時監視",
+      "A593代替ルート AKARA-APITO-MIKES：A593上の悪天候回避時に使用可",
+      "Non-RVSM機は原則FL291〜FL411の飛行不可（例外：人道支援等、事前申請必要）"
+    ],
+    "source": "RM_REGPROC PRC.7 (Rev.26.2 / 16 APR 2026)",
+    "contacts": {
+      "main": "Shanghai Control (AKARA-FUKUE corridor時はFukuoka/Shanghai双方監視)",
+      "emergency": "121.5 / backup 123.45"
+    }
+  },
+  "ZJSA": {
+    "name": "Sanya FIR",
+    "icao": "ZJSA",
+    "country": "People's Republic of China",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Available",
+    "position_report": "FIR境界の15〜20分前にATCへ通報し通過許可を取得。JALは通常交信維持で不要。各報告点通過時に即時報告。",
+    "emergency_procedure": "【急降下時】右に30°旋回→20km逸脱→元ルート平行→高度変更→復帰。121.5MHz（バックアップ：123.45）で放送。Shanghai FIRと同一手順（PRC.7）。",
+    "special_notes": [
+      "RVSM FL291〜FL411、メートル制（China RVSM変換表使用）",
+      "R474（TEBAK：Nanning ACC - Hanoi ACC境界）でのFL変換に注意",
+      "SEA SLOP：右側1NMオフセット（非レーダー空域）",
+      "中国全FIRで共通のPRC手順が適用される"
+    ],
+    "source": "RM_REGPROC PRC.7 / SEA.1.8.4 (Rev.26.2 / 16 APR 2026)",
+    "contacts": {
+      "main": "Sanya Control",
+      "emergency": "121.5 / backup 123.45"
+    }
+  },
+  "ZGZU": {
+    "name": "Guangzhou FIR",
+    "icao": "ZGZU",
+    "country": "People's Republic of China",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Available",
+    "position_report": "FIR境界の15〜20分前にATCへ通報し通過許可取得。JALは通常交信維持で不要。各報告点通過時に即時報告。",
+    "emergency_procedure": "【急降下時】右に30°旋回→20km逸脱→元ルート平行→高度変更→復帰。121.5MHz（バックアップ：123.45）で放送。R474経由の場合はTEBAK（Nanning-Hanoi境界）でFL移行手順に注意。",
+    "special_notes": [
+      "RVSM FL291〜FL411、メートル制（China RVSM変換表使用）",
+      "HK FIRとの境界付近：M503（RNAV2）使用時は別途手順あり（SEA.3.3.3）",
+      "A599（LINSO：Yangon-Kunming境界）でのFL変換に注意",
+      "中国全FIRで共通のPRC手順が適用される"
+    ],
+    "source": "RM_REGPROC PRC.7 (Rev.26.2 / 16 APR 2026)",
+    "contacts": {
+      "main": "Guangzhou Control",
+      "emergency": "121.5 / backup 123.45"
+    }
+  },
+  "VHHK": {
+    "name": "Hong Kong FIR",
+    "icao": "VHHK",
+    "country": "Hong Kong",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": true,
+    "hf_required": false,
+    "cpdlc": "Available",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5 and working freq. Contact Hong Kong Approach/Control.",
+    "special_notes": [
+      "RNP2 required on RNAV routes",
+      "Busy terminal area - follow ATC instructions precisely",
+      "Interface between Chinese and ICAO procedures"
+    ],
+    "contacts": {
+      "main": "Hong Kong Control 128.2 / 134.45",
+      "emergency": "121.5"
+    }
+  },
+  "RCAA": {
+    "name": "Taipei FIR",
+    "icao": "RCAA",
+    "country": "Taiwan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5. Contact Taipei Control.",
+    "special_notes": [
+      "Standard ICAO procedures",
+      "May be used as alternate routing to avoid Chinese airspace"
+    ],
+    "contacts": {
+      "main": "Taipei Control 132.5",
+      "emergency": "121.5"
+    }
+  },
+  "RPHI": {
+    "name": "Manila FIR",
+    "icao": "RPHI",
+    "country": "Philippines",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Limited",
+    "position_report": "At compulsory reporting points. HF position reports for oceanic portions.",
+    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5. Contact Manila Control.",
+    "special_notes": [
+      "Standard ICAO procedures",
+      "Alternate routing option (avoiding Chinese airspace)"
+    ],
+    "contacts": {
+      "main": "Manila Control 128.3",
+      "emergency": "121.5"
+    }
+  },
+  "VVHM": {
+    "name": "Ho Chi Minh FIR",
+    "icao": "VVHM",
+    "country": "Vietnam",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": true,
+    "hf_required": false,
+    "cpdlc": "Available",
+    "position_report": "At entry and compulsory reporting points",
+    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5 and working freq. Contact Ho Chi Minh Control.",
+    "special_notes": [
+      "RNP2 required on B-RNAV/RNAV routes",
+      "FIR entry position report required",
+      "ATC may have limited English proficiency at times - speak slowly and clearly"
+    ],
+    "contacts": {
+      "main": "Ho Chi Minh Control 132.8 / 124.9",
+      "emergency": "121.5"
+    }
+  },
+  "VTBB": {
+    "name": "Bangkok FIR",
+    "icao": "VTBB",
+    "country": "Thailand",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5. Contact Bangkok Control.",
+    "special_notes": [
+      "Standard ICAO procedures",
+      "RVSM required above FL290"
+    ],
+    "contacts": {
+      "main": "Bangkok Control 133.0 / 119.1",
+      "emergency": "121.5"
+    }
+  }
+}
