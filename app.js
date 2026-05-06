@@ -48,8 +48,18 @@ FIR_BOUNDARIES.features.forEach(feature => {
   const id = feature.properties.id;
   const color = feature.properties.color || '#1e2530';
 
+  const rawCoords = feature.geometry.coordinates[0];
+
+  // 西半球のFIR（アメリカ・太平洋）は経度+360°して日本から見て東側に表示
+  // 平均経度が -30° 未満 = Americas / Pacific → 東コピーにシフト
+  const avgLng = rawCoords.reduce((s, [lng]) => s + lng, 0) / rawCoords.length;
+  const shiftEast = avgLng < -30;
+
   // Convert GeoJSON [lng,lat] to Leaflet [lat,lng]
-  const coords = feature.geometry.coordinates[0].map(([lng, lat]) => [lat, lng]);
+  const coords = rawCoords.map(([lng, lat]) => [
+    lat,
+    shiftEast && lng < 0 ? lng + 360 : lng,
+  ]);
 
   const polygon = L.polygon(coords, {
     color: color,
@@ -171,23 +181,25 @@ function ofpPolyline(routeId, color, dashed) {
   );
   line.addTo(group);
 
-  // FIR boundary crossing markers (diamond icons)
+  // FIR boundary crossing markers — diamond + WPT name label
   route.waypoints.forEach(w => {
     if (!w.fir) return;
     const firMarker = L.marker(w.coords, {
       icon: L.divIcon({
         className: '',
-        html: `<div class="fir-diamond"></div>`,
-        iconSize: [10, 10],
-        iconAnchor: [5, 5],
+        html: `<div class="fir-wpt-label">
+                 <div class="fir-diamond"></div>
+                 <span class="fir-wpt-name">${w.name}</span>
+               </div>`,
+        iconSize: [80, 14],
+        iconAnchor: [5, 7],
       }),
       interactive: true,
       zIndexOffset: 100,
     });
     firMarker.bindTooltip(
-      `<span class="fir-tip-fir">${w.fir}</span> boundary<br>` +
-      `<span class="fir-tip-wpt">${w.name}</span>`,
-      { className: 'fir-tip', direction: 'top', offset: [0, -6] }
+      `<span class="fir-tip-fir">${w.fir}</span> FIR`,
+      { className: 'fir-tip', direction: 'top', offset: [0, -8] }
     );
     firMarker.addTo(group);
   });

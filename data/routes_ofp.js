@@ -180,7 +180,7 @@ const OFP_ROUTES = {
       { name: "PEKBA", airway: "Y16",    coords: [15.017, 104.443] },
       { name: "BUTRA", airway: "Y16",    fir: "VLVT", coords: [15.418, 105.597] },
       { name: "TIPOX", airway: "Y16",    coords: [16.000, 107.233] },
-      { name: "KAPLI", airway: "Y16",    fir: "VHHK", coords: [21.100, 117.300] },
+      { name: "KAPLI", airway: "Y16",    fir: "VHHK", coords: [21.167, 117.500] },
       { name: "IGURU", airway: "Y16",    fir: "RCAA", coords: [23.570, 124.000] },
       { name: "VELOP", airway: "Y16",    fir: "RJJJ", coords: [25.000, 126.000] },
       { name: "RJTT",  airway: "DCT",    coords: [35.549, 139.780] },
@@ -193,10 +193,10 @@ const OFP_ROUTES = {
     ofpSource: "JAL33 2026-05-05",
     waypoints: [
       { name: "RJTT",  airway: "DCT",    coords: [35.549, 139.780] },
-      { name: "BULAN", airway: "Y17",    fir: "RCAA", coords: [27.055, 124.000] },
+      { name: "BULAN", airway: "Y17",    fir: "RCAA", coords: [27.092, 124.000] },
       { name: "ELATO", airway: "Y17",    fir: "VHHK", coords: [22.200, 117.300] },
-      { name: "IKELA", airway: "Y17",    fir: "ZJSA", coords: [18.397, 112.147] },
-      { name: "BUNTA", airway: "Y17",    fir: "VVHM", coords: [16.500, 109.237] },
+      { name: "IKELA", airway: "Y17",    fir: "ZJSA", coords: [18.662, 112.245] },
+      { name: "BUNTA", airway: "Y17",    fir: "VVHM", coords: [16.833, 109.395] },
       { name: "FIRWPT",airway: "Y17",    fir: "VLVT", coords: [15.468, 107.138] },
       { name: "BUTRA", airway: "Y17",    fir: "VTBB", coords: [15.251, 105.358] },
       { name: "PEKBA", airway: "DCT",    coords: [15.017, 104.443] },
@@ -422,7 +422,7 @@ const OFP_ROUTES = {
     ofpSource: "JAL97 2026-05-05",
     waypoints: [
       { name: "RJTT",  airway: "DCT",    coords: [35.549, 139.780] },
-      { name: "BULAN", airway: "Y57",    fir: "RCAA", coords: [27.055, 124.000] },
+      { name: "BULAN", airway: "Y57",    fir: "RCAA", coords: [27.092, 124.000] },
       { name: "RCSS",  airway: "DCT",    coords: [25.069, 121.552] },
     ]
   },
@@ -445,7 +445,7 @@ const OFP_ROUTES = {
     ofpSource: "JAL79 2026-05-05",
     waypoints: [
       { name: "RJTT",  airway: "DCT",    coords: [35.549, 139.780] },
-      { name: "BULAN", airway: "Y17",    fir: "RCAA", coords: [27.055, 124.000] },
+      { name: "BULAN", airway: "Y17",    fir: "RCAA", coords: [27.092, 124.000] },
       { name: "KABAM", airway: "Y17",    fir: "RPHI", coords: [21.000, 119.528] },
       { name: "MIGUG", airway: "Y17",    fir: "ZJSA", coords: [15.164, 114.000] },
       { name: "MONBO", airway: "Y17",    fir: "VVHM", coords: [14.300, 113.257] },
@@ -511,7 +511,7 @@ const OFP_ROUTES = {
     ofpSource: "JAL735 2026-05-05",
     waypoints: [
       { name: "RJAA",  airway: "DCT",    coords: [35.765, 140.385] },
-      { name: "BULAN", airway: "Y17",    fir: "RCAA", coords: [27.055, 124.000] },
+      { name: "BULAN", airway: "Y17",    fir: "RCAA", coords: [27.092, 124.000] },
       { name: "ELATO", airway: "Y17",    fir: "VHHK", coords: [22.200, 117.300] },
       { name: "VHHH",  airway: "DCT",    coords: [22.308, 113.918] },
     ]
@@ -536,7 +536,7 @@ const OFP_ROUTES = {
     ofpSource: "JAL29 2026-05-06",
     waypoints: [
       { name: "RJTT",  airway: "DCT",    coords: [35.549, 139.780] },
-      { name: "BULAN", airway: "Y17",    fir: "RCAA", coords: [27.055, 124.000] },
+      { name: "BULAN", airway: "Y17",    fir: "RCAA", coords: [27.092, 124.000] },
       { name: "ELATO", airway: "Y17",    fir: "VHHK", coords: [22.200, 117.300] },
       { name: "VHHH",  airway: "DCT",    coords: [22.308, 113.918] },
     ]
@@ -550,9 +550,9 @@ const OFP_ROUTES = {
     waypoints: [
       { name: "RJAA",  airway: "DCT",    coords: [35.765, 140.385] },
       { name: "IGURU", airway: "Y17",    fir: "RCAA", coords: [23.570, 124.000] },
-      { name: "KAPLI", airway: "Y17",    fir: "VHHK", coords: [21.100, 117.300] },
-      { name: "IKELA", airway: "Y17",    fir: "ZJSA", coords: [18.397, 112.147] },
-      { name: "BUNTA", airway: "Y17",    fir: "VVHM", coords: [16.500, 109.237] },
+      { name: "KAPLI", airway: "Y17",    fir: "VHHK", coords: [21.167, 117.500] },
+      { name: "IKELA", airway: "Y17",    fir: "ZJSA", coords: [18.662, 112.245] },
+      { name: "BUNTA", airway: "Y17",    fir: "VVHM", coords: [16.833, 109.395] },
       { name: "FIRWPT",airway: "Y17",    fir: "VLVT", coords: [15.468, 107.138] },
       { name: "BUTRA", airway: "Y17",    fir: "VTBB", coords: [15.251, 105.358] },
       { name: "VTBS",  airway: "DCT",    coords: [13.690, 100.750] },
@@ -566,9 +566,9 @@ const OFP_ROUTES = {
     waypoints: [
       { name: "VTBS",  airway: "DCT",    coords: [13.690, 100.750] },
       { name: "BUTRA", airway: "Y16",    fir: "VLVT", coords: [15.251, 105.358] },
-      { name: "BUNTA", airway: "Y16",    fir: "ZJSA", coords: [16.500, 109.237] },
-      { name: "IKELA", airway: "Y16",    fir: "VHHK", coords: [18.397, 112.147] },
-      { name: "KAPLI", airway: "Y16",    fir: "RCAA", coords: [21.100, 117.300] },
+      { name: "BUNTA", airway: "Y16",    fir: "ZJSA", coords: [16.833, 109.395] },
+      { name: "IKELA", airway: "Y16",    fir: "VHHK", coords: [18.662, 112.245] },
+      { name: "KAPLI", airway: "Y16",    fir: "RCAA", coords: [21.167, 117.500] },
       { name: "IGURU", airway: "Y16",    fir: "RJJJ", coords: [23.570, 124.000] },
       { name: "RJAA",  airway: "DCT",    coords: [35.765, 140.385] },
     ]
@@ -582,9 +582,9 @@ const OFP_ROUTES = {
     waypoints: [
       { name: "VTBS",  airway: "DCT",    coords: [13.690, 100.750] },
       { name: "BUTRA", airway: "Y16",    fir: "VLVT", coords: [15.251, 105.358] },
-      { name: "BUNTA", airway: "Y16",    fir: "ZJSA", coords: [16.500, 109.237] },
-      { name: "IKELA", airway: "Y16",    fir: "VHHK", coords: [18.397, 112.147] },
-      { name: "KAPLI", airway: "Y16",    fir: "RCAA", coords: [21.100, 117.300] },
+      { name: "BUNTA", airway: "Y16",    fir: "ZJSA", coords: [16.833, 109.395] },
+      { name: "IKELA", airway: "Y16",    fir: "VHHK", coords: [18.662, 112.245] },
+      { name: "KAPLI", airway: "Y16",    fir: "RCAA", coords: [21.167, 117.500] },
       { name: "IGURU", airway: "Y16",    fir: "RJJJ", coords: [23.570, 124.000] },
       { name: "RJBB",  airway: "DCT",    coords: [34.427, 135.244] },
     ]
@@ -597,9 +597,9 @@ const OFP_ROUTES = {
     waypoints: [
       { name: "RJBB",  airway: "DCT",    coords: [34.427, 135.244] },
       { name: "IGURU", airway: "Y17",    fir: "RCAA", coords: [23.570, 124.000] },
-      { name: "KAPLI", airway: "Y17",    fir: "VHHK", coords: [21.100, 117.300] },
-      { name: "IKELA", airway: "Y17",    fir: "ZJSA", coords: [18.397, 112.147] },
-      { name: "BUNTA", airway: "Y17",    fir: "VVHM", coords: [16.500, 109.237] },
+      { name: "KAPLI", airway: "Y17",    fir: "VHHK", coords: [21.167, 117.500] },
+      { name: "IKELA", airway: "Y17",    fir: "ZJSA", coords: [18.662, 112.245] },
+      { name: "BUNTA", airway: "Y17",    fir: "VVHM", coords: [16.833, 109.395] },
       { name: "FIRWPT",airway: "Y17",    fir: "VLVT", coords: [15.468, 107.138] },
       { name: "BUTRA", airway: "Y17",    fir: "VTBB", coords: [15.251, 105.358] },
       { name: "VTBS",  airway: "DCT",    coords: [13.690, 100.750] },
