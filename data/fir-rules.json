@@ -281,5 +281,494 @@
     "cpdlc_procedure": "<b>Incheon FIR（RKRR）はCPDLC対応FIR</b>。<br>2-03 RM_JALISSUE_INTの当該セクションにIncheon FIR向けCPDLC手順の詳細記載あり（本セッションでは未抽出）。<br>通信手段: <b>VHF音声（主）</b>、CPDLC（Available）。",
     "reg_rules": "<b>出典: RM_REGPROC ROK（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（航空路FL200〜FL600）/ Class B（Incheon・Gimpo・Jeju主要空港周辺）/ Class D（航空路MEA〜FL200）<br><b>PBN要件</b>: <b>RNAV2</b>（FL140以上の航空路。FL290以上のオーバーフライト）/ <b>RNAV1</b>（SID・STAR）<br><b>速度制限</b>: 10,000ft MSL以下は<b>250kt IAS</b>以下（B Class: 250kt / C・D Class: 250kt / 空港4NM以内2,500ft以下は200kt）<br><b>TA</b>: 14,000ft / <b>TL</b>: FL140<br><b>高度計規正（最低使用FL）</b>: QNH 1013.2hPa以上→FL140 / 1012.9〜996.3hPa→FL145 / 995.9〜979.3hPa→FL150 / 979.0〜962.4hPa→FL155 / 962.1〜945.5hPa→FL160<br><b>RVSM</b>: FL290〜FL410（1,000ft垂直間隔）<br><b>FLAS（主要ルート）</b>:<br>・<b>A593</b>（SADLI〜NIRAT）: NB（000〜179°）FL270/330/350/370/410 / SB（180〜359°）FL260/320/340/360/380<br>・<b>A586</b>（RUGMA〜CJU）: NB FL270/330/350/370/410 / SB FL260/320/340/360/380<br>・<b>G203</b>（PSN〜KALEK）: NB FL290/310/330/350/370/390/410 / SB FL300/340/380<br>・<b>G339</b>（PSN〜INVOK）: NB FL290/310/330/350/370/390/410 / SB FL320/360/400<br>・<b>A582</b>（PSN〜APELA）: NB FL290/310/330/350/370/390/410 / SB FL300/340/380<br><b>SLOP</b>: G597/Y697/B467/Y437/L512（KARBU〜KAE/ANDOL間、2200〜1300UTC）→ EB/WB共に<b>3NM右</b>オフセット。A582/Y782: EB（KALOD→BITUX）2NM右 / WB（OSPOT→TGU）3NM右<br><b>飛行計画提出</b>: 出発・FIR進入の<b>1時間以上前</b><br><b>CDR</b>: CDR1（AIP）/ CDR2（NOTAM）/ CDR3（ATC戦術クリアランス）<br><b>ATFM</b>: ATCC（Air Traffic Command Center）がIncheon FIR全域のATFMを提供",
     "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)"
+  },
+  "WSJC": {
+    "name": "Singapore FIR",
+    "country": "Singapore",
+    "icao": "WSJC",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Singapore Control on guard 121.5 MHz; squawk 7700",
+    "contingency_procedure": "Deviate right of track, contact Singapore Control. Use 123.45 MHz air-to-air if unable to contact ATC.",
+    "cpdlc_procedure": null,
+    "position_report": "Request clearance from appropriate authority not later than 10 min VHF or 20 min HF before joining or crossing airway",
+    "contacts": {
+      "main": "Singapore Control",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Controlled airspace: Class A FL150-FL460; Class B Surface-FL150",
+      "Transition altitude 11,000 ft; Transition level FL130 (common with Malaysia/Brunei)",
+      "DRO (Direct Routing Operations) available on N892, L642, L644, G334, G579 at FL290-FL460",
+      "ADS-B OUT mandatory at or above FL290 (1090 MHz ES; B1 or B2 in FPL item 10)",
+      "SSR transponder mandatory in controlled airspace; squawk code assigned by ATC or squawk A2000",
+      "Speed: max 250 KIAS within 40 NM of Changi at or below 10,000 ft; 180 KT to 8 NM from threshold",
+      "SLOP: refer SEA.1 - not specifically mandated for Singapore FIR oceanic routes",
+      "FLAS: Refer SEA.1.3 Western Pacific/South China Sea FLAS table (semi-circular + special parallel route allocations on L642/M771/N892/L625/N884/M767)"
+    ],
+    "reg_rules": "<b>Airspace Class:</b> Class A FL150-FL460 (and more than 100 NM seaward); Class B Surface-FL150. Uncontrolled airspace Class G.<br><b>Transition:</b> TA 11,000 ft / TL FL130 (common with Malaysia and Brunei FIRs).<br><b>RVSM:</b> FL290-FL410 (inclusive). Exclusive RVSM (non-RVSM aircraft may NOT flight plan in stratum). Equipment: two primary altimetry systems, automatic altitude-keeping device, altitude alerter, Mode C transponder.<br><b>FLAS (SEA.1.3):</b> Western Pacific/South China Sea scheme applies. Semi-circular (odd EB/even WB) plus special high-capacity allocations on parallel routes L642/M771 (WB), N892/L625/N884/M767 (EB). Consult No-PDC FL tables per route.<br><b>DRO (SEA.13.2.2):</b> Direct routing available at FL290-FL460 on segments of N892, L642, L644, G334, G579. E.g. MELAS DCT MABAL (arr via N892); ESPOB DCT ELALO (arr via L642).<br><b>ADS-B (SEA.13.9):</b> ADS-B OUT mandatory at or above FL290. Must carry 1090 MHz ES equipment certified to EASA AMC 20-24 or FAA AC 20-165A. Indicate B1/B2 in FPL item 10. Include 24-bit aircraft address (CODE/xxxxxxx) in item 18.<br><b>SSR:</b> Mode 3/A + Mode C mandatory in controlled airspace. Squawk last assigned code or A2000; request discrete code from Singapore Control.<br><b>Position Report:</b> IFR flights must request clearance not later than 10 min on VHF or 20 min on HF before joining/crossing airway or CTR.<br><b>Speed:</b> 250 KIAS at or below 10,000 ft within 40 NM of Changi; 180 KT to 8 NM from touchdown; 150 KT to 4 NM from touchdown.<br><b>Flight Plan:</b> File 120 hours (5 days) earliest, minimum 60 min prior to EOBT. Amend if delay exceeds 30 min."
+  },
+  "WMFC": {
+    "name": "Kuala Lumpur FIR",
+    "country": "Malaysia",
+    "icao": "WMFC",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Lumpur Control on guard 121.5 MHz; squawk 7700",
+    "contingency_procedure": "Contact Lumpur Control on HF or VHF. Use 123.45 MHz air-to-air if unable to contact ATC.",
+    "cpdlc_procedure": null,
+    "position_report": "Request clearance not later than 10 min VHF or 20 min HF before joining or crossing airway/TMA/CTR",
+    "contacts": {
+      "main": "Lumpur Control",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Controlled airspace: Class A FL250-FL460 (ATS routes) and FL150-FL250; Class B 10,000 ft-FL150; Class C below 10,000 ft and CTRs; Class G uncontrolled below FL250",
+      "Transition altitude 11,000 ft; Transition level FL130 (common with Singapore/Brunei, except Mt Kinabalu area: TA 15,000 ft / TL FL170)",
+      "Semi-circular cruising levels in controlled airspace at or above 3,000 ft; Quadrantal below",
+      "FLAS: Refer SEA.1.3 Western Pacific/South China Sea FLAS table",
+      "ADS-B: Not mandated separately for KL FIR (refer SEA.2.8 summary; no specific mandate cited)",
+      "SSR: Mode 3/A + Mode C mandatory in KUL TMA/CTR. Squawk A2000 if no discrete code assigned",
+      "Uni-directional routing scheme along western Peninsular Malaysia (SEA.10.3.1)"
+    ],
+    "reg_rules": "<b>Airspace Class:</b> Class A FL250-FL460 (FIR/ATS routes), FL150-FL250 (ATS routes/TMAs); Class B 10,000 ft-FL150; Class C below 10,000 ft and CTRs/ATZs. Class G uncontrolled below FL250.<br><b>Transition:</b> TA 11,000 ft / TL FL130. Exception: Mt Kinabalu area (Kota Kinabalu FIR) TA 15,000 ft / TL FL170.<br><b>RVSM:</b> FL290-FL410 (inclusive). Exclusive RVSM. Additional requirement: one altitude reporting transponder (Mode C) required in Malaysian FIR within RVSM stratum.<br><b>FLAS (SEA.1.3):</b> Western Pacific/South China Sea FLAS applies. Consult No-PDC FL tables for each route (e.g. L625 EB FL310/320/350/360/390/400; L759/N571/M770/P628 WB FL280; N884/M771 EB FL310/320/350/360/390/400; L642 WB FL310/320/350/360/390/400).<br><b>SSR (SEA.10.6):</b> Mode 3/A + Mode C mandatory in KUL TMA/CTR. International DEP codes: 2100-2177, 2600-2677, 5400-5477. Transit aircraft retain assigned code or squawk A2000.<br><b>Routing (SEA.10.3):</b> Uni-directional routing scheme in effect along western Peninsular Malaysia. Specific FPL routes required per origin/destination pair — see SEA.10.3.1 tables.<br><b>Enroute Ops (SEA.10.5):</b> IFR aircraft must request clearance not later than 10 min VHF or 20 min HF before joining/crossing airways, TMAs or CTRs.<br><b>Cruising Level (SEA.10.2.3):</b> Semi-circular at or above 3,000 ft in controlled airspace; Quadrantal otherwise.<br><b>Speed (SEA.10.2.4):</b> Plan top of descent at 270 KIAS unless restricted by ATC.<br><b>Flight Plan (SEA.10.4):</b> Submit at least 60 min before departure."
+  },
+  "WBFC": {
+    "name": "Kota Kinabalu FIR",
+    "country": "Malaysia",
+    "icao": "WBFC",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Kota Kinabalu Control on guard 121.5 MHz; squawk 7700",
+    "contingency_procedure": "Contact Kota Kinabalu Control on HF or VHF. Use 123.45 MHz air-to-air if unable to contact ATC.",
+    "cpdlc_procedure": null,
+    "position_report": "Request clearance not later than 10 min VHF or 20 min HF before joining or crossing airway/TMA/CTR",
+    "contacts": {
+      "main": "Kota Kinabalu Control",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Same airspace classification as Kuala Lumpur FIR (SEA.10.1): Class A FL250-FL460; Class B 10,000-FL150; Class C CTRs/ATZs; Class G uncontrolled below FL250",
+      "Transition altitude 11,000 ft / Transition level FL130 in general; EXCEPTION: within 10 NM of Mt Kinabalu — TA 15,000 ft / TL FL170",
+      "RVSM FL290-FL410 inclusive; Mode C transponder required in RVSM stratum",
+      "SSR: Kota Kinabalu FIR international DEP codes: 2001-2077, 0400-0477",
+      "FLAS: Western Pacific/South China Sea FLAS applies (SEA.1.3)",
+      "Covers East Malaysia (Sabah/Sarawak/Brunei airspace); separate FIR from Kuala Lumpur FIR"
+    ],
+    "reg_rules": "<b>Airspace Class:</b> Same classification as Kuala Lumpur FIR — Class A FL250-FL460 (FIR/ATS routes), FL150-FL250 (ATS routes/TMAs); Class B 10,000 ft-FL150; Class C CTRs/ATZs; Class G uncontrolled below FL250.<br><b>Transition:</b> TA 11,000 ft / TL FL130. CRITICAL EXCEPTION: within 10 NM radius of Mt Kinabalu — TA 15,000 ft (4,570 m) / TL FL170.<br><b>RVSM:</b> FL290-FL410 (inclusive). Exclusive RVSM. Mode C transponder required in RVSM stratum (Malaysian FIR requirement per SEA.1.4).<br><b>FLAS (SEA.1.3):</b> Western Pacific/South China Sea FLAS applies. Key routes: A341/B592/R223/M522 EB FL310/350/390, WB FL320/360/400; G334/G580/M758/M759/M761 EB FL270/290/330, WB FL280/300/340; M754/M522(VJN-VINIK) NB FL300/340/380, SB FL290/330/370/410; P648 EB FL310/350/390, WB FL320/360/380/400.<br><b>SSR (SEA.10.6):</b> International DEP codes: 2001-2077, 0400-0477. Transit aircraft retain assigned code or squawk A2000.<br><b>Enroute Ops (SEA.10.5):</b> IFR aircraft must request clearance not later than 10 min VHF or 20 min HF before joining/crossing airways/TMAs/CTRs.<br><b>Cruising Level (SEA.10.2.3):</b> Semi-circular at or above 3,000 ft in controlled airspace; Quadrantal otherwise."
+  },
+  "WIIF": {
+    "name": "Jakarta FIR",
+    "country": "Indonesia",
+    "icao": "WIIF",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Jakarta Control on guard 121.5 MHz; squawk 7700",
+    "contingency_procedure": "Contact Jakarta Control on HF or VHF. Weather radar recommended for navigation in Jakarta FIR due to unsatisfactory NAVAIDs and communications.",
+    "cpdlc_procedure": null,
+    "position_report": "Normal IFR position reporting required",
+    "contacts": {
+      "main": "Jakarta Control",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Includes both Jakarta FIR (WIIF) and Ujung Pandang FIR (WAAF) — both have same ADS-B mandate",
+      "Airspace: Class A CTA/UTA FL250-FL460; Class B CTR; Class C TMA/ATZ; Class F/G remaining",
+      "Cruising levels: semi-circular at or above FL200; Quadrantal at or above 3,000 ft but below FL200",
+      "ADS-B OUT mandatory at or above FL290 (Mode S + GNSS source position; E, L, B1 or B2 in FPL item 10)",
+      "ADS-B for ATC separation service also implemented FL245-FL600 in Jakarta UCA and Ujung Pandang UCA",
+      "Company note: Use weather radar for navigation in Jakarta FIR — NAVAIDs, A/G comms and ATS unsatisfactory",
+      "Transition altitude: 11,000 ft; Transition level: FL130",
+      "FLAS: Western Pacific/South China Sea FLAS applies (SEA.1.3)"
+    ],
+    "reg_rules": "<b>Airspace Class (SEA.8.1):</b> Class A CTA/UTA FL250-FL460; Class B CTR; Class C TMA/ATZ; Class F/G FIR/UIR and unattended aerodromes.<br><b>Transition (SEA.8.2.2):</b> TA 11,000 ft / TL FL130 (specified per aerodrome).<br><b>RVSM:</b> FL290-FL410 (inclusive). Exclusive RVSM (Jakarta FIR listed in Western Pacific/SEA RVSM table).<br><b>Cruising Levels (SEA.8.2.3):</b> Semi-circular at or above FL200; Quadrantal at or above 3,000 ft but below FL200.<br><b>FLAS (SEA.1.3):</b> Western Pacific/South China Sea FLAS applies — semi-circular plus special parallel route allocations.<br><b>ADS-B (SEA.8.7):</b> ADS-B OUT mandatory at or above FL290 in Jakarta FIR and Ujung Pandang FIR. Equipment: Mode S transponder + GNSS source position. Indicate E, L, B1 or B2 in FPL item 10. ADS-B separation service also active in Jakarta UCA and Ujung Pandang UCA (FL245-FL600).<br><b>IFR Requirement (SEA.8.2.1):</b> IFR required for overwater flight more than 10 NM from land or for more than one hour; above FL150 in controlled airspace; above FL200 in uncontrolled airspace.<br><b>Speed (SEA.8.2.4):</b> Max 250 KIAS below 10,000 ft MSL; max 200 KIAS at or below 2,500 ft within 4 NM of Class C/D primary airport.<br><b>Company Procedure (SEA.8.3):</b> Use weather radar for navigation — NAVAIDs, A/G communications and ATS are unsatisfactory in Jakarta FIR."
+  },
+  "VLVT": {
+    "name": "Vientiane FIR",
+    "country": "Laos",
+    "icao": "VLVT",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "N/A",
+    "emergency_procedure": "Contact Vientiane ACC on guard 121.5 MHz; squawk 7700",
+    "contingency_procedure": "Transfer of control at FIR boundaries is effective at boundary waypoints. Contact Vientiane ACC.",
+    "cpdlc_procedure": null,
+    "position_report": "Transfer of control at FIR boundary waypoints; standard IFR position reports required",
+    "contacts": {
+      "main": "Vientiane ACC",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Airspace: Class A upper ATS routes FL200 and above; Class C TMAs/CTRs and lower ATS routes; Class F remaining",
+      "RVSM FL290-FL410 inclusive (listed in Western Pacific/SEA RVSM table)",
+      "Transfer of control at FIR boundary waypoints on respective boundaries",
+      "Flight plan must be filed at least 60 minutes before departure",
+      "FLAS: Western Pacific/South China Sea FLAS applies (SEA.1.3) — A1 EB FL290/330/370/390/410, WB FL300/340/380/400"
+    ],
+    "reg_rules": "<b>Airspace Class (SEA.9.1):</b> Class A upper ATS routes FL200 and above; Class C all TMAs, CTRs and lower ATS routes; Class F all remaining airspace.<br><b>RVSM:</b> FL290-FL410 (inclusive). Listed in Western Pacific/SEA exclusive RVSM airspace (non-RVSM aircraft may NOT flight plan in stratum).<br><b>FLAS (SEA.1.3):</b> Western Pacific/South China Sea FLAS applies. Key route A1: EB FL290/330/370/390/410, WB FL300/340/380/400. Route A202 EB FL290/330/370/390/410, WB FL300/340/380/400. Consult No-PDC FL tables per route.<br><b>Control Transfer (SEA.9.2):</b> Transfer of control between Vientiane ACC and adjacent ACCs is effective at boundary waypoints on respective FIR boundaries.<br><b>Flight Plan (SEA.9.3):</b> Must be submitted at least 60 minutes before departure for flights requiring ATC service.<br><b>CPDLC/ADS-C:</b> Not implemented — procedural separation applies."
+  },
+  "VYYF": {
+    "name": "Yangon FIR",
+    "country": "Myanmar",
+    "icao": "VYYF",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Yangon ACC on guard 121.5 MHz; squawk 7700. Use 123.45 MHz air-to-air if unable to contact ATC.",
+    "contingency_procedure": "Weather deviation: contact Yangon Radio on HF or Yangon Control on VHF. State deviation direction, magnitude (degrees), duration (minutes). If deviation continues beyond FIR boundary, inform Yangon ACC in advance.",
+    "cpdlc_procedure": null,
+    "position_report": "Standard IFR position reports required",
+    "contacts": {
+      "main": "Yangon ACC / Yangon Radio (HF)",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Airspace: Class A FIR ATS routes and TMAs FL150-FL560; Class B TMA GND-FL150 and APCH zone; Class C CTRs; Class D; Class E uncontrolled GND-1,500 ft",
+      "RVSM FL290-FL410 (SEA RVSM table); FLAS (SAS.1.2.5): L759/M770 WB FL280/320/340/360/380/400, EB FL310/330/350/370/390/410; L301/N895/P762 WB FL300/FL360, EB all RVSM FLs",
+      "FL transition: China metric to ICAO RVSM on A599/A201 at positions notified by NOTAM",
+      "ADIZ: All aircraft operating to/through/within ADIZ must obtain Air Defence Clearance (ADC) through ATCC",
+      "SLOP: Applicable on A201/A599/B465/R203/L301/P762/M770/L759 — 1 or 2 NM right (non-radar); requires ATC approval in radar airspace",
+      "ADS-B OUT mandatory at or above FL250 (SEA.11.7)",
+      "SSR: Squawk last assigned code or code 2000 upon entering Yangon FIR",
+      "HF available: Yangon Radio on HF for weather deviations and communications"
+    ],
+    "reg_rules": "<b>Airspace Class (SEA.11.1):</b> Class A: FIR ATS routes FL150-FL560, TMA FL150-FL560; Class B: TMA GND-FL150 and APCH zone; Class C: CTRs; Class D; Class E: uncontrolled GND-1,500 ft.<br><b>IFR Required (SEA.11.2.1):</b> Above FL150; more than 100 NM seaward in controlled airspace; more than 20 NM seaward for more than 1 hour.<br><b>RVSM:</b> FL290-FL410. Exclusive RVSM (listed in Western Pacific/SEA RVSM table).<br><b>FLAS (SAS.1.2.5):</b> L759/M770: WB FL280/320/340/360/380/400, EB FL310/330/350/370/390/410. L301/N895/P762: WB FL300/FL360, EB all RVSM FLs.<br><b>FL Transition (SAS.1.3.2):</b> China metric ↔ ICAO RVSM transition on A599/A201 at positions notified by NOTAM. Conversion table: WB FL380↔12000M, FL360↔10800M, FL320↔9600M, FL280↔8400M; EB FL410↔12600M, FL370↔11400M, FL330↔10200M, FL290↔9000M.<br><b>ADIZ (SEA.11.2.4):</b> ADC required from ATCC. Eastbound: request ADC on first contact at FIR boundary, provide ETO at ADIZ boundary. Westbound: request ADC only on first contact at FIR boundary.<br><b>SLOP (SEA.11.6 / SAS.1.11.3):</b> Applicable on A201/A599/B465/R203/L301/P762/M770/L759. Offset 1 or 2 NM right of centerline. Auto offset capability required. No ATC notification needed in non-radar airspace; approval required in radar airspace.<br><b>ADS-B (SEA.11.7):</b> ADS-B OUT mandatory at or above FL250. 7 ADS-B stations providing coverage up to 200 NM. Monitoring service for flight safety.<br><b>SSR (SEA.11.2.5):</b> Squawk last assigned code or code 2000 upon entering Yangon FIR.<br><b>Weather Deviation (SEA.11.5):</b> Contact Yangon Radio (HF) or Yangon Control (VHF). State: aircraft ID, direction (right/left), degrees, duration in minutes.<br><b>Transition Altitude:</b> Specified per aerodrome. Cruising Level: Semi-circular."
+  },
+  "VIDF": {
+    "name": "Delhi FIR",
+    "country": "India",
+    "icao": "VIDF",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Delhi Control on guard 121.5 MHz; squawk 7700",
+    "contingency_procedure": "Contact Delhi ACC. If communication loss, contact nearest ATS unit. Fuel state: use phrase 'minimum fuel' or 'mayday mayday mayday fuel' only.",
+    "cpdlc_procedure": null,
+    "position_report": "All flights entering Delhi FIR (excluding from Mumbai or Kolkata FIR) must forward estimates for FIR boundary including FL and SSR code at least 10 min prior to entry via VHF, HF or ADS-CPDLC",
+    "contacts": {
+      "main": "Delhi ACC / Delhi Radio (HF)",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "RVSM FL290-FL410: Exclusive RVSM (Bay of Bengal and Arabian Sea); non-exclusive over continental India",
+      "FLAS continental India (SAS.1.2.2): WB 0001-1600UTC: A325/A791/N877 FL300/340/360/400; EB FL310/350/390/410. All levels 1601-0000UTC",
+      "ADIZ: ADC required before entering Indian airspace from respective FIC, at least 10 min prior to entry. ADC valid between -15 min and +45 min of EOBT",
+      "ADS-B OUT mandatory at or above FL290 on PBN routes (L,M,N,P,Q,T designators) and specific routes (A201, A347, A465, A474, A791, B211, B466, G450, R457, R460, R461, W routes) in Indian continental airspace",
+      "HF: Delhi Radio frequencies — 10018 kHz (day primary), 5658 kHz (night primary/day secondary), 3467 kHz (night secondary)",
+      "ACAS II strongly recommended in RVSM airspace (India)",
+      "Fuel state: 'minimum fuel' or 'mayday mayday mayday fuel' ONLY — other phrases not recognized at Indian airports"
+    ],
+    "reg_rules": "<b>Airspace (SAS.4.1):</b> Classes A*, B*, C, D, E, F, G. Class A/B over designated controlled airspace (TMA/CTA/CTZ) — IFR only or IFR+VFR. Class C: IFR+VFR, full ATC. *Class A/B implementation under consideration.<br><b>VFR Limit (SAS.4.2.1):</b> VFR not permitted above FL150.<br><b>RVSM (SAS.1.1):</b> FL290-FL410 (both inclusive) in Delhi, Kolkata, Chennai, Mumbai FIRs. Exclusive RVSM over Bay of Bengal and Arabian Sea oceanic airspace. Non-exclusive over continental India. ACAS II recommended.<br><b>FLAS Continental India (SAS.1.2.2):</b> 0001-1600UTC on A325/A791/N877: WB FL300/340/360/400; EB FL310/350/390/410. All levels available 1601-0000UTC for international flights.<br><b>FLAS Bay of Bengal (SAS.1.2.1):</b> Various routes — consult table. N877/P628/L759/P570/M300/N563/N571/P574 WB: FL280/320/340/360/380/400; EB: all available (except FL290).<br><b>Comm Requirements (SAS.4.3):</b> All flights entering Delhi FIR (except from Mumbai or Kolkata FIR) must pass estimates for FIR boundary (FL + SSR code) at least 10 min prior to entry via VHF, HF or ADS-CPDLC. Delhi Radio HF: 10018 kHz (day), 5658 kHz (night/day secondary), 3467 kHz (night secondary).<br><b>ADC/ADIZ (SAS.4.4):</b> Air Defence Clearance required before entering Indian airspace. Obtain from FIC at least 10 min prior to entry. ADC valid -15 min to +45 min EOBT. Valid for entire route including intermediate stops.<br><b>ADS-B (SAS.4.8):</b> Mandatory at or above FL290 on PBN routes (L/M/N/P/Q/T designators) and routes A201/A347/A465/A474/A791/B211/B466/G450/R457/R460/R461/W routes in continental India. Indicate B1 or B2 in FPL item 10.<br><b>SLOP (SAS.1.11.1):</b> Applicable in oceanic airspace of Chennai, Kolkata and Mumbai FIRs only (beyond TMA/CTA/CTR). Up to 2 NM right of centerline where spacing ≥15 NM; up to 0.5 NM where spacing 6-15 NM.<br><b>Fuel State (SAS.4.2.7):</b> ONLY use 'minimum fuel' or 'mayday mayday mayday fuel'. Other phrases not recognized. Inform ATC 10 min before expected diversion.<br><b>FPL (SAS.4.5):</b> Submit at least 180 min before EOBT."
+  },
+  "VECF": {
+    "name": "Kolkata FIR",
+    "country": "India",
+    "icao": "VECF",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Kolkata ACC on guard 121.5 MHz; squawk 7700",
+    "contingency_procedure": "Contact Kolkata ACC. If communication loss, contact nearest ATS unit. Kolkata ACC also provides ATS for part of Dhaka FIR (L507 between AVPOP-ESDOT, FL280-FL460).",
+    "cpdlc_procedure": null,
+    "position_report": "Standard IFR position reports; Kolkata ACC also controls portion of Dhaka FIR (L507 AVPOP-ESDOT)",
+    "contacts": {
+      "main": "Kolkata ACC / Kolkata Radio (HF)",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Covers Bay of Bengal and eastern India; similar rules to Delhi FIR (SAS.4)",
+      "RVSM FL290-FL410: Exclusive RVSM over Bay of Bengal oceanic airspace",
+      "FLAS Bay of Bengal (SAS.1.2.1): consult route-specific table. Key: N877/P628/L759/P570/M300/N563/N571/P574 WB FL280/320/340/360/380/400; EB all available (except FL290)",
+      "SLOP applicable in oceanic airspace (beyond TMA/CTA/CTR): up to 2 NM right on routes N877/L301/P628/L759/M770/M770A/N895/P646/L507",
+      "ADS-B OUT mandatory at or above FL290 on PBN routes in Indian continental airspace",
+      "Kolkata ACC provides ATS delegation for L507 AVPOP-ESDOT within Dhaka FIR (FL280-FL460)",
+      "ACAS II strongly recommended",
+      "FPL submission: at least 180 min before EOBT"
+    ],
+    "reg_rules": "<b>Airspace:</b> Same classification as other Indian FIRs (SAS.4.1). Classes A*,B*,C,D,E,F,G. VFR not above FL150.<br><b>RVSM (SAS.1.1):</b> FL290-FL410 (inclusive). Exclusive RVSM over Bay of Bengal oceanic airspace. ACAS II recommended.<br><b>FLAS Bay of Bengal (SAS.1.2.1):</b> N877/P628/L759/P570/M300/N563/N571/P574 WB: FL280/320/340/360/380/400; EB: all available (except FL290). P762/L301/N895/L645 WB: FL320/FL360. P646/L507 WB: all WB levels available. Consult full table.<br><b>FLAS Continental India (SAS.1.2.2):</b> 0001-1600UTC: WB FL300/340/360/400; EB FL310/350/390/410. All levels 1601-0000UTC.<br><b>SLOP (SAS.1.11.1):</b> Kolkata FIR oceanic airspace (beyond TMA/CTA/CTR): N877/L301/P628/L759/M770/M770A/N895/P646/L507. Up to 2 NM right; 0.5 NM max where spacing 6-15 NM. Inter-pilot frequency 123.45 MHz.<br><b>ADS-B (SAS.4.8):</b> Mandatory at or above FL290 on PBN routes in Indian continental airspace. Indicate B1/B2 in FPL item 10.<br><b>ADC/ADIZ (SAS.4.4):</b> Air Defence Clearance required. Obtain at least 10 min before entering Indian airspace. Valid -15 to +45 min EOBT.<br><b>Dhaka FIR Delegation (SAS.3.4):</b> Kolkata ACC controls L507 AVPOP-ESDOT within Dhaka FIR (FL280-FL460 ATS only; control at or above FL130 remains Kolkata ATCC). Prior approval from CAAB required to operate in this delegated airspace.<br><b>Fuel State (SAS.4.2.7):</b> 'minimum fuel' or 'mayday mayday mayday fuel' ONLY.<br><b>FPL:</b> Submit at least 180 min before EOBT."
+  },
+  "VGFR": {
+    "name": "Dhaka FIR",
+    "country": "Bangladesh",
+    "icao": "VGFR",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Dhaka ACC on guard 121.5 MHz; squawk 7700. If unable contact ATC, call Bangladesh Air Defence Unit on 124.20 MHz or 6826 kHz.",
+    "contingency_procedure": "Establish contact with Dhaka Radio on HF (3491/6556/10066/2947 kHz) or Dhaka ACC 125.7 MHz. Provide: call sign, departure place/time, destination/ETA, ETO over AVPOP and ESDOT.",
+    "cpdlc_procedure": null,
+    "position_report": "Establish contact with Dhaka ACC/FIC at least 10 min before entering FIR boundary",
+    "contacts": {
+      "main": "Dhaka ACC / Dhaka Radio (HF 3491/6556/10066 kHz)",
+      "emergency": "124.20 MHz or 6826 kHz (Air Defence)"
+    },
+    "special_notes": [
+      "Airspace classes: B, C, D, F, G. IFR required above FL150.",
+      "RVSM FL290-FL410 (inclusive); no RVSM transition areas established",
+      "FLAS (SAS.1.2.4): A201/B465/A599/L507/G463/R472/R598 — WB FL300/320/340/360/380/400; EB FL290/310/330/350/370/390/410",
+      "ADIZ: Air Defence Clearance (ADC) required before entry. Obtain at least 10 min before crossing ADIZ boundary. Flights on P646/N895/M770/L524/W112 do NOT need ADC unless deviating toward Bangladesh landmass",
+      "SLOP applicable on G463 and L507 — 2 NM right only (not 1NM option). In oceanic/remote continental airspace only. Auto offset capability required.",
+      "Partial airspace (L507 AVPOP-ESDOT, FL280-FL460) delegated to Kolkata ACC for ATS provision",
+      "Longitudinal separation reduced to 10 min on L507/A599/A201/B465/G463/A462/R344/R472/B593/R598",
+      "HF: Dhaka Radio 3491/6556/10066/2947 kHz"
+    ],
+    "reg_rules": "<b>Airspace (SAS.3.1):</b> Classes B, C, D, F, G. IFR required above FL150 (SAS.3.2.1).<br><b>RVSM (SAS.1.1):</b> FL290-FL410 (inclusive). No RVSM transition areas (SAS.1.3.3).<br><b>FLAS (SAS.1.2.4):</b> Routes A201/B465/A599/L507/G463/R472/R598: WB FL300/320/340/360/380/400; EB FL290/310/330/350/370/390/410.<br><b>Comm (SAS.3.3):</b> Establish radio contact with Dhaka ACC/FIC at least 10 min before entering FIR boundary. Exception: flights from adjacent Indian aerodromes near boundary contact as early as possible but not later than FIR crossing. Dhaka Radio HF: 3491/6556/10066/2947 kHz.<br><b>Delegated Airspace (SAS.3.4):</b> L507 between AVPOP and ESDOT (FL280-FL460) — ATS delegated to Kolkata ACC/FIC. Prior approval from Chairman CAAB required. Before entering: contact Dhaka Radio HF or Dhaka ACC 125.7 MHz; provide call sign, departure, destination/ETA, ETO AVPOP/ESDOT.<br><b>ADIZ (SAS.3.5):</b> Bangladesh ADIZ covers entire territory plus southern sea area. ADC required at least 10 min before entering ADIZ. Exception: flights on P646/N895/M770/L524/W112 exempt unless deviating toward land mass. If unable to contact ATS, call Air Defence on 124.20 MHz or 6826 kHz.<br><b>SLOP (SAS.1.11.2):</b> Applicable on G463 and L507 in oceanic/remote continental airspace. Offset: 2 NM right of centerline only. Auto offset capability required. No ATC notification needed.<br><b>Separation (SAS.3.2.2):</b> Longitudinal minimum 15 min reduced to 10 min on L507/A599/A201/B465/G463/A462/R344/R472/B593/R598 for same track/level, crossing track/level, and climb/descent."
+  },
+  "KZAK": {
+    "name": "Oakland Oceanic FIR",
+    "country": "United States",
+    "icao": "KZAK",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Required",
+    "emergency_procedure": "Contact San Francisco ARINC on HF; squawk 7700. After radar service terminated, set transponder to code 2000.",
+    "contingency_procedure": "If deviated from cleared route, take action to regain route within 200 NM of deviation. Notify ATC of loss of CPDLC/ADS-C or inability to meet RNP4/10.",
+    "cpdlc_procedure": "ADS-C and CPDLC required for PBCS operations (RNP4/RCP240/RSP180) enabling 30NM longitudinal or 23NM lateral separation. RNP10+CPDLC/ADS-C enables 50NM longitudinal separation.",
+    "position_report": "Position reports at lat/lon coordinates or named fixes per TDM. At Fukuoka/Oakland FIR boundary for eastbound: check on freq with SF ARINC, report altitude and ETO next position (normally 170E). Westbound: transpose beacon code to 2000.",
+    "contacts": {
+      "main": "San Francisco ARINC (HF)",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "RVSM FL290-FL410 (inclusive). FLAS: westbound (180-359°) even FLs FL300-FL400 + odd FL410+; eastbound (000-179°) odd FLs FL290-FL410+",
+      "RNP10 required for PACOTS operations. PBCS (RNP4/RCP240/RSP180 + ADS-C/CPDLC) enables 30NM longitudinal or 23NM lateral separation",
+      "SLOP: 0 to 2.0 NM right of centerline in 0.1 NM increments. Authorized throughout FAA-controlled oceanic airspace including Oakland Oceanic. No ATC clearance required.",
+      "Beacon code: squawk 2000 after radar service terminated upon entering Oakland Oceanic FIR",
+      "Mach number: report CPDLC or voice if Mach varies ≥0.02 from entry Mach or last notified change",
+      "PACOTS: Oakland issues westbound PACOTS NOTAM (KZAK) by ~1100UTC daily. Westbound tracks C/D/E/F — even FLs FL300-FL400, odd FL410+",
+      "PACOTS eastbound tracks 1/2/3/4: odd FLs FL290+. Japan-Hawaii tracks 11/12: odd FLs FL290+",
+      "HF contact: San Francisco ARINC. Contact at least 5 min before entering Anchorage FIR from Oakland FIR to get beacon code assignment."
+    ],
+    "reg_rules": "<b>RVSM (PAC.10):</b> FL290-FL410 (inclusive). FLAS: WB (180-359°) even FLs FL300/320/340/360/380/400 + odd FL410+; EB (000-179°) odd FLs FL290/310/330/350/370/390/410+.<br><b>Separation (PAC.8.2):</b> 50 NM lateral between RNP10 or RNP4 aircraft. PBCS operations: RNP4+RCP240+RSP180+ADS-C/CPDLC = 30 NM longitudinal; or 23 NM lateral (with waypoint change event and 5 NM deviation event contracts). Advise ATC of CPDLC/ADS-C loss or inability to meet RNP4/10.<br><b>PACOTS (PAC.6):</b> RNP10 (or RNP4) required. EB tracks 1/2/3/4 (Japan-NA): odd FLs ≥FL290, crossing 160E 0700-2100UTC. EB tracks 11/12 (Japan-Hawaii): odd FLs ≥FL290, crossing 160E 1000-2100UTC. WB tracks C/D/E/F (NA-Japan): even FL300-FL400, odd ≥FL410, crossing 160E 1900-0800UTC. WB tracks A/B (Hawaii-Japan): even FL300-FL400, odd ≥FL410, crossing 160E 1900-0800UTC. NOTAM KZAK issued ~1100UTC.<br><b>SLOP (PAC.10.5):</b> Authorized throughout Oakland Oceanic. 0 to 2.0 NM right of centerline in 0.1 NM increments. No ATC clearance required. Apply outbound after reaching cruise FL; retain until top of descent. Aircraft departing Hawaii: apply SLOP within 70 NM of entering Oakland Oceanic.<br><b>Beacon Code (PAC.1.3):</b> Squawk 2000 after radar service terminated upon entering Oakland Oceanic FIR. Westbounds: ANC ARTCC assigns code 2000 at ANC/Tokyo FIR boundary, or change to 2000 when crossing 164E.<br><b>Mach (PAC.4):</b> ATC approved Mach included in clearance. Report if Mach varies ≥0.02 from entry Mach or last notified speed change (voice or CPDLC).<br><b>Position Reports (PAC.2):</b> At lat/lon or named fixes per TDM. Random routes: every 5° or 10° longitude (E-W flights) or latitude (N-S flights). Address to San Francisco ARINC when entering Oakland/Anchorage FIR.<br><b>HF / CPDLC:</b> Contact San Francisco ARINC on HF. CPDLC required for PBCS operations."
+  },
+  "PAZAO": {
+    "name": "Anchorage Oceanic FIR (Western Sector)",
+    "country": "United States",
+    "icao": "PAZAO",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Required",
+    "emergency_procedure": "Contact Anchorage ARTCC; squawk 7700. If no discrete code assigned, squawk 2000.",
+    "contingency_procedure": "If deviated from cleared route, take action to regain route within 200 NM. Notify ATC of loss of CPDLC/ADS-C or inability to meet RNP.",
+    "cpdlc_procedure": "ADS-C and CPDLC required for PBCS operations (RNP4/RCP240/RSP180) enabling 30NM longitudinal or 23NM lateral separation. RNP10+ADS-C/CPDLC enables 50NM longitudinal separation.",
+    "position_report": "Address position reports to San Francisco ARINC when entering Anchorage/Oakland FIR. Contact ANC ARTCC on VHF 129.4 for NOPAC HF frequencies and SELCAL verification.",
+    "contacts": {
+      "main": "Anchorage ARTCC / San Francisco ARINC (HF)",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "RVSM FL290-FL410 (inclusive). Same FLAS as Oakland: WB even FL300-FL400 + odd FL410+; EB odd FL290-FL410+",
+      "50 NM lateral separation between RNP10 or RNP4 aircraft (PAC.8.3.1)",
+      "PBCS: RNP4+RCP240+RSP180+ADS-C/CPDLC = 30 NM longitudinal or 23 NM lateral separation",
+      "SLOP: authorized throughout Anchorage Oceanic FIR. 0 to 2.0 NM right of centerline in 0.1 NM increments. No ATC clearance required.",
+      "SLOP also applies in Anchorage Arctic FIR and portions of Anchorage Domestic FIR more than 12 miles offshore or west of 160W on Alaska Peninsula",
+      "NOPAC routes: R220/R580 (eastbound), M523 (westbound), A590 (eastbound). RNP4+ADS-C+CPDLC+RCP240+RSP180 required for M523 and FL334-FL400 on R220/R580",
+      "Mach: report if varies ≥0.02 from entry Mach or last notified change (voice or CPDLC) — applies south of N63 and west of W165 in Anchorage Domestic FIR, and throughout Anchorage Oceanic FIR",
+      "Beacon code: contact SF ARINC on HF at least 5 min before entering Anchorage FIR from Oakland FIR for code assignment. Eastbound: ANC assigns discrete code 150 NM west of PINSO/SHEMYA/CHIPT. Westbound: squawk 2000 at ANC/Tokyo FIR boundary or at 164E."
+    ],
+    "reg_rules": "<b>RVSM (PAC.10):</b> FL290-FL410 (inclusive). FLAS: WB (180-359°) even FL300/320/340/360/380/400 + odd FL410+; EB (000-179°) odd FL290/310/330/350/370/390/410+.<br><b>Separation (PAC.8.3):</b> 50 NM lateral between RNP10 or RNP4 aircraft. PBCS: RNP4+RCP240+RSP180+ADS-C/CPDLC = 30 NM longitudinal; 23 NM lateral (with ADS-C waypoint change event and 5 NM deviation event contracts). ADS-C CDP available (15 NM or 25 NM longitudinal during climb/descent).<br><b>NOPAC Routes (PAC.5):</b> R220 (westbound) and R580 (eastbound): RNP10 minimum; RNP4+ADS-C+CPDLC+RCP240+RSP180 required for FL334-FL400 (otherwise file at/below FL330 or at/above FL410). M523 (westbound): RNP4+ADS-C+CPDLC+RCP240+RSP180 mandatory, FL340-FL400. A590 (eastbound): RNP10 required FL290-FL410. Contact ANC ARTCC on VHF 129.4 for HF frequencies and SELCAL before entering NOPAC.<br><b>SLOP (PAC.10.5):</b> Authorized throughout Anchorage Oceanic FIR, Arctic FIR, and portions of Domestic FIR (>12 NM offshore or over Alaska Peninsula west of 160W). 0 to 2.0 NM right in 0.1 NM increments. No ATC clearance required.<br><b>Mach (PAC.4):</b> ATC-approved Mach in clearance. Report if varies ≥0.02 from entry Mach or last notified speed (voice or CPDLC). Applies south of N63/west of W165 in ANC Domestic FIR and throughout ANC Oceanic FIR.<br><b>Beacon Code (PAC.1.3/1.4):</b> Eastbound: ANC assigns discrete code ~150 NM west of entry. Contact SF ARINC HF at least 5 min before entering ANC FIR from Oakland FIR. Westbound: squawk 2000 at ANC/Tokyo boundary or at 164E.<br><b>Position Reports (PAC.2):</b> Address to San Francisco ARINC when entering Anchorage/Oakland FIR. At lat/lon or named fixes per TDM. Every 5° or 10° on random routes."
+  },
+  "PAZAU": {
+    "name": "Anchorage Oceanic FIR (Eastern Sector)",
+    "country": "United States",
+    "icao": "PAZAU",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Required",
+    "emergency_procedure": "Contact Anchorage ARTCC; squawk 7700. If no discrete code assigned, squawk 2000.",
+    "contingency_procedure": "If deviated from cleared route, take action to regain route within 200 NM. Notify ATC of loss of CPDLC/ADS-C or inability to meet RNP.",
+    "cpdlc_procedure": "ADS-C and CPDLC required for PBCS operations (RNP4/RCP240/RSP180) enabling 30NM longitudinal or 23NM lateral separation.",
+    "position_report": "Address position reports to San Francisco ARINC when entering Anchorage/Oakland FIR.",
+    "contacts": {
+      "main": "Anchorage ARTCC / San Francisco ARINC (HF)",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Same rules as PAZAO (Western Sector) — same Anchorage Oceanic FIR separated for database purposes",
+      "RVSM FL290-FL410; 50 NM lateral separation (RNP10/RNP4); PBCS 30NM/23NM with ADS-C/CPDLC",
+      "SLOP: 0 to 2.0 NM right, 0.1 NM increments, no ATC clearance required",
+      "NOPAC routes and PACOTS procedures apply — see PAZAO for details",
+      "Mach: report if varies ≥0.02 from entry or last notified speed change"
+    ],
+    "reg_rules": "<b>Note:</b> PAZAU (Eastern Sector) operates under identical rules to PAZAO (Western Sector) — both are within the Anchorage Oceanic FIR managed by Anchorage ARTCC.<br><b>RVSM (PAC.10):</b> FL290-FL410 (inclusive). FLAS: WB even FL300/320/340/360/380/400 + odd FL410+; EB odd FL290/310/330/350/370/390/410+.<br><b>Separation (PAC.8.3):</b> 50 NM lateral (RNP10/RNP4). PBCS: RNP4+RCP240+RSP180+ADS-C/CPDLC = 30 NM longitudinal; 23 NM lateral. ADS-C CDP available for altitude changes.<br><b>SLOP (PAC.10.5):</b> 0 to 2.0 NM right in 0.1 NM increments. No ATC clearance required. Applies throughout Anchorage Oceanic FIR.<br><b>Mach (PAC.4):</b> Report if varies ≥0.02 from entry or last notified speed change (voice or CPDLC).<br><b>NOPAC / PACOTS:</b> Refer to PAZAO entry for full details on NOPAC routes (R220/M523/R580/A590) and PACOTS.<br><b>Position Reports (PAC.2):</b> Address to San Francisco ARINC. At lat/lon coordinates or named fixes per TDM."
+  },
+  "PHZH": {
+    "name": "Honolulu FIR",
+    "country": "United States",
+    "icao": "PHZH",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Required",
+    "emergency_procedure": "Contact Honolulu Control Facility (HCF) on guard 121.5 MHz; squawk 7700.",
+    "contingency_procedure": "Notify ATC of loss of CPDLC/ADS-C or inability to meet RNP. Regain cleared route within 200 NM if deviated.",
+    "cpdlc_procedure": "ADS-C and CPDLC required for PBCS operations enabling reduced separation. Same standards as Oakland Oceanic (RNP10 = 50NM; RNP4 = 30NM longitudinal or 23NM lateral).",
+    "position_report": "Address reports to San Francisco ARINC when entering Oakland/Anchorage FIR. HCF is gateway for Japan-Hawaii PACOTS tracks 11/12 and Hawaii-Japan tracks A/B.",
+    "contacts": {
+      "main": "Honolulu Control Facility (HCF)",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Honolulu Control Facility (HCF) manages airspace around Hawaii",
+      "RVSM FL290-FL410 (same as Oakland Oceanic — FAA-controlled oceanic airspace)",
+      "SLOP authorized throughout HCF airspace (PAC.10.5). 0 to 2.0 NM right in 0.1 NM increments. No ATC clearance required.",
+      "Arriving Hawaii: discontinue SLOP no later than 70 NM after entering HCF airspace or when receiving radar vectors, whichever first. Hawaii inter-island flights must NOT use SLOP.",
+      "Departing Hawaii: apply SLOP upon reaching initial cruise FL within 70 NM of entering Oakland Oceanic",
+      "PACOTS Japan-Hawaii Tracks: EB tracks 11/12 cross 160E 1000-2100UTC (1200-1600UTC). WB tracks A/B cross 160E 1900-0800UTC (2300-0600UTC). Even FLs FL300-FL400, odd FL410+",
+      "Hawaiian gateway waypoints: THOMA/DANNO/CANON/LILIA/PUPPI/SYVAD/HOOPA (HCF boundary)",
+      "UPR (User Preferred Routes): available between Hawaii and Asia. Must connect to/from OTR gateway fixes at Hawaii end."
+    ],
+    "reg_rules": "<b>RVSM (PAC.10):</b> FL290-FL410 (inclusive). FAA-controlled oceanic airspace. FLAS: WB even FL300/320/340/360/380/400 + odd FL410+; EB odd FL290/310/330/350/370/390/410+.<br><b>SLOP (PAC.10.5):</b> Authorized throughout Honolulu Control Facility (HCF) airspace. 0 to 2.0 NM right in 0.1 NM increments. No ATC clearance required. Arriving Hawaii: discontinue SLOP within 70 NM after entering HCF or on radar vectors. Departing Hawaii: apply within 70 NM before entering Oakland Oceanic. Inter-island flights: SLOP prohibited.<br><b>Separation:</b> Same as Oakland Oceanic (PAC.8.2). RNP10 = 50 NM lateral; PBCS (RNP4+RCP240+RSP180+ADS-C/CPDLC) = 30 NM longitudinal or 23 NM lateral.<br><b>PACOTS Japan-Hawaii (PAC.6.3):</b> EB tracks 11/12: cross 160E 1000-2100UTC (target crossing 1200-1600UTC). Odd cardinal FLs ≥FL290. WB tracks A/B: cross 160E 1900-0800UTC (target 2300-0600UTC). Even FL300-FL400 or odd FL410+. NOTAM KZAK issued ~1100UTC.<br><b>Hawaiian Gateway Waypoints:</b> THOMA/DANNO/CANON/LILIA/PUPPI/SYVAD (→BOOKE PHNL); HOOPA (→KATHS OPACA PHNL).<br><b>UPR Asia-Hawaii (PAC.7.2):</b> EB: connect to OTR gateway (ADNAP OTR5/7, AVBET OTR9/11, LAPIL OTR13, POVAL OTR15, PIPIK OTR17, DAGDA G223). End at Hawaiian gateway waypoint on HCF boundary. WB: start from Hawaiian gateway waypoint. If crossing 160E 1100-1230UTC, stay ≥50 NM south of PACOTS TRACK 2."
+  },
+  "CZVR": {
+    "name": "Vancouver FIR",
+    "country": "Canada",
+    "icao": "CZVR",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Vancouver ACC on guard 121.5 MHz; squawk 7700",
+    "contingency_procedure": "Contact Vancouver ACC. If in CMNPS airspace and navigation capability lost, notify ATC immediately. HF/SATCOM available in northern Canada.",
+    "cpdlc_procedure": null,
+    "position_report": "Position reports required. POWOL/YAZ to CYVR for Pacific arrivals.",
+    "contacts": {
+      "main": "Vancouver ACC",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "RVSM FL290-FL410 (inclusive) — Canadian RVSM same stratum as US (NAM.2.15)",
+      "8.33 kHz frequency spacing NOT required in Canada",
+      "FLAS: semi-circular (WB: even FLs; EB: odd FLs) within RVSM — WB 180-359°: FL300/320/340/360/380/400; EB 000-179°: FL290/310/330/350/370/390/410",
+      "CMNPS (Canadian Minimum Navigation Performance Specifications) airspace in ACA/NCA and portions of SCA (NAM.2.11)",
+      "Southern Control Area (SCA), Northern Control Area (NCA), Arctic Control Area (ACA) — different airspace designations",
+      "HF: Arctic Radio/Gander Radio on HF in northern Canada (NAM.2.11.6); SATCOM acceptable alternative to HF. VHF 126.7 MHz or HF 5,680/6,706/11,232 kHz",
+      "PACOTS Pacific gateway routes: POWOL CYVR or YAZ CYVR for Vancouver-bound Pacific traffic",
+      "ADS-B OUT required in Canadian Class A, B, C airspace and Class E above 10,000 ft MSL"
+    ],
+    "reg_rules": "<b>Airspace (NAM.2.1):</b> Canadian Domestic Airspace (CDA) divided into Southern Control Area (SCA), Northern Control Area (NCA), and Arctic Control Area (ACA). Class A: 18,000 ft ASL and above (IFR only). Class B: 12,500-18,000 ft ASL (IFR + CVFR). Class C-G: lower levels.<br><b>RVSM (NAM.2.15):</b> FL290-FL410 (inclusive). FLAS: WB (180-359°) FL300/320/340/360/380/400; EB (000-179°) FL290/310/330/350/370/390/410. Non-RVSM: WB FL310/350/390/430; EB FL270/310(add)/350/390/450.<br><b>8.33 kHz:</b> NOT required — Canada does not mandate 8.33 kHz frequency spacing.<br><b>CMNPS Airspace (NAM.2.11):</b> Designated within ACA, NCA and portions of SCA. Requires CMNPS-certified navigation equipment. RNAV routes, DME distance requirements apply per route.<br><b>Communications (NAM.2.11.6):</b> VHF for routine; HF (Arctic Radio or Gander Radio) in northern Canada. SATCOM voice is acceptable alternative. Frequency: VHF 126.7 MHz or HF 5,680/6,706/11,232 kHz. If unable HF/SATCOM, make position reports within ~200 NM of any VHF facility.<br><b>PACOTS Gateway (PAC.7.5):</b> Pacific arrivals to Vancouver: POWOL CYVR or YAZ CYVR.<br><b>ADS-B (NAM.1.1.5):</b> Required in Class A, B, C airspace and Class E at or above 10,000 ft MSL. Indicate in FPL.<br><b>ADIZ (NAM.2.1.7):</b> Canadian ADIZ applies in designated areas. DVFR flight plan required for VFR flights entering ADIZ."
+  },
+  "ZBPE": {
+    "name": "Beijing FIR",
+    "country": "China",
+    "icao": "ZBPE",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Beijing ACC on guard 121.5 MHz or VHF inter-pilot 123.45 MHz; squawk 7700",
+    "contingency_procedure": "If unable to maintain FL: notify ATC, maintain cleared FL as possible, watch for traffic (TCAS). If unable to contact ATC: broadcast on 121.5 MHz (and 123.45 MHz backup). Contingency level change: turn 30° right, track out 20 km (5 NM right of centreline), fly parallel, then climb/descend to new level, return to original route.",
+    "cpdlc_procedure": null,
+    "position_report": "Report on entry to/exit from China FIRs; standard IFR position reports on ATS routes",
+    "contacts": {
+      "main": "Beijing ACC",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Metric flight levels — ATC clears in meters; pilot flies using feet altimeter with China RVSM conversion table",
+      "RVSM stratum: 8,900 m (FL291) to 12,500 m (FL411) inclusive",
+      "FLAS (PRC.7.4.3): EB (0-179°) FL411/391/371/351/331/311/291; WB (180-359°) FL401/381/361/341/321/301",
+      "SLOP: in non-radar airspace only — 1 or 2 NM right of centreline. In radar airspace, requires ATC approval. Auto offset capability required.",
+      "ADS-B: mandatory in ADS-B control airspace (ACC/APP where radar not available from Dec 2020). Indicate B1/B2 in FPL. Waiver required if not equipped.",
+      "FLAS FL transition: at FIR boundary (Beijing ACC - adjacent ACC), transition positions notified on charts (e.g. B339/W33/A310 at POLHO)",
+      "PRC.7.2: AKARA-FUKUE Corridor and AKARA-APITO-MIKES Route procedures apply for certain overflights"
+    ],
+    "reg_rules": "<b>Metric FLs (PRC.7.4.4):</b> ATC issues clearances in meters. Pilot uses China RVSM conversion table to determine corresponding FL in feet and flies in feet. Rounding difference never more than 30 m.<br><b>RVSM (PRC.7.4.1):</b> 8,900 m (FL291) to 12,500 m (FL411) inclusive. 300 m (1,000 ft) vertical separation between RVSM-approved aircraft.<br><b>FLAS (PRC.7.4.3):</b> EB (true track 0-179°): 12500m(FL411)/11900m(FL391)/11300m(FL371)/10700m(FL351)/10100m(FL331)/9500m(FL311)/8900m(FL291). WB (true track 180-359°): 12200m(FL401)/11600m(FL381)/11000m(FL361)/10400m(FL341)/9800m(FL321)/9200m(FL301).<br><b>FL Transition (PRC.7.4.7):</b> At FIR boundary entering Chinese airspace, transition from feet to metric FL per ATC instruction. Transition positions marked on route charts (☆ symbol). E.g. B339/W33/A310 at POLHO (Ulaanbaatar ACC - Beijing ACC): 27 NM east of POLHO. A599 at LINSO (Yangon ACC - Kunming ACC): 40.5 NM west of GULOT.<br><b>SLOP (PRC.7.4.5):</b> Applicable in non-radar airspace only — 1 or 2 NM right of centreline. Auto offset capability required. No ATC notification in non-radar airspace. In radar airspace: ATC approval required before applying or continuing offset.<br><b>ADS-B (PRC.5):</b> Mandatory in ADS-B control airspace (ACC/APP areas without radar from Dec 31, 2020). Indicate B1/B2 in FPL item 10. Non-equipped aircraft require waiver from CAAC Operations Management Center (ATMB).<br><b>Contingency (PRC.7.4.6):</b> Deviation for level change: turn 30° right, track 20 km out (5 NM right), fly parallel original route, climb/descent, return. Broadcast on 121.5 MHz and 123.45 MHz. Illuminate exterior lights."
+  },
+  "ZHWH": {
+    "name": "Wuhan FIR",
+    "country": "China",
+    "icao": "ZHWH",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Wuhan ACC on guard 121.5 MHz or VHF inter-pilot 123.45 MHz; squawk 7700",
+    "contingency_procedure": "Same as Beijing FIR: notify ATC, maintain FL as possible, TCAS watch. Contingency level change: 30° right, 20 km out (5 NM right), parallel, climb/descend, return. Broadcast on 121.5 MHz and 123.45 MHz.",
+    "cpdlc_procedure": null,
+    "position_report": "Standard IFR position reports on ATS routes; report on entry/exit from China FIRs",
+    "contacts": {
+      "main": "Wuhan ACC",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Same rules as ZBPE (Beijing FIR) — all China FIRs use identical RVSM/FLAS/SLOP/ADS-B regulations",
+      "Metric flight levels: ATC clears in meters; pilot flies in feet using China RVSM conversion table",
+      "RVSM: 8,900 m (FL291) to 12,500 m (FL411) inclusive",
+      "FLAS EB (0-179°): FL411/391/371/351/331/311/291; WB (180-359°): FL401/381/361/341/321/301",
+      "SLOP: 1 or 2 NM right in non-radar airspace only; ATC approval required in radar airspace",
+      "ADS-B mandatory in ADS-B control airspace"
+    ],
+    "reg_rules": "<b>Metric FLs (PRC.7.4.4):</b> ATC clears in meters; pilot flies in feet using China RVSM conversion table. Difference never more than 30 m.<br><b>RVSM (PRC.7.4.1):</b> 8,900 m (FL291) to 12,500 m (FL411) inclusive. 300 m (1,000 ft) VSM between RVSM-approved aircraft.<br><b>FLAS (PRC.7.4.3):</b> EB (true track 0-179°): FL411/391/371/351/331/311/291. WB (true track 180-359°): FL401/381/361/341/321/301.<br><b>FL Transition:</b> At FIR boundary, transition from feet to metric FL per ATC instruction at positions marked on route charts.<br><b>SLOP (PRC.7.4.5):</b> Non-radar airspace: 1 or 2 NM right only. Radar airspace: ATC approval required. Auto offset capability required.<br><b>ADS-B (PRC.5):</b> Mandatory in ADS-B control airspace (ACC/APP without radar). B1/B2 in FPL item 10. Waiver needed if not equipped.<br><b>Contingency (PRC.7.4.6):</b> Level change: 30° right, 20 km out (5 NM right of centreline), parallel route, climb/descend, return. Broadcast on 121.5 MHz (backup: 123.45 MHz). Illuminate exterior lights."
+  },
+  "ZPKM": {
+    "name": "Kunming FIR",
+    "country": "China",
+    "icao": "ZPKM",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Kunming ACC on guard 121.5 MHz or VHF inter-pilot 123.45 MHz; squawk 7700",
+    "contingency_procedure": "Same as Beijing FIR: notify ATC, maintain FL as possible, TCAS watch. Contingency level change: 30° right, 20 km out (5 NM right), parallel, climb/descend, return. Broadcast on 121.5 MHz and 123.45 MHz.",
+    "cpdlc_procedure": null,
+    "position_report": "Standard IFR position reports on ATS routes; report on entry/exit from China FIRs",
+    "contacts": {
+      "main": "Kunming ACC",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Same rules as ZBPE (Beijing FIR) — all China FIRs use identical RVSM/FLAS/SLOP/ADS-B regulations",
+      "Key FIR boundary: A599 at LINSO (Yangon ACC - Kunming ACC) — FLAS transition at 40.5 NM west of GULOT",
+      "Metric flight levels: ATC clears in meters; pilot flies in feet using China RVSM conversion table",
+      "RVSM: 8,900 m (FL291) to 12,500 m (FL411) inclusive",
+      "FLAS EB (0-179°): FL411/391/371/351/331/311/291; WB (180-359°): FL401/381/361/341/321/301",
+      "SLOP: 1 or 2 NM right in non-radar airspace only; ATC approval required in radar airspace",
+      "ADS-B mandatory in ADS-B control airspace"
+    ],
+    "reg_rules": "<b>Metric FLs (PRC.7.4.4):</b> ATC clears in meters; pilot flies in feet using China RVSM conversion table. Difference never more than 30 m.<br><b>RVSM (PRC.7.4.1):</b> 8,900 m (FL291) to 12,500 m (FL411) inclusive. 300 m (1,000 ft) VSM between RVSM-approved aircraft.<br><b>FLAS (PRC.7.4.3):</b> EB (true track 0-179°): FL411/391/371/351/331/311/291. WB (true track 180-359°): FL401/381/361/341/321/301.<br><b>FL Transition at A599/LINSO (PRC.7.4.7.2):</b> EB (entering China): at 40.5 NM west of GULOT (☆) — FL290→8900m/FL310→9500m/FL330→10100m/FL350→10700m/FL370→11300m/FL390→11900m/FL410→12500m. WB (exiting China): at 13.5 NM west of GULOT — reverse conversion. FLAS transition also at R474/TEBAK (Nanning ACC - Hanoi ACC).<br><b>SLOP (PRC.7.4.5):</b> Non-radar airspace: 1 or 2 NM right only. Radar airspace: ATC approval required. Auto offset capability required.<br><b>ADS-B (PRC.5):</b> Mandatory in ADS-B control airspace. B1/B2 in FPL item 10.<br><b>Contingency (PRC.7.4.6):</b> Level change: 30° right, 20 km out (5 NM right), parallel, climb/descend, return. Broadcast on 121.5 MHz and 123.45 MHz."
+  },
+  "ZYSH": {
+    "name": "Shenyang FIR",
+    "country": "China",
+    "icao": "ZYSH",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Optional",
+    "emergency_procedure": "Contact Shenyang ACC on guard 121.5 MHz or VHF inter-pilot 123.45 MHz; squawk 7700",
+    "contingency_procedure": "Same as Beijing FIR: notify ATC, maintain FL as possible, TCAS watch. Contingency level change: 30° right, 20 km out (5 NM right), parallel, climb/descend, return. Broadcast on 121.5 MHz and 123.45 MHz.",
+    "cpdlc_procedure": null,
+    "position_report": "Standard IFR position reports on ATS routes; report on entry/exit from China FIRs",
+    "contacts": {
+      "main": "Shenyang ACC",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "Same rules as ZBPE (Beijing FIR) — all China FIRs use identical RVSM/FLAS/SLOP/ADS-B regulations",
+      "Key boundary: G597 at AGAVO (Qingdao ACC - Incheon ACC) — FLAS transition at AGAVO/NOPIK/GONAV",
+      "Metric flight levels: ATC clears in meters; pilot flies in feet using China RVSM conversion table",
+      "RVSM: 8,900 m (FL291) to 12,500 m (FL411) inclusive",
+      "FLAS EB (0-179°): FL411/391/371/351/331/311/291; WB (180-359°): FL401/381/361/341/321/301",
+      "SLOP: 1 or 2 NM right in non-radar airspace only; ATC approval required in radar airspace",
+      "ADS-B mandatory in ADS-B control airspace; G597 AGAVO transition also applicable"
+    ],
+    "reg_rules": "<b>Metric FLs (PRC.7.4.4):</b> ATC clears in meters; pilot flies in feet using China RVSM conversion table. Difference never more than 30 m.<br><b>RVSM (PRC.7.4.1):</b> 8,900 m (FL291) to 12,500 m (FL411) inclusive. 300 m (1,000 ft) VSM between RVSM-approved aircraft.<br><b>FLAS (PRC.7.4.3):</b> EB (true track 0-179°): FL411/391/371/351/331/311/291. WB (true track 180-359°): FL401/381/361/341/321/301.<br><b>FL Transition at G597/AGAVO (PRC.7.4.7.5):</b> WB (entering China from Incheon): at NOPIK — FL300→9200m/FL320→9800m/FL340→10400m/FL360→11000m/FL380→11600m/FL400→12200m. EB (exiting China to Incheon): at GONAV — reverse conversion (FL291→FL290, FL311→FL310, etc.). Transition also at A593/SADLI (Shanghai ACC - Fukuoka ACC): EB FL250/290/310/390, WB FL240/280/300/400.<br><b>SLOP (PRC.7.4.5):</b> Non-radar airspace: 1 or 2 NM right only. Radar airspace: ATC approval required.<br><b>ADS-B (PRC.5):</b> Mandatory in ADS-B control airspace. B1/B2 in FPL item 10. Waiver from CAAC required if not equipped.<br><b>Contingency (PRC.7.4.6):</b> Level change: 30° right, 20 km out (5 NM right), parallel, climb/descend, return. Broadcast on 121.5 MHz and 123.45 MHz."
   }
 }
