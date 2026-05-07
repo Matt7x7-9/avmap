@@ -770,5 +770,37 @@
       "ADS-B mandatory in ADS-B control airspace; G597 AGAVO transition also applicable"
     ],
     "reg_rules": "<b>Metric FLs (PRC.7.4.4):</b> ATC clears in meters; pilot flies in feet using China RVSM conversion table. Difference never more than 30 m.<br><b>RVSM (PRC.7.4.1):</b> 8,900 m (FL291) to 12,500 m (FL411) inclusive. 300 m (1,000 ft) VSM between RVSM-approved aircraft.<br><b>FLAS (PRC.7.4.3):</b> EB (true track 0-179°): FL411/391/371/351/331/311/291. WB (true track 180-359°): FL401/381/361/341/321/301.<br><b>FL Transition at G597/AGAVO (PRC.7.4.7.5):</b> WB (entering China from Incheon): at NOPIK — FL300→9200m/FL320→9800m/FL340→10400m/FL360→11000m/FL380→11600m/FL400→12200m. EB (exiting China to Incheon): at GONAV — reverse conversion (FL291→FL290, FL311→FL310, etc.). Transition also at A593/SADLI (Shanghai ACC - Fukuoka ACC): EB FL250/290/310/390, WB FL240/280/300/400.<br><b>SLOP (PRC.7.4.5):</b> Non-radar airspace: 1 or 2 NM right only. Radar airspace: ATC approval required.<br><b>ADS-B (PRC.5):</b> Mandatory in ADS-B control airspace. B1/B2 in FPL item 10. Waiver from CAAC required if not equipped.<br><b>Contingency (PRC.7.4.6):</b> Level change: 30° right, 20 km out (5 NM right), parallel, climb/descend, return. Broadcast on 121.5 MHz and 123.45 MHz."
+  },
+  "YBBB": {
+    "name": "Brisbane FIR",
+    "country": "Australia",
+    "icao": "YBBB",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": true,
+    "cpdlc_procedure": "<b>Brisbane FIR: CPDLC available</b><br>CPDLC (DCL) available at major Australian airports and en-route in designated areas.<br>RNP4 + CPDLC/ADS-C enables reduced oceanic separation on designated routes.<br>HF required in remote/oceanic areas beyond VHF coverage. SELCAL monitoring recommended.<br>Logon to Brisbane Centre (YBBB) for CPDLC clearances.",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Brisbane FIR specific</b>: Contact Brisbane Centre on assigned VHF; guard 121.5 MHz.<br>　HF: Brisbane Radio (primary/secondary frequencies per sector). SELCAL if equipped.",
+    "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・Brisbane FIR: Deviate right of track; notify Brisbane Centre.<br>　123.45 MHz air-to-air coordination for conflicting traffic.",
+    "position_report": "Not required in radar-covered domestic airspace. Required in non-radar/oceanic areas at waypoints.",
+    "contacts": [],
+    "special_notes": "RVSM airspace FL290-FL410. HF required in remote/oceanic areas. CPDLC available at major airports and en-route.",
+    "reg_rules": "<b>Brisbane FIR (YBBB)</b><br>・RVSM適用空域: FL290〜FL410<br>・RNP10航路にはHF通信必須（VHF圏外）<br>・CPDLC available on designated routes; DCL at major airports<br>・ADS-B搭載機は監視対応空域でSPAD防止のため承認高度維持<br>Ref: AIP Australia ENR 1.6, 2-05 context"
+  },
+  "YMMM": {
+    "name": "Melbourne FIR",
+    "country": "Australia",
+    "icao": "YMMM",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": true,
+    "cpdlc_procedure": "<b>Melbourne FIR: CPDLC available</b><br>CPDLC (DCL) available at major Australian airports and en-route in designated areas.<br>HF required in remote/oceanic areas (Indian Ocean / Southern Ocean) beyond VHF coverage.<br>SELCAL monitoring recommended on oceanic tracks. Logon to Melbourne Centre (YMMM).",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Melbourne FIR specific</b>: Contact Melbourne Centre on assigned VHF; guard 121.5 MHz.<br>　HF: Melbourne Radio frequencies per sector for oceanic/remote areas.",
+    "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・Melbourne FIR: Deviate right of track; notify Melbourne Centre.<br>　HF/SELCAL for oceanic contingency. 123.45 MHz air-to-air for conflicting traffic.",
+    "position_report": "Required in non-radar/oceanic areas (Indian Ocean / Southern Ocean) at waypoints.",
+    "contacts": [],
+    "special_notes": "RVSM airspace FL290-FL410. HF/SELCAL required in Indian Ocean and Southern Ocean areas.",
+    "reg_rules": "<b>Melbourne FIR (YMMM)</b><br>・RVSM適用空域: FL290〜FL410<br>・インド洋・南洋ルートでHF通信必須<br>・CPDLC available on designated routes; DCL at major airports<br>・南洋洋上(Indian Ocean/Southern Ocean)ではSELCAL推奨<br>Ref: AIP Australia ENR 1.6, 2-05 context"
   }
 }
