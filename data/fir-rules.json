@@ -10,12 +10,14 @@
     "hf_required": false,
     "cpdlc": "Optional",
     "position_report": "At compulsory reporting points",
-    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5. Contact Tokyo Control.",
+    "emergency_procedure": "<b>出典: RM Basic 2-04 §5（ICAO Standard）</b><br>・<b>Emergency</b>: Sq7700。使用中周波数またはVHF 121.5 MHzでMAYDAY宣言。他機に優先。<br>・<b>Radio Failure（Sq7600）</b>:<br>　レーダー空域：最後の高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定高度（または最低高度）を維持→FPL通り飛行。<br>　非レーダー空域：強制報告点未通報から<b>20分間</b>最終高度維持→FPL通り。<br>　IMC時はILS/GNSS等の計器進入→ETAまたは最終EATのうち遅い方から30分以内に着陸。<br>・<b>Unlawful Interference</b>: Sq7500（ATC指定コードがあればそれを維持）。<br>・<b>Distress Freq</b>: VHF 121.5 MHz / UHF 243.0 MHz / HF 500kHz・2182kHz・8364kHz",
     "special_notes": [],
     "contacts": {
       "main": "Tokyo Control 132.6 / 135.7",
       "emergency": "121.5"
-    }
+    },
+    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
+    "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)"
   },
   "RJJJ-F": {
     "name": "Fukuoka FIR",
@@ -28,12 +30,14 @@
     "hf_required": false,
     "cpdlc": "Optional",
     "position_report": "At compulsory reporting points",
-    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5. Contact Fukuoka Control.",
+    "emergency_procedure": "<b>出典: RM Basic 2-04 §5（ICAO Standard）</b><br>・<b>Emergency</b>: Sq7700。使用中周波数またはVHF 121.5 MHzでMAYDAY宣言。他機に優先。<br>・<b>Radio Failure（Sq7600）</b>:<br>　レーダー空域：最後の高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定高度（または最低高度）を維持→FPL通り飛行。<br>　非レーダー空域：強制報告点未通報から<b>20分間</b>最終高度維持→FPL通り。<br>　IMC時はILS/GNSS等の計器進入→ETAまたは最終EATのうち遅い方から30分以内に着陸。<br>・<b>Unlawful Interference</b>: Sq7500（ATC指定コードがあればそれを維持）。<br>・<b>Distress Freq</b>: VHF 121.5 MHz / UHF 243.0 MHz / HF 500kHz・2182kHz・8364kHz",
     "special_notes": [],
     "contacts": {
       "main": "Fukuoka Control 133.0 / 128.7",
       "emergency": "121.5"
-    }
+    },
+    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
+    "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)"
   },
   "ZSHA": {
     "name": "Shanghai FIR",
@@ -46,7 +50,7 @@
     "hf_required": true,
     "cpdlc": "Available",
     "position_report": "FIR境界の15〜20分前にATCへ通報し通過許可を取得すること。ただしJALフライトは通常のポジションレポートと交信が維持されていれば不要。各報告点通過時に即時報告：コールサイン・位置・時刻・FL・状況・次点ETA。",
-    "emergency_procedure": "【急降下時】右に30°旋回→20km（5NM）逸脱→元ルートに平行飛行→高度変更→元ルート復帰。121.5MHz（バックアップ：123.45MHz）で位置・FL・意図を放送。121.5をモニター。ATC連絡不能時も同手順。",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700",
     "special_notes": [
       "RVSM airspace FL291〜FL411（中国はメートル制：ATCはメートルでクリアランス、パイロットはフィートで飛行）",
       "ATCクリアランスはメートル単位（例：9200m）→ China RVSM変換表でフィートに換算",
@@ -59,7 +63,9 @@
     "contacts": {
       "main": "Shanghai Control (AKARA-FUKUE corridor時はFukuoka/Shanghai双方監視)",
       "emergency": "121.5 / backup 123.45"
-    }
+    },
+    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC"
   },
   "ZJSA": {
     "name": "Sanya FIR",
@@ -72,7 +78,7 @@
     "hf_required": true,
     "cpdlc": "Available",
     "position_report": "FIR境界の15〜20分前にATCへ通報し通過許可を取得。JALは通常交信維持で不要。各報告点通過時に即時報告。",
-    "emergency_procedure": "【急降下時】右に30°旋回→20km逸脱→元ルート平行→高度変更→復帰。121.5MHz（バックアップ：123.45）で放送。Shanghai FIRと同一手順（PRC.7）。",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700",
     "special_notes": [
       "RVSM FL291〜FL411、メートル制（China RVSM変換表使用）",
       "R474（TEBAK：Nanning ACC - Hanoi ACC境界）でのFL変換に注意",
@@ -83,7 +89,9 @@
     "contacts": {
       "main": "Sanya Control",
       "emergency": "121.5 / backup 123.45"
-    }
+    },
+    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC"
   },
   "ZGZU": {
     "name": "Guangzhou FIR",
@@ -96,7 +104,7 @@
     "hf_required": true,
     "cpdlc": "Available",
     "position_report": "FIR境界の15〜20分前にATCへ通報し通過許可取得。JALは通常交信維持で不要。各報告点通過時に即時報告。",
-    "emergency_procedure": "【急降下時】右に30°旋回→20km逸脱→元ルート平行→高度変更→復帰。121.5MHz（バックアップ：123.45）で放送。R474経由の場合はTEBAK（Nanning-Hanoi境界）でFL移行手順に注意。",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700",
     "special_notes": [
       "RVSM FL291〜FL411、メートル制（China RVSM変換表使用）",
       "HK FIRとの境界付近：M503（RNAV2）使用時は別途手順あり（SEA.3.3.3）",
@@ -107,7 +115,9 @@
     "contacts": {
       "main": "Guangzhou Control",
       "emergency": "121.5 / backup 123.45"
-    }
+    },
+    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC"
   },
   "VHHK": {
     "name": "Hong Kong FIR",
@@ -120,7 +130,7 @@
     "hf_required": false,
     "cpdlc": "Available",
     "position_report": "At compulsory reporting points",
-    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5 and working freq. Contact Hong Kong Approach/Control.",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.1（EMERG PROC - SEA / Hong Kong）</b><br>・<b>VMC</b>: 最寄りの適切な空港に着陸<br>・<b>IMC 到着機</b>: 指定STARに従いターミネーションポイントへ→ホールディング→ILSアプローチ<br>　RWY 07系: LIMES hold → 4,500ft → ILS<br>　RWY 25 (RIVMI): RIVMI hold → 4,500ft → ILS<br>　RWY 25 (LUDLA): LUDLA hold → 4,500ft → RNP AR<br>・<b>到着機（レーダー誘導中）</b>: 1分間無応答→通信途絶→上記IMC手順に従う<br>　最低扇形高度以下なら直ちに上昇<br>・<b>出発機</b>: 最終クリアランス遵守→SID次報告点まで→計画巡航高度に上昇→SID/Transition→FPL<br>・<b>通過機（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>通過機（レーダー誘導下）</b>: 7min間最終速度・高度維持→FPL復帰<br>・Sq7600。RVSM中の通信途絶機は非RVSM扱い→2,000ft垂直間隔適用",
     "special_notes": [
       "RNP2 required on RNAV routes",
       "Busy terminal area - follow ATC instructions precisely",
@@ -129,7 +139,9 @@
     "contacts": {
       "main": "Hong Kong Control 128.2 / 134.45",
       "emergency": "121.5"
-    }
+    },
+    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.1 EMERG PROC - SEA (HKG)"
   },
   "RCAA": {
     "name": "Taipei FIR",
@@ -142,7 +154,7 @@
     "hf_required": false,
     "cpdlc": "Available",
     "position_report": "At compulsory reporting points",
-    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5. Contact Taipei Control.",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.3（EMERG PROC - SEA / Taiwan）</b><br>・<b>VMC / IMC</b>: ICAO Standard手順を適用<br>・<b>レーダー誘導中のComm Failure</b>:<br>　Sq7600 → レーダー空域で<b>7分間</b>最終高度維持 → FPL復帰 → 指定NAIDまで → EATまたはETA以近に降下開始 → ILS → ETA+30分以内に着陸<br>・<b>防空警報中（Air Raid）</b>:<br>　台北FIR進入禁止（ROCAF Air Control Centerが管制）<br>　進入済み機：ROCAF指示に従い転進または即時着陸<br>　121.5 MHz / 234.0 MHzをモニター<br>　ATC各機関へ逐次状況報告",
     "special_notes": [
       "Standard ICAO procedures",
       "May be used as alternate routing to avoid Chinese airspace"
@@ -150,7 +162,9 @@
     "contacts": {
       "main": "Taipei Control 132.5",
       "emergency": "121.5"
-    }
+    },
+    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.3 EMERG PROC - SEA (Taiwan)"
   },
   "RPHI": {
     "name": "Manila FIR",
@@ -163,7 +177,7 @@
     "hf_required": false,
     "cpdlc": "Limited",
     "position_report": "At compulsory reporting points. HF position reports for oceanic portions.",
-    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5. Contact Manila Control.",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.2（EMERG PROC - SEA / Philippines）</b><br>・VMC/IMC: <b>ICAO Standard手順</b>を適用<br>・<b>空港着陸時（無線故障）</b>:<br>　通常トラフィック・サーキットに合流し管制塔からの光信号を待機<br>　光信号なし → 管制塔横断時に着陸灯を2回明滅（軽飛行機は翼を振る）<br>　それでも光信号なし かつ 滑走路クリア → そのままアプローチ・着陸<br>　着陸後直ちに管制塔に電話連絡",
     "special_notes": [
       "Standard ICAO procedures",
       "Alternate routing option (avoiding Chinese airspace)"
@@ -171,7 +185,9 @@
     "contacts": {
       "main": "Manila Control 128.3",
       "emergency": "121.5"
-    }
+    },
+    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.2 EMERG PROC - SEA (Philippines)"
   },
   "VVHM": {
     "name": "Ho Chi Minh FIR",
@@ -184,7 +200,7 @@
     "hf_required": false,
     "cpdlc": "Available",
     "position_report": "At entry and compulsory reporting points",
-    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5 and working freq. Contact Ho Chi Minh Control.",
+    "emergency_procedure": "<b>ICAO Standard（RM Basic 2-04 §5）</b><br>2-03 RM_JALISSUE_INTにHaNoi/Ho Chi Minh FIR固有のEmergency Procedure記載なし。<br>・Sq7700（Emergency）/ Sq7600（Radio Failure）<br>・使用中周波数またはVHF 121.5 MHzでMAYDAY/PAN PAN宣言<br>・ICAO Standard Communications Failure手順を適用",
     "special_notes": [
       "RNP2 required on B-RNAV/RNAV routes",
       "FIR entry position report required",
@@ -193,7 +209,9 @@
     "contacts": {
       "main": "Ho Chi Minh Control 132.8 / 124.9",
       "emergency": "121.5"
-    }
+    },
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.7.4（CONTINGENCY PROC - SEA / HaNoi & Ho Chi Minh FIR）</b><br>・<b>初動</b>: ATCクリアランス取得不能な場合→<b>90°右または左に旋回</b>→指定ルートから<b>25NM逸脱</b>するトラックに乗る<br>　高度維持可能：500ft異なる高度に変更<br>　高度維持不能：最低降下率を維持しながら25NM逸脱、その後500ft異なる高度で飛行<br>・<b>隣接トラック横断（ダイバート）</b>: 25NMオフセット維持しながらFL400以上またはFL290以下へ上昇/降下→通常使用高度から500ft異なる高度<br>・<b>双発機でエンジン停止/ETOPSクリティカル</b>: 機体種別と状況をATCに通報し優先処理要請<br>・<b>悪天候回避（Weather Deviation）</b>:<br>　「WEATHER DEVIATION REQUIRED」申告で優先処理<br>　ATCクリアランス取得後に逸脱。取得不能時も同様の25NM逸脱手順を実施<br>　偏向不要になったらATCに通報・元ルート復帰",
+    "emerg_proc_source": "ICAO Standard (2-04) + 2-03 §2.1.7.4 Contingency"
   },
   "VTBB": {
     "name": "Bangkok FIR",
@@ -206,7 +224,7 @@
     "hf_required": false,
     "cpdlc": "Available",
     "position_report": "At compulsory reporting points",
-    "emergency_procedure": "Standard ICAO. Squawk 7700, MAYDAY on 121.5. Contact Bangkok Control.",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.9（EMERG PROC - SEA / Thailand）</b><br>・<b>通信途絶の判断</b>: 全チャンネルで<b>2分間</b>応答なし→Sq7600。121.5含む全周波数で再確立を試みる。<br>・<b>到着機（IMC）</b>: 指定STAR or 最も直接的なルートでSTARに復帰→着陸方向確認<br>　レーダー誘導中：2分間無応答→最低扇形高度以上を維持しながらSTARに最短復帰<br>・<b>ミスドアプローチ</b>: Sq7600→ミスドアプローチホールドポイントに3,000ftでホールド→4,000ftに上昇→アプローチ<br>　または: BKK VORに直行（4,000ft）→IAF→アプローチ<br>・<b>出発機（全損）</b>: Sq7600→SID最終ウェイポイントまで→BKK VORでホールド（INB CRS 120°、1分レグ、1周後アプローチ）<br>　燃料ダンプ必要時: 8,500ftで2分→最寄りダンプエリア→BKK VOR<br>・<b>バンコクTMA通過機</b>: Sq7600。非レーダー: 強制報告点未通報から<b>10分間</b>最終高度維持→FPL通り<br>・<b>レーダー誘導下（出発/通過）</b>: Sq7600→<b>2分間</b>最終針路・速度・高度維持→FPL最短復帰<br>・着陸方向確認: ATIS/D-ATIS/ACARS/衛星電話等。ILS・進入灯が点灯している滑走路が使用中",
     "special_notes": [
       "Standard ICAO procedures",
       "RVSM required above FL290"
@@ -214,6 +232,8 @@
     "contacts": {
       "main": "Bangkok Control 133.0 / 119.1",
       "emergency": "121.5"
-    }
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>Bangkok FIRは大陸空域のため、洋上空域固有のContingency手順は適用外。<br>偏差が必要な場合はATCクリアランスを事前取得。取得不能時はICAO Standard手順を適用:<br>・使用中周波数および121.5 MHzでブロードキャスト（コールサイン・FL・位置・意図）<br>・ACAS/目視で相反トラフィック監視<br>・全外部灯火点灯",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.9 EMERG PROC - SEA (Thailand)"
   }
 }

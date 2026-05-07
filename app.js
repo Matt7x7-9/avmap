@@ -477,6 +477,12 @@ function openFirPanel(firId, firLabel) {
       <div class="section-body warn">${rules.emergency_procedure}</div>
     </div>
 
+    ${rules.contingency_procedure ? `
+    <div class="section">
+      <div class="section-title">🔄 Contingency Procedure</div>
+      <div class="section-body warn">${rules.contingency_procedure}</div>
+    </div>` : ''}
+
     <div class="section">
       <div class="section-title">📡 Position Reporting</div>
       <div class="section-body">${rules.position_report}</div>
