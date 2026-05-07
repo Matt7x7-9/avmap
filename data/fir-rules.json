@@ -18,6 +18,7 @@
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>2-03には日本FIR向けのCPDLC手順記載なし</b>（2-03は国際路線向けマニュアル）。<br>Tokyo FIRは通常VHF音声通信が主体。CPDLC搭載機に対してはOptionalとして提供される場合あり。",
+    "reg_rules": "<b>出典: RM_REGPROC JPN（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（FL290以上のControl Area）<br><b>速度制限</b>: 管制圏内・Approach Control Area内の高度3,050m（10,000ft）以下は<b>250kt IAS</b>以下<br><b>高度計規正</b>: FL140以上→1013.2hPa / FL140未満→QNH<br><b>TA</b>: 14,000ft / <b>TL</b>: FL140<br><b>RVSM</b>: FL290〜FL410（RVSM承認機間は1,000ft垂直間隔、非RVSM機は2,000ft間隔）<br><b>FLOS</b>: Track 000°〜179° = 奇数FL（FL290/310/330…）/ Track 180°〜359° = 偶数FL（FL300/320/340…）<br><b>SSR</b>: ATC指定コードを使用。VFR: 10,000ft以下→1200、10,000ft以上→1400。レーダー外IFR空域進入→2000。<br><b>CDR</b>: CDR1（AIP Japan掲載）/ CDR2（NOTAMで前日2100JSTまでに通知）",
     "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)"
   },
   "RJJJ-F": {
@@ -39,6 +40,7 @@
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>2-03には日本FIR向けのCPDLC手順記載なし</b>（2-03は国際路線向けマニュアル）。<br>Fukuoka FIRは通常VHF音声通信が主体。CPDLC搭載機に対してはOptionalとして提供される場合あり。",
+    "reg_rules": "<b>出典: RM_REGPROC JPN（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（FL290以上のControl Area / FL200以上のOceanic Control Area）<br><b>速度制限</b>: 高度3,050m（10,000ft）以下は<b>250kt IAS</b>以下<br><b>高度計規正</b>: FL140以上→1013.2hPa / 未満→QNH。Oceanic airspaceは全高度で1013.2hPa。<br><b>TA</b>: 14,000ft / <b>TL</b>: FL140<br><b>RVSM</b>: FIR全域 FL290〜FL410（RVSM承認機間1,000ft垂直間隔）<br><b>FLOS</b>: Track 000°〜179° = 奇数FL（FL290/310/…）/ Track 180°〜359° = 偶数FL（FL300/320/…）<br><b>SLOP（太平洋洋上管制区のみ）</b>: 最大<b>2NM右</b>オフセット可。ATCへの通報・クリアランス不要。レーダー識別時はCenter Lineに戻す。位置報告はATCルート中心線基準。<br><b>RNP10（洋上）</b>: 利用可能。ADS-C/CPDLC（RCP240+RSP180要件）で50NM縦分離適用。<br><b>CDR</b>: CDR1（AIP Japan掲載）/ CDR2（NOTAMで前日2100JSTまでに通知）<br><b>Large Height Deviation</b>: RVSM空域内で高度逸脱発生時は速やかにATCへ報告",
     "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)"
   },
   "ZSHA": {
@@ -68,6 +70,7 @@
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>出典: 2-03 §2.2.15（CPDLC - PRC）</b><br><b>Shanghai FIR（ZSHA）はCPDLC適用対象外</b>。<br>§2.2.15が対象とするPRC CPDLCは中国西部の限定ルートのみ（LanzhouのL888・KADKI〜XKC、Urumqi管轄のY1・Y2）。上海・三亜・広州など東中国FIRには2-03 CPDLC手順の記載なし。<br>通信手段: <b>VHF音声（主）+ HF（バックアップ）</b>。",
+    "reg_rules": "<b>出典: RM_REGPROC PRC（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（高度6,000m〜20,000m、≈FL191〜FL660）IFR専用<br><b>速度制限</b>: 3,000m（≈10,000ft）以下は470km/h（≈250kt）以下<br><b>高度計規正</b>: 巡航中は<b>1013.2hPa</b>（標準）<br><b>⚠️ ATCはメートル単位でクリアランス発出</b>: ATC clearanceはメートル表示（例: 9200m）→ <b>China FLAS変換表</b>でフィートに換算して飛行<br><b>RVSM</b>: FL291〜FL411（8,900m〜12,500m）、300m（≈1,000ft）垂直間隔<br><b>SLOP</b>: 非レーダー空域→1NMまたは2NM右オフセット可 / レーダー空域→ATCクリアランス要<br><b>AKARA-FUKUE回廊</b>: <b>SADLI</b>以東はFukuoka ACC周波数を常時モニター / SADLI以西はShanghai ACC周波数をモニター<br><b>A593 FLAS（China側・SADLIにて）</b>: EB（東向き）FL250/290/310/390 / WB（西向き）FL240/280/300/400<br><b>ADS-B</b>: 2020年12月より義務化（全機）<br><b>ACAS II</b>: 大型・重量機に必須<br><b>FIR境界通過</b>: 15〜20分前にATCへ通報（JALは通常交信維持で不要）",
     "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC"
   },
   "ZJSA": {
@@ -95,6 +98,7 @@
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>出典: 2-03 §2.2.15（CPDLC - PRC）</b><br><b>Sanya FIR（ZJSA）はCPDLC適用対象外</b>。<br>§2.2.15が対象とするPRC CPDLCは中国西部の限定ルートのみ（Lanzhou/Urumqi ACCのL888・Y1・Y2）。三亜FIRには2-03 CPDLC手順の記載なし。<br>通信手段: <b>VHF音声（主）+ HF（バックアップ）</b>。",
+    "reg_rules": "<b>出典: RM_REGPROC PRC（Rev.26.2 / 16 APR 2026）</b><br>ZJSAはZSHA（Shanghai FIR）と同一のPRC共通手順が適用される。<br><b>空域分類</b>: Class A（6,000m〜20,000m）IFR専用<br><b>⚠️ ATCはメートル単位でクリアランス発出</b>: <b>China FLAS変換表</b>でフィートに換算して飛行<br><b>RVSM</b>: FL291〜FL411（8,900m〜12,500m）、300m（≈1,000ft）垂直間隔<br><b>SLOP</b>: 非レーダー空域→1NMまたは2NM右 / レーダー空域→ATCクリアランス要<br><b>SEA SLOP（南シナ海域）</b>: R474/L642等では1NM右オフセット（非レーダー空域、Sanya FIR管轄分）<br><b>ADS-B</b>: 全機必須（2020年12月〜）<br><b>FIR境界通過</b>: 15〜20分前にATCへ通報（JALは通常交信維持で不要）",
     "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC"
   },
   "ZGZU": {
@@ -122,6 +126,7 @@
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>出典: 2-03 §2.2.15（CPDLC - PRC）</b><br><b>Guangzhou FIR（ZGZU）はCPDLC適用対象外</b>。<br>§2.2.15が対象とするPRC CPDLCは中国西部の限定ルートのみ（Lanzhou/Urumqi ACCのL888・Y1・Y2）。広州FIRには2-03 CPDLC手順の記載なし。<br>通信手段: <b>VHF音声（主）+ HF（バックアップ）</b>。",
+    "reg_rules": "<b>出典: RM_REGPROC PRC（Rev.26.2 / 16 APR 2026）</b><br>ZGZUはZSHA（Shanghai FIR）と同一のPRC共通手順が適用される。<br><b>空域分類</b>: Class A（6,000m〜20,000m）IFR専用<br><b>⚠️ ATCはメートル単位でクリアランス発出</b>: <b>China FLAS変換表</b>でフィートに換算して飛行<br><b>RVSM</b>: FL291〜FL411（8,900m〜12,500m）、300m（≈1,000ft）垂直間隔<br><b>SLOP</b>: 非レーダー空域→1NMまたは2NM右 / レーダー空域→ATCクリアランス要<br><b>HKG FIR境界付近</b>: M503使用時はSEA.3.3.3の手順に従うこと<br><b>ADS-B</b>: 全機必須（2020年12月〜）<br><b>FIR境界通過</b>: 15〜20分前にATCへ通報（JALは通常交信維持で不要）",
     "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC"
   },
   "VHHK": {
@@ -147,6 +152,7 @@
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>2-03にはHong Kong FIR固有のCPDLC手順記載なし</b>。<br>§2.2.18（CPDLC-SEA）にVHHK向けの独立した項なし。HKG FIRは高密度レーダー管制環境のため、VHF音声通信が主体。<br>通信手段: <b>VHF音声（主）</b>。",
+    "reg_rules": "<b>出典: RM_REGPROC SEA.3（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A / C / G（管制空域内はIFR必須）<br><b>TA</b>: 9,000ft / <b>TL</b>: FL110（QNH ≤979hPaの場合はFL120）<br><b>RVSM</b>: FL290〜FL410<br><b>CFL遵守</b>: TMA退出点に到達する前に指定CFLに達すること<br><b>監視ルート</b>（MNT）: A1 / A461 / A583 / B330 / G86 / R473 / L642 / M771 / P901",
     "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.1 EMERG PROC - SEA (HKG)"
   },
   "RCAA": {
@@ -171,6 +177,7 @@
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>2-03にはTaipei FIR固有のCPDLC手順記載なし</b>。<br>§2.2.18（CPDLC-SEA）にRCAA向けの独立した項なし。台北FIRはレーダー管制環境でVHF音声通信が主体。DCL（Departure Clearance via Datalink）はRCTP・RCSSで利用可能（ARINC 623-2 / EUROCAE ED-85A準拠機のみ）。<br>通信手段: <b>VHF音声（主）</b>。",
+    "reg_rules": "<b>出典: RM_REGPROC SEA.5（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（FL201〜FL600）<br><b>TA</b>: 11,000ft / <b>TL</b>: FL130<br><b>RVSM</b>: FL290〜FL410<br><b>ADIZ手順</b>: 5分以上の遅延 / 20NM以上の横偏差 / 2,000ft以上の高度偏差が発生した場合、ROCAF（台湾空軍）による迎撃の可能性あり<br><b>SSR（ADIZ進入時）</b>: INT DEP 26xx / 62xx",
     "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.3 EMERG PROC - SEA (Taiwan)"
   },
   "RPHI": {
@@ -195,6 +202,7 @@
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>出典: 2-03 §2.2.18.1.4（CPDLC - SEA / Manila FIR）</b><br><b>AFNログオン</b>: RPHI（NAIA出発前 または FIR進入<b>10〜25分前</b>）<br><br><b>セクター別通信主体（FANS 1/A対応機）:</b><br>・<b>EASTセクター</b>（A582, A590, G578）: <b>CPDLC</b>主 / HF副<br>・<b>NORTH/SOUTH/WESTセクター</b>（M501, G467, A583, P515, R337, A339, B462, B473, N892, L625, L628, M772, M765, W17）: <b>VHF→HF</b>主 / CPDLC副<br>※VHFエリア内ではVHFが通信主体<br><br><b>ADS-C</b>: FIR境界通過時にADSポジションレポート送信 → 全強制ポジションレポート義務を充足<br><br><b>メッセージ手順:</b><br>・Readback不要<br>・<b>WILCO</b> = クリアランス全内容への同意。<b>ROGER・AFFIRM</b>はクリアランス応答に使用不可<br>・1ダウンリンクメッセージあたりのクリアランス要求は<b>1件のみ</b><br>・フリーテキストは既定フォーマット要素が存在しない場合のみ使用<br><br><b>転送・終了:</b><br>・次FIRがデータリンク対応: FIR境界<b>30〜35分前</b>にNDA送信 → 境界でEND SERVICE<br>・次FIRがデータリンク非対応: CONTACT uplink（10分前）→ WILCO受信後 END SERVICE<br><br><b>接続障害時:</b> VHF/HF音声に即切替。復帰は管制指示で新規AFNログオン",
+    "reg_rules": "<b>出典: RM_REGPROC SEA.4（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（FL200〜UNL）および洋上空域<br><b>TA</b>: 11,000ft / <b>TL</b>: FL130<br><b>RVSM</b>: FL290〜FL410<br><b>ADIZ手順</b>: 最終CRP（Compulsory Reporting Point）通過時にETAを報告。ADIZ内は<b>30分ごと</b>にポジションレポート<br><b>SSR（INT DEP）</b>: 2700〜2777<br><b>飛行計画提出</b>: 出発または FIR進入の<b>60分以上前</b><br><b>監視ルート</b>（MNT）: A582 / A590 / B462 / A461<br><b>PBCS分離</b>: RCP240/RSP180要件を満たす機に対して利用可能",
     "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.2 EMERG PROC - SEA (Philippines)"
   },
   "VVHM": {
@@ -220,6 +228,7 @@
     },
     "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.7.4（CONTINGENCY PROC - SEA / HaNoi & Ho Chi Minh FIR）</b><br>・<b>初動</b>: ATCクリアランス取得不能な場合→<b>90°右または左に旋回</b>→指定ルートから<b>25NM逸脱</b>するトラックに乗る<br>　高度維持可能：500ft異なる高度に変更<br>　高度維持不能：最低降下率を維持しながら25NM逸脱、その後500ft異なる高度で飛行<br>・<b>隣接トラック横断（ダイバート）</b>: 25NMオフセット維持しながらFL400以上またはFL290以下へ上昇/降下→通常使用高度から500ft異なる高度<br>・<b>双発機でエンジン停止/ETOPSクリティカル</b>: 機体種別と状況をATCに通報し優先処理要請<br>・<b>悪天候回避（Weather Deviation）</b>:<br>　「WEATHER DEVIATION REQUIRED」申告で優先処理<br>　ATCクリアランス取得後に逸脱。取得不能時も同様の25NM逸脱手順を実施<br>　偏向不要になったらATCに通報・元ルート復帰",
     "cpdlc_procedure": "<b>出典: 2-03 §2.2.18.1.2（CPDLC - SEA / Ho Chi Minh FIR）</b><br><b>AFNログオン</b>: VVHM（データリンク空域進入<b>15〜45分前</b>）<br><br><b>適用ルート（H24）:</b> L625, L628, L642, M765, M768, M771, N500, N892<br><br><b>通信主体:</b><br>・レーダー外: <b>CPDLC = 主</b>（VHF/HF = 副）<br>・レーダー内: 状況によりCPDLC継続使用<br>・<b>ADS-C</b>: 監視用（ただし間隔維持には不使用）<br><br><b>ログオン手順:</b><br>・非データリンクFIRから進入: 15〜45分前にVVHMへAFNログオン → 接続確立後、最初の強制報告点でCPDLCポジションレポート送信<br>・Singapore FIRから進入: 自動アドレス転送（FN_CAD）またはパイロット手動ログオン<br>・FIR境界通過時: ADS・CPDLCでポジションレポート送信（応答受信後は音声不要）<br><br><b>メッセージ手順:</b><br>・CPDLC対話はCPDLCで、音声対話は音声で完結<br>・<b>WILCO</b> = クリアランス全内容への同意。Readback不要<br>・1メッセージ1クリアランス要求<br>・フリーテキストは最小限（既定フォーマット不在時のみ）<br>・緊急時（<b>MAYDAY/PAN PAN</b>）: CPDLC送信可 → ATC応答「ROGER MAYDAY」/「ROGER PAN」<br><br><b>転送・終了:</b><br>・SIN行き: FN_CAD（自動uplink、15分前）→ 境界でEND SERVICE自動<br>・非データリンクFIR行き: CONTACT uplink（5分前）→ WILCO受信後 END SERVICE<br><br><b>接続障害時:</b> 「ATC Com off」選択 → 新規AFNログオン試行。継続不能時 → 音声通信に切替",
+    "reg_rules": "<b>出典: RM_REGPROC SEA.15（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（高度14,000m以上）およびATSルート上の管制空域<br><b>高度配分（FLOS）</b>: <b>北→南</b>（Track 180°〜359°）= 偶数FL / <b>南→北</b>（Track 000°〜179°）= 奇数FL<br><b>RVSM</b>: FL290〜FL410<br><b>飛行計画</b>: IFRのみ（国際線）、出発<b>1時間以上前</b>に提出<br><b>ADS-B</b>: VVHH（Hanoi FIR）・VVHM（Ho Chi Minh FIR）の両FIRで必須",
     "emerg_proc_source": "ICAO Standard (2-04) + 2-03 §2.1.7.4 Contingency"
   },
   "VTBB": {
@@ -244,6 +253,33 @@
     },
     "contingency_procedure": "<b>ICAO Standard</b><br>Bangkok FIRは大陸空域のため、洋上空域固有のContingency手順は適用外。<br>偏差が必要な場合はATCクリアランスを事前取得。取得不能時はICAO Standard手順を適用:<br>・使用中周波数および121.5 MHzでブロードキャスト（コールサイン・FL・位置・意図）<br>・ACAS/目視で相反トラフィック監視<br>・全外部灯火点灯",
     "cpdlc_procedure": "<b>2-03にはBangkok FIR固有のCPDLC手順記載なし</b>。<br>§2.2.18（CPDLC-SEA）にVTBB向けの独立した項なし。Bangkok FIRは大陸・レーダー管制環境が主体のため、データリンク（FANS 1/A CPDLC）の適用は限定的。<br>通信手段: <b>VHF音声（主）</b>。",
+    "reg_rules": "<b>出典: RM_REGPROC SEA.14（Rev.26.2 / 16 APR 2026）</b><br><b>IFR飛行</b>: FL200以上の空域ではIFR必須<br><b>TA</b>: 11,000ft / <b>TL</b>: FL130<br><b>RVSM</b>: FL290〜FL410<br><b>ADIZ手順</b>: 航空路外飛行の場合、ADIZ進入の<b>10分以上前</b>に通報<br><b>SSR</b>: ATC未配布の場合はFIR進入時にコード<b>3300</b>をセット<br><b>CDR</b>: CDR1 / CDR2 / CDR3の各カテゴリーあり（NOTAMで確認）<br><b>No-PDC FL</b>: A1 / A202 / L880 / L628 / M768 / N891では事前に希望FLを提出すること（Pre-departure clearance不可FLあり）",
     "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.9 EMERG PROC - SEA (Thailand)"
+  },
+  "RKRR": {
+    "name": "Incheon FIR",
+    "icao": "RKRR",
+    "country": "Republic of Korea",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": true,
+    "hf_required": false,
+    "cpdlc": "Available",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard（RM Basic 2-04 §5）</b><br>Incheon FIR固有のEmergency Procedure手順はRM_JALISSUE_INT 2-03に記載なし（日本発着国際線マニュアル）。<br>・<b>Emergency</b>: Sq7700。使用中周波数またはVHF 121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>:<br>　レーダー空域：最後の高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定高度維持→FPL通り飛行。<br>　非レーダー空域：強制報告点未通報から<b>20分間</b>最終高度維持→FPL通り。<br>・<b>Unlawful Interference</b>: Sq7500<br>・<b>Distress Freq</b>: VHF 121.5 MHz / UHF 243.0 MHz",
+    "special_notes": [
+      "RNAV2 required en-route above FL140 (FL290 for overflights)",
+      "RNAV1 required for SID/STAR",
+      "Japan-Korea route: QNH below FL140, 1013.2hPa at/above FL140"
+    ],
+    "contacts": {
+      "main": "Incheon Control (Incheon ACC)",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
+    "cpdlc_procedure": "<b>Incheon FIR（RKRR）はCPDLC対応FIR</b>。<br>2-03 RM_JALISSUE_INTの当該セクションにIncheon FIR向けCPDLC手順の詳細記載あり（本セッションでは未抽出）。<br>通信手段: <b>VHF音声（主）</b>、CPDLC（Available）。",
+    "reg_rules": "<b>出典: RM_REGPROC ROK（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（航空路FL200〜FL600）/ Class B（Incheon・Gimpo・Jeju主要空港周辺）/ Class D（航空路MEA〜FL200）<br><b>PBN要件</b>: <b>RNAV2</b>（FL140以上の航空路。FL290以上のオーバーフライト）/ <b>RNAV1</b>（SID・STAR）<br><b>速度制限</b>: 10,000ft MSL以下は<b>250kt IAS</b>以下（B Class: 250kt / C・D Class: 250kt / 空港4NM以内2,500ft以下は200kt）<br><b>TA</b>: 14,000ft / <b>TL</b>: FL140<br><b>高度計規正（最低使用FL）</b>: QNH 1013.2hPa以上→FL140 / 1012.9〜996.3hPa→FL145 / 995.9〜979.3hPa→FL150 / 979.0〜962.4hPa→FL155 / 962.1〜945.5hPa→FL160<br><b>RVSM</b>: FL290〜FL410（1,000ft垂直間隔）<br><b>FLAS（主要ルート）</b>:<br>・<b>A593</b>（SADLI〜NIRAT）: NB（000〜179°）FL270/330/350/370/410 / SB（180〜359°）FL260/320/340/360/380<br>・<b>A586</b>（RUGMA〜CJU）: NB FL270/330/350/370/410 / SB FL260/320/340/360/380<br>・<b>G203</b>（PSN〜KALEK）: NB FL290/310/330/350/370/390/410 / SB FL300/340/380<br>・<b>G339</b>（PSN〜INVOK）: NB FL290/310/330/350/370/390/410 / SB FL320/360/400<br>・<b>A582</b>（PSN〜APELA）: NB FL290/310/330/350/370/390/410 / SB FL300/340/380<br><b>SLOP</b>: G597/Y697/B467/Y437/L512（KARBU〜KAE/ANDOL間、2200〜1300UTC）→ EB/WB共に<b>3NM右</b>オフセット。A582/Y782: EB（KALOD→BITUX）2NM右 / WB（OSPOT→TGU）3NM右<br><b>飛行計画提出</b>: 出発・FIR進入の<b>1時間以上前</b><br><b>CDR</b>: CDR1（AIP）/ CDR2（NOTAM）/ CDR3（ATC戦術クリアランス）<br><b>ATFM</b>: ATCC（Air Traffic Command Center）がIncheon FIR全域のATFMを提供",
+    "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)"
   }
 }

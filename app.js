@@ -489,6 +489,12 @@ function openFirPanel(firId, firLabel) {
       <div class="section-body info">${rules.cpdlc_procedure}</div>
     </div>` : ''}
 
+    ${rules.reg_rules ? `
+    <div class="section">
+      <div class="section-title">📋 Regional Rules (2-05)</div>
+      <div class="section-body">${rules.reg_rules}</div>
+    </div>` : ''}
+
     <div class="section">
       <div class="section-title">📡 Position Reporting</div>
       <div class="section-body">${rules.position_report}</div>
