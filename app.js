@@ -483,6 +483,12 @@ function openFirPanel(firId, firLabel) {
       <div class="section-body warn">${rules.contingency_procedure}</div>
     </div>` : ''}
 
+    ${rules.cpdlc_procedure ? `
+    <div class="section">
+      <div class="section-title">🖥️ CPDLC</div>
+      <div class="section-body info">${rules.cpdlc_procedure}</div>
+    </div>` : ''}
+
     <div class="section">
       <div class="section-title">📡 Position Reporting</div>
       <div class="section-body">${rules.position_report}</div>
