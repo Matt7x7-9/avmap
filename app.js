@@ -210,10 +210,10 @@ function ofpPolyline(routeId, color, dashed) {
     dashArray: dashed ? '6 4' : null,
     smoothFactor: 1,
   });
-  line.bindPopup(
-    `<b style="color:${color}">${route.label}</b><br>` +
-    `<span style="font-size:11px;color:#8b949e">${route.ofpSource}</span>`
-  );
+  line.on('click', (e) => {
+    L.DomEvent.stopPropagation(e);
+    openRouteFirPanel(route);
+  });
   line.addTo(group);
 
   // FIR boundary crossing markers — diamond + WPT name label
@@ -408,6 +408,73 @@ firBtn.addEventListener('click', () => {
 firBtn.classList.add('active');
 // Show hint on first load
 setTimeout(showFirHint, 1500);
+
+// ── Route FIR List Panel ──────────────────────
+// ルートラインをタップ → 通過FIR一覧を表示
+// 各FIRをタップ → openFirPanel() で詳細表示
+function openRouteFirPanel(route) {
+  // 通過FIRを経路順に収集（重複なし）
+  const firIds = [];
+  const seen = new Set();
+  route.waypoints.forEach(w => {
+    if (w.fir && !seen.has(w.fir)) {
+      seen.add(w.fir);
+      firIds.push(w.fir);
+    }
+  });
+  if (firIds.length === 0) return;   // FIR情報なし → 何もしない
+
+  const panel = document.getElementById('fir-panel');
+
+  const listHtml = firIds.map(firId => {
+    const rules = FIR_RULES[firId];
+    const name  = rules ? rules.name : firId;
+    const tags  = [];
+    if (rules?.rnp2)        tags.push('<span class="tag tag-warn" style="font-size:9px;padding:1px 5px">RNP2</span>');
+    if (rules?.rvsm)        tags.push('<span class="tag tag-ok"   style="font-size:9px;padding:1px 5px">RVSM</span>');
+    if (rules?.hf_required) tags.push('<span class="tag tag-warn" style="font-size:9px;padding:1px 5px">HF</span>');
+    const noInfo = !rules
+      ? '<span style="color:#8b949e;font-size:11px">情報未登録</span>'
+      : '';
+
+    return `<div class="fir-list-item" data-fir="${firId}" data-label="${name.replace(/"/g, '&quot;')}">
+      <div class="fir-list-row">
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#f0f6fc">${name}</div>
+          <div style="font-size:11px;color:#8b949e">${firId}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+          ${tags.join('')}${noInfo}
+          <span style="color:#8b949e;font-size:18px;line-height:1">›</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  panel.innerHTML = `
+    <div class="panel-drag-handle"></div>
+    <div class="panel-header">
+      <div>
+        <div class="panel-fir-name" style="font-size:14px">✈ ${route.label}</div>
+        <div class="panel-country">${firIds.length} FIR通過 — タップで詳細</div>
+      </div>
+      <button id="panel-close">✕</button>
+    </div>
+    <div>${listHtml}</div>
+  `;
+
+  panel.classList.remove('hidden');
+
+  document.getElementById('panel-close').addEventListener('click', () => {
+    panel.classList.add('hidden');
+  });
+
+  panel.querySelectorAll('.fir-list-item').forEach(item => {
+    item.addEventListener('click', () => {
+      openFirPanel(item.dataset.fir, item.dataset.label);
+    });
+  });
+}
 
 // ── FIR Info Panel ────────────────────────────
 function openFirPanel(firId, firLabel) {

@@ -349,3 +349,26 @@ body {
 }
 
 .leaflet-control-attribution a { color: #555 !important; }
+
+/* ── Route FIR list ── */
+.fir-list-item {
+  border-bottom: 1px solid #21262d;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.fir-list-item:last-child {
+  border-bottom: none;
+}
+
+.fir-list-item:active,
+.fir-list-item:hover {
+  background: rgba(88, 166, 255, 0.08);
+}
+
+.fir-list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 4px;
+}
