@@ -783,8 +783,15 @@
     "emergency_procedure": "<b>ICAO Standard</b><br>Emergency: Sq7700 / MAYDAY on 121.5 MHz。<br>Radio Failure (Sq7600): 最終指示FL維持、121.5 + 123.45 MHzでブロードキャスト。",
     "contingency_procedure": "",
     "position_report": "レーダー覆域内: 不要。非レーダー・洋上: 通過FIX毎に報告。",
-    "contacts": { "main": "Brisbane Centre (各VHF周波数 / HF南太平洋)", "emergency": "121.5 MHz" },
-    "special_notes": ["RVSM適用空域: FL290〜FL410", "HF必須: 遠隔・洋上区域（VHF圏外）", "CPDLC available（主要空港DCL含む）"],
+    "contacts": {
+      "main": "Brisbane Centre (各VHF周波数 / HF南太平洋)",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "RVSM適用空域: FL290〜FL410",
+      "HF必須: 遠隔・洋上区域（VHF圏外）",
+      "CPDLC available（主要空港DCL含む）"
+    ],
     "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>HF:</b> VHF圏外（オセアニア洋上）で必須。SELCAL推奨。<b>CPDLC:</b> 主要空港DCL・経路上利用可。RNP4+ADS-Cで30NM縦断分離。"
   },
   "YMMM": {
@@ -799,24 +806,15 @@
     "emergency_procedure": "<b>ICAO Standard</b><br>Emergency: Sq7700 / MAYDAY on 121.5 MHz。<br>Radio Failure (Sq7600): 最終指示FL維持、121.5 + 123.45 MHzでブロードキャスト。",
     "contingency_procedure": "",
     "position_report": "インド洋・南洋の非レーダー区域: 通過FIX毎に報告。",
-    "contacts": { "main": "Melbourne Centre (各VHF周波数 / HFインド洋・南洋)", "emergency": "121.5 MHz" },
-    "special_notes": ["RVSM適用空域: FL290〜FL410", "HF必須: インド洋・南洋区域", "SELCAL推奨（洋上トラック）"],
+    "contacts": {
+      "main": "Melbourne Centre (各VHF周波数 / HFインド洋・南洋)",
+      "emergency": "121.5 MHz"
+    },
+    "special_notes": [
+      "RVSM適用空域: FL290〜FL410",
+      "HF必須: インド洋・南洋区域",
+      "SELCAL推奨（洋上トラック）"
+    ],
     "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>HF:</b> インド洋・南洋区域で必須。SELCAL推奨。<b>CPDLC:</b> 主要空港DCL・経路上利用可。"
-  },
-  "RJTG": {
-    "name": "Tokyo FIR",
-    "country": "Japan",
-    "icao": "RJTG",
-    "rvsm": true,
-    "rnp2": false,
-    "hf_required": false,
-    "cpdlc": "Available",
-    "cpdlc_procedure": "<b>Tokyo ACC CPDLC</b><br>国内管制区はVHF音声が主体。洋上移管後はRJJJ洋上区のCPDLC手順に従う。",
-    "emergency_procedure": "<b>ICAO Standard</b><br>Emergency: Sq7700 / MAYDAY on 121.5 MHz（または管制周波数）。<br>Radio Failure (Sq7600): 最終指示FL維持、121.5 MHzでブロードキャスト。",
-    "contingency_procedure": "",
-    "position_report": "レーダー覆域内のため通常不要。",
-    "contacts": { "main": "東京コントロール (各VHF周波数)", "emergency": "121.5 MHz" },
-    "special_notes": ["RVSM適用空域: FL290〜FL410", "国内管制区: レーダー管制・VHF主体", "日本国内RNP AR空港あり（CAUGマニュアル参照）"],
-    "reg_rules": "<b>RVSM:</b> FL290〜FL410（RJJJ同様）。<b>管制:</b> 東京コントロール（東日本・北海道担当）。<b>移管:</b> 洋上移管後はRJJJ Fukuoka FIRルールが適用される。"
   }
 }
