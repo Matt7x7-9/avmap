@@ -393,11 +393,11 @@ const toggleContainer = document.getElementById('route-toggles');
 
 ROUTE_GROUPS.forEach(group => {
   const btn = document.createElement('button');
-  btn.className = 'route-btn active';
+  btn.className = 'route-btn';
   btn.textContent = group.shortName;
   btn.style.borderColor = group.color;
-  btn.style.backgroundColor = group.color;
-  btn.style.color = '#0d1117';
+  btn.style.backgroundColor = 'transparent';
+  btn.style.color = '#c9d1d9';
 
   btn.addEventListener('click', () => {
     if (activeRoutes.has(group.id)) {
@@ -416,19 +416,17 @@ ROUTE_GROUPS.forEach(group => {
   });
 
   toggleContainer.appendChild(btn);
-  activeRoutes.add(group.id);
-  routeLayers[group.id].addTo(map);
+  // デフォルトは非表示（ユーザーが明示的に選択するまで何も表示しない）
 });
 
 // OFP route toggle buttons
 OFP_GROUPS.forEach(group => {
-  const isOn = !group.defaultOff;
   const btn = document.createElement('button');
-  btn.className = isOn ? 'route-btn active' : 'route-btn';
+  btn.className = 'route-btn';
   btn.textContent = group.shortName;
   btn.style.borderColor = group.color;
-  btn.style.backgroundColor = isOn ? group.color : 'transparent';
-  btn.style.color = isOn ? '#0d1117' : '#c9d1d9';
+  btn.style.backgroundColor = 'transparent';
+  btn.style.color = '#c9d1d9';
 
   btn.addEventListener('click', () => {
     if (activeRoutes.has(group.id)) {
@@ -447,10 +445,7 @@ OFP_GROUPS.forEach(group => {
   });
 
   toggleContainer.appendChild(btn);
-  if (isOn) {
-    activeRoutes.add(group.id);
-    routeLayers[group.id].addTo(map);
-  }
+  // デフォルトは全路線非表示
 });
 
 // FIR tap hint (shows briefly on first load)
