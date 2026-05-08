@@ -27,10 +27,25 @@ const AIRPORTS = {
   KUL: { name: "クアラルンプール国際空港", icao: "WMKK", coords: [2.746,  101.710] },
   // ── South Asia ────────────────────────────────────
   DEL: { name: "インディラ・ガンジー国際空港", icao: "VIDP", coords: [28.568, 77.112] },
-  // ── Pacific ───────────────────────────────────────
+  // ── South Asia (long-haul) ────────────────────────
+  BLR: { name: "ケンペゴウダ国際空港",     icao: "VOBL", coords: [13.199,  77.706] },
+  // ── Europe ───────────────────────────────────────
+  LHR: { name: "ロンドン・ヒースロー空港", icao: "EGLL", coords: [51.477,  -0.461] },
+  CDG: { name: "シャルル・ド・ゴール空港", icao: "LFPG", coords: [49.013,   2.550] },
+  HEL: { name: "ヘルシンキ・ヴァンター空港", icao: "EFHK", coords: [60.317,  24.963] },
+  FRA: { name: "フランクフルト空港",       icao: "EDDF", coords: [50.033,   8.571] },
+  // ── North America (long-haul) ────────────────────
   // 西経は +360° — 日本から東向きに表示するため
-  YVR: { name: "バンクーバー国際空港",    icao: "CYVR", coords: [49.194, 236.816] },
+  ORD: { name: "シカゴ・オヘア国際空港",   icao: "KORD", coords: [41.978, 272.092] },
+  BOS: { name: "ボストン・ローガン国際空港", icao: "KBOS", coords: [42.363, 288.993] },
+  SAN: { name: "サンディエゴ国際空港",     icao: "KSAN", coords: [32.734, 242.810] },
+  DFW: { name: "ダラス・フォートワース空港", icao: "KDFW", coords: [32.897, 262.963] },
+  // ── Pacific ───────────────────────────────────────
+  YVR: { name: "バンクーバー国際空港",     icao: "CYVR", coords: [49.194, 236.816] },
   HNL: { name: "ダニエル・K・イノウエ国際空港", icao: "PHNL", coords: [21.318, 202.080] },
+  // ── Australia ─────────────────────────────────────
+  SYD: { name: "シドニー・キングスフォード・スミス空港", icao: "YSSY", coords: [-33.946, 151.177] },
+  MEL: { name: "メルボルン・タラマリン空港", icao: "YMML", coords: [-37.673, 144.843] },
 };
 
 // Route groups with color coding and approximate path waypoints [lat, lng]

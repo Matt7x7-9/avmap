@@ -321,6 +321,43 @@ const OFP_GROUPS = [
   { id: 'ofp-hnl',  shortName: 'HNL', color: '#A569BD',
     routeIds: ['PHNL-RJBB', 'RJAA-PHNL'],
     airports: ['KIX', 'NRT', 'HNL'], defaultOff: true },
+  // ── North America (long-haul) ────────────────────────────────────────
+  { id: 'ofp-ord',  shortName: 'ORD', color: '#E67E22',
+    routeIds: ['RJAA-KORD', 'KORD-RJAA'],
+    airports: ['NRT', 'ORD'], defaultOff: true },
+  { id: 'ofp-bos',  shortName: 'BOS', color: '#E74C3C',
+    routeIds: ['RJAA-KBOS', 'KBOS-RJAA'],
+    airports: ['NRT', 'BOS'], defaultOff: true },
+  { id: 'ofp-san',  shortName: 'SAN', color: '#F39C12',
+    routeIds: ['RJAA-KSAN', 'KSAN-RJAA'],
+    airports: ['NRT', 'SAN'], defaultOff: true },
+  { id: 'ofp-dfw',  shortName: 'DFW', color: '#8E44AD',
+    routeIds: ['RJTT-KDFW', 'KDFW-RJTT'],
+    airports: ['HND', 'DFW'], defaultOff: true },
+  // ── Europe ───────────────────────────────────────────────────────────
+  { id: 'ofp-lhr',  shortName: 'LHR', color: '#3498DB',
+    routeIds: ['RJTT-EGLL', 'EGLL-RJTT'],
+    airports: ['HND', 'LHR'], defaultOff: true },
+  { id: 'ofp-cdg',  shortName: 'CDG', color: '#5B6BC8',
+    routeIds: ['RJTT-LFPG', 'LFPG-RJTT'],
+    airports: ['HND', 'CDG'], defaultOff: true },
+  { id: 'ofp-hel',  shortName: 'HEL', color: '#BDC3C7',
+    routeIds: ['RJTT-EFHK', 'EFHK-RJTT'],
+    airports: ['HND', 'HEL'], defaultOff: true },
+  { id: 'ofp-fra',  shortName: 'FRA', color: '#C0392B',
+    routeIds: ['RJAA-EDDF', 'EDDF-RJAA'],
+    airports: ['NRT', 'FRA'], defaultOff: true },
+  // ── Australia ────────────────────────────────────────────────────────
+  { id: 'ofp-syd',  shortName: 'SYD', color: '#27AE60',
+    routeIds: ['RJTT-YSSY', 'YSSY-RJTT'],
+    airports: ['HND', 'SYD'], defaultOff: true },
+  { id: 'ofp-mel',  shortName: 'MEL', color: '#16A085',
+    routeIds: ['RJAA-YMML', 'YMML-RJAA'],
+    airports: ['NRT', 'MEL'], defaultOff: true },
+  // ── South Asia (long-haul) ───────────────────────────────────────────
+  { id: 'ofp-blr',  shortName: 'BLR', color: '#9B59B6',
+    routeIds: ['RJAA-VOBL', 'VOBL-RJAA'],
+    airports: ['NRT', 'BLR'], defaultOff: true },
 ];
 
 OFP_GROUPS.forEach(group => {
