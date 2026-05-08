@@ -271,10 +271,18 @@ function ofpPolyline(routeId, color, dashed) {
   return group;
 }
 
+// 日本発着判定: 出発ICAOが日本空港 → 実線、到着が日本 → 点線
+const JAPAN_ICAO = new Set(['RJTT', 'RJAA', 'RJBB', 'RJOO', 'RJCC', 'ROAH']);
+
+function isJapanDep(routeId) {
+  return JAPAN_ICAO.has(routeId.split('-')[0]);
+}
+
 const OFP_GROUPS = [
   // ── Northeast Asia ──────────────────────────────────────────────
+  // 新規路線追加: 同じ目的地なら routeIds に追加、airports に空港コード追加
   { id: 'ofp-gmp',  shortName: 'GMP', color: '#4A90D9',
-    routeIds: ['RKSS-RJTT', 'RJTT-RKSS'],
+    routeIds: ['RJTT-RKSS', 'RKSS-RJTT'],
     airports: ['HND', 'GMP'] },
   { id: 'ofp-pek',  shortName: 'PEK', color: '#F39C12',
     routeIds: ['RJTT-ZBAA', 'ZBAA-RJTT'],
@@ -303,30 +311,30 @@ const OFP_GROUPS = [
     airports: ['HND', 'DEL'] },
   // ── Southeast Asia ──────────────────────────────────────────────
   { id: 'ofp-hkg',  shortName: 'HKG', color: '#C0392B',
-    routeIds: ['VHHH-RJAA', 'RJAA-VHHH', 'VHHH-RJTT', 'RJTT-VHHH'],
+    routeIds: ['RJAA-VHHH', 'VHHH-RJAA', 'RJTT-VHHH', 'VHHH-RJTT'],
     airports: ['NRT', 'HND', 'HKG'] },
   { id: 'ofp-bkk',  shortName: 'BKK', color: '#F1C40F',
-    routeIds: ['VTBS-RJTT', 'RJTT-VTBS', 'VTBS-RJAA', 'RJAA-VTBS', 'VTBS-RJBB', 'RJBB-VTBS'],
+    routeIds: ['RJTT-VTBS', 'VTBS-RJTT', 'RJAA-VTBS', 'VTBS-RJAA', 'RJBB-VTBS', 'VTBS-RJBB'],
     airports: ['HND', 'NRT', 'KIX', 'BKK'] },
   { id: 'ofp-sgn',  shortName: 'SGN', color: '#16A085',
     routeIds: ['RJTT-VVTS', 'VVTS-RJTT', 'RJAA-VVTS', 'VVTS-RJAA'],
     airports: ['HND', 'NRT', 'SGN'] },
   { id: 'ofp-sin',  shortName: 'SIN', color: '#E74C3C',
-    routeIds: ['WSSS-RJAA', 'RJAA-WSSS', 'WSSS-RJTT', 'RJTT-WSSS'],
+    routeIds: ['RJAA-WSSS', 'WSSS-RJAA', 'RJTT-WSSS', 'WSSS-RJTT'],
     airports: ['NRT', 'HND', 'SIN'] },
   { id: 'ofp-cgk',  shortName: 'CGK', color: '#27AE60',
-    routeIds: ['WIII-RJAA', 'RJAA-WIII'],
+    routeIds: ['RJAA-WIII', 'WIII-RJAA'],
     airports: ['NRT', 'CGK'] },
   { id: 'ofp-kul',  shortName: 'KUL', color: '#1ABC9C',
-    routeIds: ['WMKK-RJAA', 'RJAA-WMKK'],
+    routeIds: ['RJAA-WMKK', 'WMKK-RJAA'],
     airports: ['NRT', 'KUL'] },
   // ── Pacific (日付変更線越え — 初期オフ) ─────────────────────────
   { id: 'ofp-yvr',  shortName: 'YVR', color: '#5DADE2',
-    routeIds: ['CYVR-RJAA', 'RJAA-CYVR'],
+    routeIds: ['RJAA-CYVR', 'CYVR-RJAA'],
     airports: ['NRT', 'YVR'], defaultOff: true },
   { id: 'ofp-hnl',  shortName: 'HNL', color: '#A569BD',
-    routeIds: ['PHNL-RJBB', 'RJAA-PHNL'],
-    airports: ['KIX', 'NRT', 'HNL'], defaultOff: true },
+    routeIds: ['RJAA-PHNL', 'PHNL-RJBB'],
+    airports: ['NRT', 'KIX', 'HNL'], defaultOff: true },
   // ── North America (long-haul) ────────────────────────────────────────
   { id: 'ofp-ord',  shortName: 'ORD', color: '#E67E22',
     routeIds: ['RJAA-KORD', 'KORD-RJAA'],
@@ -368,8 +376,10 @@ const OFP_GROUPS = [
 
 OFP_GROUPS.forEach(group => {
   const layer = L.layerGroup();
-  group.routeIds.forEach((rid, i) => {
-    const line = ofpPolyline(rid, group.color, i % 2 === 1);  // odd = dashed (return)
+  group.routeIds.forEach(rid => {
+    // 日本発 → 実線、日本着 → 点線（出発ICAOで判定）
+    const dashed = !isJapanDep(rid);
+    const line = ofpPolyline(rid, group.color, dashed);
     if (line) line.addTo(layer);
   });
   group.airports.forEach(code => {
