@@ -205,20 +205,38 @@ function resolveFirWptName(wpts, idx) {
   return w.name;
 }
 
+// 連続するウェイポイント間で経度差が180°を超えないよう正規化
+// (Polar/Transatlantic路線の日付変更線跨ぎに対応)
+function normalizeWaypointLngs(waypoints) {
+  if (!waypoints.length) return waypoints;
+  const out = [{ ...waypoints[0] }];
+  for (let i = 1; i < waypoints.length; i++) {
+    const prevLng = out[i - 1].coords[1];
+    let lng = waypoints[i].coords[1];
+    while (lng - prevLng >  180) lng -= 360;
+    while (lng - prevLng < -180) lng += 360;
+    out.push({ ...waypoints[i], coords: [waypoints[i].coords[0], lng] });
+  }
+  return out;
+}
+
 // Returns a LayerGroup containing the polyline + FIR-boundary diamond markers.
-// Western Hemisphere longitudes (< -30°) are auto-shifted +360° so Pacific
-// routes appear east of Japan rather than west.
+// Polar/Transpolar routes (Japan↔Europe via North Pole) are handled via
+// sequential longitude normalization to avoid crossing-line artifacts.
 function ofpPolyline(routeId, color, dashed) {
   const route = OFP_ROUTES[routeId];
   if (!route) return null;
 
   const group = L.layerGroup();
 
-  // Shift Western Hemisphere coords to eastern map copy
-  const baseWaypoints = route.waypoints.map(w => {
-    const [lat, lng] = w.coords;
-    return { ...w, coords: [lat, lng < -30 ? lng + 360 : lng] };
-  });
+  // 1. 順次経度を正規化（隣接点間の跳びを解消）
+  const normalized = normalizeWaypointLngs(route.waypoints);
+  // 2. 正規化後の平均経度で全体シフトを決定
+  const avgLng = normalized.reduce((s, w) => s + w.coords[1], 0) / normalized.length;
+  const shift = avgLng < -30 ? 360 : 0;
+  const baseWaypoints = normalized.map(w => ({
+    ...w, coords: [w.coords[0], w.coords[1] + shift],
+  }));
 
   // 東西±360°コピーも描画して無限スクロールに対応
   [-360, 0, 360].forEach(offset => {
