@@ -2176,11 +2176,6 @@ const OFP_ROUTES = {
     ]
   },
 
-
-
-// Export for use in map
-if (typeof module !== "undefined") module.exports = { OFP_ROUTES };
-
 // ── New long-haul routes from OFP batch upload (May 2026) ──────────────
 
   "VOBL-RJAA": {
