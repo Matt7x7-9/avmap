@@ -484,6 +484,13 @@ firBtn.classList.add('active');
 // Show hint on first load
 setTimeout(showFirHint, 1500);
 
+// 'i' key toggles FIR layer
+document.addEventListener('keydown', e => {
+  if ((e.key === 'i' || e.key === 'I') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+    firBtn.click();
+  }
+});
+
 // ── Route FIR List Panel ──────────────────────
 // ルートラインをタップ → 通過FIR一覧を表示
 // 各FIRをタップ → openFirPanel() で詳細表示

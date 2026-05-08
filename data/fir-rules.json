@@ -8,7 +8,7 @@
     "rvsm": true,
     "rnp2": false,
     "hf_required": false,
-    "cpdlc": "Optional",
+    "cpdlc": "Available (RJJJ洋上区)",
     "position_report": "At compulsory reporting points",
     "emergency_procedure": "<b>出典: RM Basic 2-04 §5（ICAO Standard）</b><br>・<b>Emergency</b>: Sq7700。使用中周波数またはVHF 121.5 MHzでMAYDAY宣言。他機に優先。<br>・<b>Radio Failure（Sq7600）</b>:<br>　レーダー空域：最後の高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定高度（または最低高度）を維持→FPL通り飛行。<br>　非レーダー空域：強制報告点未通報から<b>20分間</b>最終高度維持→FPL通り。<br>　IMC時はILS/GNSS等の計器進入→ETAまたは最終EATのうち遅い方から30分以内に着陸。<br>・<b>Unlawful Interference</b>: Sq7500（ATC指定コードがあればそれを維持）。<br>・<b>Distress Freq</b>: VHF 121.5 MHz / UHF 243.0 MHz / HF 500kHz・2182kHz・8364kHz",
     "special_notes": [],
@@ -17,7 +17,7 @@
       "emergency": "121.5"
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
-    "cpdlc_procedure": "<b>2-03には日本FIR向けのCPDLC手順記載なし</b>（2-03は国際路線向けマニュアル）。<br>Tokyo FIRは通常VHF音声通信が主体。CPDLC搭載機に対してはOptionalとして提供される場合あり。",
+    "cpdlc_procedure": "<b>出典: 2-02 2.4 COMMUNICATION JPN §2.4.5</b><br><b>Tokyo FIR（RJJJ）のCPDLC手順</b><br>・Fukuoka FIR（RJJJ洋上管制区）ではCPDLC運用が行われています。<br>・<b>Auto Transfer</b>: RJJJ⇔RPHI（マニラFIR）の双方向でCPDLC Auto Transferが実施されます（2026/02/24改訂）。<br>・Logonタイミング・詳細手順は RM_JALISSUE_Japan 2-02 §2.4.5を参照してください。",
     "reg_rules": "<b>出典: RM_REGPROC JPN（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（FL290以上のControl Area）<br><b>速度制限</b>: 管制圏内・Approach Control Area内の高度3,050m（10,000ft）以下は<b>250kt IAS</b>以下<br><b>高度計規正</b>: FL140以上→1013.2hPa / FL140未満→QNH<br><b>TA</b>: 14,000ft / <b>TL</b>: FL140<br><b>RVSM</b>: FL290〜FL410（RVSM承認機間は1,000ft垂直間隔、非RVSM機は2,000ft間隔）<br><b>FLOS</b>: Track 000°〜179° = 奇数FL（FL290/310/330…）/ Track 180°〜359° = 偶数FL（FL300/320/340…）<br><b>SSR</b>: ATC指定コードを使用。VFR: 10,000ft以下→1200、10,000ft以上→1400。レーダー外IFR空域進入→2000。<br><b>CDR</b>: CDR1（AIP Japan掲載）/ CDR2（NOTAMで前日2100JSTまでに通知）",
     "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)"
   },
@@ -30,7 +30,7 @@
     "rvsm": true,
     "rnp2": false,
     "hf_required": false,
-    "cpdlc": "Optional",
+    "cpdlc": "Available (RJJJ洋上区)",
     "position_report": "At compulsory reporting points",
     "emergency_procedure": "<b>出典: RM Basic 2-04 §5（ICAO Standard）</b><br>・<b>Emergency</b>: Sq7700。使用中周波数またはVHF 121.5 MHzでMAYDAY宣言。他機に優先。<br>・<b>Radio Failure（Sq7600）</b>:<br>　レーダー空域：最後の高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定高度（または最低高度）を維持→FPL通り飛行。<br>　非レーダー空域：強制報告点未通報から<b>20分間</b>最終高度維持→FPL通り。<br>　IMC時はILS/GNSS等の計器進入→ETAまたは最終EATのうち遅い方から30分以内に着陸。<br>・<b>Unlawful Interference</b>: Sq7500（ATC指定コードがあればそれを維持）。<br>・<b>Distress Freq</b>: VHF 121.5 MHz / UHF 243.0 MHz / HF 500kHz・2182kHz・8364kHz",
     "special_notes": [],
@@ -39,7 +39,7 @@
       "emergency": "121.5"
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
-    "cpdlc_procedure": "<b>2-03には日本FIR向けのCPDLC手順記載なし</b>（2-03は国際路線向けマニュアル）。<br>Fukuoka FIRは通常VHF音声通信が主体。CPDLC搭載機に対してはOptionalとして提供される場合あり。",
+    "cpdlc_procedure": "<b>出典: 2-02 2.4 COMMUNICATION JPN §2.4.5</b><br><b>Fukuoka FIR（RJJJ）のCPDLC手順</b><br>・Fukuoka FIR洋上管制区ではCPDLC運用が行われています。<br>・<b>Auto Transfer</b>: RJJJ⇔RPHI（マニラFIR）の双方向でCPDLC Auto Transferが実施されます（2026/02/24改訂）。<br>・Logonタイミング・詳細手順は RM_JALISSUE_Japan 2-02 §2.4.5を参照してください。",
     "reg_rules": "<b>出典: RM_REGPROC JPN（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（FL290以上のControl Area / FL200以上のOceanic Control Area）<br><b>速度制限</b>: 高度3,050m（10,000ft）以下は<b>250kt IAS</b>以下<br><b>高度計規正</b>: FL140以上→1013.2hPa / 未満→QNH。Oceanic airspaceは全高度で1013.2hPa。<br><b>TA</b>: 14,000ft / <b>TL</b>: FL140<br><b>RVSM</b>: FIR全域 FL290〜FL410（RVSM承認機間1,000ft垂直間隔）<br><b>FLOS</b>: Track 000°〜179° = 奇数FL（FL290/310/…）/ Track 180°〜359° = 偶数FL（FL300/320/…）<br><b>SLOP（太平洋洋上管制区のみ）</b>: 最大<b>2NM右</b>オフセット可。ATCへの通報・クリアランス不要。レーダー識別時はCenter Lineに戻す。位置報告はATCルート中心線基準。<br><b>RNP10（洋上）</b>: 利用可能。ADS-C/CPDLC（RCP240+RSP180要件）で50NM縦分離適用。<br><b>CDR</b>: CDR1（AIP Japan掲載）/ CDR2（NOTAMで前日2100JSTまでに通知）<br><b>Large Height Deviation</b>: RVSM空域内で高度逸脱発生時は速やかにATCへ報告",
     "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)"
   },
