@@ -556,10 +556,24 @@ function openRouteFirPanel(route) {
 // ── FIR Info Panel ────────────────────────────
 function openFirPanel(firId, firLabel) {
   const rules = FIR_RULES[firId];
+  const savedNote = userNotes[firId] || '';
+
+  // Build My Note tab HTML (shared between both cases)
+  const myNoteTabHtml = `
+    <div class="tab-content" id="tab-mynote">
+      <div style="font-size:12px;color:#8b949e;margin-bottom:10px;">
+        ${firId} — ${firLabel || firId} 用メモ
+      </div>
+      <textarea id="user-note-area" placeholder="ここに自由にメモを追記できます...">${savedNote}</textarea>
+      <button class="note-save-btn" id="note-save-btn">保存</button>
+      <div class="note-save-toast hidden" id="note-save-toast">✓ 保存しました</div>
+    </div>
+  `;
+
+  const panel = document.getElementById('fir-panel');
 
   // FIRルールが未定義の場合でも基本パネルを表示
   if (!rules) {
-    const panel = document.getElementById('fir-panel');
     panel.innerHTML = `
       <div class="panel-drag-handle"></div>
       <div class="panel-header">
@@ -569,28 +583,31 @@ function openFirPanel(firId, firLabel) {
         </div>
         <button id="panel-close">✕</button>
       </div>
-      <div class="section">
-        <div class="section-body" style="color:#8b949e;font-size:12px;">
-          このFIRの詳細情報はまだ登録されていません。
+      <div class="panel-tabs">
+        <button class="panel-tab active" data-tab="info">Info</button>
+        <button class="panel-tab" data-tab="mynote">My Note${savedNote ? ' ●' : ''}</button>
+      </div>
+      <div class="tab-content active" id="tab-info">
+        <div class="section">
+          <div class="section-body" style="color:#8b949e;font-size:12px;">
+            このFIRの詳細情報はまだ登録されていません。
+          </div>
         </div>
       </div>
+      ${myNoteTabHtml}
     `;
     panel.classList.remove('hidden');
-    document.getElementById('panel-close').addEventListener('click', () => {
-      panel.classList.add('hidden');
-    });
+    attachPanelListeners(firId);
     return;
   }
 
-  const panel = document.getElementById('fir-panel');
-
   // Tags
   const tags = [];
-  if (rules.rnp2)       tags.push({ cls: 'tag-warn', text: 'RNP 2 Required' });
-  if (rules.rvsm)       tags.push({ cls: 'tag-ok',   text: 'RVSM' });
+  if (rules.rnp2)        tags.push({ cls: 'tag-warn', text: 'RNP 2 Required' });
+  if (rules.rvsm)        tags.push({ cls: 'tag-ok',   text: 'RVSM' });
   if (rules.hf_required) tags.push({ cls: 'tag-warn', text: 'HF Required' });
   if (rules.cpdlc !== 'Optional' && rules.cpdlc)
-                         tags.push({ cls: 'tag-info',  text: `CPDLC: ${rules.cpdlc}` });
+                          tags.push({ cls: 'tag-info',  text: `CPDLC: ${rules.cpdlc}` });
 
   const tagHtml = tags.map(t =>
     `<span class="tag ${t.cls}">${t.text}</span>`
@@ -600,9 +617,6 @@ function openFirPanel(firId, firLabel) {
   const notesHtml = rules.special_notes.length
     ? `<ul class="note-list">${rules.special_notes.map(n => `<li>${n}</li>`).join('')}</ul>`
     : '<span style="color:#8b949e;font-size:12px;">特記事項なし</span>';
-
-  // User notes
-  const savedNote = userNotes[firId] || '';
 
   panel.innerHTML = `
     <div class="panel-drag-handle"></div>
@@ -614,65 +628,106 @@ function openFirPanel(firId, firLabel) {
       <button id="panel-close">✕</button>
     </div>
 
-    <div class="tag-row">${tagHtml}</div>
-
-    <div class="section">
-      <div class="section-title">🚨 Emergency Procedure</div>
-      <div class="section-body warn">${rules.emergency_procedure}</div>
+    <div class="panel-tabs">
+      <button class="panel-tab active" data-tab="info">Info</button>
+      <button class="panel-tab" data-tab="mynote">My Note${savedNote ? ' ●' : ''}</button>
     </div>
 
-    ${rules.contingency_procedure ? `
-    <div class="section">
-      <div class="section-title">🔄 Contingency Procedure</div>
-      <div class="section-body warn">${rules.contingency_procedure}</div>
-    </div>` : ''}
+    <div class="tab-content active" id="tab-info">
+      <div class="tag-row">${tagHtml}</div>
 
-    ${rules.cpdlc_procedure ? `
-    <div class="section">
-      <div class="section-title">🖥️ CPDLC</div>
-      <div class="section-body info">${rules.cpdlc_procedure}</div>
-    </div>` : ''}
+      <div class="section">
+        <div class="section-title">🚨 Emergency Procedure</div>
+        <div class="section-body warn">${rules.emergency_procedure}</div>
+      </div>
 
-    ${rules.reg_rules ? `
-    <div class="section">
-      <div class="section-title">📋 Regional Rules (2-05)</div>
-      <div class="section-body">${rules.reg_rules}</div>
-    </div>` : ''}
+      ${rules.contingency_procedure ? `
+      <div class="section">
+        <div class="section-title">🔄 Contingency Procedure</div>
+        <div class="section-body warn">${rules.contingency_procedure}</div>
+      </div>` : ''}
 
-    <div class="section">
-      <div class="section-title">📡 Position Reporting</div>
-      <div class="section-body">${rules.position_report}</div>
-    </div>
+      ${rules.cpdlc_procedure ? `
+      <div class="section">
+        <div class="section-title">🖥️ CPDLC</div>
+        <div class="section-body info">${rules.cpdlc_procedure}</div>
+      </div>` : ''}
 
-    <div class="section">
-      <div class="section-title">📻 Contacts</div>
-      <div class="section-body info">
-        <b>Main:</b> ${rules.contacts.main}<br>
-        <b>Emergency:</b> ${rules.contacts.emergency}
+      ${rules.reg_rules ? `
+      <div class="section">
+        <div class="section-title">📋 Regional Rules (2-05)</div>
+        <div class="section-body">${rules.reg_rules}</div>
+      </div>` : ''}
+
+      <div class="section">
+        <div class="section-title">📡 Position Reporting</div>
+        <div class="section-body">${rules.position_report}</div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">📻 Contacts</div>
+        <div class="section-body info">
+          <b>Main:</b> ${rules.contacts.main}<br>
+          <b>Emergency:</b> ${rules.contacts.emergency}
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">⚠️ Special Notes</div>
+        <div class="section-body">${notesHtml}</div>
       </div>
     </div>
 
-    <div class="section">
-      <div class="section-title">⚠️ Special Notes</div>
-      <div class="section-body">${notesHtml}</div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">📝 自分用メモ</div>
-      <textarea id="user-note-area" placeholder="ここに自由にメモを追記できます...">${savedNote}</textarea>
-    </div>
+    ${myNoteTabHtml}
   `;
 
   panel.classList.remove('hidden');
+  attachPanelListeners(firId);
+}
 
+// ── Panel shared event listeners ──────────────
+function attachPanelListeners(firId) {
+  const panel = document.getElementById('fir-panel');
+
+  // Close
   document.getElementById('panel-close').addEventListener('click', () => {
     panel.classList.add('hidden');
   });
 
-  document.getElementById('user-note-area').addEventListener('input', (e) => {
-    userNotes[firId] = e.target.value;
-    localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
+  // Tab switching
+  panel.querySelectorAll('.panel-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      panel.querySelectorAll('.panel-tab').forEach(t => t.classList.remove('active'));
+      panel.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      tab.classList.add('active');
+      const target = document.getElementById('tab-' + tab.dataset.tab);
+      if (target) target.classList.add('active');
+    });
   });
+
+  // Save button
+  const saveBtn = document.getElementById('note-save-btn');
+  const toast   = document.getElementById('note-save-toast');
+  const textarea = document.getElementById('user-note-area');
+
+  if (saveBtn && textarea) {
+    saveBtn.addEventListener('click', () => {
+      userNotes[firId] = textarea.value;
+      localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
+
+      // Update tab indicator
+      const noteTab = panel.querySelector('[data-tab="mynote"]');
+      if (noteTab) noteTab.textContent = 'My Note' + (textarea.value ? ' ●' : '');
+
+      // Toast feedback
+      saveBtn.classList.add('saved');
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        saveBtn.classList.remove('saved');
+        toast.classList.add('hidden');
+      }, 1800);
+    });
+  }
 }
 
 // Close panel on map click
