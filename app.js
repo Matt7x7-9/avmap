@@ -56,38 +56,43 @@ FIR_BOUNDARIES.features.forEach(feature => {
   const shiftEast = avgLng < -30;
 
   // Convert GeoJSON [lng,lat] to Leaflet [lat,lng]
-  const coords = rawCoords.map(([lng, lat]) => [
+  const baseCoords = rawCoords.map(([lng, lat]) => [
     lat,
     shiftEast && lng < 0 ? lng + 360 : lng,
   ]);
 
-  const polygon = L.polygon(coords, {
-    color: color,
-    fillColor: color,
-    fillOpacity: 0.3,
-    weight: 1.5,
-    dashArray: '4 3',
+  // 東西±360°コピーも描画して無限スクロールに対応
+  [-360, 0, 360].forEach(offset => {
+    const coords = baseCoords.map(([lat, lng]) => [lat, lng + offset]);
+
+    const polygon = L.polygon(coords, {
+      color: color,
+      fillColor: color,
+      fillOpacity: 0.3,
+      weight: 1.5,
+      dashArray: '4 3',
+    });
+
+    polygon.on('click', () => openFirPanel(id, feature.properties.label));
+
+    // FIR label — interactive so tapping the label also opens the panel
+    const center = polygon.getBounds().getCenter();
+    const label = L.divIcon({
+      className: '',
+      html: `<div style="color:#8b949e;font-size:10px;font-weight:700;
+                         letter-spacing:0.5px;white-space:nowrap;
+                         text-shadow:0 0 4px #000,0 0 4px #000;
+                         cursor:pointer;padding:6px;">
+               ℹ ${feature.properties.label}
+             </div>`,
+      iconAnchor: [0, 0],
+    });
+    const labelMarker = L.marker(center, { icon: label, interactive: true });
+    labelMarker.on('click', () => openFirPanel(id, feature.properties.label));
+    labelMarker.addTo(firLayer);
+
+    polygon.addTo(firLayer);
   });
-
-  polygon.on('click', () => openFirPanel(id, feature.properties.label));
-
-  // FIR label — interactive so tapping the label also opens the panel
-  const center = polygon.getBounds().getCenter();
-  const label = L.divIcon({
-    className: '',
-    html: `<div style="color:#8b949e;font-size:10px;font-weight:700;
-                       letter-spacing:0.5px;white-space:nowrap;
-                       text-shadow:0 0 4px #000,0 0 4px #000;
-                       cursor:pointer;padding:6px;">
-             ℹ ${feature.properties.label}
-           </div>`,
-    iconAnchor: [0, 0],
-  });
-  const labelMarker = L.marker(center, { icon: label, interactive: true });
-  labelMarker.on('click', () => openFirPanel(id, feature.properties.label));
-  labelMarker.addTo(firLayer);
-
-  polygon.addTo(firLayer);
 });
 
 firLayer.addTo(map);
@@ -108,12 +113,16 @@ function airportIcon(icao) {
 
 const airportMarkers = {};
 Object.entries(AIRPORTS).forEach(([code, ap]) => {
-  const marker = L.marker(ap.coords, { icon: airportIcon(ap.icao) });
-  marker.bindPopup(`
-    <div class="popup-airport-name">${code} — ${ap.icao}</div>
-    <div class="popup-icao">${ap.name}</div>
-  `, { maxWidth: 200 });
-  airportMarkers[code] = marker;
+  const [lat, lng] = ap.coords;
+  // 東西±360°コピー（3つ）作成
+  airportMarkers[code] = [-360, 0, 360].map(offset => {
+    const marker = L.marker([lat, lng + offset], { icon: airportIcon(ap.icao) });
+    marker.bindPopup(`
+      <div class="popup-airport-name">${code} — ${ap.icao}</div>
+      <div class="popup-icao">${ap.name}</div>
+    `, { maxWidth: 200 });
+    return marker;
+  });
 });
 
 // ── Route lines ───────────────────────────────
@@ -121,35 +130,38 @@ function buildRouteLayer(group) {
   const layer = L.layerGroup();
 
   Object.entries(group.routes).forEach(([routeKey, coords]) => {
-    // Forward route
-    const line = L.polyline(coords, {
-      color: group.color,
-      weight: 2.5,
-      opacity: 0.85,
-      smoothFactor: 1,
-    });
-    line.bindPopup(`<b style="color:${group.color}">${routeKey}</b><br>
-      <span style="font-size:11px;color:#8b949e">Approx. corridor — update with OFP route</span>`);
-    line.addTo(layer);
-
-    // Return route (reverse, dashed)
-    if (group.bidirectional) {
-      const returnKey = routeKey.split('-').reverse().join('-');
-      const returnLine = L.polyline([...coords].reverse(), {
+    [-360, 0, 360].forEach(offset => {
+      const shiftedCoords = coords.map(([lat, lng]) => [lat, lng + offset]);
+      // Forward route
+      const line = L.polyline(shiftedCoords, {
         color: group.color,
-        weight: 2,
-        opacity: 0.55,
-        dashArray: '6 4',
+        weight: 2.5,
+        opacity: 0.85,
+        smoothFactor: 1,
       });
-      returnLine.bindPopup(`<b style="color:${group.color}">${returnKey}</b><br>
+      line.bindPopup(`<b style="color:${group.color}">${routeKey}</b><br>
         <span style="font-size:11px;color:#8b949e">Approx. corridor — update with OFP route</span>`);
-      returnLine.addTo(layer);
-    }
+      line.addTo(layer);
+
+      // Return route (reverse, dashed)
+      if (group.bidirectional) {
+        const returnKey = routeKey.split('-').reverse().join('-');
+        const returnLine = L.polyline([...shiftedCoords].reverse(), {
+          color: group.color,
+          weight: 2,
+          opacity: 0.55,
+          dashArray: '6 4',
+        });
+        returnLine.bindPopup(`<b style="color:${group.color}">${returnKey}</b><br>
+          <span style="font-size:11px;color:#8b949e">Approx. corridor — update with OFP route</span>`);
+        returnLine.addTo(layer);
+      }
+    });
   });
 
   // Airport markers for this group
   group.airports.forEach(code => {
-    if (airportMarkers[code]) airportMarkers[code].addTo(layer);
+    if (airportMarkers[code]) airportMarkers[code].forEach(m => m.addTo(layer));
   });
 
   return layer;
@@ -197,47 +209,57 @@ function ofpPolyline(routeId, color, dashed) {
   const group = L.layerGroup();
 
   // Shift Western Hemisphere coords to eastern map copy
-  const waypoints = route.waypoints.map(w => {
+  const baseWaypoints = route.waypoints.map(w => {
     const [lat, lng] = w.coords;
     return { ...w, coords: [lat, lng < -30 ? lng + 360 : lng] };
   });
 
-  const coords = waypoints.map(w => w.coords);
-  const line = L.polyline(coords, {
-    color,
-    weight: dashed ? 2 : 2.5,
-    opacity: dashed ? 0.6 : 0.85,
-    dashArray: dashed ? '6 4' : null,
-    smoothFactor: 1,
-  });
-  line.on('click', (e) => {
-    L.DomEvent.stopPropagation(e);
-    openRouteFirPanel(route);
-  });
-  line.addTo(group);
+  // 東西±360°コピーも描画して無限スクロールに対応
+  [-360, 0, 360].forEach(offset => {
+    const waypoints = baseWaypoints.map(w => ({
+      ...w, coords: [w.coords[0], w.coords[1] + offset],
+    }));
 
-  // FIR boundary crossing markers — diamond + WPT name label
-  waypoints.forEach((w, i) => {
-    if (!w.fir) return;
-    const displayName = resolveFirWptName(waypoints, i);  // FIRWPT→近傍WPT名に置換
-    const firMarker = L.marker(w.coords, {
-      icon: L.divIcon({
-        className: '',
-        html: `<div class="fir-wpt-label">
-                 <div class="fir-diamond"></div>
-                 <span class="fir-wpt-name">${displayName}</span>
-               </div>`,
-        iconSize: [80, 14],
-        iconAnchor: [5, 7],
-      }),
-      interactive: true,
-      zIndexOffset: 100,
+    const coords = waypoints.map(w => w.coords);
+    const line = L.polyline(coords, {
+      color,
+      weight: dashed ? 2 : 2.5,
+      opacity: dashed ? 0.6 : 0.85,
+      dashArray: dashed ? '6 4' : null,
+      smoothFactor: 1,
     });
-    firMarker.bindTooltip(
-      `<span class="fir-tip-fir">${w.fir}</span> FIR`,
-      { className: 'fir-tip', direction: 'top', offset: [0, -8] }
-    );
-    firMarker.addTo(group);
+    line.on('click', (e) => {
+      L.DomEvent.stopPropagation(e);
+      openRouteFirPanel(route);
+    });
+    line.addTo(group);
+
+    // FIR boundary crossing markers — diamond + WPT name label
+    // ツールチップはメインコピー（offset=0）のみ（パフォーマンス最適化）
+    waypoints.forEach((w, i) => {
+      if (!w.fir) return;
+      const displayName = resolveFirWptName(waypoints, i);
+      const firMarker = L.marker(w.coords, {
+        icon: L.divIcon({
+          className: '',
+          html: `<div class="fir-wpt-label">
+                   <div class="fir-diamond"></div>
+                   <span class="fir-wpt-name">${displayName}</span>
+                 </div>`,
+          iconSize: [80, 14],
+          iconAnchor: [5, 7],
+        }),
+        interactive: offset === 0,
+        zIndexOffset: 100,
+      });
+      if (offset === 0) {
+        firMarker.bindTooltip(
+          `<span class="fir-tip-fir">${w.fir}</span> FIR`,
+          { className: 'fir-tip', direction: 'top', offset: [0, -8] }
+        );
+      }
+      firMarker.addTo(group);
+    });
   });
 
   return group;
@@ -308,7 +330,7 @@ OFP_GROUPS.forEach(group => {
     if (line) line.addTo(layer);
   });
   group.airports.forEach(code => {
-    if (airportMarkers[code]) airportMarkers[code].addTo(layer);
+    if (airportMarkers[code]) airportMarkers[code].forEach(m => m.addTo(layer));
   });
   routeLayers[group.id] = layer;
 });
