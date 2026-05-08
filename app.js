@@ -559,6 +559,7 @@ function openFirPanel(firId, firLabel) {
   const savedNote = userNotes[firId] || '';
 
   // Build My Note tab HTML (shared between both cases)
+  const allNotesCount = Object.keys(userNotes).filter(k => userNotes[k]).length;
   const myNoteTabHtml = `
     <div class="tab-content" id="tab-mynote">
       <div style="font-size:12px;color:#8b949e;margin-bottom:10px;">
@@ -566,7 +567,19 @@ function openFirPanel(firId, firLabel) {
       </div>
       <textarea id="user-note-area" placeholder="ここに自由にメモを追記できます...">${savedNote}</textarea>
       <button class="note-save-btn" id="note-save-btn">保存</button>
-      <div class="note-save-toast hidden" id="note-save-toast">✓ 保存しました</div>
+      <div class="note-save-toast hidden" id="note-save-toast"></div>
+
+      <div class="note-io-section">
+        <div class="note-io-title">📋 全メモ管理（${allNotesCount}件）</div>
+        <div class="note-io-btns">
+          <button class="note-io-btn" id="note-export-btn">📤 全メモをコピー</button>
+          <button class="note-io-btn" id="note-import-toggle-btn">📥 インポート</button>
+        </div>
+        <div id="note-import-area" class="hidden">
+          <textarea id="note-import-text" placeholder='Claudeから受け取ったJSONをここに貼り付け&#10;{"RJJJ":"メモ内容","YBBB":"..."}'></textarea>
+          <button class="note-save-btn" id="note-import-btn" style="margin-top:6px;">読み込む</button>
+        </div>
+      </div>
     </div>
   `;
 
@@ -705,27 +718,77 @@ function attachPanelListeners(firId) {
     });
   });
 
-  // Save button
-  const saveBtn = document.getElementById('note-save-btn');
-  const toast   = document.getElementById('note-save-toast');
+  // ── Save button ──
+  const saveBtn  = document.getElementById('note-save-btn');
+  const toast    = document.getElementById('note-save-toast');
   const textarea = document.getElementById('user-note-area');
+
+  function showToast(msg, color = '#3fb950') {
+    toast.textContent = msg;
+    toast.style.color = color;
+    toast.classList.remove('hidden');
+    setTimeout(() => toast.classList.add('hidden'), 2000);
+  }
 
   if (saveBtn && textarea) {
     saveBtn.addEventListener('click', () => {
       userNotes[firId] = textarea.value;
       localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
-
-      // Update tab indicator
       const noteTab = panel.querySelector('[data-tab="mynote"]');
       if (noteTab) noteTab.textContent = 'My Note' + (textarea.value ? ' ●' : '');
-
-      // Toast feedback
       saveBtn.classList.add('saved');
-      toast.classList.remove('hidden');
-      setTimeout(() => {
-        saveBtn.classList.remove('saved');
-        toast.classList.add('hidden');
-      }, 1800);
+      showToast('✓ 保存しました');
+      setTimeout(() => saveBtn.classList.remove('saved'), 1800);
+    });
+  }
+
+  // ── Export: copy all notes as JSON ──
+  const exportBtn = document.getElementById('note-export-btn');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', () => {
+      const json = JSON.stringify(userNotes, null, 2);
+      navigator.clipboard.writeText(json).then(() => {
+        showToast('📋 全メモをコピーしました');
+        exportBtn.textContent = '✓ コピー済み';
+        setTimeout(() => exportBtn.textContent = '📤 全メモをコピー', 2000);
+      }).catch(() => {
+        // fallback: show in textarea
+        const imp = document.getElementById('note-import-text');
+        if (imp) { imp.value = json; imp.select(); }
+        showToast('↓ テキストを選択してコピーしてください', '#e3b341');
+      });
+    });
+  }
+
+  // ── Import toggle ──
+  const importToggle = document.getElementById('note-import-toggle-btn');
+  const importArea   = document.getElementById('note-import-area');
+  if (importToggle && importArea) {
+    importToggle.addEventListener('click', () => {
+      importArea.classList.toggle('hidden');
+    });
+  }
+
+  // ── Import: load JSON into userNotes ──
+  const importBtn  = document.getElementById('note-import-btn');
+  const importText = document.getElementById('note-import-text');
+  if (importBtn && importText) {
+    importBtn.addEventListener('click', () => {
+      try {
+        const parsed = JSON.parse(importText.value.trim());
+        if (typeof parsed !== 'object' || Array.isArray(parsed)) throw new Error();
+        Object.assign(userNotes, parsed);
+        localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
+        // Refresh current FIR note textarea
+        if (textarea) textarea.value = userNotes[firId] || '';
+        const noteTab = panel.querySelector('[data-tab="mynote"]');
+        if (noteTab) noteTab.textContent = 'My Note' + (userNotes[firId] ? ' ●' : '');
+        importText.value = '';
+        importArea.classList.add('hidden');
+        showToast(`✓ ${Object.keys(parsed).length}件のメモを読み込みました`);
+      } catch {
+        showToast('⚠ JSONが正しくありません', '#f85149');
+      }
     });
   }
 }

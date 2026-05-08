@@ -288,13 +288,63 @@ body {
 .note-save-toast {
   margin-top: 8px;
   font-size: 12px;
-  color: #3fb950;
   text-align: center;
   min-height: 18px;
   transition: opacity 0.4s;
 }
 
 .note-save-toast.hidden { opacity: 0; }
+
+/* Export / Import section */
+.note-io-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #21262d;
+}
+
+.note-io-title {
+  font-size: 11px;
+  color: #8b949e;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.note-io-btns {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.note-io-btn {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  background: #161b22;
+  color: #c9d1d9;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.note-io-btn:active {
+  background: #21262d;
+}
+
+#note-import-area textarea {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 11px;
+  color: #c9d1d9;
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
+  font-family: monospace;
+}
 
 /* FIR tap hint */
 #fir-hint {
