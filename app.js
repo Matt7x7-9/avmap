@@ -180,23 +180,29 @@ function distNm(lat1, lng1, lat2, lng2) {
   return Math.sqrt(dlat * dlat + dlng * dlng);
 }
 
-// "FIRWPT" / "FIR WPT" 等のプレースホルダ名を、同ルート内5nm以内の実在WPT名で置換
-// OFPでは "FIR WPT"（スペースあり）と書かれることもある
+// "FIRWPT" / "FIR WPT" 等のプレースホルダ名を N25E165 形式の座標名で表示
+// 座標形式WPT名（35N140E など）も同様に正規化して表示
 const FIR_WPT_PLACEHOLDER = /^FIR[\s_]?WPT\d*$/i;
+
+// lat/lng → N25E165 形式（航空オーシャニックFIX標準表記）
+function formatFirCoord(lat, shiftedLng) {
+  // +360°シフトされた西経を元に戻す
+  const lng = shiftedLng > 180 ? shiftedLng - 360 : shiftedLng;
+  const ns  = lat >= 0 ? 'N' : 'S';
+  const ew  = lng >= 0 ? 'E' : 'W';
+  const latD = String(Math.round(Math.abs(lat))).padStart(2, '0');
+  const lngD = String(Math.round(Math.abs(lng))).padStart(3, '0');
+  return `${ns}${latD}${ew}${lngD}`;
+}
 
 function resolveFirWptName(wpts, idx) {
   const w = wpts[idx];
-  if (!FIR_WPT_PLACEHOLDER.test(w.name)) return w.name;  // 通常WPTはそのまま
-  const [lat0, lng0] = w.coords;
-  let best = null, bestDist = 5.0;                        // 5nm上限
-  wpts.forEach((other, j) => {
-    if (j === idx) return;
-    if (FIR_WPT_PLACEHOLDER.test(other.name)) return;     // 他のプレースホルダはスキップ
-    const [lat1, lng1] = other.coords;
-    const d = distNm(lat0, lng0, lat1, lng1);
-    if (d < bestDist) { bestDist = d; best = other.name; }
-  });
-  return best || w.name;                                  // 見つかれば置換、なければ元の名前
+  // FIRWPT プレースホルダ → 座標名に変換
+  if (FIR_WPT_PLACEHOLDER.test(w.name)) {
+    const [lat, lng] = w.coords;
+    return formatFirCoord(lat, lng);
+  }
+  return w.name;
 }
 
 // Returns a LayerGroup containing the polyline + FIR-boundary diamond markers.
