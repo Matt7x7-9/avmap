@@ -129,12 +129,16 @@ Object.entries(AIRPORTS).forEach(([code, ap]) => {
 let caugAirportLayer = null;
 let caugVisible = false;
 
-function caugAirportIcon(icao) {
+const AIRPORT_TYPE_COLOR = { '◎': '#3fb950', '〇': '#58a6ff', '＊': '#e3b341' };
+const AIRPORT_TYPE_LABEL = { '◎': '◎ 正規飛行場', '〇': '〇 その他の指定飛行場', '＊': '＊ Contingency Airport' };
+
+function caugAirportIcon(icao, type) {
+  const color = AIRPORT_TYPE_COLOR[type] || '#c9d1d9';
   return L.divIcon({
     className: '',
     html: `<div style="display:flex;flex-direction:column;align-items:center;pointer-events:none">
-      <div style="width:8px;height:8px;border-radius:50%;background:#3fb950;border:1.5px solid #0d1117;box-shadow:0 0 5px rgba(63,185,80,0.5);"></div>
-      <div style="font-size:8px;font-weight:700;color:#3fb950;text-shadow:0 0 3px #000,0 0 3px #000;margin-top:1px;white-space:nowrap;">${icao}</div>
+      <div style="width:8px;height:8px;border-radius:50%;background:${color};border:1.5px solid #0d1117;box-shadow:0 0 5px ${color}88;"></div>
+      <div style="font-size:8px;font-weight:700;color:${color};text-shadow:0 0 3px #000,0 0 3px #000;margin-top:1px;white-space:nowrap;">${icao}</div>
     </div>`,
     iconSize: [40, 22],
     iconAnchor: [20, 4],
@@ -145,14 +149,16 @@ function buildCaugLayer() {
   const layer = L.layerGroup();
   CAUG_AIRPORTS.forEach(ap => {
     const [lat, baseLng] = ap.coords;
-    // 東西±360°コピー
+    const color = AIRPORT_TYPE_COLOR[ap.type] || '#c9d1d9';
+    const typeLabel = AIRPORT_TYPE_LABEL[ap.type] || ap.type;
     [-360, 0, 360].forEach(offset => {
-      const marker = L.marker([lat, baseLng + offset], { icon: caugAirportIcon(ap.icao) });
+      const marker = L.marker([lat, baseLng + offset], { icon: caugAirportIcon(ap.icao, ap.type) });
       marker.bindPopup(`
         <div class="popup-airport-name">${ap.icao}</div>
         <div class="popup-icao">${ap.name}</div>
-        <div style="font-size:10px;color:#3fb950;margin-top:4px;">CAUG 2-03</div>
-      `, { maxWidth: 220 });
+        <div style="font-size:11px;font-weight:700;color:${color};margin-top:6px;">${typeLabel}</div>
+        <div style="font-size:10px;color:#8b949e;margin-top:2px;">CAUG 1-03 §3.2.1.1 B787</div>
+      `, { maxWidth: 240 });
       marker.addTo(layer);
     });
   });
