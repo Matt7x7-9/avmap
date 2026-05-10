@@ -59,6 +59,24 @@ body {
   opacity: 0.5;
 }
 
+#caug-toggle-btn {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1.5px solid #3fb950;
+  background: transparent;
+  color: #3fb950;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+#caug-toggle-btn.active {
+  background: #3fb950;
+  color: #0d1117;
+}
+
 #fir-toggle-btn {
   padding: 5px 10px;
   border-radius: 20px;

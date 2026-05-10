@@ -125,6 +125,40 @@ Object.entries(AIRPORTS).forEach(([code, ap]) => {
   });
 });
 
+// ── CAUG 2-03 Airport markers ─────────────────
+let caugAirportLayer = null;
+let caugVisible = false;
+
+function caugAirportIcon(icao) {
+  return L.divIcon({
+    className: '',
+    html: `<div style="display:flex;flex-direction:column;align-items:center;pointer-events:none">
+      <div style="width:8px;height:8px;border-radius:50%;background:#3fb950;border:1.5px solid #0d1117;box-shadow:0 0 5px rgba(63,185,80,0.5);"></div>
+      <div style="font-size:8px;font-weight:700;color:#3fb950;text-shadow:0 0 3px #000,0 0 3px #000;margin-top:1px;white-space:nowrap;">${icao}</div>
+    </div>`,
+    iconSize: [40, 22],
+    iconAnchor: [20, 4],
+  });
+}
+
+function buildCaugLayer() {
+  const layer = L.layerGroup();
+  CAUG_AIRPORTS.forEach(ap => {
+    const [lat, baseLng] = ap.coords;
+    // 東西±360°コピー
+    [-360, 0, 360].forEach(offset => {
+      const marker = L.marker([lat, baseLng + offset], { icon: caugAirportIcon(ap.icao) });
+      marker.bindPopup(`
+        <div class="popup-airport-name">${ap.icao}</div>
+        <div class="popup-icao">${ap.name}</div>
+        <div style="font-size:10px;color:#3fb950;margin-top:4px;">CAUG 2-03</div>
+      `, { maxWidth: 220 });
+      marker.addTo(layer);
+    });
+  });
+  return layer;
+}
+
 // ── Route lines ───────────────────────────────
 function buildRouteLayer(group) {
   const layer = L.layerGroup();
@@ -479,6 +513,20 @@ function showFirHint() {
   clearTimeout(hint._timer);
   hint._timer = setTimeout(() => hint.classList.add('fade'), 3000);
 }
+
+// CAUG 2-03 airport toggle button
+const caugBtn = document.getElementById('caug-toggle-btn');
+caugBtn.addEventListener('click', () => {
+  if (caugVisible) {
+    if (caugAirportLayer) map.removeLayer(caugAirportLayer);
+    caugBtn.classList.remove('active');
+  } else {
+    if (!caugAirportLayer) caugAirportLayer = buildCaugLayer();
+    caugAirportLayer.addTo(map);
+    caugBtn.classList.add('active');
+  }
+  caugVisible = !caugVisible;
+});
 
 // FIR toggle button
 const firBtn = document.getElementById('fir-toggle-btn');
