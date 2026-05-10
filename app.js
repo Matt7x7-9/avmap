@@ -145,20 +145,65 @@ function caugAirportIcon(icao, type) {
   });
 }
 
+function buildCaugPopupHtml(ap, color, typeLabel) {
+  const notes = (typeof CAUG_NOTES_24 !== 'undefined') ? CAUG_NOTES_24[ap.icao] : null;
+
+  let html = `<div class="popup-airport-name">${ap.icao}`;
+  if (notes) html += ` <span style="font-size:11px;font-weight:400;color:#8b949e;">/${notes.iata}</span>`;
+  html += `</div>`;
+  html += `<div class="popup-icao">${notes ? notes.fullName : ap.name}</div>`;
+  html += `<div style="font-size:11px;font-weight:700;color:${color};margin-top:6px;">${typeLabel}</div>`;
+
+  if (notes) {
+    // Info grid
+    html += `<div style="display:grid;grid-template-columns:auto 1fr;gap:2px 8px;margin-top:8px;font-size:11px;line-height:1.5;">`;
+    html += `<span style="color:#8b949e;">UTC</span><span>${notes.utc}</span>`;
+    html += `<span style="color:#8b949e;">OPS</span><span>${notes.ops}</span>`;
+    if (notes.curfew && notes.curfew !== 'Nil' && notes.curfew !== '—') {
+      html += `<span style="color:#e3b341;">Curfew</span><span style="color:#e3b341;font-weight:700;">${notes.curfew}</span>`;
+    } else {
+      html += `<span style="color:#8b949e;">Curfew</span><span>${notes.curfew || 'Nil'}</span>`;
+    }
+    html += `<span style="color:#8b949e;">Fuel</span><span>${notes.fuel}</span>`;
+    html += `<span style="color:#8b949e;">RFFS</span><span>${notes.rffs}</span>`;
+    if (notes.prefRwy && notes.prefRwy !== '—') {
+      html += `<span style="color:#8b949e;">PrefRWY</span><span>${notes.prefRwy}</span>`;
+    }
+    html += `</div>`;
+
+    // Sections
+    notes.sections.forEach(sec => {
+      html += `<div style="margin-top:8px;">`;
+      html += `<div style="font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#58a6ff;margin-bottom:3px;">${sec.title}</div>`;
+      html += `<ul style="margin:0;padding-left:12px;font-size:11px;line-height:1.55;color:#c9d1d9;">`;
+      sec.items.forEach(item => {
+        html += `<li style="margin-bottom:2px;">${item}</li>`;
+      });
+      html += `</ul></div>`;
+    });
+
+    html += `<div style="font-size:10px;color:#8b949e;margin-top:8px;border-top:1px solid #30363d;padding-top:6px;">CAUG 2-03 §2.4 / 1-03 §3.2.1.1 B787</div>`;
+  } else {
+    html += `<div style="font-size:10px;color:#8b949e;margin-top:2px;">CAUG 1-03 §3.2.1.1 B787</div>`;
+  }
+
+  return html;
+}
+
 function buildCaugLayer() {
   const layer = L.layerGroup();
   CAUG_AIRPORTS.forEach(ap => {
     const [lat, baseLng] = ap.coords;
     const color = AIRPORT_TYPE_COLOR[ap.type] || '#c9d1d9';
     const typeLabel = AIRPORT_TYPE_LABEL[ap.type] || ap.type;
+    const hasNotes = (typeof CAUG_NOTES_24 !== 'undefined') && !!CAUG_NOTES_24[ap.icao];
+    const popupHtml = buildCaugPopupHtml(ap, color, typeLabel);
     [-360, 0, 360].forEach(offset => {
       const marker = L.marker([lat, baseLng + offset], { icon: caugAirportIcon(ap.icao, ap.type) });
-      marker.bindPopup(`
-        <div class="popup-airport-name">${ap.icao}</div>
-        <div class="popup-icao">${ap.name}</div>
-        <div style="font-size:11px;font-weight:700;color:${color};margin-top:6px;">${typeLabel}</div>
-        <div style="font-size:10px;color:#8b949e;margin-top:2px;">CAUG 1-03 §3.2.1.1 B787</div>
-      `, { maxWidth: 240 });
+      marker.bindPopup(popupHtml, {
+        maxWidth: hasNotes ? 300 : 240,
+        maxHeight: 400,
+      });
       marker.addTo(layer);
     });
   });

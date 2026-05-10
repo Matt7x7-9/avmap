@@ -1,4 +1,4 @@
-const CACHE = 'avmap-v37';
+const CACHE = 'avmap-v38';
 const PRECACHE = [
   './',
   './index.html',
@@ -9,6 +9,7 @@ const PRECACHE = [
   './data/fir-boundaries.js',
   './data/fir-rules.json',
   './data/airports_caug.js',
+  './data/caug_notes_24.js',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
 ];
