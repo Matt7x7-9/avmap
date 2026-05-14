@@ -711,6 +711,67 @@ const CAUG_NOTES_24 = {
     ]
   },
 
+  VTBS: {
+    fullName: 'BANGKOK, Suvarnabhumi INTL',
+    iata: 'BKK',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'RWY運用',
+        items: [
+          'South Flow: RWY19 DEP+ARR / RWY20L DEP / RWY20R ARR',
+          'North Flow: RWY01 DEP+ARR / RWY02R DEP / RWY02L ARR',
+          'PAPI: 全RWY LEFT側 3.0° MEHT 64ft',
+        ]
+      },
+      {
+        title: 'TWY/スポット',
+        items: [
+          'TWY最小幅: 25m',
+          'ストップバー: VIS<1500m または夜間に運用',
+          'JALスポット: G1-G5, F1-F6, E1-E10, 401-403, 501-505',
+          'B787利用可能スポット: D2-D7, E1-E10, F5-F6, G2-G5',
+          '⚠️ Power Out: 全スポット不可 (NOT AVBL from any spot)',
+          'APU: Block In後5分まで / Block Out 10分前まで運用可',
+        ]
+      },
+      {
+        title: '出発',
+        items: [
+          'GND周波数: Eスポット = 121.75MHz / F・G・401-525スポット = 121.95MHz',
+          '⚠️ VHF干渉: Spot E/F/G付近で121.5MHzに干渉あり (PBB近く)',
+          'DEP Transition: TWR → APP East/West/South/North → BKK Control',
+        ]
+      },
+      {
+        title: '制限空域',
+        items: [
+          '⚠️ VT(R)-1 BANGKOK CITY: 3000ft以下はATC制限を除き飛行禁止',
+          '⚠️ VT(R)-2 KING PALACE: 飛行禁止 (strictly prohibited)',
+        ]
+      },
+      {
+        title: '気象・鳥害',
+        items: [
+          'TS: 4月〜10月 (午後〜深夜)。CB locally developed または ITCZ通過型',
+          'FOG: 12月〜4月 放射霧 (深夜〜早朝、VIS<1000m)',
+          '鳥害: 空港北側に鳥の餌場。RWY上/周辺に多数。バードスウィープはRQ後5分以内',
+        ]
+      },
+      {
+        title: 'B787 地上設備',
+        items: [
+          'GND PWR / PAX STEP / TUG/BAR / WATER/LAV SVC: 全て利用可 (AVBL)',
+        ]
+      },
+    ]
+  },
+
   // ── ベトナム ──────────────────────────────────
 
   VVDN: {
@@ -775,7 +836,138 @@ const CAUG_NOTES_24 = {
     ]
   },
 
-  // ── マレーシア ────────────────────────────────
+  VVNB: {
+    fullName: 'HANOI, Noi Bai INTL',
+    iata: 'HAN',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'COMM',
+        items: [
+          'コンパニー無線: 現地当局規制により利用不可 (N/A)',
+          '運航情報: ACARS または SATCOM 経由 (TYOOD)',
+        ]
+      },
+      {
+        title: 'RWY/TWY',
+        items: [
+          'テールウィンド10KTS超で使用RWY変更',
+          '軍用機オペレーション実施中',
+          '離陸: T/Oクリアランス後30秒以内に滑走開始',
+          '着陸: 減速後60秒以内にRWY退去',
+          '⚠️ TWY N1〜N5: 軍用ランプに接続 → 進入禁止',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          'JAL指定スポット: 14〜21',
+          'PBB / VDGS: スポット 14〜27',
+          'スポット15-22/24-27: B747-400/B777-300相当まで (翼幅<65m)',
+          'スポット14: A380/AN-124相当まで (翼幅<80m)',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'アプローチスピード制限: 12NM最終またはターニングファイナル → 最大200KT',
+          '                       5NM最終 → 最大160KT',
+          'パーキング: PWR In全スポット。VDGS primary誘導',
+          'ノーズホイール停止位置: ストップライン±0.5m超過時は空港当局インタビューの可能性',
+        ]
+      },
+      {
+        title: '出発',
+        items: [
+          'PB/ENG start 5分前にNOIBAI GND にコール (callsign / destination / spot / FL)',
+          'プッシュバック: 全スポット可 (オープンスポットはPower Out)',
+          '⚠️ RWY11L THR 180°ターン指示あり: Turning PadはコードCまで。エッジライトはRWYと共有 (踏み可)',
+        ]
+      },
+      {
+        title: '気象・その他',
+        items: [
+          'TS: ITCZ・熱帯性低気圧により4月〜9月',
+          '煙霧(FU): 6月 および 10月下旬〜11月上旬 (周辺焼き畑由来)',
+          '高度制限: 10ft単位の場合は100ft単位に切り上げて適用',
+          '鳥害: 空港周辺に注意',
+          '制限空域: VVP1 Hanoi City / VVD21 軍事(NOTAM) / VVR7/8/9 Air force TRNG',
+        ]
+      },
+    ]
+  },
+
+  VVTS: {
+    fullName: 'HO CHI MINH CITY, Tan Son Nhat INTL',
+    iata: 'SGN',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'COMM',
+        items: [
+          'コンパニー無線: 現地当局規制により利用不可 (N/A)',
+          'D-ATIS: TAN SON NHAT 128.0MHz H24',
+        ]
+      },
+      {
+        title: 'TWY/スポット',
+        items: [
+          'TWY S5: 45m / その他TWY: 23m',
+          'RWY07L/25Rホールディングポジション: ポジションマーキングのみ (サインなし)',
+          'PBB: スポット 9-16 および 17-22',
+          '⚠️ スポット14: 駐機中の上り傾斜に注意 (stop position直前)',
+          'スポット18/19: B747-400の同時使用不可',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'フォローミーカー: リクエストで利用可',
+          'タキシング: Jeppesen 10-6参照',
+          'パーキング: PWR In全スポット; VDGS (スポット09-18: stop line +1M/-0.5M)',
+        ]
+      },
+      {
+        title: '出発',
+        items: [
+          'ATC Clearance: TAN SON NHAT DELIVERY に PB 5分前にコール',
+          'SID: KADUM DEP (Priority 1) ※軍事理由でANTRI経由指示の場合あり',
+          '      ANTRI DEP (Priority 2)',
+          'Delivery通報: callsign / destination / spot / FL',
+        ]
+      },
+      {
+        title: '気象・その他',
+        items: [
+          'TS: 雨季15-20分 (5月は激しく1時間以上継続することあり)',
+          'FOG: 10月〜11月早朝 (VISはほぼminimaまで低下せず)',
+          '高度制限: 10ft単位の場合は100ft単位に切り上げて適用',
+          '鳥害: 空港周辺に注意',
+          '最寄り軍用空港: Bien Hoa (SGNから北東13NM)',
+          '制限空域: VVP4 Ho Chi Minh City (GND〜3000m) / VVD23-26 Air force TRNG(ヘリ)',
+        ]
+      },
+      {
+        title: 'B787 地上設備',
+        items: [
+          'GND PWR / PAX STEP / TUG/BAR / WATER/LAV SVC: 全て利用可 (AVBL)',
+          'B787スポット: PBB=17,18,9-16 / Open=29-32,33-36 / 全スポットPB可',
+        ]
+      },
+    ]
+  },
+
+  // ── マレーシア・インドネシア・シンガポール ──────
 
   WMKJ: {
     fullName: 'JOHOR BAHRU (Senai INTL)',
@@ -821,6 +1013,232 @@ const CAUG_NOTES_24 = {
         title: '連絡先',
         items: [
           'APT: +607-5994500',
+        ]
+      },
+    ]
+  },
+
+  WIII: {
+    fullName: 'JAKARTA, Soekarno-Hatta INTL',
+    iata: 'CGK',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'COMM',
+        items: [
+          'コンパニー無線: JL CGK 131.8MHz',
+          '⚠️ GND/TWR通信が弱い場所: スポットD31/D51/D61/D71 および RWY/TWY交差部',
+          '⚠️ NAVAIDS (ILS含む): NOTAMなしに停止することあり',
+          '⚠️ CKG VOR: 40NM以遠は使用不可',
+        ]
+      },
+      {
+        title: 'RWY/TWY',
+        items: [
+          'RWY 07L/25R / 07R/25L: 通常運用',
+          '⚠️ RWY 06/24: 着陸のみ (07L/25R閉鎖時等、非正常時のT/Oは可)',
+          'TWY幅: 23m + 10m舗装肩 各側',
+          'TWY一方通行: NP2/SP2=西行き / NP1/SP1=東行き / WC1=南行き / WC2=北行き',
+          'NCY→Terminal E / NC5→Terminal F / NC4→Terminal G',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          'Terminal G: G16/G19/G23/G36/G2-G6 → B773ER / G26/G29/G33 → A380',
+          'Remote Apron: R83/R85/R87/R88 → B773ER',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS同時進入: RWY25L/Rへの Simultaneous ILS APCHはVMC条件下で許可',
+          'タキシング: ATCがJeppesen 10-6の「ROUTE No.」で指示することあり (TWY名が優先)',
+          '⚠️ 夜間・雨天時: TWYセンターライン・タキシーガイドラインが見えにくい (特にランプ)',
+        ]
+      },
+      {
+        title: '出発',
+        items: [
+          'ATC Clearance: DEL/GND/TWR に PB 25分前にコール',
+          '通報: callsign / destination / spot / POB / A/C type+Reg / FL',
+          'プッシュバック手順: Jeppesen 10-9参照',
+          '⚠️ CGK→JPN: T/Oクリアランス時にTWRがSIDキャンセル・右旋回heading 070を指示する場合あり',
+        ]
+      },
+      {
+        title: 'その他',
+        items: [
+          '凧 (KITES): 最終進入エリア周辺 (特に4月〜10月)',
+          '気象: ITCZ 11月に北から南へ通過 → 5月に南から戻る',
+          '制限空域: WI(D)-10 SAR訓練 / WI(R)-2 民間航空学校訓練',
+        ]
+      },
+    ]
+  },
+
+  WMKK: {
+    fullName: 'KUALA LUMPUR INTL',
+    iata: 'KUL',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'RWY32R/L',
+    sections: [
+      {
+        title: 'COMM',
+        items: [
+          'コンパニー無線: JAPAN AIR KUL 131.8MHz',
+          'METAR特記コード: TL=TS(中〜強) / TLO=軽いTS / J=視程内だが空港外 / JTL=遠方TS',
+        ]
+      },
+      {
+        title: 'RWY運用・閉鎖スケジュール',
+        items: [
+          'Pref RWY: 32R/L (南向き運用)',
+          'RWY14L/32R 閉鎖: 月/木/日 1530-2200UTC + 月 0300-0400UTC',
+          'RWY14R/32L 閉鎖: 火/金 1530-2200UTC + 火 0300-0400UTC',
+          'RWY15/33 閉鎖: 水/土 1530-2200UTC + 水 0300-0400UTC',
+          '再開前20分間検査。定期検査: 0200-0430/0800-1100/1400-1600/2100-2330UTC',
+          'Triple RWY DEP (2330-1400UTC): RWY32L DEP / RWY32R mixed / RWY33 mixed',
+          '独立・従属並行APCH: ATIS通報あり。サイドステップは8NM以内への変更不可',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          '⚠️ B787専用スポット: C1, C2, C23, C32, C34, C36',
+          'B773ER: C4/C6/C22/C24/C25/C27/C35/C37 (APIS++) / C15/C26 (APIS)',
+          '⚠️ Power Out: 全スポット不可 (NOT AVBL from any spot)',
+          'スポットによっては3本リードインラインあり (Ref.20-9C: センターラインに従うこと)',
+        ]
+      },
+      {
+        title: 'STAR/到着',
+        items: [
+          'STAR: KUL TMA進入ウェイポイントに基づいてATCが割り当て',
+          'PMS East (STAR 1G): KAKAK/PULIP/SAROX → RWY32R/L または 14R/L',
+          'PMS West (STAR 1H): NIREN/PUGER/SALAX/GUPTA → RWY15/33',
+          '0000-1600UTC: DUAL PMS / 1600-0000UTC: Midnight STAR (3K/3J) またはPMS',
+          'ホールディング: PIBOS (AWY R208 と G582 の交差点付近)',
+        ]
+      },
+      {
+        title: '出発',
+        items: [
+          'ATC Clearance: KUL FIR外 → TSAT-10分前にLumpur Deliveryコール',
+          '東行き (M771-DUDIS / L625-AKMON / N884-LAXOR): TSAT-30分前にコール',
+          '離陸後: Lumpur Departure (135.25MHz) 2000ft通過前にコール',
+          'Departures通報: callsign / SID or RD identifier / last level (100ft単位) / assigned altitude',
+          '⚠️ AWY G582 東行き: VBA/BATU ARANG VOR 78DMEまでにFL250以上到達すること',
+        ]
+      },
+      {
+        title: '気象・その他',
+        items: [
+          'TS: 午後の熱対流型(30分程度) または SW monsoon期(JUN-SEP、数時間に及ぶことあり)',
+          'FOG: 前夜の大雨または夕方の雨の翌早朝に放射霧 (日出後すぐに消散)',
+          '鳥害: 渡り鳥の飛行経路上 (SEP-NOV北東方向、FEB-APR南東方向、高度300-3000ft)',
+          'SIN-KUL ルート: A464 (南行き KUL→SIN) / A457 (北行き SIN→KUL)',
+        ]
+      },
+    ]
+  },
+
+  WSSS: {
+    fullName: 'SINGAPORE, Changi INTL',
+    iata: 'SIN',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'COMM',
+        items: [
+          'コンパニー無線: JAPAN AIR SIN 131.8MHz',
+          'CLNCのため DEL周波数の代わりにGND周波数が使用される場合あり',
+        ]
+      },
+      {
+        title: 'RWY運用・閉鎖スケジュール',
+        items: [
+          'RWY: 02L/20R / 02C/20C / 02R/20L',
+          '⚠️ RWY20R DEP: RWY20C利用可能な1600-2200UTCは禁止',
+          '定期閉鎖: 02L/20R 日/水1700-2200UTC / 02C/20C 火/金1800-2200UTC / 02R/20L 月1800-2200UTC',
+          '5分間検査: 毎日 0100-0359 / 0500-0759 / 0800-1059UTC',
+        ]
+      },
+      {
+        title: 'TWY・Follow the Greens',
+        items: [
+          '⚠️ Follow the Greens (2026年3月19日〜): 夜間/低視程時の緑色センターラインライト誘導',
+          '赤ストップバー点灯中は前進禁止。verbal clearance limit未満もATCなしに前進禁止',
+          '複数グリーンセグメントで迷ったら停止してATCに確認',
+          'TWY R/S: タキシング速度制限 20KT',
+          '到着: スタンド到着まで Transponder ON を維持',
+          '出発: PB clearance request前まで Transponder ON を維持',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          'JAL: T1 C/Dベイシリーズ、West/East Cargo Apron',
+          'PWR In全スポット / VDGS全PAXスタンド設置',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          '南行き A464/A576 経由: RWY20R/C使用中かつ120DME SJ以内はSIN ATC (133.25MHz pri, 135.8MHz sec) にSTARリクエスト',
+          '依存並行アプローチ (ATIS通報): 3nm staggered separation',
+          '騒音: RWY02L/20R 1600-2200UTC はIdle Reverseのみ',
+        ]
+      },
+      {
+        title: '出発',
+        items: [
+          'ENG start: ATC通報後PB。PB終了時に全ENG始動してTaxi ready状態であること',
+          '⚠️ CHANGI 1C/1D DEP: Jeppesen initial climb "023°/203°" はTrackではなくRWY Magnetic Headingで飛行',
+          '速度制限: 4000ft AMSL以下 230KT / 10000ft AMSL以下 250KT',
+          '初期上昇: RNAV-1 GNSS SIDを適用。初期3000ftまで上昇',
+          '騒音: AWY G579 (SJ〜GUMPU) は5000ft以上を維持',
+          '出発スロット(LSWD): Delivery からSlot period/最早・最遅DEP時刻の通報あり → Expected T/O時刻を計算してreply',
+        ]
+      },
+      {
+        title: '⚠️ 船舶横断 (RWY02系統 離陸時)',
+        items: [
+          '北側shipping channelを横断する船舶がT/O障害となる場合あり (通過時間10-15分)',
+          '最小クライムグラジェント: 2500ftまで5% → その後3.3%',
+          '02L: 船舶>35m → RWY CODE 02L55 / >55m → CODE 02L140',
+          '02C: 船舶>70m → RWY CODE 02C115 / >115m → CODE 02C140',
+          '02R: 船舶>65m → RWY CODE 02R140',
+          '⚠️ 140m超の船舶: いかなるCODEも性能要件を満たせない → 通過を待つこと',
+        ]
+      },
+      {
+        title: '通信途絶 エンルートホールディング',
+        items: [
+          'HOSBA(HHA): INBD 259° Right 1min, 230KT, FL140/7000ft ALT — SIN ACC 120.3MHz',
+          'NYLON(NHA): INBD 203° Left 1min, 220KT, FL140/3000ft ALT — SIN ACC 120.3MHz',
+          'SAMKO(SHA): INBD 348° Left 1min, 220KT, FL140/4000ft ALT — SIN ACC 120.3MHz',
+        ]
+      },
+      {
+        title: '気象',
+        items: [
+          'TS: 4-5月および10-11月 (inter-monsoon期)。突風・急激なVIS低下、30分以内に回復',
+          'HZ: 年間を通じて観測 (VIS最大1500mまで低下)。SEP-OCTに最多',
         ]
       },
     ]
