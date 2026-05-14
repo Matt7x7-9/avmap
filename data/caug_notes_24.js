@@ -1,5 +1,5 @@
 // CAUG 2-03 Chapter 2.4 Terminal Other AD - Asia
-// Operational notes for 9 airports
+// Operational notes for 35 airports (26 with cache data, 9 placeholder)
 // Source: RM_JALISSUE_INT 2-03 Rev.26.3 (16 APR 2026)
 
 const CAUG_NOTES_24 = {
@@ -391,6 +391,597 @@ const CAUG_NOTES_24 = {
         ]
       },
     ]
+  },
+
+  // ── インド ────────────────────────────────────
+
+  VAAH: {
+    fullName: 'AHMEDABAD (Sardar Vallabhbhai Patel INTL)',
+    iata: 'AMD',
+    utc: '+5.5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'RWY 23',
+    sections: [
+      {
+        title: 'スポット',
+        items: [
+          'B777/787利用可能スポット: 31-34, 36, 70',
+          'RWY23: Turning Pad設置あり',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: +91-79-2286-9211 / +91-79-2285-0333 / VAAHYHYX / apdahm@aai.aero',
+          'MET: +91-79-2285-8064',
+        ]
+      },
+    ]
+  },
+
+  VABB: {
+    fullName: 'MUMBAI (Chhatrapati Shivaji Maharaj INTL)',
+    iata: 'BOM',
+    utc: '+5.5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'RWY 27',
+    sections: [
+      {
+        title: 'RWY情報',
+        items: [
+          '⚠️ RWY14/32 着陸禁止 (障害物によりJAL規定)',
+          'RWY09: TORA/LDA はTWY-N3まで',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: (VABBZPZX)',
+          'MET: (VABBYMYX)',
+        ]
+      },
+    ]
+  },
+
+  VECC: {
+    fullName: 'KOLKATA (Netaji Subhas Chandra Bose INTL)',
+    iata: 'CCU',
+    utc: '+5.5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'RWY 01R/19L',
+    sections: [
+      {
+        title: '情報',
+        items: [
+          '主な特記事項なし (詳細はJeppesen参照)',
+        ]
+      },
+    ]
+  },
+
+  VIAR: {
+    fullName: 'AMRITSAR (Sri Guru Ram Dass Jee INTL)',
+    iata: 'ATQ',
+    utc: '+5.5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'RWY 34',
+    sections: [
+      {
+        title: 'TWY/スポット',
+        items: [
+          'RWY西側のTWYは使用不可',
+          'B777/787利用可能スポット: 2, 5, 11-14',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'STARなし → RADARベクターを期待',
+          '到着Taxi: RWY16: F/P→Apron / RWY34: Turning Pad→E→G→Apron (RWY端での転回推奨)',
+        ]
+      },
+      {
+        title: '出発',
+        items: [
+          '出発Taxi: RWY16: G→E→Turning Pad',
+        ]
+      },
+    ]
+  },
+
+  // ── マカオ ────────────────────────────────────
+
+  VMMC: {
+    fullName: 'MACAU INTL',
+    iata: 'MFM',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'RWY 34 (Tail component <10kt)',
+    sections: [
+      {
+        title: 'アプローチ',
+        items: [
+          'LOC RWY16: D6.5〜D4.5間にベンドあり',
+          '(LDG RWY16) Inbound CRS 215°を維持。ZAO VOR方向への逸脱禁止',
+          'VDGS設置: Jeppesen 10-1P参照',
+        ]
+      },
+      {
+        title: 'ATC Transfer (到着)',
+        items: [
+          'S (HKG ATC→ZHUHAI ATC)',
+          'Established on MCS LLZ (ZHUHAI ATC→MFM TWR)',
+          '高度計: RWY16/34 → Set MACAU QNH (HKG ATC→MFM TWR) / Set 1013.2hPa (HKG ATC→ZHUHAI ATC) → Set MACAU QNH (ZHUHAI ATC→MFM TWR)',
+        ]
+      },
+      {
+        title: 'ATC Transfer (出発)',
+        items: [
+          'Initial Right turn (MFM TWR→ZHUHAI ATC)',
+          'LKC (ZHUHAI ATC→HKG ATC)',
+          '離陸後できるだけ速やかにHKG FIR進入前にSID ALTへ上昇',
+          'RWY16/34: Set HKG QNH (MACAU TWR→HKG ATC)',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: ADMINISTRATION OF AIRPORT Ltd. +853-88982829',
+          'MET: +853-88986214 / +853-28862203(Forecast Duty)',
+        ]
+      },
+    ]
+  },
+
+  // ── インド（南部） ─────────────────────────────
+
+  VOMM: {
+    fullName: 'CHENNAI (Chennai INTL)',
+    iata: 'MAA',
+    utc: '+5.5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: '—',
+    sections: [
+      {
+        title: 'RWY/TWY情報',
+        items: [
+          'RWY12/30: Code C以下の機体のみ使用可',
+          '誘導灯: Edge lightのみ (Center line light未設置)',
+          'RWY07: Full lengthが必要な場合はStart-up request前にATCへ通報',
+          'Taxi方向(RWY07 DEP): TWY-K交差点からRWYへ直接進入 (バックトラック不要)',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: +91-44-22561122 / +91-44-22561234 / apdchennai@aai.aero',
+          'MET: +91-44-22560168 / +91-44-22560270',
+        ]
+      },
+    ]
+  },
+
+  // ── タイ ─────────────────────────────────────
+
+  VTBD: {
+    fullName: 'BANGKOK, Don Mueang INTL',
+    iata: 'DMK',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'RWY 21',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'TWY J: B737以下のみ使用可 (B767以上は使用不可)',
+          '濡れているとき・夜間: TWY中心線・縁線が見えにくい',
+        ]
+      },
+      {
+        title: '空港周辺',
+        items: [
+          '空港周辺に小鳥が多数生息',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'Arrival Route: STAR またはRADAR ベクター',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: (VTBDZPZX)',
+          'MET: (VTBDYMYX)',
+        ]
+      },
+    ]
+  },
+
+  VTBU: {
+    fullName: 'RAYONG (U-Tapao INTL)',
+    iata: 'UTP',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '地形',
+        items: [
+          '⚠️ RWY18 THR北北東2.2nmに無灯の丘陵 896ft',
+        ]
+      },
+      {
+        title: '制限',
+        items: [
+          '⚠️ B787: いかなるスポットからもPower Outは利用不可',
+          '夜間: VFRアプローチ不可',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: U-Tapao Airport Authority +66-38-245600 / VTBUZPZX',
+          'MET: +66-38-245489',
+        ]
+      },
+    ]
+  },
+
+  VTCC: {
+    fullName: 'CHIANG MAI INTL',
+    iata: 'CNX',
+    utc: '+7',
+    ops: '24hrs',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '地形',
+        items: [
+          '空港西側に高地。最高点 5528ft (空港北西5.5nm)',
+          '⚠️ IAFでの最低通過高度に注意 (地形のため)',
+        ]
+      },
+      {
+        title: 'RWY/TWY',
+        items: [
+          'RWY18: Straight-in approachは設定されていない',
+          'TWY F: 使用不可',
+          'RADARサービス: CHIANG MAI APP周波数で24時間 (PRIカバレッジ60nm / SSR 200nm)',
+        ]
+      },
+    ]
+  },
+
+  VTSP: {
+    fullName: 'PHUKET INTL',
+    iata: 'HKT',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'RWY 27',
+    sections: [
+      {
+        title: 'TWY/スポット',
+        items: [
+          'TWY C/D: ワイドボディ機は使用不可',
+          'B787利用可能スポット: 7-15',
+          'Spot 4/8-11: RLGシステム設置',
+          'Spot 5-7: Safegateシステム設置',
+        ]
+      },
+      {
+        title: 'RWY情報',
+        items: [
+          'RWY27 THR: 180°ターン用Turning Pad設置 (幅200ft/RWY含む)',
+          'TWY Gからの使用可能RWY長に注意 (RWY27 DEPの場合)',
+          'RADARサービス: PHUKET APP周波数で24時間',
+        ]
+      },
+    ]
+  },
+
+  // ── ベトナム ──────────────────────────────────
+
+  VVDN: {
+    fullName: 'DA NANG INTL',
+    iata: 'DAD',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'RWY 35R',
+    sections: [
+      {
+        title: 'RWY情報',
+        items: [
+          'RWY17 着陸: Visual Approachのみ',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          '使用可能スポット: 1-10, 14, 18, 20, 23, 25, 27, 31',
+          'VDGS (PBB): スポット 14, 16, 18, 20, 23, 25, 27',
+          'Follow me car: パイロット要請で利用可',
+        ]
+      },
+      {
+        title: 'FMS注意',
+        items: [
+          '⚠️ B738 FMS NAVDATAの CIR17L / CIR17R / TST17L は使用禁止 (テスト用手順)',
+        ]
+      },
+    ]
+  },
+
+  VVCI: {
+    fullName: 'HAI PHONG (Cat Bi INTL)',
+    iata: 'HPH',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET A1',
+    rffs: 'Cat 8',
+    prefRwy: '—',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          'GND PWR / Air Starter / PAX Step / Towing TUG&BAR / LAV SVC / Follow Me Car: 全て利用可',
+          '⚠️ Water SVC: N/A (利用不可)',
+        ]
+      },
+      {
+        title: 'Taxi経路',
+        items: [
+          '到着後: 着陸RWY25端→Turn Pad→RWY07/25→TWY N4→TWY N→TWY W3/W4→スタンド',
+          '  または: TWY N4→TWY N→TWY W3/W4→スタンド',
+          'Turning Pad: TWY N1 および N7',
+          '出発(スタンド5/6/8/17/19): TWY W3/W4→TWY N→TWY N4→RWY07/25→Turn Pad→離陸',
+        ]
+      },
+    ]
+  },
+
+  // ── マレーシア ────────────────────────────────
+
+  WMKJ: {
+    fullName: 'JOHOR BAHRU (Senai INTL)',
+    iata: 'JHB',
+    utc: '+8',
+    ops: '2230-1600Z',
+    curfew: '1600-2230Z',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          'Towing TUG/BAR: B737-400/800・B767-200/300・B747-400・B777-200/300のみ対応するユニバーサルタウバー',
+          '⚠️ B787: タウバーなし → ダイバート着陸は可。Power In / Power Out のみで対応',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          'B767/B777: スポット 1(PBB)/3(PBB)/5-7',
+          'B787: スポット 5-7 (PWR-OUT利用可)',
+          'VDGS: スポット 1/2/3/4 (B767は対象外)',
+        ]
+      },
+      {
+        title: '空域制限',
+        items: [
+          '⚠️ 禁止空域 WM(P)-228 (GND〜5000ft): 空港南方 (160°/10NM VJR) に存在',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'SINから: RADAR Vectorを期待',
+          'KULから: TOPOR ARRIVAL経由',
+          'ダイバート機: 機体タイプをATCへ通報 → JHBのGHが利用可能タウバーに応じてスポット割り当て',
+          'ダイバート機: Cargo apronに駐機',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: +607-5994500',
+        ]
+      },
+    ]
+  },
+
+  // ── キャッシュ未収録空港 ──────────────────────
+
+  VVVD: {
+    fullName: 'VAN DON INTL',
+    iata: 'VDO',
+    utc: '+7',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.VVVD/VDO) 参照'] }]
+  },
+
+  WARR: {
+    fullName: 'SURABAYA (Juanda INTL)',
+    iata: 'SUB',
+    utc: '+7',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.WARR/SUB) 参照'] }]
+  },
+
+  WBGG: {
+    fullName: 'KUCHING INTL',
+    iata: 'KCH',
+    utc: '+8',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.WBGG/KCH) 参照'] }]
+  },
+
+  WBKK: {
+    fullName: 'KOTA KINABALU INTL',
+    iata: 'BKI',
+    utc: '+8',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.WBKK/BKI) 参照'] }]
+  },
+
+  WBSB: {
+    fullName: 'BANDAR SERI BEGAWAN (Brunei INTL)',
+    iata: 'BWN',
+    utc: '+8',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.WBSB/BWN) 参照'] }]
+  },
+
+  WMKP: {
+    fullName: 'PENANG INTL',
+    iata: 'PEN',
+    utc: '+8',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.WMKP/PEN) 参照'] }]
+  },
+
+  ZBHH: {
+    fullName: 'HOHHOT (Baita INTL)',
+    iata: 'HET',
+    utc: '+8',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZBHH/HET) 参照'] }]
+  },
+
+  ZHHH: {
+    fullName: 'WUHAN (Tianhe INTL)',
+    iata: 'WUH',
+    utc: '+8',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZHHH/WUH) 参照'] }]
+  },
+
+  ZMUB: {
+    fullName: 'ULAANBAATAR (Chinggis Khaan INTL)',
+    iata: 'ULN',
+    utc: '+8',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZMUB/ULN) 参照'] }]
+  },
+
+  ZPPP: {
+    fullName: 'KUNMING (Changshui INTL)',
+    iata: 'KMG',
+    utc: '+8',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZPPP/KMG) 参照'] }]
+  },
+
+  ZSAM: {
+    fullName: 'XIAMEN (Gaoqi INTL)',
+    iata: 'XMN',
+    utc: '+8',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZSAM/XMN) 参照'] }]
+  },
+
+  ZSHC: {
+    fullName: 'HANGZHOU (Xiaoshan INTL)',
+    iata: 'HGH',
+    utc: '+8',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZSHC/HGH) 参照'] }]
+  },
+
+  ZWWW: {
+    fullName: 'URUMQI (Diwopu INTL)',
+    iata: 'URC',
+    utc: '+8',
+    ops: '—',
+    curfew: '—',
+    fuel: 'JET-A1',
+    rffs: '—',
+    prefRwy: '—',
+    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZWWW/URC) 参照'] }]
   },
 
 };
