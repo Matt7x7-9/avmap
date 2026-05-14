@@ -1,6 +1,6 @@
 // CAUG 2-03 Chapter 2.4 Terminal Other AD - Asia
-// Operational notes for 35 airports (26 with cache data, 9 placeholder)
-// Source: RM_JALISSUE_INT 2-03 Rev.26.3 (16 APR 2026)
+// Operational notes for 35 airports (all with real data)
+// Source: RM_JALISSUE_INT 2-03 Rev.26.4 (14 MAY 2026)
 
 const CAUG_NOTES_24 = {
 
@@ -832,156 +832,504 @@ const CAUG_NOTES_24 = {
     fullName: 'VAN DON INTL',
     iata: 'VDO',
     utc: '+7',
-    ops: '—',
-    curfew: '—',
-    fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.VVVD/VDO) 参照'] }]
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'スポット',
+        items: [
+          'スポット 4, 5, 6: B787利用可',
+          'VDGS: スポット 2, 3 に設置',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'アプローチ: STAR + TRANSITION',
+        ]
+      },
+      {
+        title: '出発',
+        items: [
+          '⚠️ TWY B5 からの離陸: RWY03 THR方向へ左旋回。RWY21 THR方向への右旋回は禁止',
+          'Water SVC: N/A',
+        ]
+      },
+    ]
   },
 
   WARR: {
     fullName: 'SURABAYA (Juanda INTL)',
     iata: 'SUB',
     utc: '+7',
-    ops: '—',
-    curfew: '—',
+    ops: 'H24',
+    curfew: 'Nil',
     fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.WARR/SUB) 参照'] }]
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          '⚠️ GND PWR / PAX Step / TUG / Water SVC: B787対応について調査中 (Under investigation)',
+        ]
+      },
+      {
+        title: '障害物・制限',
+        items: [
+          '⚠️ アンテナ 1013ft: SBR R-315° / D8.77NM に存在',
+          'STAR RWY10 NIMAS: ≥2000ft を維持',
+          'MVA: ≥2000ft',
+          '⚠️ RWY10/28: 毎日 0600-0615UTC クローズ',
+        ]
+      },
+      {
+        title: '鳥害・FOD',
+        items: [
+          '雨天後: 鳥が多数出現',
+          'アウトボードENGパワーを最小限に抑えること (FOD防止)',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          'T1: スポット 4, 5 (Open), 6, 7, 8, 10, 11 (PBB)',
+          'T2: スポット A6, A7, A8 (PBB)',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'アプローチ: RADARベクター',
+        ]
+      },
+    ]
   },
 
   WBGG: {
     fullName: 'KUCHING INTL',
     iata: 'KCH',
     utc: '+8',
-    ops: '—',
-    curfew: '—',
+    ops: 'H24',
+    curfew: 'Nil',
     fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.WBGG/KCH) 参照'] }]
+    rffs: 'Cat 9',
+    prefRwy: 'RWY25 ARR / RWY07 DEP',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          '⚠️ GND PWR / PAX Step / TUG / Water SVC: B787対応について調査中 (Under investigation)',
+        ]
+      },
+      {
+        title: 'RWY情報',
+        items: [
+          'RWY: グルービングなし',
+          'Turning Pad: 230ft',
+        ]
+      },
+      {
+        title: '気象',
+        items: [
+          '午後: TSRA多い',
+          'SW monsoon期: Hazy (煙霧)',
+          'NE monsoon期: 大雨 (Heavy RA)',
+        ]
+      },
+      {
+        title: '周辺情報',
+        items: [
+          '空港位置: 市街地南方6NM',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'アプローチ: RADARベクター',
+        ]
+      },
+    ]
   },
 
   WBKK: {
     fullName: 'KOTA KINABALU INTL',
     iata: 'BKI',
     utc: '+8',
-    ops: '—',
-    curfew: '—',
+    ops: 'H24',
+    curfew: 'Nil',
     fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.WBKK/BKI) 参照'] }]
+    rffs: 'Cat 9',
+    prefRwy: 'RWY20',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          '⚠️ GND PWR / PAX Step / TUG / Water SVC: B787対応について調査中 (Under investigation)',
+        ]
+      },
+      {
+        title: 'RWY制限',
+        items: [
+          '⚠️ RWY20: 火・水曜日 1845-2115UTC クローズ',
+          '⚠️ 地形: 空港東側に高地 → 離陸後は必ず西向きターン',
+        ]
+      },
+      {
+        title: '気象',
+        items: [
+          'SW monsoon期: TS多い',
+          'NE monsoon期: RA',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          'スポット 1-5: Power In / Tow Out',
+        ]
+      },
+      {
+        title: 'Taxi経路',
+        items: [
+          '到着 RWY20: H → J → APRON',
+          '到着 RWY02: E → C → J → APRON',
+          '出発 RWY20: APRON → J → C → N',
+          '出発 RWY02: APRON → J → C → K',
+        ]
+      },
+    ]
   },
 
   WBSB: {
     fullName: 'BANDAR SERI BEGAWAN (Brunei INTL)',
     iata: 'BWN',
     utc: '+8',
-    ops: '—',
-    curfew: '—',
+    ops: 'H24',
+    curfew: 'Nil',
     fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.WBSB/BWN) 参照'] }]
+    rffs: 'Cat 9',
+    prefRwy: 'RWY03',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          '⚠️ GND PWR / PAX Step / TUG / Water SVC: B787対応について調査中 (Under investigation)',
+        ]
+      },
+      {
+        title: 'RWY/TWY',
+        items: [
+          'RWY03: グルービングあり',
+          'TWY幅: 23m',
+        ]
+      },
+      {
+        title: '気象',
+        items: [
+          'TS: 突風20-30分間継続',
+          '雨季: 11月〜1月 (NOV-JAN)',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          'スポット: S2, S5, F1〜F7',
+          'Power In',
+        ]
+      },
+      {
+        title: '出発',
+        items: [
+          'Power Out (Tow Out)',
+          'プッシュバック手順: Jeppesen 10-9A参照',
+        ]
+      },
+    ]
   },
 
   WMKP: {
     fullName: 'PENANG INTL',
     iata: 'PEN',
     utc: '+8',
-    ops: '—',
-    curfew: '—',
+    ops: 'H24',
+    curfew: 'Nil',
     fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.WMKP/PEN) 参照'] }]
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          '⚠️ GND PWR / PAX Step / TUG / Water SVC: B787対応について調査中 (Under investigation)',
+        ]
+      },
+      {
+        title: 'TWY/地形',
+        items: [
+          '⚠️ TWY-C: B737以下のみ使用可',
+          '地形: 空港西〜北方向2NM以内に 1400ft',
+          '鳥害: 9月〜2月 (SEP-FEB)',
+          'TS時: 強いクロスウィンド注意',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          'Bay 3-7, 13, 14, 15: B747-400まで',
+          'Bay 8: B747まで',
+          'Power In',
+        ]
+      },
+      {
+        title: 'SID',
+        items: [
+          'SID経路例: VPG → PR → A464 → VBA',
+        ]
+      },
+    ]
   },
 
   ZBHH: {
     fullName: 'HOHHOT (Baita INTL)',
     iata: 'HET',
     utc: '+8',
-    ops: '—',
-    curfew: '—',
-    fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZBHH/HET) 参照'] }]
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'Nr.3 Jet Fuel (JET A-1)',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          '⚠️ 全GND設備: B787対応について調査中 (Under investigation)',
+        ]
+      },
+      {
+        title: 'PAPI',
+        items: [
+          'RWY08: 左側 1050ft 3° MEHT 56ft',
+          'RWY26: 左側 1165ft 3° MEHT 55ft',
+        ]
+      },
+      {
+        title: '出発',
+        items: [
+          'プッシュバック: ATCクリアランス取得後5分以内に開始すること',
+          '⚠️ Circle-to-land: RWY北側は禁止',
+        ]
+      },
+    ]
   },
 
   ZHHH: {
     fullName: 'WUHAN (Tianhe INTL)',
     iata: 'WUH',
     utc: '+8',
-    ops: '—',
-    curfew: '—',
+    ops: 'H24',
+    curfew: 'Nil',
     fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZHHH/WUH) 参照'] }]
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'RWY',
+        items: [
+          'RWY: 04/22, 05L/23R, 05R/23L',
+          'CAT II: RWY05L/23R',
+        ]
+      },
+      {
+        title: '深夜運用',
+        items: [
+          '深夜オペレーション連絡先: +86-27-6568-7545',
+        ]
+      },
+      {
+        title: '手順',
+        items: [
+          'アプローチ/タキシング: Jeppesen参照',
+        ]
+      },
+    ]
   },
 
   ZMUB: {
     fullName: 'ULAANBAATAR (Chinggis Khaan INTL)',
     iata: 'ULN',
     utc: '+8',
-    ops: '—',
-    curfew: '—',
-    fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZMUB/ULN) 参照'] }]
+    ops: '2330-1130UTC',
+    curfew: 'Nil',
+    fuel: 'TS-1 (= JET A-1)',
+    rffs: 'Cat 5 (Cat 8 on request)',
+    prefRwy: 'LDG RWY14 / T/O RWY32',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          '⚠️ GND PWR / TUG: B787対応について調査中 (Under investigation)',
+          'PAX Step: 5.8m対応あり',
+          'Water SVC: 利用可',
+        ]
+      },
+      {
+        title: 'RWY制限 (重要)',
+        items: [
+          '⚠️ 着陸: RWY14のみ。RWY32着陸は禁止 (地形)',
+          '⚠️ 離陸: RWY32のみ。RWY14離陸は禁止 (地形)',
+          '使用可能距離: THRから8354ftのみ (着陸・離陸共)',
+        ]
+      },
+      {
+        title: 'ILS注意',
+        items: [
+          '⚠️ RWY14 ILS偏差警告ゾーン: THRから 4.85-5.63NM / 7.46-8.4NM / 9.02-10.11NMの区間',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          'スポット形式: Open',
+          'Power In / マーシャラー誘導あり',
+          'プッシュバック: Power Out',
+        ]
+      },
+    ]
   },
 
   ZPPP: {
     fullName: 'KUNMING (Changshui INTL)',
     iata: 'KMG',
     utc: '+8',
-    ops: '—',
-    curfew: '—',
+    ops: 'H24',
+    curfew: 'Nil',
     fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZPPP/KMG) 参照'] }]
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          '⚠️ GND PWR / TUG: B787対応について調査中 (Under investigation)',
+          'その他設備: 利用可',
+        ]
+      },
+      {
+        title: 'Displaced THR',
+        items: [
+          'RWY03/21: 540m',
+          'RWY22R: 500m',
+          'RWY04R: 300m',
+        ]
+      },
+      {
+        title: '手順',
+        items: [
+          '到着: STAR',
+          'タキシング: Jeppesen参照',
+        ]
+      },
+    ]
   },
 
   ZSAM: {
     fullName: 'XIAMEN (Gaoqi INTL)',
     iata: 'XMN',
     utc: '+8',
-    ops: '—',
-    curfew: '—',
+    ops: 'H24',
+    curfew: 'Nil',
     fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZSAM/XMN) 参照'] }]
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'Displaced THR',
+        items: [
+          'RWY05: 150m',
+          'RWY23: 200m + END 150m',
+        ]
+      },
+      {
+        title: 'ATC',
+        items: [
+          '中国語: 国内線はATC交信が中国語の場合あり',
+          'DCL: 音声による読み上げ復唱不要',
+        ]
+      },
+      {
+        title: 'スポット',
+        items: [
+          '翼幅65m未満対応スポット: 1L, 2L, 3L, 5L, 8, 9, 11, 15, 17, 21-23, 82-85, 205-206, 228',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'フォローミーカー: 誘導あり',
+          'アプローチ/タキシング/騒音手順: Jeppesen参照',
+        ]
+      },
+    ]
   },
 
   ZSHC: {
     fullName: 'HANGZHOU (Xiaoshan INTL)',
     iata: 'HGH',
     utc: '+8',
-    ops: '—',
-    curfew: '—',
+    ops: 'H24',
+    curfew: 'Nil',
     fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZSHC/HGH) 参照'] }]
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          '全設備: 利用可',
+        ]
+      },
+      {
+        title: '手順',
+        items: [
+          'RWY/TWY/全手順: Jeppesen参照',
+        ]
+      },
+    ]
   },
 
   ZWWW: {
     fullName: 'URUMQI (Diwopu INTL)',
     iata: 'URC',
     utc: '+8',
-    ops: '—',
-    curfew: '—',
+    ops: 'H24',
+    curfew: 'Nil',
     fuel: 'JET-A1',
-    rffs: '—',
-    prefRwy: '—',
-    sections: [{ title: '注意', items: ['CAUG 2-03: キャッシュデータなし。詳細はマニュアル (2.4.ZWWW/URC) 参照'] }]
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '地上設備',
+        items: [
+          '全設備: 利用可',
+        ]
+      },
+      {
+        title: 'RWY',
+        items: [
+          'RWY: 07/25, 08L/26R, 08R/26L',
+          '⚠️ Full length以外での離陸: ATC許可が必要',
+        ]
+      },
+      {
+        title: '手順',
+        items: [
+          'TWY/タキシング: Jeppesen参照',
+        ]
+      },
+    ]
   },
 
 };
