@@ -216,7 +216,7 @@
     "hf_required": false,
     "cpdlc": "Available",
     "position_report": "At entry and compulsory reporting points",
-    "emergency_procedure": "<b>ICAO Standard（RM Basic 2-04 §5）</b><br>2-03 RM_JALISSUE_INTにHaNoi/Ho Chi Minh FIR固有のEmergency Procedure記載なし。<br>・Sq7700（Emergency）/ Sq7600（Radio Failure）<br>・使用中周波数またはVHF 121.5 MHzでMAYDAY/PAN PAN宣言<br>・ICAO Standard Communications Failure手順を適用",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.10（EMERG PROC - SEA / Vietnam）</b><br>（HaNoi FIR / Ho Chi Minh FIR 共通）<br>・<b>送信機故障（ATC側）</b>: ATC指示→<b>Sq Ident</b>またはADS-Bモード変更で確認応答<br>・<b>全通信途絶</b>: 最終クリアランスに従い飛行継続。ATC側でノンレーダー分離に移行して間隔確保<br>・<b>監視システム故障</b>: Conventional Separation（従来型間隔）に切替<br>・<b>ADS-B装備機</b>: 緊急・遭難時にADS-B Emergency/Distressモードを使用可<br>・<b>Sq7700</b>（Emergency）/ <b>Sq7600</b>（Radio Failure）<br>・適用空域: Ha Noi ACC / Noi Bai TMA / Cam Ranh空域<br>・（出典: AIP ENR 1.6-18,19）",
     "special_notes": [
       "RNP2 required on B-RNAV/RNAV routes",
       "FIR entry position report required",
@@ -229,7 +229,35 @@
     "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.7.4（CONTINGENCY PROC - SEA / HaNoi & Ho Chi Minh FIR）</b><br>・<b>初動</b>: ATCクリアランス取得不能な場合→<b>90°右または左に旋回</b>→指定ルートから<b>25NM逸脱</b>するトラックに乗る<br>　高度維持可能：500ft異なる高度に変更<br>　高度維持不能：最低降下率を維持しながら25NM逸脱、その後500ft異なる高度で飛行<br>・<b>隣接トラック横断（ダイバート）</b>: 25NMオフセット維持しながらFL400以上またはFL290以下へ上昇/降下→通常使用高度から500ft異なる高度<br>・<b>双発機でエンジン停止/ETOPSクリティカル</b>: 機体種別と状況をATCに通報し優先処理要請<br>・<b>悪天候回避（Weather Deviation）</b>:<br>　「WEATHER DEVIATION REQUIRED」申告で優先処理<br>　ATCクリアランス取得後に逸脱。取得不能時も同様の25NM逸脱手順を実施<br>　偏向不要になったらATCに通報・元ルート復帰",
     "cpdlc_procedure": "<b>出典: 2-03 §2.2.18.1.2（CPDLC - SEA / Ho Chi Minh FIR）</b><br><b>AFNログオン</b>: VVHM（データリンク空域進入<b>15〜45分前</b>）<br><br><b>適用ルート（H24）:</b> L625, L628, L642, M765, M768, M771, N500, N892<br><br><b>通信主体:</b><br>・レーダー外: <b>CPDLC = 主</b>（VHF/HF = 副）<br>・レーダー内: 状況によりCPDLC継続使用<br>・<b>ADS-C</b>: 監視用（ただし間隔維持には不使用）<br><br><b>ログオン手順:</b><br>・非データリンクFIRから進入: 15〜45分前にVVHMへAFNログオン → 接続確立後、最初の強制報告点でCPDLCポジションレポート送信<br>・Singapore FIRから進入: 自動アドレス転送（FN_CAD）またはパイロット手動ログオン<br>・FIR境界通過時: ADS・CPDLCでポジションレポート送信（応答受信後は音声不要）<br><br><b>メッセージ手順:</b><br>・CPDLC対話はCPDLCで、音声対話は音声で完結<br>・<b>WILCO</b> = クリアランス全内容への同意。Readback不要<br>・1メッセージ1クリアランス要求<br>・フリーテキストは最小限（既定フォーマット不在時のみ）<br>・緊急時（<b>MAYDAY/PAN PAN</b>）: CPDLC送信可 → ATC応答「ROGER MAYDAY」/「ROGER PAN」<br><br><b>転送・終了:</b><br>・SIN行き: FN_CAD（自動uplink、15分前）→ 境界でEND SERVICE自動<br>・非データリンクFIR行き: CONTACT uplink（5分前）→ WILCO受信後 END SERVICE<br><br><b>接続障害時:</b> 「ATC Com off」選択 → 新規AFNログオン試行。継続不能時 → 音声通信に切替",
     "reg_rules": "<b>出典: RM_REGPROC SEA.15（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（高度14,000m以上）およびATSルート上の管制空域<br><b>高度配分（FLOS）</b>: <b>北→南</b>（Track 180°〜359°）= 偶数FL / <b>南→北</b>（Track 000°〜179°）= 奇数FL<br><b>RVSM</b>: FL290〜FL410<br><b>飛行計画</b>: IFRのみ（国際線）、出発<b>1時間以上前</b>に提出<br><b>ADS-B</b>: VVHH（Hanoi FIR）・VVHM（Ho Chi Minh FIR）の両FIRで必須",
-    "emerg_proc_source": "ICAO Standard (2-04) + 2-03 §2.1.7.4 Contingency"
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.10 EMERG PROC - SEA (Vietnam / HaNoi + Ho Chi Minh FIR)"
+  },
+  "VVHN": {
+    "name": "Hanoi FIR",
+    "icao": "VVHN",
+    "country": "Vietnam",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": true,
+    "hf_required": false,
+    "cpdlc": "N/A",
+    "position_report": "At entry and compulsory reporting points",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.10（EMERG PROC - SEA / Vietnam）</b><br>（HaNoi FIR / Ho Chi Minh FIR 共通）<br>・<b>送信機故障（ATC側）</b>: ATC指示→<b>Sq Ident</b>またはADS-Bモード変更で確認応答<br>・<b>全通信途絶</b>: 最終クリアランスに従い飛行継続。ATC側でノンレーダー分離に移行して間隔確保<br>・<b>監視システム故障</b>: Conventional Separation（従来型間隔）に切替<br>・<b>ADS-B装備機</b>: 緊急・遭難時にADS-B Emergency/Distressモードを使用可<br>・<b>Sq7700</b>（Emergency）/ <b>Sq7600</b>（Radio Failure）<br>・適用空域: Ha Noi ACC / Noi Bai TMA<br>・（出典: AIP ENR 1.6-18,19）",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.7.4（CONTINGENCY PROC - SEA / HaNoi & Ho Chi Minh FIR）</b><br>・<b>初動</b>: ATCクリアランス取得不能な場合→<b>90°右または左に旋回</b>→指定ルートから<b>25NM逸脱</b>するトラックに乗る<br>　高度維持可能：500ft異なる高度に変更<br>　高度維持不能：最低降下率を維持しながら25NM逸脱、その後500ft異なる高度で飛行<br>・<b>悪天候回避（§2.1.7.4.3 Weather Deviation）</b>:<br>　逸脱が10NMを超える場合→<b>300ftの高度変更</b>（上昇・降下はトラックの東西方向による）<br>　「<b>WEATHER DEVIATION REQUIRED</b>」申告で優先処理。取得不能時も25NM逸脱手順を実施<br>　PAN PANオプションあり<br>・本手順はHaNoi FIR（VVHN）とHo Chi Minh FIR（VVHM）に<b>共通適用</b>",
+    "cpdlc_procedure": "<b>Hanoi FIR（VVHN）: CPDLC非対応</b><br>RM_JALISSUE_INT 2-03 §2.2.18（CPDLC-SEA）にVVHN向け手順記載なし。<br>通信手段: <b>VHF音声（主）/ HF（副）</b>。<br>※Ho Chi Minh FIR（VVHM）はCPDLC対応（AFN: VVHM）",
+    "special_notes": [
+      "RNP2 required on B-RNAV/RNAV routes",
+      "FIR entry position report required",
+      "ADS-B OUT mandatory (same as VVHM — Vietnam-wide mandate)",
+      "ATC may have limited English proficiency at times - speak slowly and clearly",
+      "Emergency/Contingency procedures are common to both VVHN and VVHM (§2.1.4.10 / §2.1.7.4)"
+    ],
+    "contacts": {
+      "main": "Ha Noi ACC / Noi Bai Approach",
+      "emergency": "121.5"
+    },
+    "reg_rules": "<b>出典: RM_REGPROC SEA.15（Rev.26.2 / 16 APR 2026）</b><br>（VVHNはVVHMと同じ国内規制に基づく）<br><b>空域分類</b>: Class A（高度14,000m以上）およびATSルート上の管制空域<br><b>高度配分（FLOS）</b>: <b>北→南</b>（Track 180°〜359°）= 偶数FL / <b>南→北</b>（Track 000°〜179°）= 奇数FL<br><b>RVSM</b>: FL290〜FL410<br><b>飛行計画</b>: IFRのみ（国際線）、出発<b>1時間以上前</b>に提出<br><b>ADS-B</b>: VVHN（Hanoi FIR）・VVHM（Ho Chi Minh FIR）の両FIRで必須",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.10 EMERG PROC - SEA (Vietnam / HaNoi + Ho Chi Minh FIR)"
   },
   "VTBB": {
     "name": "Bangkok FIR",
@@ -371,16 +399,16 @@
     "rnp2": false,
     "hf_required": false,
     "cpdlc": "Optional",
-    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast intentions on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Jakarta FIR specific</b>: Contact Jakarta Control on VHF; guard 121.5 MHz.<br>　HF communication required in remote oceanic airspace.",
-    "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・Jakarta FIR: Weather radar recommended for navigation; unreliable NAVAIDs in some sectors.",
-    "cpdlc_procedure": "<b>Jakarta FIR: CPDLC not routinely required</b><br>VHF primary in most of the FIR. HF used in remote oceanic portions.<br>RNP10 procedural separation applies (10 min / 80 NM). CPDLC not mandated.<br>Note: Weather radar recommended due to unreliable NAVAIDs in some areas (2-05 SEA).",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.5（EMERG PROC - SEA / Indonesia）</b><br>・<b>監視システム（ADS-B）故障</b>: ATCからの指示に従い、代替監視手段（レーダー等）を確認<br>・<b>無線通信途絶（Radio Comm Failure）</b>: <b>Sq7600</b>セット。ICAO手順を適用:<br>　レーダー環境: 現在FLを維持<br>　非レーダー: 最終指定／予定／巡航FLで飛行<br>　121.5 MHz＋123.45 MHzで意図をブロードキャスト（コールサイン・FL・位置・意図）<br>・<b>地上送信機故障</b>: ATC側の機材故障の場合、パイロットはICAO手順に従い飛行継続<br>・<b>Emergency</b>: Sq7700; MAYDAY宣言（使用中周波数または121.5 MHz）",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.7.2（CONTINGENCY PROC - SEA / Jakarta FIR AND Ujung Pandang FIR）</b><br>・<b>初動</b>: ATCクリアランス取得不能な場合→<b>90°右または左に旋回</b>→指定ルートから<b>25NM逸脱</b>するトラックに乗る<br>　高度維持可能：500ft異なる高度に変更<br>　高度維持不能：最低降下率を維持しながら25NM逸脱、その後500ft異なる高度で飛行<br>・<b>悪天候回避（§2.1.7.2.2 Weather Deviation / Jakarta FIR＆Ujung Pandang FIR）</b>:<br>　逸脱が<b>10NMを超える</b>場合→<b>300ftの高度変更</b><br>　　<b>東行き</b>（EAST）: 左偏差→<b>D300</b>（降下300ft）、右偏差→<b>C300</b>（上昇300ft）<br>　　<b>西行き</b>（WEST）: 左偏差→<b>C300</b>（上昇300ft）、右偏差→<b>D300</b>（降下300ft）<br>・本手順はJakarta FIR（WIIF）とUjung Pandang FIR（WAAF）に<b>共通適用</b>",
+    "cpdlc_procedure": "<b>Jakarta FIR（WIIF）: CPDLC非必須（非適用エリア主体）</b><br>VHFが大部分のFIRで主通信手段。遠隔洋上部はHF使用。<br>CPDLC非義務（§2.2.18にWIIF向け独立セクションなし）。<br>注: NAVAIDが不良なエリアがあるため気象レーダーによるナビゲーション推奨（2-05 SEA）。<br>※Ujung Pandang FIR（WAAF）はCPDLC対応（AFN: WAAF）— 別エントリ参照",
     "position_report": "Normal IFR position reporting required",
     "contacts": {
       "main": "Jakarta Control",
       "emergency": "121.5 MHz"
     },
     "special_notes": [
-      "Includes both Jakarta FIR (WIIF) and Ujung Pandang FIR (WAAF) — both have same ADS-B mandate",
+      "Ujung Pandang FIR (WAAF) は別エントリ参照。Contingency/Weather Deviation手順は両FIR共通（§2.1.7.2）",
       "Airspace: Class A CTA/UTA FL250-FL460; Class B CTR; Class C TMA/ATZ; Class F/G remaining",
       "Cruising levels: semi-circular at or above FL200; Quadrantal at or above 3,000 ft but below FL200",
       "ADS-B OUT mandatory at or above FL290 (Mode S + GNSS source position; E, L, B1 or B2 in FPL item 10)",
@@ -390,6 +418,34 @@
       "FLAS: Western Pacific/South China Sea FLAS applies (SEA.1.3)"
     ],
     "reg_rules": "<b>Airspace Class (SEA.8.1):</b> Class A CTA/UTA FL250-FL460; Class B CTR; Class C TMA/ATZ; Class F/G FIR/UIR and unattended aerodromes.<br><b>Transition (SEA.8.2.2):</b> TA 11,000 ft / TL FL130 (specified per aerodrome).<br><b>RVSM:</b> FL290-FL410 (inclusive). Exclusive RVSM (Jakarta FIR listed in Western Pacific/SEA RVSM table).<br><b>Cruising Levels (SEA.8.2.3):</b> Semi-circular at or above FL200; Quadrantal at or above 3,000 ft but below FL200.<br><b>FLAS (SEA.1.3):</b> Western Pacific/South China Sea FLAS applies — semi-circular plus special parallel route allocations.<br><b>ADS-B (SEA.8.7):</b> ADS-B OUT mandatory at or above FL290 in Jakarta FIR and Ujung Pandang FIR. Equipment: Mode S transponder + GNSS source position. Indicate E, L, B1 or B2 in FPL item 10. ADS-B separation service also active in Jakarta UCA and Ujung Pandang UCA (FL245-FL600).<br><b>IFR Requirement (SEA.8.2.1):</b> IFR required for overwater flight more than 10 NM from land or for more than one hour; above FL150 in controlled airspace; above FL200 in uncontrolled airspace.<br><b>Speed (SEA.8.2.4):</b> Max 250 KIAS below 10,000 ft MSL; max 200 KIAS at or below 2,500 ft within 4 NM of Class C/D primary airport.<br><b>Company Procedure (SEA.8.3):</b> Use weather radar for navigation — NAVAIDs, A/G communications and ATS are unsatisfactory in Jakarta FIR."
+  },
+  "WAAF": {
+    "name": "Ujung Pandang FIR",
+    "icao": "WAAF",
+    "country": "Indonesia",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available",
+    "position_report": "At FIR boundary and compulsory reporting points (ADS-C/CPDLC position report on entry)",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.5（EMERG PROC - SEA / Indonesia）</b><br>（Jakarta FIR / Ujung Pandang FIR 共通）<br>・<b>監視システム（ADS-B）故障</b>: ATCからの指示に従い、代替監視手段（レーダー等）を確認<br>・<b>無線通信途絶（Radio Comm Failure）</b>: <b>Sq7600</b>セット。ICAO手順を適用:<br>　レーダー環境: 現在FLを維持<br>　非レーダー: 最終指定／予定／巡航FLで飛行<br>　121.5 MHz＋123.45 MHzで意図をブロードキャスト（コールサイン・FL・位置・意図）<br>・<b>地上送信機故障</b>: ATC側の機材故障の場合、パイロットはICAO手順に従い飛行継続<br>・<b>Emergency</b>: Sq7700; MAYDAY宣言（使用中周波数または121.5 MHz）",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.7.2（CONTINGENCY PROC - SEA / Jakarta FIR AND Ujung Pandang FIR）</b><br>・<b>初動</b>: ATCクリアランス取得不能な場合→<b>90°右または左に旋回</b>→指定ルートから<b>25NM逸脱</b>するトラックに乗る<br>　高度維持可能：500ft異なる高度に変更<br>　高度維持不能：最低降下率を維持しながら25NM逸脱、その後500ft異なる高度で飛行<br>・<b>悪天候回避（§2.1.7.2.2 Weather Deviation / Jakarta FIR＆Ujung Pandang FIR）</b>:<br>　逸脱が<b>10NMを超える</b>場合→<b>300ftの高度変更</b><br>　　<b>東行き</b>（EAST）: 左偏差→<b>D300</b>（降下300ft）、右偏差→<b>C300</b>（上昇300ft）<br>　　<b>西行き</b>（WEST）: 左偏差→<b>C300</b>（上昇300ft）、右偏差→<b>D300</b>（降下300ft）<br>・本手順はJakarta FIR（WIIF）とUjung Pandang FIR（WAAF）に<b>共通適用</b>",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.2.18.1.6（ADS-C/CPDLC - Ujung Pandang FIR）</b><br><b>AFNログオン</b>: <b>WAAF</b>（FIR進入前または出発前にログオン。入境機は境界通過時にADS-C/CPDLCポジションレポート送信）<br><br><b>適用範囲（国際ルート）:</b><br>・VHF外（洋上）: <b>CPDLC = 主</b><br>・VHF内: CPDLC = 副（VHFが主）<br><br><b>分離:</b> DCPC（Direct Controller-Pilot Communication）＋ADS-C監視に基づき<b>50 NM最小分離</b>を適用可<br><br><b>データリンク終了:</b> 「DATA LINK SERVICES TERMINATED CONTRACT [ICAO unit name][frequency]」uplink→パイロットがROGER→END SERVICEでCPDLC終了<br><br><b>データリンク障害時:</b> 即座に音声通信（バックアップ周波数）に移行。再接続後はデータリンク再開可",
+    "special_notes": [
+      "Contingency/Weather Deviation手順はJakarta FIR（WIIF）と共通（§2.1.7.2）",
+      "ADS-B OUT mandatory at or above FL290 (same as Jakarta FIR — Indonesia-wide mandate)",
+      "ADS-B separation service active in Ujung Pandang UCA (FL245-FL600)",
+      "50 NM separation applicable with DCPC + ADS-C surveillance",
+      "Airspace: Class A CTA/UTA FL250-FL460; same classification as Jakarta FIR"
+    ],
+    "contacts": {
+      "main": "Ujung Pandang Control (WAAF)",
+      "emergency": "121.5"
+    },
+    "reg_rules": "<b>出典: RM_REGPROC SEA.8（Rev.26.2 / 16 APR 2026）</b><br>（WIIFと同一インドネシア規制に基づく）<br><b>空域分類</b>: Class A CTA/UTA FL250〜FL460; Class B CTR; Class C TMA/ATZ; Class F/G<br><b>Transition</b>: TA 11,000 ft / TL FL130<br><b>RVSM</b>: FL290〜FL410<br><b>ADS-B OUT</b>: FL290以上で必須（Mode S + GNSS source position; FPL Item 10にE/L/B1/B2）<br><b>ADS-B分離サービス</b>: Ujung Pandang UCA（FL245〜FL600）で実施中<br><b>巡航高度</b>: FL200以上でSemi-circular; 3,000ft以上FL200未満でQuadrantal",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.5 EMERG PROC - SEA (Indonesia / Jakarta + Ujung Pandang)"
   },
   "VLVT": {
     "name": "Vientiane FIR",
