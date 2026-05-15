@@ -2329,5 +2329,424 @@
     "cpdlc_procedure": "<b>US ARTCC CPDLC</b><br>・Logon: <b>KUSA</b>（全20 ARTCCで共通）<br>・ATN/VDL Mode 2のみ。FPL Field 10a: J4。<br>・大西洋洋上（Gander CZQO方向）へのhandoffはFANS-1/A（logon: CZQX）に切り替え。",
     "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> VDL Mode 2（logon: KUSA）。<b>遷移高度:</b> 18,000ft MSL（FL180）。",
     "emerg_proc_source": "FAA AIM Chapter 6"
+  },
+  "UTAA": {
+    "name": "Ashgabat FIR",
+    "icao": "UTAA",
+    "country": "Turkmenistan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: UTAA）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "欧州→日本中央アジアルートの主要通過FIR",
+      "RVSM: FL290〜FL410",
+      "Ashgabat ACC管轄"
+    ],
+    "contacts": {
+      "main": "Ashgabat Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UTAA CPDLC</b><br>・Logon: <b>UTAA</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: UTAA）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UTAK": {
+    "name": "Turkmenbashi FIR",
+    "icao": "UTAK",
+    "country": "Turkmenistan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（UTAA logon）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "トルクメニスタン西部（カスピ海沿岸）セクター",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Ashgabat Control（Turkmenbashi sector）",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UTAK CPDLC</b><br>・Ashgabat ACCを通じて運用（logon: UTAA）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UTAT": {
+    "name": "Dashoguz FIR",
+    "icao": "UTAT",
+    "country": "Turkmenistan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（UTAA logon）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "トルクメニスタン北部セクター（ウズベキスタン国境）",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Ashgabat Control（Dashoguz sector）",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UTAT CPDLC</b><br>・Ashgabat ACCを通じて運用（logon: UTAA）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UTAV": {
+    "name": "Turkmenabat FIR",
+    "icao": "UTAV",
+    "country": "Turkmenistan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（UTAA logon）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "トルクメニスタン東部セクター（アフガニスタン・ウズベキスタン国境）",
+      "欧州→日本ルートの出口付近（UZTR/UAAAAへ引継ぎ）",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Ashgabat Control（Turkmenabat sector）",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UTAV CPDLC</b><br>・Ashgabat ACCを通じて運用（logon: UTAA）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UACN": {
+    "name": "Astana FIR",
+    "icao": "UACN",
+    "country": "Kazakhstan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（UAAA logon）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "カザフスタン中北部セクター（首都Astana付近）",
+      "Almaty ACC管轄下（logon: UAAA）",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Astana Control / Almaty ACC",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UACN CPDLC</b><br>・Logon: <b>UAAA</b>（Almaty ACC）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> Almaty ACC経由（logon: UAAA）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UAII": {
+    "name": "Shymkent FIR",
+    "icao": "UAII",
+    "country": "Kazakhstan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（UAAA logon）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "カザフスタン南部セクター（ウズベキスタン・キルギス国境付近）",
+      "欧州→日本ルートの主要通過エリア",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Shymkent Control / Almaty ACC",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UAII CPDLC</b><br>・Logon: <b>UAAA</b>（Almaty ACC）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> Almaty ACC経由（logon: UAAA）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UATT": {
+    "name": "Aktobe FIR",
+    "icao": "UATT",
+    "country": "Kazakhstan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（UAAA logon）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "カザフスタン西部セクター（ロシア・ウラル方面）",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Aktobe Control / Almaty ACC",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UATT CPDLC</b><br>・Logon: <b>UAAA</b>（Almaty ACC）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> Almaty ACC経由（logon: UAAA）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UCFM": {
+    "name": "Bishkek FIR",
+    "icao": "UCFM",
+    "country": "Kyrgyzstan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: UCFM）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "キルギス北部セクター（天山山脈）",
+      "山岳地帯: 最低安全高度が高い（一部FL200以上）",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Bishkek Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UCFM CPDLC</b><br>・Logon: <b>UCFM</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>山岳地形:</b> 天山山脈通過時は最低安全高度に十分な余裕を確保。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UCFO": {
+    "name": "Osh FIR",
+    "icao": "UCFO",
+    "country": "Kyrgyzstan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（UCFM logon）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "キルギス南部セクター（タジキスタン・中国国境付近）",
+      "パミール高原・天山山脈: 最低安全高度が非常に高い",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Osh Control / Bishkek ACC",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UCFO CPDLC</b><br>・Bishkek ACCを通じて運用（logon: UCFM）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>山岳地形:</b> パミール高原・天山付近は最低安全高度が非常に高い。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UDDD": {
+    "name": "Yerevan FIR",
+    "icao": "UDDD",
+    "country": "Armenia",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: UDDD）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "コーカサス地域（トルコ・イラン・アゼルバイジャン・ジョージア隣接）",
+      "一部ルートでUGGG（ジョージア）の代替通過点",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Yerevan Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UDDD CPDLC</b><br>・Logon: <b>UDDD</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: UDDD）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "OBBB": {
+    "name": "Bahrain FIR",
+    "icao": "OBBB",
+    "country": "Bahrain",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: OBBB）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。<br>・<b>HF distress</b>: MID-2 MWARA（8918 / 11396 kHz）",
+    "special_notes": [
+      "ペルシャ湾岸・中東ルートの主要FIR",
+      "MWARA HF: MID-2ファミリー（8918 / 11396 kHz）",
+      "2026年5月時点: OIIX/ORBB閉鎖に伴い迂回ルートで交通量増加",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Bahrain Control / HF MID-2 8918 / 11396 kHz",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数、121.5 MHz、HF MID-2でブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>OBBB CPDLC</b><br>・Logon: <b>OBBB</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: OBBB）。<b>HF:</b> MID-2 MWARA（8918 / 11396 kHz）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "OJAC": {
+    "name": "Amman FIR",
+    "icao": "OJAC",
+    "country": "Jordan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: OJAC）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "中東ルートのFIR（イスラエル・サウジアラビア・イラク隣接）",
+      "RVSM: FL290〜FL410",
+      "2026年5月: ORBB閉鎖に伴い一部ルート変更あり"
+    ],
+    "contacts": {
+      "main": "Amman Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>OJAC CPDLC</b><br>・Logon: <b>OJAC</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: OJAC）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "OKAC": {
+    "name": "Kuwait FIR",
+    "icao": "OKAC",
+    "country": "Kuwait",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: OKAC）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。<br>・<b>HF distress</b>: MID-2 MWARA（8918 / 11396 kHz）",
+    "special_notes": [
+      "ペルシャ湾北西・中東ルート通過FIR",
+      "MWARA HF: MID-2ファミリー",
+      "RVSM: FL290〜FL410",
+      "2026年5月: ORBB（バグダッド）閉鎖による迂回ルートで通過機増加"
+    ],
+    "contacts": {
+      "main": "Kuwait Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>OKAC CPDLC</b><br>・Logon: <b>OKAC</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: OKAC）。<b>HF:</b> MID-2 MWARA。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "OOMM": {
+    "name": "Muscat FIR",
+    "icao": "OOMM",
+    "country": "Oman",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Available（logon: OOMM）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。<br>・<b>HF distress</b>: MID-2 MWARA（8918 / 11396 kHz）",
+    "special_notes": [
+      "アラビア海・インド洋北西部を含む大きなFIR",
+      "海洋部ではHF必須（MWARA MID-2: 8918 / 11396 kHz）",
+      "SELCAL推奨（洋上区域）",
+      "RVSM: FL290〜FL410",
+      "インド洋経由南回りルートの重要FIR"
+    ],
+    "contacts": {
+      "main": "Muscat Control / HF MID-2 8918 / 11396 kHz",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数、121.5 MHz、HF MID-2でブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>OOMM CPDLC</b><br>・Logon: <b>OOMM</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: OOMM）。<b>HF:</b> 洋上区域必須（MID-2 MWARA）。<b>SELCAL:</b> 洋上推奨。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "OPKR": {
+    "name": "Karachi FIR",
+    "icao": "OPKR",
+    "country": "Pakistan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: OPKR）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "パキスタン南部・アラビア海沿岸",
+      "欧州→日本南回りルート（OOMM経由）の通過FIR",
+      "RVSM: FL290〜FL410",
+      "アフガニスタン（OAKX）隣接 – NOTAM確認推奨"
+    ],
+    "contacts": {
+      "main": "Karachi Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>OPKR CPDLC</b><br>・Logon: <b>OPKR</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: OPKR）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "OPLR": {
+    "name": "Lahore FIR",
+    "icao": "OPLR",
+    "country": "Pakistan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: OPLR）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "パキスタン北部・カシミール付近",
+      "インド（VIDF）との境界付近: 軍事活動に注意",
+      "アフガニスタン（OAKX）・中国（ZWUQ）隣接",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Lahore Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>OPLR CPDLC</b><br>・Logon: <b>OPLR</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: OPLR）。<b>注意:</b> インド・パキスタン国境（カシミール）付近の軍事活動に注意。",
+    "emerg_proc_source": "ICAO Standard"
   }
 }
