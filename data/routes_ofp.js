@@ -3832,7 +3832,7 @@ const OFP_ROUTES = {
       { name: "VOCUS", airway: "DCT", coords: [42.453, -70.962] },
       { name: "KBOS", airway: "DCT", coords: [42.363, -71.007] }
     ]
-  }
+  },
 
 
   "RJAA-PHNL-2": {
