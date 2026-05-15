@@ -54,7 +54,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9 (Cat 10 on request)',
     prefRwy: 'Nil',
-    runways: [{'id':'12/30', 'len':4500, 'apch':'ILS 12/30'}],
+    runways: [{'id':'12/30', 'len':4500, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: 'TWY情報',
@@ -179,7 +179,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'RWY 09 (優先)',
-    runways: [{'id':'09/27', 'len':3150, 'apch':'ILS 09/27'}],
+    runways: [{'id':'09/27', 'len':3150, 'apch':'ILS Cat II 09/27'}],
     sections: [
       {
         title: 'COMM/NAV',
@@ -247,7 +247,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'RWY 07/25',
-    runways: [{'id':'07/25', 'len':3180, 'apch':'ILS 07/25'}, {'id':'13/31', 'len':1910, 'apch':null}],
+    runways: [{'id':'07/25', 'len':3180, 'apch':'ILS Cat II 07/25'}, {'id':'13/31', 'len':1910, 'apch':'ILS 13/31'}],
     sections: [
       {
         title: '気象',
@@ -440,7 +440,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'RWY 27',
-    runways: [{'id':'09/27', 'len':3509, 'apch':'ILS 09/27'}, {'id':'14/32', 'len':2871, 'apch':'ILS 14/32'}],
+    runways: [{'id':'09/27', 'len':3509, 'apch':'ILS Cat II 09/27'}, {'id':'14/32', 'len':2871, 'apch':'ILS 14/32'}],
     sections: [
       {
         title: 'RWY情報',
@@ -468,7 +468,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'RWY 01R/19L',
-    runways: [{'id':'01L/19R', 'len':2832, 'apch':'ILS 01L/19R'}, {'id':'01R/19L', 'len':3633, 'apch':'ILS 01R/19L'}],
+    runways: [{'id':'01L/19R', 'len':2832, 'apch':'ILS Cat II 01L/19R'}, {'id':'01R/19L', 'len':3633, 'apch':'ILS 01R/19L'}],
     sections: [
       {
         title: '情報',
@@ -488,7 +488,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'RWY 34',
-    runways: [{'id':'16/34', 'len':3658, 'apch':'ILS 16/34'}],
+    runways: [{'id':'16/34', 'len':3658, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: 'TWY/スポット',
@@ -524,7 +524,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'RWY 34 (Tail component <10kt)',
-    runways: [{'id':'16/34', 'len':3214, 'apch':'ILS 16/34'}],
+    runways: [{'id':'16/34', 'len':3214, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: 'アプローチ',
@@ -572,7 +572,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: '—',
-    runways: [{'id':'07/25', 'len':3658, 'apch':'ILS 07/25'}, {'id':'12/30', 'len':2045, 'apch':'ILS 12/30'}],
+    runways: [{'id':'07/25', 'len':3658, 'apch':'ILS Cat II 07/25'}, {'id':'12/30', 'len':2045, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: 'RWY/TWY情報',
@@ -644,7 +644,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'18/36', 'len':3505, 'apch':'ILS 18/36'}],
+    runways: [{'id':'18/36', 'len':3505, 'apch':'ILS Cat II 18/36'}],
     sections: [
       {
         title: '地形',
@@ -678,7 +678,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'18/36', 'len':3400, 'apch':'ILS 18/36'}],
+    runways: [{'id':'18/36', 'len':3400, 'apch':'ILS Cat II 18/36'}],
     sections: [
       {
         title: '地形',
@@ -707,7 +707,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'RWY 27',
-    runways: [{'id':'09/27', 'len':3100, 'apch':'ILS 09/27'}],
+    runways: [{'id':'09/27', 'len':3100, 'apch':'ILS Cat II 09/27'}],
     sections: [
       {
         title: 'TWY/スポット',
@@ -801,7 +801,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'RWY 35R',
-    runways: [{'id':'17L/35R', 'len':3500, 'apch':'ILS 17L/35R'}, {'id':'17R/35L', 'len':3048, 'apch':'ILS 35L'}],
+    runways: [{'id':'17L/35R', 'len':3500, 'apch':'ILS Cat III 17L/35R'}, {'id':'17R/35L', 'len':3048, 'apch':'ILS Cat III 17R/35L'}],
     sections: [
       {
         title: 'RWY情報',
@@ -835,7 +835,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET A1',
     rffs: 'Cat 8',
     prefRwy: '—',
-    runways: [{'id':'07/25', 'len':3050, 'apch':'ILS 07/25'}],
+    runways: [{'id':'07/25', 'len':3050, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: '地上設備',
@@ -998,7 +998,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'16/34', 'len':3800, 'apch':'ILS 16/34'}],
+    runways: [{'id':'16/34', 'len':3800, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: '地上設備',
@@ -1358,7 +1358,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'RWY25 ARR / RWY07 DEP',
-    runways: [{'id':'07/25', 'len':3780, 'apch':'ILS 07/25'}],
+    runways: [{'id':'07/25', 'len':3780, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: '地上設備',
@@ -1405,7 +1405,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'RWY20',
-    runways: [{'id':'02/20', 'len':3780, 'apch':'ILS 02/20'}],
+    runways: [{'id':'02/20', 'len':3780, 'apch':'ILS Cat II 02/20'}],
     sections: [
       {
         title: '地上設備',
@@ -1545,7 +1545,7 @@ const CAUG_NOTES_24 = {
     fuel: 'Nr.3 Jet Fuel (JET A-1)',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'08/26', 'len':3600, 'apch':'ILS 08/26'}],
+    runways: [{'id':'08/26', 'len':3600, 'apch':'ILS Cat II 08/26'}],
     sections: [
       {
         title: '地上設備',
@@ -1733,7 +1733,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'06/24', 'len':3400, 'apch':'ILS 06/24'}, {'id':'07/25', 'len':3600, 'apch':'ILS 07/25'}],
+    runways: [{'id':'06/24', 'len':3400, 'apch':'ILS 06/24'}, {'id':'07/25', 'len':3600, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: '地上設備',
@@ -1759,7 +1759,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'07/25', 'len':3600, 'apch':'ILS 07/25'}, {'id':'08L/26R', 'len':3200, 'apch':'ILS 08L/26R'}, {'id':'08R/26L', 'len':3600, 'apch':'ILS 08R/26L'}],
+    runways: [{'id':'07/25', 'len':3600, 'apch':'ILS Cat II 07/25'}, {'id':'08L/26R', 'len':3200, 'apch':'ILS 08L/26R'}, {'id':'08R/26L', 'len':3600, 'apch':'ILS 08R/26L'}],
     sections: [
       {
         title: '地上設備',
@@ -1819,7 +1819,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'12/30', 'len':3000, 'apch':'ILS 12/30'}],
+    runways: [{'id':'12/30', 'len':3000, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: '運用情報',
@@ -1846,7 +1846,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'16/34', 'len':2499, 'apch':'ILS 16/34'}],
+    runways: [{'id':'16/34', 'len':2499, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: '運用情報',
@@ -1874,7 +1874,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'16/34', 'len':2999, 'apch':'ILS 16/34'}],
+    runways: [{'id':'16/34', 'len':2999, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: '運用情報',
@@ -1902,7 +1902,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'18/36', 'len':2500, 'apch':'ILS 18/36'}],
+    runways: [{'id':'18/36', 'len':2500, 'apch':'ILS Cat II 18/36'}],
     sections: [
       {
         title: '運用情報',
@@ -1930,7 +1930,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'07/25', 'len':2999, 'apch':'ILS 07/25'}],
+    runways: [{'id':'07/25', 'len':2999, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: '運用情報',
@@ -1985,7 +1985,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'09/27', 'len':3000, 'apch':'ILS 09/27'}, {'id':'12/30', 'len':1201, 'apch':null}],
+    runways: [{'id':'09/27', 'len':3000, 'apch':'ILS Cat II 09/27'}, {'id':'12/30', 'len':1201, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: '運用情報',
@@ -2040,7 +2040,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'15L/33R', 'len':3750, 'apch':'ILS Cat III 15L/33R'}, {'id':'15R/33L', 'len':3750, 'apch':'ILS Cat III 15R/33L'}, {'id':'16L/34R', 'len':4000, 'apch':'ILS Cat III 16L/34R'}, {'id':'16R/34L', 'len':3750, 'apch':'ILS 16R/34L'}],
+    runways: [{'id':'15L/33R', 'len':3750, 'apch':'ILS Cat III 15L/33R'}, {'id':'15R/33L', 'len':3750, 'apch':'ILS Cat III 15R/33L'}, {'id':'16L/34R', 'len':4000, 'apch':'ILS Cat II 16L/34R'}, {'id':'16R/34L', 'len':3750, 'apch':'ILS Cat II 16R/34L'}],
     sections: [
       {
         title: 'TWY情報',
@@ -2080,7 +2080,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'13C/31C', 'len':2370, 'apch':'ILS 13C/31C'}, {'id':'13R/31L', 'len':3500, 'apch':'ILS Cat II 13R/31L'}],
+    runways: [{'id':'13C/31C', 'len':2370, 'apch':'ILS Cat II 13C/31C'}, {'id':'13R/31L', 'len':3500, 'apch':'ILS Cat III 13R/31L'}],
     sections: [
       {
         title: 'TWY情報',
@@ -2120,7 +2120,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'10L/28R', 'len':3397, 'apch':'ILS 10L/28R'}, {'id':'10R/28L', 'len':3780, 'apch':'ILS Cat II 10R/28L'}],
+    runways: [{'id':'10L/28R', 'len':3397, 'apch':'ILS Cat II 10L/28R'}, {'id':'10R/28L', 'len':3780, 'apch':'ILS Cat III 10R/28L'}],
     sections: [
       {
         title: '到着',
@@ -2258,7 +2258,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'04/22', 'len':2020, 'apch':'ILS 04/22'}, {'id':'06/24', 'len':3439, 'apch':'ILS Cat III 06/24'}, {'id':'09/27', 'len':3453, 'apch':'ILS Cat III 09/27'}, {'id':'18C/36C', 'len':3300, 'apch':'ILS Cat III 18C/36C'}, {'id':'18L/36R', 'len':3400, 'apch':'ILS Cat III 18L/36R'}, {'id':'18R/36L', 'len':3800, 'apch':'ILS Cat III 18R/36L'}],
+    runways: [{'id':'04/22', 'len':2020, 'apch':'ILS 04/22'}, {'id':'06/24', 'len':3439, 'apch':'ILS Cat III 06/24'}, {'id':'09/27', 'len':3453, 'apch':'ILS Cat II 09/27'}, {'id':'18C/36C', 'len':3300, 'apch':'ILS Cat III 18C/36C'}, {'id':'18L/36R', 'len':3400, 'apch':'ILS Cat II 18L/36R'}, {'id':'18R/36L', 'len':3800, 'apch':'ILS Cat II 18R/36L'}],
     sections: [
       {
         title: 'TWY情報',
@@ -2330,7 +2330,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'08/26', 'len':2500, 'apch':'ILS 08/26'}],
+    runways: [{'id':'08/26', 'len':2500, 'apch':'ILS Cat II 08/26'}],
     sections: [
       {
         title: '運用情報',
@@ -2358,7 +2358,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'08/26', 'len':3480, 'apch':'ILS 08/26'}],
+    runways: [{'id':'08/26', 'len':3480, 'apch':'ILS Cat II 08/26'}],
     sections: [
       {
         title: '到着',
@@ -2392,7 +2392,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'01L/19R', 'len':3301, 'apch':'ILS 01L/19R'}, {'id':'01R/19L', 'len':2500, 'apch':'ILS 01R/19L'}, {'id':'08/26', 'len':2500, 'apch':'ILS 08/26'}],
+    runways: [{'id':'01L/19R', 'len':3301, 'apch':'ILS Cat II 01L/19R'}, {'id':'01R/19L', 'len':2500, 'apch':'ILS 01R/19L'}, {'id':'08/26', 'len':2500, 'apch':'ILS Cat II 08/26'}],
     sections: [
       {
         title: 'TWY情報',
@@ -2432,7 +2432,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'04L/22R', 'len':3600, 'apch':'ILS Cat III 04L/22R'}, {'id':'04R/22L', 'len':3300, 'apch':'ILS Cat III 04R/22L'}, {'id':'12/30', 'len':2800, 'apch':'ILS 12/30'}],
+    runways: [{'id':'04L/22R', 'len':3600, 'apch':'ILS Cat III 04L/22R'}, {'id':'04R/22L', 'len':3300, 'apch':'ILS Cat III 04R/22L'}, {'id':'12/30', 'len':2800, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: 'TWY情報',
@@ -2467,7 +2467,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'02/20', 'len':2400, 'apch':'ILS 02/20'}, {'id':'06/24', 'len':3650, 'apch':'ILS Cat II 06/24'}, {'id':'07/25', 'len':3320, 'apch':'ILS Cat II 07/25'}],
+    runways: [{'id':'02/20', 'len':2400, 'apch':'ILS Cat II 02/20'}, {'id':'06/24', 'len':3650, 'apch':'ILS Cat II 06/24'}, {'id':'07/25', 'len':3320, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: 'TWY情報',
@@ -2502,7 +2502,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'08/26', 'len':1890, 'apch':null}, {'id':'11/29', 'len':2438, 'apch':'ILS 11/29'}, {'id':'17L/35R', 'len':4267, 'apch':'ILS Cat II 17L/35R'}, {'id':'17R/35L', 'len':3863, 'apch':'ILS 17R/35L'}],
+    runways: [{'id':'08/26', 'len':1890, 'apch':'ILS Cat II 08/26'}, {'id':'11/29', 'len':2438, 'apch':'ILS 11/29'}, {'id':'17L/35R', 'len':4267, 'apch':'ILS Cat III 17L/35R'}, {'id':'17R/35L', 'len':3863, 'apch':'ILS Cat III 17R/35L'}],
     sections: [
       {
         title: '到着',
@@ -2531,7 +2531,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'02/20', 'len':3353, 'apch':'ILS 02/20'}, {'id':'12/30', 'len':3109, 'apch':'ILS 12/30'}],
+    runways: [{'id':'02/20', 'len':3353, 'apch':'ILS Cat II 02/20'}, {'id':'12/30', 'len':3109, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: '到着',
@@ -2595,7 +2595,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'12/30', 'len':3206, 'apch':'ILS 12/30'}, {'id':'10R/28L', 'len':1894, 'apch':null}, {'id':'10L/28R', 'len':1663, 'apch':null}],
+    runways: [{'id':'12/30', 'len':3206, 'apch':'ILS Cat II 12/30'}, {'id':'10R/28L', 'len':1894, 'apch':'ILS Cat III 10R/28L'}, {'id':'10L/28R', 'len':1663, 'apch':'ILS Cat II 10L/28R'}],
     sections: [
       {
         title: '到着',
@@ -2653,7 +2653,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'17L/35R', 'len':2623, 'apch':'ILS 17L/35R'}, {'id':'17R/35L', 'len':2621, 'apch':'ILS 17R/35L'}],
+    runways: [{'id':'17L/35R', 'len':2623, 'apch':'ILS Cat III 17L/35R'}, {'id':'17R/35L', 'len':2621, 'apch':'ILS Cat III 17R/35L'}],
     sections: [
       {
         title: '到着',
@@ -2681,7 +2681,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'16R/34L', 'len':4877, 'apch':'ILS Cat III 16R/34L'}, {'id':'07/25', 'len':3658, 'apch':'ILS 07/25'}, {'id':'08/26', 'len':3658, 'apch':'ILS 08/26'}, {'id':'16L/34R', 'len':3658, 'apch':'ILS 16L/34R'}, {'id':'17L/35R', 'len':3658, 'apch':'ILS 17L/35R'}, {'id':'17R/35L', 'len':3658, 'apch':'ILS 17R/35L'}],
+    runways: [{'id':'16R/34L', 'len':4877, 'apch':'ILS Cat II 16R/34L'}, {'id':'07/25', 'len':3658, 'apch':'ILS Cat II 07/25'}, {'id':'08/26', 'len':3658, 'apch':'ILS Cat II 08/26'}, {'id':'16L/34R', 'len':3658, 'apch':'ILS Cat II 16L/34R'}, {'id':'17L/35R', 'len':3658, 'apch':'ILS Cat III 17L/35R'}, {'id':'17R/35L', 'len':3658, 'apch':'ILS Cat III 17R/35L'}],
     sections: [
       {
         title: 'TWY情報',
@@ -2717,7 +2717,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'01L/19R', 'len':3045, 'apch':'ILS Cat II 01L/19R'}, {'id':'07R/25L', 'len':2530, 'apch':'ILS 07R/25L'}, {'id':'01R/19L', 'len':1275, 'apch':null}],
+    runways: [{'id':'01L/19R', 'len':3045, 'apch':'ILS Cat II 01L/19R'}, {'id':'07R/25L', 'len':2530, 'apch':'ILS 07R/25L'}, {'id':'01R/19L', 'len':1275, 'apch':'ILS 01R/19L'}],
     sections: [
       {
         title: '到着',
@@ -2746,7 +2746,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'07/25', 'len':3049, 'apch':'ILS 07/25'}, {'id':'01/19', 'len':2499, 'apch':'ILS 01/19'}],
+    runways: [{'id':'07/25', 'len':3049, 'apch':'ILS Cat II 07/25'}, {'id':'01/19', 'len':2499, 'apch':'ILS 01/19'}],
     sections: [
       {
         title: '到着',
@@ -2846,7 +2846,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'01C/19C', 'len':3505, 'apch':'ILS Cat III 01C/19C'}, {'id':'01R/19L', 'len':3505, 'apch':'ILS Cat II 01R/19L'}, {'id':'01L/19R', 'len':2865, 'apch':'ILS 01L/19R'}, {'id':'12/30', 'len':3201, 'apch':'ILS 12/30'}],
+    runways: [{'id':'01C/19C', 'len':3505, 'apch':'ILS Cat III 01C/19C'}, {'id':'01R/19L', 'len':3505, 'apch':'ILS 01R/19L'}, {'id':'01L/19R', 'len':2865, 'apch':'ILS Cat II 01L/19R'}, {'id':'12/30', 'len':3201, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: 'TWY情報',
@@ -2887,7 +2887,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'16/34', 'len':3451, 'apch':'ILS 16/34'}],
+    runways: [{'id':'16/34', 'len':3451, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: '到着',
@@ -2916,7 +2916,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'09/27', 'len':3602, 'apch':'ILS Cat II 09/27'}, {'id':'16/34', 'len':1830, 'apch':null}],
+    runways: [{'id':'09/27', 'len':3602, 'apch':'ILS Cat II 09/27'}, {'id':'16/34', 'len':1830, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: '到着',
@@ -2945,7 +2945,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'15L/33R', 'len':3658, 'apch':'ILS Cat II 15L/33R'}, {'id':'09/27', 'len':3048, 'apch':'ILS 09/27'}, {'id':'08R/26L', 'len':2866, 'apch':'ILS 08R/26L'}, {'id':'08L/26R', 'len':2743, 'apch':'ILS 08L/26R'}, {'id':'15R/33L', 'len':3048, 'apch':'ILS 15R/33L'}],
+    runways: [{'id':'15L/33R', 'len':3658, 'apch':'ILS Cat II 15L/33R'}, {'id':'09/27', 'len':3048, 'apch':'ILS Cat II 09/27'}, {'id':'08R/26L', 'len':2866, 'apch':'ILS 08R/26L'}, {'id':'08L/26R', 'len':2743, 'apch':'ILS 08L/26R'}, {'id':'15R/33L', 'len':3048, 'apch':'ILS 15R/33L'}],
     sections: [
       {
         title: 'TWY情報',
@@ -3010,7 +3010,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'04/22', 'len':3355, 'apch':'ILS Cat III 04/22'}, {'id':'12R/30L', 'len':3048, 'apch':'ILS 12R/30L'}, {'id':'12L/30R', 'len':2499, 'apch':'ILS 12L/30R'}, {'id':'17/35', 'len':2438, 'apch':null}],
+    runways: [{'id':'04/22', 'len':3355, 'apch':'ILS Cat III 04/22'}, {'id':'12R/30L', 'len':3048, 'apch':'ILS 12R/30L'}, {'id':'12L/30R', 'len':2499, 'apch':'ILS Cat II 12L/30R'}, {'id':'17/35', 'len':2438, 'apch':null}],
     sections: [
       {
         title: 'TWY情報',
@@ -3045,7 +3045,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'18R/36L', 'len':3734, 'apch':'ILS Cat II 18R/36L'}, {'id':'18L/36R', 'len':2743, 'apch':'ILS 18L/36R'}],
+    runways: [{'id':'18R/36L', 'len':3734, 'apch':'ILS Cat II 18R/36L'}, {'id':'18L/36R', 'len':2743, 'apch':'ILS Cat II 18L/36R'}],
     sections: [
       {
         title: '到着',
@@ -3074,7 +3074,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'02/20', 'len':2133, 'apch':'ILS 02/20'}, {'id':'05/23', 'len':1518, 'apch':null}],
+    runways: [{'id':'02/20', 'len':2133, 'apch':'ILS Cat II 02/20'}, {'id':'05/23', 'len':1518, 'apch':null}],
     sections: [
       {
         title: '到着',
@@ -3134,7 +3134,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'08/26', 'len':2987, 'apch':'ILS 08/26'}, {'id':'03/21', 'len':1707, 'apch':null}],
+    runways: [{'id':'08/26', 'len':2987, 'apch':'ILS Cat II 08/26'}, {'id':'03/21', 'len':1707, 'apch':null}],
     sections: [
       {
         title: '到着',
@@ -3192,7 +3192,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'01R/19L', 'len':3560, 'apch':'ILS Cat I 01R/19L'}, {'id':'01L/19R', 'len':3300, 'apch':'ILS 01L/19R'}],
+    runways: [{'id':'01R/19L', 'len':3560, 'apch':'ILS 01R/19L'}, {'id':'01L/19R', 'len':3300, 'apch':'ILS Cat II 01L/19R'}],
     sections: [
       {
         title: 'TWY情報',
@@ -3257,7 +3257,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'05/23', 'len':3100, 'apch':'ILS Cat I 05/23'}, {'id':'12/30', 'len':1652, 'apch':null}],
+    runways: [{'id':'05/23', 'len':3100, 'apch':'ILS Cat I 05/23'}, {'id':'12/30', 'len':1652, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: '到着',
@@ -3345,7 +3345,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'12L/30R', 'len':4351, 'apch':'ILS Cat III 12L/30R'}, {'id':'12R/30L', 'len':4447, 'apch':'ILS Cat III 12R/30L'}],
+    runways: [{'id':'12L/30R', 'len':4351, 'apch':'ILS Cat II 12L/30R'}, {'id':'12R/30L', 'len':4447, 'apch':'ILS 12R/30L'}],
     sections: [
       {
         title: 'TWY情報',
@@ -3381,7 +3381,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'12L/30R', 'len':3956, 'apch':'ILS 12L/30R'}, {'id':'12R/30L', 'len':2530, 'apch':'ILS 12R/30L'}],
+    runways: [{'id':'12L/30R', 'len':3956, 'apch':'ILS Cat II 12L/30R'}, {'id':'12R/30L', 'len':2530, 'apch':'ILS 12R/30L'}],
     sections: [
       {
         title: '到着',
@@ -3468,7 +3468,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'16/34', 'len':4000, 'apch':'ILS 16/34'}, {'id':'17/35', 'len':3200, 'apch':'ILS 17/35'}],
+    runways: [{'id':'16/34', 'len':4000, 'apch':'ILS Cat II 16/34'}, {'id':'17/35', 'len':3200, 'apch':'ILS 17/35'}],
     sections: [
       {
         title: '到着',
@@ -3497,7 +3497,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'08/26', 'len':3850, 'apch':'ILS 08/26'}],
+    runways: [{'id':'08/26', 'len':3850, 'apch':'ILS Cat II 08/26'}],
     sections: [
       {
         title: '到着',
@@ -3526,7 +3526,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'13R/31L', 'len':3000, 'apch':'ILS 13R/31L'}],
+    runways: [{'id':'13R/31L', 'len':3000, 'apch':'ILS Cat III 13R/31L'}],
     sections: [
       {
         title: '到着',
@@ -3671,7 +3671,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'16L/34R', 'len':3400, 'apch':'ILS 16R/34L'}, {'id':'16R/34L', 'len':3400, 'apch':'ILS 16R/34L'}],
+    runways: [{'id':'16L/34R', 'len':3400, 'apch':'ILS Cat II 16L/34R'}, {'id':'16R/34L', 'len':3400, 'apch':'ILS Cat II 16R/34L'}],
     sections: [
       {
         title: '到着',
@@ -3729,7 +3729,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'02/20', 'len':3500, 'apch':'ILS 02/20'}],
+    runways: [{'id':'02/20', 'len':3500, 'apch':'ILS Cat II 02/20'}],
     sections: [
       {
         title: '到着',
@@ -3787,7 +3787,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'12/30', 'len':3160, 'apch':'ILS 12/30'}],
+    runways: [{'id':'12/30', 'len':3160, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: '到着',
@@ -3815,7 +3815,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'12/30', 'len':3565, 'apch':'ILS 12/30'}],
+    runways: [{'id':'12/30', 'len':3565, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: '到着',
@@ -3845,7 +3845,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'07/25', 'len':3597, 'apch':'ILS 07/25'}, {'id':'16/34', 'len':3602, 'apch':'ILS 16/34'}],
+    runways: [{'id':'07/25', 'len':3597, 'apch':'ILS Cat II 07/25'}, {'id':'16/34', 'len':3602, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: '到着',
@@ -3903,7 +3903,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'02/20', 'len':3250, 'apch':'ILS 02/20'}],
+    runways: [{'id':'02/20', 'len':3250, 'apch':'ILS Cat II 02/20'}],
     sections: [
       {
         title: '到着',
@@ -3959,7 +3959,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'09/27', 'len':3200, 'apch':'ILS 09/27'}],
+    runways: [{'id':'09/27', 'len':3200, 'apch':'ILS Cat II 09/27'}],
     sections: [
       {
         title: '到着',
@@ -4042,7 +4042,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'07/25', 'len':2790, 'apch':'ILS 07/25'}],
+    runways: [{'id':'07/25', 'len':2790, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: '到着',
@@ -4070,7 +4070,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'03/21', 'len':3003, 'apch':'ILS 03/21'}, {'id':'12/30', 'len':2704, 'apch':'ILS 12/30'}],
+    runways: [{'id':'03/21', 'len':3003, 'apch':'ILS 03/21'}, {'id':'12/30', 'len':2704, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: '到着',
@@ -4126,7 +4126,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'17/35', 'len':3658, 'apch':'ILS 17/35'}, {'id':'12/30', 'len':2408, 'apch':null}],
+    runways: [{'id':'17/35', 'len':3658, 'apch':'ILS 17/35'}, {'id':'12/30', 'len':2408, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: '到着',
@@ -4185,7 +4185,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'07/25', 'len':2794, 'apch':'ILS 07/25'}],
+    runways: [{'id':'07/25', 'len':2794, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: '到着',
@@ -4281,7 +4281,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'13L/31R', 'len':3707, 'apch':'ILS Cat II 13L/31R'}, {'id':'13R/31L', 'len':3010, 'apch':'ILS 13R/31L'}],
+    runways: [{'id':'13L/31R', 'len':3707, 'apch':'ILS Cat II 13L/31R'}, {'id':'13R/31L', 'len':3010, 'apch':'ILS Cat III 13R/31L'}],
     sections: [
       {
         title: '到着',
@@ -4310,7 +4310,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'17L/35R', 'len':3920, 'apch':'ILS Cat II 17L/35R'}, {'id':'17R/35L', 'len':3920, 'apch':'ILS Cat II 17R/35L'}],
+    runways: [{'id':'17L/35R', 'len':3920, 'apch':'ILS Cat III 17L/35R'}, {'id':'17R/35L', 'len':3920, 'apch':'ILS Cat III 17R/35L'}],
     sections: [
       {
         title: 'TWY情報',
@@ -4346,7 +4346,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'09/27', 'len':3600, 'apch':'ILS 09/27'}],
+    runways: [{'id':'09/27', 'len':3600, 'apch':'ILS Cat II 09/27'}],
     sections: [
       {
         title: '到着',
@@ -4376,7 +4376,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'13/31', 'len':2695, 'apch':'ILS 13/31'}, {'id':'18/36', 'len':3353, 'apch':'ILS 18/36'}],
+    runways: [{'id':'13/31', 'len':2695, 'apch':'ILS 13/31'}, {'id':'18/36', 'len':3353, 'apch':'ILS Cat II 18/36'}],
     sections: [
       {
         title: '到着',
@@ -4435,7 +4435,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'10/28', 'len':1524, 'apch':null}, {'id':'16/34', 'len':2286, 'apch':'ILS 16/34'}],
+    runways: [{'id':'10/28', 'len':1524, 'apch':null}, {'id':'16/34', 'len':2286, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: '到着',
@@ -4465,7 +4465,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'16/34', 'len':2623, 'apch':'ILS 16/34'}],
+    runways: [{'id':'16/34', 'len':2623, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: '到着',
@@ -4525,7 +4525,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'03/21', 'len':3353, 'apch':'ILS 03/21'}, {'id':'08/26', 'len':2499, 'apch':null}],
+    runways: [{'id':'03/21', 'len':3353, 'apch':'ILS 03/21'}, {'id':'08/26', 'len':2499, 'apch':'ILS Cat II 08/26'}],
     sections: [
       {
         title: '到着',
@@ -4554,7 +4554,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'10R/28L', 'len':3353, 'apch':'ILS Cat II 10R/28L'}, {'id':'10L/28R', 'len':2995, 'apch':'ILS 10L/28R'}, {'id':'03/21', 'len':1829, 'apch':null}],
+    runways: [{'id':'10R/28L', 'len':3353, 'apch':'ILS Cat III 10R/28L'}, {'id':'10L/28R', 'len':2995, 'apch':'ILS Cat II 10L/28R'}, {'id':'03/21', 'len':1829, 'apch':null}],
     sections: [
       {
         title: 'TWY情報',
@@ -4583,7 +4583,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'08L/26R', 'len':4522, 'apch':'ILS Cat II 08L/26R'}, {'id':'08R/26L', 'len':3208, 'apch':'ILS 08R/26L'}, {'id':'01L/19R', 'len':2978, 'apch':'ILS 01L/19R'}, {'id':'01R/19L', 'len':2978, 'apch':'ILS 01R/19L'}],
+    runways: [{'id':'08L/26R', 'len':4522, 'apch':'ILS Cat II 08L/26R'}, {'id':'08R/26L', 'len':3208, 'apch':'ILS 08R/26L'}, {'id':'01L/19R', 'len':2978, 'apch':'ILS Cat II 01L/19R'}, {'id':'01R/19L', 'len':2978, 'apch':'ILS 01R/19L'}],
     sections: [
       {
         title: '到着',
@@ -4650,7 +4650,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'08/26', 'len':4204, 'apch':'ILS 08/26'}, {'id':'03/21', 'len':3048, 'apch':'ILS 03/21'}, {'id':'12/30', 'len':1829, 'apch':null}],
+    runways: [{'id':'08/26', 'len':4204, 'apch':'ILS Cat II 08/26'}, {'id':'03/21', 'len':3048, 'apch':'ILS 03/21'}, {'id':'12/30', 'len':1829, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: '到着',
@@ -4680,7 +4680,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'16L/34R', 'len':3658, 'apch':'ILS Cat III 16L/34R'}, {'id':'16R/34L', 'len':3658, 'apch':'ILS Cat III 16R/34L'}, {'id':'17/35', 'len':2925, 'apch':'ILS 17/35'}, {'id':'14/32', 'len':1491, 'apch':null}],
+    runways: [{'id':'16L/34R', 'len':3658, 'apch':'ILS Cat II 16L/34R'}, {'id':'16R/34L', 'len':3658, 'apch':'ILS Cat II 16R/34L'}, {'id':'17/35', 'len':2925, 'apch':'ILS 17/35'}, {'id':'14/32', 'len':1491, 'apch':'ILS 14/32'}],
     sections: [
       {
         title: 'TWY情報',
@@ -4710,7 +4710,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'18R/36L', 'len':3659, 'apch':'ILS Cat II 18R/36L'}, {'id':'18L/36R', 'len':3659, 'apch':'ILS 18L/36R'}, {'id':'17R/35L', 'len':3048, 'apch':'ILS 17R/35L'}, {'id':'17L/35R', 'len':2744, 'apch':null}],
+    runways: [{'id':'18R/36L', 'len':3659, 'apch':'ILS Cat II 18R/36L'}, {'id':'18L/36R', 'len':3659, 'apch':'ILS Cat II 18L/36R'}, {'id':'17R/35L', 'len':3048, 'apch':'ILS Cat III 17R/35L'}, {'id':'17L/35R', 'len':2744, 'apch':'ILS Cat III 17L/35R'}],
     sections: [
       {
         title: 'TWY情報',
@@ -4739,7 +4739,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'09/27', 'len':3967, 'apch':'ILS Cat III 09/27'}, {'id':'08R/26L', 'len':3202, 'apch':'ILS Cat II 08R/26L'}, {'id':'12/30', 'len':2853, 'apch':'ILS 12/30'}, {'id':'08L/26R', 'len':2621, 'apch':'ILS 08L/26R'}],
+    runways: [{'id':'09/27', 'len':3967, 'apch':'ILS Cat II 09/27'}, {'id':'08R/26L', 'len':3202, 'apch':'ILS Cat II 08R/26L'}, {'id':'12/30', 'len':2853, 'apch':'ILS Cat II 12/30'}, {'id':'08L/26R', 'len':2621, 'apch':'ILS 08L/26R'}],
     sections: [
       {
         title: 'TWY情報',
@@ -4865,7 +4865,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'08/26', 'len':2700, 'apch':'ILS 08/26'}],
+    runways: [{'id':'08/26', 'len':2700, 'apch':'ILS Cat II 08/26'}],
     sections: [
       {
         title: '到着',
@@ -4955,7 +4955,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JP-8 / JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'06/24', 'len':3048, 'apch':'ILS 06/24'}, {'id':'16/34', 'len':2284, 'apch':null}],
+    runways: [{'id':'06/24', 'len':3048, 'apch':'ILS 06/24'}, {'id':'16/34', 'len':2284, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: '運用情報',
@@ -4983,7 +4983,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'12/30', 'len':2713, 'apch':'ILS 12/30'}],
+    runways: [{'id':'12/30', 'len':2713, 'apch':'ILS Cat II 12/30'}],
     sections: [
       {
         title: '到着',
@@ -5012,7 +5012,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 6',
     prefRwy: 'Nil',
-    runways: [{'id':'15/33', 'len':3103, 'apch':'ILS 15/33'}, {'id':'08/26', 'len':1494, 'apch':null}],
+    runways: [{'id':'15/33', 'len':3103, 'apch':'ILS 15/33'}, {'id':'08/26', 'len':1494, 'apch':'ILS Cat II 08/26'}],
     sections: [
       {
         title: '到着',
@@ -5130,7 +5130,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'07/25', 'len':2652, 'apch':'ILS 07/25'}],
+    runways: [{'id':'07/25', 'len':2652, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: '到着',
@@ -5159,7 +5159,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'07/25', 'len':2407, 'apch':'ILS 07/25'}],
+    runways: [{'id':'07/25', 'len':2407, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: '到着',
@@ -5343,7 +5343,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'11/29', 'len':3354, 'apch':'ILS 11/29'}, {'id':'18/36', 'len':1524, 'apch':null}],
+    runways: [{'id':'11/29', 'len':3354, 'apch':'ILS 11/29'}, {'id':'18/36', 'len':1524, 'apch':'ILS Cat II 18/36'}],
     sections: [
       {
         title: '到着',
@@ -5374,7 +5374,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 8',
     prefRwy: 'Nil',
-    runways: [{'id':'01/19', 'len':2438, 'apch':'ILS 01/19'}, {'id':'07/25', 'len':1100, 'apch':null}],
+    runways: [{'id':'01/19', 'len':2438, 'apch':'ILS 01/19'}, {'id':'07/25', 'len':1100, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: '到着',
@@ -5407,7 +5407,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1（軍調整要）',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'07/25', 'len':2652, 'apch':null}],
+    runways: [{'id':'07/25', 'len':2652, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: '運用情報',
@@ -5466,7 +5466,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'16L/34R', 'len':3750, 'apch':'ILS 16L/34R'}, {'id':'16R/34L', 'len':3750, 'apch':'ILS 16R/34L'}, {'id':'17L/35R', 'len':4100, 'apch':'ILS 17L/35R'}, {'id':'17R/35L', 'len':4100, 'apch':'ILS 17R/35L'}, {'id':'18/36', 'len':3060, 'apch':'ILS 18/36'}],
+    runways: [{'id':'16L/34R', 'len':3750, 'apch':'ILS Cat II 16L/34R'}, {'id':'16R/34L', 'len':3750, 'apch':'ILS Cat II 16R/34L'}, {'id':'17L/35R', 'len':4100, 'apch':'ILS Cat III 17L/35R'}, {'id':'17R/35L', 'len':4100, 'apch':'ILS Cat III 17R/35L'}, {'id':'18/36', 'len':3060, 'apch':'ILS Cat II 18/36'}],
     sections: [
       {
         title: '到着',
@@ -5583,7 +5583,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'11/29', 'len':3500, 'apch':'ILS Cat III 11/29'}, {'id':'16/34', 'len':3600, 'apch':'ILS Cat III 16/34'}],
+    runways: [{'id':'11/29', 'len':3500, 'apch':'ILS Cat III 11/29'}, {'id':'16/34', 'len':3600, 'apch':'ILS Cat II 16/34'}],
     sections: [
       {
         title: '到着',
@@ -5613,7 +5613,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1（供給状況要確認）',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    runways: [{'id':'18L/36R', 'len':4000, 'apch':'ILS 18L/36R'}, {'id':'18R/36L', 'len':3500, 'apch':'ILS 18R/36L'}],
+    runways: [{'id':'18L/36R', 'len':4000, 'apch':'ILS Cat II 18L/36R'}, {'id':'18R/36L', 'len':3500, 'apch':'ILS Cat II 18R/36L'}],
     sections: [
       {
         title: '運用情報',
@@ -5643,7 +5643,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 7',
     prefRwy: 'Nil',
-    runways: [{'id':'09/27', 'len':2810, 'apch':'ILS 09/27'}],
+    runways: [{'id':'09/27', 'len':2810, 'apch':'ILS Cat II 09/27'}],
     sections: [
       {
         title: '運用情報',
@@ -5704,7 +5704,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 6',
     prefRwy: 'Nil',
-    runways: [{'id':'10L/28R', 'len':3206, 'apch':'ILS 10L/28R'}, {'id':'07/25', 'len':1677, 'apch':null}],
+    runways: [{'id':'10L/28R', 'len':3206, 'apch':'ILS Cat II 10L/28R'}, {'id':'07/25', 'len':1677, 'apch':'ILS Cat II 07/25'}],
     sections: [
       {
         title: '運用情報',
@@ -5766,7 +5766,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 6',
     prefRwy: 'Nil',
-    runways: [{'id':'09/27', 'len':2195, 'apch':'ILS 09/27'}],
+    runways: [{'id':'09/27', 'len':2195, 'apch':'ILS Cat II 09/27'}],
     sections: [
       {
         title: '運用情報',
@@ -5798,7 +5798,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 6',
     prefRwy: 'Nil',
-    runways: [{'id':'12/30', 'len':2438, 'apch':'ILS 12/30'}, {'id':'17/35', 'len':1133, 'apch':null}],
+    runways: [{'id':'12/30', 'len':2438, 'apch':'ILS Cat II 12/30'}, {'id':'17/35', 'len':1133, 'apch':null}],
     sections: [
       {
         title: '運用情報',
