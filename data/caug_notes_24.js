@@ -1750,4 +1750,1451 @@ const CAUG_NOTES_24 = {
     ]
   },
 
+  RJCB: {
+    fullName: 'OBIHIRO',
+    iata: 'OBO',
+    utc: '+9',
+    ops: '0600-2200L',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          'H24運用不可 – 0600-2200LSTのみ',
+          'RWY: 17/35',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: 帯広空港ビルディング +81-155-64-0489',
+        ]
+      },
+    ]
+  },
+
+  RJCH: {
+    fullName: 'HAKODATE',
+    iata: 'HKD',
+    utc: '+9',
+    ops: '0630-2130L',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '0630-2130LSTのみ運用',
+          'RWY: 12/30',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: 函館空港ビルデング +81-138-57-8881',
+        ]
+      },
+    ]
+  },
+
+  RJEC: {
+    fullName: 'ASAHIKAWA',
+    iata: 'AKJ',
+    utc: '+9',
+    ops: '0700-2100L',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '0700-2100LSTのみ運用',
+          'RWY: 16/34',
+          '冬季: 積雪・除雪作業に注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: 旭川空港ビル +81-166-83-3939',
+        ]
+      },
+    ]
+  },
+
+  RJFK: {
+    fullName: 'KAGOSHIMA',
+    iata: 'KOJ',
+    utc: '+9',
+    ops: '0630-2130L',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '0630-2130LSTのみ運用',
+          'RWY: 16/34',
+          '火山灰（桜島）: SIGMET/ASHTAM確認必須。火山灰による視程低下・エンジン影響に注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: 鹿児島空港ターミナルビル +81-995-58-2111',
+        ]
+      },
+    ]
+  },
+
+  RJFR: {
+    fullName: 'KITAKYUSHU',
+    iata: 'KKJ',
+    utc: '+9',
+    ops: '0700-2200L',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '0700-2200LSTのみ運用',
+          'RWY: 07/25',
+          '海上空港 – 濃霧に注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: 北九州空港 +81-93-475-4195',
+        ]
+      },
+    ]
+  },
+
+  RJFT: {
+    fullName: 'KUMAMOTO',
+    iata: 'KMJ',
+    utc: '+9',
+    ops: '0700-2130L',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '0700-2130LSTのみ運用',
+          'RWY: 07/25',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: 熊本空港 +81-96-232-2811',
+        ]
+      },
+    ]
+  },
+
+  RJFU: {
+    fullName: 'NAGASAKI',
+    iata: 'NGS',
+    utc: '+9',
+    ops: '0700-2130L',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '0700-2130LSTのみ運用',
+          'RWY: 14/32',
+          '山岳地形 – 進入時の地形確認必要',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: 長崎空港ビルディング +81-957-52-5555',
+        ]
+      },
+    ]
+  },
+
+  RJSS: {
+    fullName: 'SENDAI',
+    iata: 'SDJ',
+    utc: '+9',
+    ops: '0630-2230L',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '0630-2230LSTのみ運用',
+          'RWY: 09/27',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: 仙台空港ビル +81-22-382-5111',
+        ]
+      },
+    ]
+  },
+
+  RODN: {
+    fullName: 'KADENA AB (Okinawa)',
+    iata: '—',
+    utc: '+9',
+    ops: 'H24 (US Military)',
+    curfew: 'Nil',
+    fuel: 'JET-A1 / JP-8',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '米空軍嘉手納基地 – 民間機使用には事前調整が必要',
+          'RWY: 05L/23R, 05R/23L',
+          'Divert使用時: 嘉手納AB事前許可（Prior Permission Required）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'Kadena AB Command Post: +81-98-961-1110',
+        ]
+      },
+    ]
+  },
+
+  RKSI: {
+    fullName: 'INCHEON, Incheon INTL',
+    iata: 'ICN',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'TWY: 広大なエプロン・複数サテライトゲート – 地上誘導に従うこと',
+          'T1とT2は別ターミナル – 到着便を確認',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS運用: H24（RWY 15L/R, 33L/R）',
+          'ATIS: 126.1 MHz',
+        ]
+      },
+      {
+        title: '離陸',
+        items: [
+          'Departure: RKSI SID参照',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Incheon International Airport Corp +82-32-741-2114',
+        ]
+      },
+    ]
+  },
+
+  UUDD: {
+    fullName: 'MOSCOW, Domodedovo INTL',
+    iata: 'DME',
+    utc: '+3',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'TWY: 大規模空港 – Jeppesen Ground Chart確認必須',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS運用: RWY 14L/R, 32L/R',
+          'ロシア空域: FL290以下はロシア国内高度規則（メートル高度）適用',
+        ]
+      },
+      {
+        title: '特記事項',
+        items: [
+          '⚠️ ロシアへのフライト: 制裁・過飛行許可の最新情報確認必須（2024年以降運用変更あり）',
+          'ロシア向けGPS/GNSS jamming: モスクワ周辺で報告あり',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Domodedovo Airport +7-495-933-6666',
+        ]
+      },
+    ]
+  },
+
+  ULLI: {
+    fullName: 'ST. PETERSBURG, Pulkovo INTL',
+    iata: 'LED',
+    utc: '+3',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'ILS運用: RWY 10L/R, 28L/R',
+          'ロシア空域: FL290以下はメートル高度適用',
+        ]
+      },
+      {
+        title: '特記事項',
+        items: [
+          '⚠️ ロシアへのフライト: 制裁・過飛行許可の最新情報確認必須',
+          'GNSS jamming: Baltic/ロシア近辺で頻繁に報告あり',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Pulkovo Airport +7-812-337-3444',
+        ]
+      },
+    ]
+  },
+
+  EGKK: {
+    fullName: 'LONDON, Gatwick',
+    iata: 'LGW',
+    utc: '+0/+1(DST)',
+    ops: 'H24',
+    curfew: '2300-0600L（Night Restrictions）',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'Single runway operation (RWY 08L/26R) – 滑走路1本のみ',
+          'North & South Terminal – 到着ターミナル事前確認',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: RWY 08L/26R',
+          'ATIS: 136.525 MHz',
+          'Night restrictions: QC（Quota Count）制度あり – 夜間は機材型式による制限',
+        ]
+      },
+      {
+        title: '離陸',
+        items: [
+          'London TCA: 複雑な空域 – SID確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Gatwick Airport +44-844-335-1802',
+        ]
+      },
+    ]
+  },
+
+  EGSS: {
+    fullName: 'LONDON, Stansted',
+    iata: 'STN',
+    utc: '+0/+1(DST)',
+    ops: 'H24',
+    curfew: '2300-0600L（Night Restrictions）',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 04/22',
+          'ILS: RWY 04/22',
+          'Night restrictions: QC制度あり',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Stansted Airport +44-844-335-1803',
+        ]
+      },
+    ]
+  },
+
+  EGCC: {
+    fullName: 'MANCHESTER',
+    iata: 'MAN',
+    utc: '+0/+1(DST)',
+    ops: 'H24',
+    curfew: '2300-0600L（Night Restrictions）',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 05L/23R, 05R/23L（2本）',
+          'TWY: Jeppesen Ground Chart参照',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: RWY 05L/R, 23L/R',
+          'ATIS: 128.175 MHz',
+          'Night restrictions: QC制度適用',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Manchester Airport +44-161-489-3000',
+        ]
+      },
+    ]
+  },
+
+  EHAM: {
+    fullName: 'AMSTERDAM, Schiphol',
+    iata: 'AMS',
+    utc: '+1/+2(DST)',
+    ops: 'H24',
+    curfew: '2300-0600L（Night Restrictions）',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          '6本の滑走路（RWY 04/22, 06/24, 09/27, 18R/36L, 18C/36C, 18L/36R）',
+          '非常に広大なエプロン – Ground Chartを十分確認',
+          'Schiphol East / Cargo apron: 別エリア注意',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: 全主要RWYに装備',
+          'ATIS: 132.975 MHz',
+          'Night restrictions: LVP（低視程手順）頻繁に適用',
+        ]
+      },
+      {
+        title: '離陸',
+        items: [
+          'Amsterdam TMA: 複雑な空域 – SID確認必須',
+          'CPDLC: EDYY（Maastricht UAC）logon',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Amsterdam Airport Schiphol +31-20-794-0800',
+        ]
+      },
+    ]
+  },
+
+  EDDL: {
+    fullName: 'DÜSSELDORF',
+    iata: 'DUS',
+    utc: '+1/+2(DST)',
+    ops: 'H24',
+    curfew: '2300-0600L（Night Restrictions）',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 05L/23R, 05R/23L',
+          'ILS: RWY 05L/R, 23L/R',
+          'ATIS: 123.975 MHz',
+          'Night restrictions: QC制度あり',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Düsseldorf Airport +49-211-4210',
+        ]
+      },
+    ]
+  },
+
+  EFTU: {
+    fullName: 'TURKU',
+    iata: 'TKU',
+    utc: '+2/+3(DST)',
+    ops: '0500-2300L',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '0500-2300LSTのみ運用',
+          'RWY: 08/26',
+          '冬季: 除氷・積雪対応設備あり',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Turku Airport +358-200-14636',
+        ]
+      },
+    ]
+  },
+
+  EETN: {
+    fullName: 'TALLINN, Lennart Meri',
+    iata: 'TLL',
+    utc: '+2/+3(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 08/26',
+          'ILS: RWY 08/26',
+          'ATIS: 126.15 MHz',
+        ]
+      },
+      {
+        title: '特記事項',
+        items: [
+          '⚠️ GNSS jamming: ロシア近接のため頻繁に報告あり – IRS/VOR backup推奨',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Tallinn Airport +372-605-8888',
+        ]
+      },
+    ]
+  },
+
+  ESSA: {
+    fullName: 'STOCKHOLM, Arlanda',
+    iata: 'ARN',
+    utc: '+1/+2(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 01L/19R, 01R/19L, 08/26',
+          '3本の平行滑走路 – 混雑時のATCコントロール注意',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: 全主要RWYに装備',
+          'ATIS: 125.725 MHz',
+        ]
+      },
+      {
+        title: '特記事項',
+        items: [
+          '⚠️ GNSS jamming: Baltic/ロシア国境付近で報告あり',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Swedavia +46-10-109-0000',
+        ]
+      },
+    ]
+  },
+
+  EKCH: {
+    fullName: 'COPENHAGEN, Kastrup',
+    iata: 'CPH',
+    utc: '+1/+2(DST)',
+    ops: 'H24',
+    curfew: '2300-0600L（Night Restrictions）',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 04L/22R, 04R/22L, 12/30',
+          'Concourse A/B/C: ターミナル構造複雑 – Ground Chart確認',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: 主要RWYに装備',
+          'ATIS: 126.875 MHz',
+          'Night restrictions: QC制度あり',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Copenhagen Airports +45-32-31-3231',
+        ]
+      },
+    ]
+  },
+
+  LFPO: {
+    fullName: 'PARIS, Orly',
+    iata: 'ORY',
+    utc: '+1/+2(DST)',
+    ops: 'H24',
+    curfew: '2300-0600L（Night Restrictions）',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 06/24, 08/26',
+          'South Terminal / West Terminal: ターミナル確認',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: RWY 06/24, 08/26',
+          'ATIS: 126.0 MHz',
+          'Night restrictions: 騒音制限あり（2300-0600）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Aéroports de Paris +33-1-70-36-39-50',
+        ]
+      },
+    ]
+  },
+
+  CYYC: {
+    fullName: 'CALGARY, International',
+    iata: 'YYC',
+    utc: '-7/-6(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 08/26, 17L/35R, 17R/35L',
+          'ILS: 主要RWYに装備',
+          'ATIS: 132.7 MHz',
+          '冬季: 除氷必須 – De-ice pad位置Jeppesen確認',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Calgary Airport Authority +1-403-735-1200',
+        ]
+      },
+    ]
+  },
+
+  CYEG: {
+    fullName: 'EDMONTON, International',
+    iata: 'YEG',
+    utc: '-7(MST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 02/20, 12/30',
+          'ILS: 主要RWYに装備',
+          'ATIS: 128.6 MHz',
+          '冬季: 除氷必須 – 極寒時の長時間駐機に注意（APU/エンジン始動への影響）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Edmonton International Airport +1-780-890-8900',
+        ]
+      },
+    ]
+  },
+
+  CYYZ: {
+    fullName: 'TORONTO, Pearson INTL',
+    iata: 'YYZ',
+    utc: '-5/-4(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 05/23, 06L/24R, 06R/24L, 15L/33R, 15R/33L',
+          'T1（国際線）/ T3（国内線）– 到着ターミナル確認',
+          '広大なエプロン – Ground Chart必須',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: 全主要RWYに装備',
+          'ATIS: 135.0 MHz',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Greater Toronto Airports Authority +1-416-247-7678',
+        ]
+      },
+    ]
+  },
+
+  KOAK: {
+    fullName: 'OAKLAND, Metropolitan Oakland INTL',
+    iata: 'OAK',
+    utc: '-8/-7(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 10L/28R, 12/30',
+          'ILS: 主要RWYに装備',
+          'ATIS: 128.5 MHz',
+          'SFOとのコンフリクト: SF Bay Area TCA – 複雑なATCコントロール',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Port of Oakland +1-510-563-3300',
+        ]
+      },
+    ]
+  },
+
+  KONT: {
+    fullName: 'ONTARIO (CA), Ontario INTL',
+    iata: 'ONT',
+    utc: '-8/-7(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 08L/26R, 08R/26L',
+          'ILS: RWY 08L/R, 26L/R',
+          'ATIS: 127.75 MHz',
+          'LA TCA内 – KZLA（Los Angeles ARTCC）管轄',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Ontario International Airport +1-909-544-5300',
+        ]
+      },
+    ]
+  },
+
+  KSMF: {
+    fullName: 'SACRAMENTO, International',
+    iata: 'SMF',
+    utc: '-8/-7(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 16L/34R, 16R/34L',
+          'ILS: 主要RWYに装備',
+          'ATIS: 132.0 MHz',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Sacramento County Airport System +1-916-929-5411',
+        ]
+      },
+    ]
+  },
+
+  KDEN: {
+    fullName: 'DENVER, International',
+    iata: 'DEN',
+    utc: '-7/-6(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 07/25, 08/26, 16L/34R, 16R/34L, 17L/35R, 17R/35L（6本）',
+          '非常に広大な空港 – Ground Chart必須',
+          '標高: 5,431ft（1,655m）– 高標高によるパフォーマンス計算注意',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: 全主要RWYに装備',
+          'ATIS: 135.975 MHz',
+          '冬季: 除氷必須。吹雪・地吹雪による視程低下注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Denver International Airport +1-303-342-2000',
+        ]
+      },
+    ]
+  },
+
+  KMKE: {
+    fullName: 'MILWAUKEE, General Mitchell INTL',
+    iata: 'MKE',
+    utc: '-6/-5(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 01L/19R, 01R/19L, 07L/25R, 07R/25L',
+          'ILS: 主要RWYに装備',
+          'ATIS: 132.75 MHz',
+          '冬季: 除氷・積雪除去対応',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Milwaukee County +1-414-747-5300',
+        ]
+      },
+    ]
+  },
+
+  KRFD: {
+    fullName: 'ROCKFORD, Chicago Rockford INTL',
+    iata: 'RFD',
+    utc: '-6/-5(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 01/19, 07/25',
+          'ILS: RWY 07/25',
+          'ATIS: 120.225 MHz',
+          'Chicago TCA外 – 比較的単純なアプローチ',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Greater Rockford Airport Authority +1-815-969-4000',
+        ]
+      },
+    ]
+  },
+
+  KDTW: {
+    fullName: 'DETROIT, Metropolitan Wayne County',
+    iata: 'DTW',
+    utc: '-5(EST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 03L/21R, 03R/21L, 04L/22R, 04R/22L（4本）',
+          'McNamara Terminal（国際線）/ North Terminal – ターミナル確認',
+          '広大なエプロン – Ground Chart必須',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: 全主要RWYに装備',
+          'ATIS: 135.0 MHz',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Wayne County Airport Authority +1-734-247-7678',
+        ]
+      },
+    ]
+  },
+
+  KEWR: {
+    fullName: 'NEWARK, Liberty INTL',
+    iata: 'EWR',
+    utc: '-5/-4(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 04L/22R, 04R/22L, 11/29',
+          'New York TCA – 非常に複雑な空域',
+          'Terminal A/B/C – 到着ターミナル確認',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: 全主要RWYに装備',
+          'ATIS: 132.35 MHz',
+          'NY TCA: KZNY（New York ARTCC）管轄 – 非常に輻輳した空域',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Port Authority of NY & NJ +1-973-961-6000',
+        ]
+      },
+    ]
+  },
+
+  KIAD: {
+    fullName: 'WASHINGTON, Dulles INTL',
+    iata: 'IAD',
+    utc: '-5/-4(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 01L/19R, 01R/19L, 12/30',
+          'Midfield Concourse（B/C）: モバイルラウンジ使用',
+          'Washington ADIZ: 特別フライト規則 – 事前通知必須（DC SFRA）',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: 全主要RWYに装備',
+          'ATIS: 134.85 MHz',
+        ]
+      },
+      {
+        title: '特記事項',
+        items: [
+          'DC SFRA（Special Flight Rules Area）: IAD着陸機でも通過時に要件あり – NOTAM確認',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Metropolitan Washington Airports Authority +1-703-572-2700',
+        ]
+      },
+    ]
+  },
+
+  KPSM: {
+    fullName: 'PORTSMOUTH, Pease INTL Tradeport',
+    iata: 'PSM',
+    utc: '-5/-4(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 16/34',
+          'ILS: RWY 16/34',
+          'ATIS: 120.025 MHz',
+          '旧空軍基地転用 – 長い滑走路（RWY 34: 11,321ft）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Pease Development Authority +1-603-433-6088',
+        ]
+      },
+    ]
+  },
+
+  KSWF: {
+    fullName: 'NEWBURGH, Stewart INTL',
+    iata: 'SWF',
+    utc: '-5/-4(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 09/27',
+          'ILS: RWY 09/27',
+          'ATIS: 124.7 MHz',
+          '旧空軍基地転用 – New York北方約60nm（混雑時のNY代替）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Port Authority of NY & NJ +1-845-564-2100',
+        ]
+      },
+    ]
+  },
+
+  KIAH: {
+    fullName: 'HOUSTON, George Bush INTL',
+    iata: 'IAH',
+    utc: '-6/-5(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 08L/26R, 08R/26L, 09/27, 15L/33R, 15R/33L',
+          'Terminal A/B/C/D/E – United Hub – 大規模空港',
+          '広大なエプロン – Ground Chart必須',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: 全主要RWYに装備',
+          'ATIS: 119.85 MHz',
+          'KZHU（Houston ARTCC）管轄',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Houston Airports +1-281-230-3000',
+        ]
+      },
+    ]
+  },
+
+  KIND: {
+    fullName: 'INDIANAPOLIS, International',
+    iata: 'IND',
+    utc: '-5(EST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 05L/23R, 05R/23L',
+          'ILS: RWY 05L/R, 23L/R',
+          'ATIS: 132.125 MHz',
+          'インディアナ州は年間DST変更なし（EST固定）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Indianapolis Airport Authority +1-317-487-7243',
+        ]
+      },
+    ]
+  },
+
+  KMSP: {
+    fullName: 'MINNEAPOLIS, St. Paul INTL',
+    iata: 'MSP',
+    utc: '-6/-5(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 12L/30R, 12R/30L, 17/35',
+          'T1（Lindbergh）/ T2（Humphrey）– 到着ターミナル確認',
+          '冬季: 除氷必須 – 極寒対応（-30℃以下になることあり）',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: 全主要RWYに装備',
+          'ATIS: 132.85 MHz',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Metropolitan Airports Commission +1-612-726-5555',
+        ]
+      },
+    ]
+  },
+
+  KAUS: {
+    fullName: 'AUSTIN, Bergstrom INTL',
+    iata: 'AUS',
+    utc: '-6/-5(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 17L/35R, 17R/35L',
+          'ILS: 主要RWYに装備',
+          'ATIS: 135.95 MHz',
+          '旧バーグストロム空軍基地転用 – 長い滑走路',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Austin-Bergstrom International Airport +1-512-530-2242',
+        ]
+      },
+    ]
+  },
+
+  PHOG: {
+    fullName: 'MAUI, Kahului',
+    iata: 'OGG',
+    utc: '-10(HST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 02/20',
+          'ILS: RWY 02/20',
+          'ATIS: 127.325 MHz',
+          'ハワイ時間: UTC-10 年間固定（DST変更なし）',
+          '貿易風: RWY 02からの着陸が多い',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Hawaii Airports Division +1-808-872-3830',
+        ]
+      },
+    ]
+  },
+
+  PHKO: {
+    fullName: 'KONA (Big Island), Ellison Onizuka Kona INTL',
+    iata: 'KOA',
+    utc: '-10(HST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 17/35',
+          'ILS: RWY 17/35',
+          'ATIS: 119.15 MHz',
+          '海沿い空港 – 貿易風による突風注意',
+          '溶岩地帯の空港 – 視覚的な特殊環境',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Hawaii Airports Division +1-808-329-9230',
+        ]
+      },
+    ]
+  },
+
+  PHTO: {
+    fullName: 'HILO (Big Island), Hilo INTL',
+    iata: 'ITO',
+    utc: '-10(HST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 03/21, 08/26',
+          'ILS: RWY 03/21',
+          'ATIS: 125.25 MHz',
+          '火山灰（キラウエア）: ASHTAM確認 – 活動状況によりNOTAM発令',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Hawaii Airports Division +1-808-961-9300',
+        ]
+      },
+    ]
+  },
+
+  PHJR: {
+    fullName: 'OAHU, Kalaeloa (John Rodgers Field)',
+    iata: 'JRF',
+    utc: '-10(HST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 04L/22R, 11L/29R',
+          'ILS: RWY 04L/22R',
+          'ATIS: 125.8 MHz',
+          'HNL（ホノルル）の代替空港 – 旧海軍航空基地',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Hawaii Airports Division +1-808-682-3923',
+        ]
+      },
+    ]
+  },
+
+  YBBN: {
+    fullName: 'BRISBANE, International',
+    iata: 'BNE',
+    utc: '+10(AEST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 01L/19R, 01R/19L',
+          'International Terminal / Domestic Terminal – 確認必要',
+          'クイーンズランド州: DST変更なし（UTC+10固定）',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: RWY 01L/R, 19L/R',
+          'ATIS: 126.1 MHz',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Brisbane Airport Corporation +61-7-3406-3000',
+        ]
+      },
+    ]
+  },
+
+  YBCS: {
+    fullName: 'CAIRNS, International',
+    iata: 'CNS',
+    utc: '+10(AEST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 15/33',
+          'ILS: RWY 15/33',
+          'ATIS: 124.5 MHz',
+          '熱帯雨林気候 – 雷雨・積乱雲に注意',
+          'Great Barrier Reef近接 – 海上進入',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Cairns Airport +61-7-4080-6703',
+        ]
+      },
+    ]
+  },
+
+  YPAD: {
+    fullName: 'ADELAIDE, International',
+    iata: 'ADL',
+    utc: '+9:30/+10:30(ACST/ACDT)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 05/23',
+          'ILS: RWY 05/23',
+          'ATIS: 126.1 MHz',
+          '南オーストラリア州: UTC+9:30（夏季+10:30）– 独特のタイムゾーンに注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Adelaide Airport Limited +61-8-8308-9211',
+        ]
+      },
+    ]
+  },
+
 };
