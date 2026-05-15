@@ -504,12 +504,10 @@ body {
 
 /* ── App version indicator ── */
 #app-version {
-  position: fixed;
-  bottom: 6px;
-  right: 8px;
   font-size: 10px;
-  color: rgba(255,255,255,0.35);
-  z-index: 500;
+  color: rgba(255,255,255,0.3);
   pointer-events: none;
   letter-spacing: 0.3px;
+  white-space: nowrap;
+  align-self: center;
 }
