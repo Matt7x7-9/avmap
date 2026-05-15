@@ -3197,4 +3197,2052 @@ const CAUG_NOTES_24 = {
     ]
   },
 
+  // ── ＊ Contingency Airports ────────────────────
+
+  RJCK: {
+    fullName: 'KUSHIRO',
+    iata: 'KUH',
+    utc: '+9',
+    ops: '0700-2100L',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '0700-2100LSTのみ運用',
+          'RWY: 17/35',
+          '霧が多い（太平洋沿岸）– 低視程進入に注意',
+          '冬季: 積雪・凍結対応',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: 釧路空港 +81-154-57-8304',
+        ]
+      },
+    ]
+  },
+
+  RORS: {
+    fullName: 'SHIMOJISHIMA',
+    iata: 'SHI',
+    utc: '+9',
+    ops: '0730-2030L',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '0730-2030LSTのみ運用',
+          'RWY: 17/35（JALフライトトレーニング用途でも使用）',
+          '宮古島南西部 – 沖縄エリアの代替空港',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: 下地島空港 +81-980-76-4371',
+        ]
+      },
+    ]
+  },
+
+  OMDB: {
+    fullName: 'DUBAI, Dubai INTL',
+    iata: 'DXB',
+    utc: '+4',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 12L/30R, 12R/30L（平行2本）',
+          'Concourse A/B/C/D: 非常に広大 – Ground Chart必須',
+          'TWY混雑: 世界有数のトラフィック量',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: RWY 12L/R, 30L/R',
+          'ATIS: 127.675 MHz',
+          'RWY交互使用: ATCの指示に従う',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Dubai Airports +971-4-224-5555',
+        ]
+      },
+    ]
+  },
+
+  OBBI: {
+    fullName: 'BAHRAIN, Bahrain INTL',
+    iata: 'BAH',
+    utc: '+3',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 12L/30R, 12R/30L',
+          'ILS: RWY 12L/R, 30L/R',
+          'ATIS: 128.1 MHz',
+          'OBBB FIR管轄: HF MID-2 MWARA利用',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Bahrain Airport Company +973-17-321-964',
+        ]
+      },
+    ]
+  },
+
+  UAAA: {
+    fullName: 'ALMATY, International',
+    iata: 'ALA',
+    utc: '+5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 05/23, 23（主用）',
+          'ILS: RWY 05/23',
+          'ATIS: 126.9 MHz',
+          '天山山脈が南側に近接 – 進入経路の地形注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Almaty International Airport +7-727-270-3333',
+        ]
+      },
+    ]
+  },
+
+  UACC: {
+    fullName: 'ASTANA (NUR-SULTAN), Nursultan Nazarbayev INTL',
+    iata: 'NQZ',
+    utc: '+5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 04/22',
+          'ILS: RWY 04/22',
+          'ATIS: 128.5 MHz',
+          '冬季: 極寒（-40℃以下）– 除氷・エンジン始動に注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Astana International Airport +7-7172-792-900',
+        ]
+      },
+    ]
+  },
+
+  UBBB: {
+    fullName: 'BAKU, Heydar Aliyev INTL',
+    iata: 'GYD',
+    utc: '+4',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 16/34',
+          'ILS: RWY 16/34',
+          'ATIS: 128.3 MHz',
+          'カスピ海沿岸 – 強風注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Baku Airports CJSC +994-12-497-2727',
+        ]
+      },
+    ]
+  },
+
+  UDYZ: {
+    fullName: 'YEREVAN, Zvartnots INTL',
+    iata: 'EVN',
+    utc: '+4',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 09/27',
+          'ILS: RWY 09/27',
+          'ATIS: 128.0 MHz',
+          'アラガツ山（4,090m）が北側に近接 – 地形注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Zvartnots International Airport +374-10-493-000',
+        ]
+      },
+    ]
+  },
+
+  UGTB: {
+    fullName: 'TBILISI, Shota Rustaveli INTL',
+    iata: 'TBS',
+    utc: '+4',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 13/31',
+          'ILS: RWY 13/31',
+          'ATIS: 126.0 MHz',
+          'コーカサス山脈に囲まれた盆地 – 地形進入注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: United Airports of Georgia +995-32-231-0601',
+        ]
+      },
+    ]
+  },
+
+  UZTT: {
+    fullName: 'TASHKENT, Islam Karimov INTL',
+    iata: 'TAS',
+    utc: '+5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 08/26',
+          'ILS: RWY 08/26',
+          'ATIS: 127.6 MHz',
+          '⚠️ FIRコード注意: タシュケントFIRは UZTR（旧UTTR）。空港コードUZTTとは別',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Uzbekistan Airports +998-71-140-2800',
+        ]
+      },
+    ]
+  },
+
+  UHWW: {
+    fullName: 'VLADIVOSTOK, Vladivostok INTL',
+    iata: 'VVO',
+    utc: '+10',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 07/25',
+          'ILS: RWY 07/25',
+          'ATIS: 126.5 MHz',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可の最新情報確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Vladivostok Air +7-423-230-4444',
+        ]
+      },
+    ]
+  },
+
+  UHHH: {
+    fullName: 'KHABAROVSK, Novy',
+    iata: 'KHV',
+    utc: '+10',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 05/23, 17/35',
+          'ILS: RWY 05/23',
+          'ATIS: 126.0 MHz',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可の最新情報確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Khabarovsk Airport +7-4212-795-757',
+        ]
+      },
+    ]
+  },
+
+  UHMM: {
+    fullName: 'MAGADAN, Sokol',
+    iata: 'GDX',
+    utc: '+11',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 10/28',
+          'ILS: RWY 10/28',
+          '冬季: 極寒（-50℃以下になることあり）– 除氷・エンジン始動注意',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Magadan Airport +7-4132-620-190',
+        ]
+      },
+    ]
+  },
+
+  UHPP: {
+    fullName: 'PETROPAVLOVSK-KAMCHATSKY, Yelizovo',
+    iata: 'PKC',
+    utc: '+12',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 16/34',
+          'ILS: RWY 16/34',
+          '火山地帯（カムチャッカ半島）– 火山灰ASHTAM確認必須',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Yelizovo Airport +7-4152-411-339',
+        ]
+      },
+    ]
+  },
+
+  UHSS: {
+    fullName: 'YUZHNO-SAKHALINSK, Khomutovo',
+    iata: 'UUS',
+    utc: '+11',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 01/19',
+          'ILS: RWY 01/19',
+          '冬季: 積雪・除雪作業に注意。北海道に近接',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Yuzhno-Sakhalinsk Airport +7-4242-463-463',
+        ]
+      },
+    ]
+  },
+
+  UHMA: {
+    fullName: 'ANADYR, Ugolny',
+    iata: 'DYR',
+    utc: '+12',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 05/23',
+          '極北: 冬季は-40℃以下。凍結跑道・視程障害に注意',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+          'ベーリング海沿岸 – アラスカ代替として使用可能性',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Ugolny Airport +7-42722-6-33-00',
+        ]
+      },
+    ]
+  },
+
+  UEEE: {
+    fullName: 'YAKUTSK',
+    iata: 'YKS',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 04/22, 13/31',
+          'ILS: RWY 22/04',
+          '世界最寒の都市のひとつ（-50℃以下）– 極寒時のパフォーマンス注意',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Yakutsk Airport +7-4112-392-192',
+        ]
+      },
+    ]
+  },
+
+  UIBB: {
+    fullName: 'BRATSK',
+    iata: 'BTK',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 11/29',
+          '冬季: 極寒・積雪',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Bratsk Airport +7-3953-412-222',
+        ]
+      },
+    ]
+  },
+
+  UIII: {
+    fullName: 'IRKUTSK',
+    iata: 'IKT',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 12/30',
+          'ILS: RWY 12/30',
+          'ATIS: 126.0 MHz',
+          'バイカル湖近接 – 濃霧発生注意',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Irkutsk Airport +7-3952-200-660',
+        ]
+      },
+    ]
+  },
+
+  UNNT: {
+    fullName: 'NOVOSIBIRSK, Tolmachevo',
+    iata: 'OVB',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 07L/25R, 07R/25L',
+          'ILS: RWY 07L/R, 25L/R',
+          'ATIS: 128.5 MHz',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Tolmachevo Airport +7-383-216-9510',
+        ]
+      },
+    ]
+  },
+
+  UNKL: {
+    fullName: 'KRASNOYARSK, Yemelyanovo',
+    iata: 'KJA',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 07/25',
+          'ILS: RWY 07/25',
+          '冬季: 極寒・積雪',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Yemelyanovo Airport +7-391-226-8181',
+        ]
+      },
+    ]
+  },
+
+  UNAA: {
+    fullName: 'ABAKAN',
+    iata: 'ABA',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 12/30',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Abakan Airport +7-3902-220-270',
+        ]
+      },
+    ]
+  },
+
+  USSS: {
+    fullName: 'YEKATERINBURG, Koltsovo',
+    iata: 'SVX',
+    utc: '+5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 08L/26R, 08R/26L',
+          'ILS: RWY 08L/R, 26L/R',
+          'ATIS: 128.1 MHz',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Koltsovo Airport +7-343-226-8000',
+        ]
+      },
+    ]
+  },
+
+  USCC: {
+    fullName: 'CHELYABINSK, Balandino',
+    iata: 'CEK',
+    utc: '+5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 09/27',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Chelyabinsk Airport +7-351-773-5070',
+        ]
+      },
+    ]
+  },
+
+  UWWW: {
+    fullName: 'SAMARA, Kurumoch',
+    iata: 'KUF',
+    utc: '+4',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 05/23',
+          'ILS: RWY 05/23',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Kurumoch Airport +7-846-279-8000',
+        ]
+      },
+    ]
+  },
+
+  UWUU: {
+    fullName: 'UFA',
+    iata: 'UFA',
+    utc: '+5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 03/21',
+          'ILS: RWY 03/21',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Ufa Airport +7-347-229-3401',
+        ]
+      },
+    ]
+  },
+
+  USRR: {
+    fullName: 'SURGUT',
+    iata: 'SGC',
+    utc: '+5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 08/26',
+          '冬季: 極寒・積雪',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Surgut Airport +7-3462-529-800',
+        ]
+      },
+    ]
+  },
+
+  USTR: {
+    fullName: 'TYUMEN, Roshchino',
+    iata: 'TJM',
+    utc: '+5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 09/27',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Roshchino Airport +7-3452-79-3080',
+        ]
+      },
+    ]
+  },
+
+  ULMM: {
+    fullName: 'MURMANSK',
+    iata: 'MMK',
+    utc: '+3',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 13/31',
+          '北極圏内 – 冬季は極夜、夏季は白夜',
+          '⚠️ GNSS jamming: ロシア北西部で頻繁',
+          '⚠️ ロシア空域: 制裁状況・過飛行許可確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Murmansk Airport +7-8152-258-000',
+        ]
+      },
+    ]
+  },
+
+  HUEN: {
+    fullName: 'ENTEBBE, Entebbe INTL',
+    iata: 'EBB',
+    utc: '+3',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 12/30, 17/35',
+          'ILS: RWY 12/30',
+          'ATIS: 128.4 MHz',
+          'ヴィクトリア湖岸（標高3,782ft）– 高高度パフォーマンス注意',
+          '熱帯気候 – スコールによる突発的な視程低下',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Entebbe Airport +256-414-320-512',
+        ]
+      },
+    ]
+  },
+
+  EDDK: {
+    fullName: 'COLOGNE-BONN, Konrad Adenauer',
+    iata: 'CGN',
+    utc: '+1/+2(DST)',
+    ops: 'H24',
+    curfew: '2300-0500L（一部制限）',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 14L/32R, 14R/32L',
+          'ILS: 主要RWYに装備',
+          'ATIS: 126.125 MHz',
+          '夜間: 一部制限あり（German QC制度）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Cologne Bonn Airport +49-2203-40-4001',
+        ]
+      },
+    ]
+  },
+
+  ENBO: {
+    fullName: 'BODØ',
+    iata: 'BOO',
+    utc: '+1/+2(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 07/25',
+          'ILS: RWY 07/25',
+          'ATIS: 126.0 MHz',
+          '北極圏近く – 冬季は悪天候・積雪',
+          'ENOB（Bodo Oceanic FIR）の管制センターが所在',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Avinor Bodø Airport +47-75-52-5000',
+        ]
+      },
+    ]
+  },
+
+  BIKF: {
+    fullName: 'KEFLAVIK, Keflavik INTL',
+    iata: 'KEF',
+    utc: '+0(UTC年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 02/20, 10/28',
+          'ILS: RWY 02/20, 10/28',
+          'ATIS: 119.7 MHz',
+          '強風・横風が多い（大西洋岸）– 最大Crosswind制限確認',
+          'アイスランド: UTC年間固定（DST変更なし）',
+          'NAT HLA: BIRD FIRの主要空港 – FANS-1/A logon BIRD',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Isavia +354-425-0600',
+        ]
+      },
+    ]
+  },
+
+  LGAV: {
+    fullName: 'ATHENS, Eleftherios Venizelos',
+    iata: 'ATH',
+    utc: '+2/+3(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 03L/21R, 03R/21L',
+          'ILS: RWY 03L/R, 21L/R',
+          'ATIS: 132.375 MHz',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          '海からの進入 – サロニカ湾上空',
+          '夏季: 強い日射による乱流（昼間）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Athens International Airport +30-210-353-0000',
+        ]
+      },
+    ]
+  },
+
+  LHBP: {
+    fullName: 'BUDAPEST, Liszt Ferenc INTL',
+    iata: 'BUD',
+    utc: '+1/+2(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 13L/31R, 13R/31L',
+          'ILS: RWY 13L/R, 31L/R',
+          'ATIS: 126.15 MHz',
+          'LHCC FIR管轄 – CPDLC logon LHCC',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Budapest Airport +36-1-296-9696',
+        ]
+      },
+    ]
+  },
+
+  LIMC: {
+    fullName: 'MILAN, Malpensa',
+    iata: 'MXP',
+    utc: '+1/+2(DST)',
+    ops: 'H24',
+    curfew: '2300-0600L（Night Restrictions）',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 17L/35R, 17R/35L',
+          'T1（国際）/ T2（LCCほか）– ターミナル確認',
+          '冬季: 霧（Po平原）– LVP頻繁',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'ILS: RWY 17L/R, 35L/R',
+          'ATIS: 127.8 MHz',
+          '霧: 11月〜2月に濃霧多発 – CAT IIIb対応確認',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: SEA Aeroporti +39-02-7485-2200',
+        ]
+      },
+    ]
+  },
+
+  LBSF: {
+    fullName: 'SOFIA',
+    iata: 'SOF',
+    utc: '+2/+3(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 09/27',
+          'ILS: RWY 09/27',
+          'ATIS: 126.575 MHz',
+          '標高1,742ft – パフォーマンス計算注意',
+          'バルカン山脈近接 – 進入時の地形注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Sofia Airport +359-2-937-2211',
+        ]
+      },
+    ]
+  },
+
+  CYWG: {
+    fullName: 'WINNIPEG, James Armstrong Richardson INTL',
+    iata: 'YWG',
+    utc: '-6/-5(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 13/31, 18/36',
+          'ILS: 主要RWYに装備',
+          'ATIS: 132.95 MHz',
+          '冬季: 極寒（-40℃以下）– 除氷・エンジン始動注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Winnipeg Airports Authority +1-204-987-9400',
+        ]
+      },
+    ]
+  },
+
+  CYXY: {
+    fullName: 'WHITEHORSE, Erik Nielsen INTL',
+    iata: 'YXY',
+    utc: '-7(PST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 13L/31R',
+          'ILS: RWY 13L/31R',
+          'ATIS: 132.2 MHz',
+          '北方空港 – 冬季は-40℃以下、白夜・極夜あり',
+          'ユーコン準州: UTC-7年間固定（DST変更なし）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Whitehorse International Airport +1-867-667-8440',
+        ]
+      },
+    ]
+  },
+
+  CYZF: {
+    fullName: 'YELLOWKNIFE',
+    iata: 'YZF',
+    utc: '-7/-6(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 10/28, 14/32',
+          'ILS: RWY 10/28',
+          'ATIS: 132.7 MHz',
+          '極北 – 冬季は-50℃以下になることあり',
+          'Northern Canada極地代替空港',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Yellowknife Airport +1-867-920-3477',
+        ]
+      },
+    ]
+  },
+
+  CYFB: {
+    fullName: 'IQALUIT',
+    iata: 'YFB',
+    utc: '-5/-4(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 09/27',
+          'ILS: RWY 09/27',
+          'バフィン島 – 北極圏内。吹雪・Whiteout注意',
+          '北大西洋横断ルート（CZQO）の緊急代替空港として機能',
+          '燃料・整備: 限定的 – 事前調整推奨',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Iqaluit Airport +1-867-979-0801',
+        ]
+      },
+    ]
+  },
+
+  KBFI: {
+    fullName: 'SEATTLE, Boeing Field / King County INTL',
+    iata: 'BFI',
+    utc: '-8/-7(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 13L/31R, 13R/31L',
+          'ILS: RWY 13L/31R',
+          'ATIS: 128.45 MHz',
+          'SEA-TAC（KSEA）の南隣 – 非常に近接しているため空域注意',
+          'ボーイング社製造・試験飛行拠点',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: King County International Airport +1-206-296-7380',
+        ]
+      },
+    ]
+  },
+
+  KGEG: {
+    fullName: 'SPOKANE, Spokane INTL',
+    iata: 'GEG',
+    utc: '-8/-7(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 03/21, 07/25',
+          'ILS: RWY 03/21, 07/25',
+          'ATIS: 134.3 MHz',
+          '冬季: 積雪・凍結注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Spokane Airport +1-509-455-6455',
+        ]
+      },
+    ]
+  },
+
+  KPDX: {
+    fullName: 'PORTLAND, Portland INTL',
+    iata: 'PDX',
+    utc: '-8/-7(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 03/21, 10L/28R, 10R/28L',
+          'ILS: 主要RWYに装備',
+          'ATIS: 128.35 MHz',
+          'コロンビア川沿岸 – 濃霧・低視程注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Port of Portland +1-503-460-4234',
+        ]
+      },
+    ]
+  },
+
+  KLAS: {
+    fullName: 'LAS VEGAS, Harry Reid INTL',
+    iata: 'LAS',
+    utc: '-8/-7(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 01L/19R, 01R/19L, 08L/26R, 08R/26L',
+          'ILS: 全主要RWYに装備',
+          'ATIS: 132.0 MHz',
+          '標高2,181ft – 夏季の高温時（45℃超）はパフォーマンス低下注意',
+          '夏季Hot & High: Performance Chart確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Clark County Department of Aviation +1-702-261-5211',
+        ]
+      },
+    ]
+  },
+
+  KPHX: {
+    fullName: 'PHOENIX, Sky Harbor INTL',
+    iata: 'PHX',
+    utc: '-7(MST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 07L/25R, 07R/25L, 08/26',
+          'ILS: 全主要RWYに装備',
+          'ATIS: 132.85 MHz',
+          '標高1,135ft。夏季は50℃超 – Hot & High',
+          'アリゾナ州: UTC-7年間固定（DST変更なし）',
+        ]
+      },
+      {
+        title: '特記事項',
+        items: [
+          '夏季高温: 気温が高いとV速度・クライムパフォーマンスに大きく影響',
+          '砂嵐（Haboob）: 視程ゼロになることあり – SIGMET/METAR確認',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: City of Phoenix Aviation Department +1-602-273-3300',
+        ]
+      },
+    ]
+  },
+
+  KABQ: {
+    fullName: 'ALBUQUERQUE, Sunport INTL',
+    iata: 'ABQ',
+    utc: '-7/-6(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 03/21, 08/26',
+          'ILS: 主要RWYに装備',
+          'ATIS: 135.1 MHz',
+          '標高5,355ft（1,632m）– 高標高によるパフォーマンス注意（デンバーに次ぐ高高度）',
+          'ロッキー山脈近接 – 山岳波（Mountain Wave）注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Albuquerque International Sunport +1-505-244-7700',
+        ]
+      },
+    ]
+  },
+
+  KSLC: {
+    fullName: 'SALT LAKE CITY, International',
+    iata: 'SLC',
+    utc: '-7/-6(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 16L/34R, 16R/34L, 17/35',
+          'ILS: 全主要RWYに装備',
+          'ATIS: 132.8 MHz',
+          '標高4,227ft – 高標高によるパフォーマンス注意',
+          '冬季: 積雪（Wasatch山脈からの降雪）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Salt Lake City Department of Airports +1-801-575-2400',
+        ]
+      },
+    ]
+  },
+
+  KMCO: {
+    fullName: 'ORLANDO, International',
+    iata: 'MCO',
+    utc: '-5/-4(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 17L/35R, 17R/35L, 18L/36R, 18R/36L',
+          'ILS: 全主要RWYに装備',
+          'ATIS: 124.6 MHz',
+          '夏季: 午後の雷雨が非常に多い（フロリダ半島）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Greater Orlando Aviation Authority +1-407-825-2001',
+        ]
+      },
+    ]
+  },
+
+  KMIA: {
+    fullName: 'MIAMI, International',
+    iata: 'MIA',
+    utc: '-5/-4(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 08L/26R, 08R/26L, 09/27, 12/30',
+          'ILS: 全主要RWYに装備',
+          'ATIS: 119.75 MHz',
+          'Concourse複雑 – Ground Chart必須',
+          'ハリケーンシーズン（6-11月）: 天候急変注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Miami-Dade Aviation Department +1-305-876-7000',
+        ]
+      },
+    ]
+  },
+
+  KTPA: {
+    fullName: 'TAMPA, International',
+    iata: 'TPA',
+    utc: '-5/-4(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 01L/19R, 01R/19L',
+          'ILS: 主要RWYに装備',
+          'ATIS: 124.9 MHz',
+          '夏季: 午後の雷雨（フロリダ）',
+          'ハリケーンシーズン（6-11月）注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Tampa International Airport +1-813-870-8700',
+        ]
+      },
+    ]
+  },
+
+  KCHS: {
+    fullName: 'CHARLESTON, International',
+    iata: 'CHS',
+    utc: '-5/-4(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 03/21, 15/33',
+          'ILS: RWY 03/21, 15/33',
+          'ATIS: 123.8 MHz',
+          '旧空軍基地共用 – Charleston AFB隣接',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Charleston County Aviation Authority +1-843-767-7000',
+        ]
+      },
+    ]
+  },
+
+  PANC: {
+    fullName: 'ANCHORAGE, Ted Stevens INTL',
+    iata: 'ANC',
+    utc: '-9/-8(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 07L/25R, 07R/25L, 15/33',
+          'ILS: 全主要RWYに装備',
+          'ATIS: 119.0 MHz',
+          '北太平洋路線の主要テクニカルストップ空港',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'PAZA FIR（Anchorage）管轄 – CPDLC logon PAZN',
+          '冬季: 極寒・積雪・氷結跑道注意',
+          '火山灰（アラスカ半島方面）: ASHTAM常時確認',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Ted Stevens Anchorage International Airport +1-907-266-2526',
+        ]
+      },
+    ]
+  },
+
+  PAJN: {
+    fullName: 'JUNEAU, Juneau INTL',
+    iata: 'JNU',
+    utc: '-9/-8(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 08/26',
+          'ILS: RWY 08/26',
+          'ATIS: 132.45 MHz',
+          '山に囲まれた複雑な地形 – 進入制限あり',
+          '低雲・霧が多い（年間降水量多い）',
+          '非精密進入が多い – 気象条件確認必須',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Juneau International Airport +1-907-789-7821',
+        ]
+      },
+    ]
+  },
+
+  PAFA: {
+    fullName: 'FAIRBANKS, Fairbanks INTL',
+    iata: 'FAI',
+    utc: '-9/-8(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 02L/20R, 02R/20L',
+          'ILS: RWY 02L/R, 20L/R',
+          'ATIS: 132.75 MHz',
+          '極寒: 冬季は-50℃以下になることあり',
+          'エンジン始動・油圧系統・ブレーキへの影響に注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Fairbanks International Airport +1-907-474-2500',
+        ]
+      },
+    ]
+  },
+
+  PAEI: {
+    fullName: 'EIELSON AFB',
+    iata: '—',
+    utc: '-9/-8(DST)',
+    ops: 'H24 (US Military)',
+    curfew: 'Nil',
+    fuel: 'JP-8 / JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '米空軍アイールソン基地 – 民間機使用には事前許可必要',
+          'RWY: 12/30',
+          'フェアバンクスから約26nm南東',
+          '極寒: 冬季は-50℃以下',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'Eielson AFB Command Post: +1-907-377-1110',
+        ]
+      },
+    ]
+  },
+
+  PAED: {
+    fullName: 'ANCHORAGE, Elmendorf AFB / JBER',
+    iata: '—',
+    utc: '-9/-8(DST)',
+    ops: 'H24 (US Military)',
+    curfew: 'Nil',
+    fuel: 'JP-8 / JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '米空軍エルメンドルフ基地（JBER）– 民間機使用には事前許可必要',
+          'RWY: 06/24',
+          'Ted Stevens INTL（PANC）に隣接',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'JBER Command Post: +1-907-552-4113',
+        ]
+      },
+    ]
+  },
+
+  PAKN: {
+    fullName: 'KING SALMON',
+    iata: 'AKN',
+    utc: '-9/-8(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 12/30',
+          'ILS: RWY 12/30',
+          'アラスカ半島南西部 – 太平洋横断ルートの緊急代替',
+          '火山地帯近接（カトマイ等）– ASHTAM確認',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: King Salmon Airport +1-907-246-3909',
+        ]
+      },
+    ]
+  },
+
+  PACD: {
+    fullName: 'COLD BAY',
+    iata: 'CDB',
+    utc: '-10/-9(DST)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 6',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 01/19, 15/33',
+          'アリューシャン列島入口付近 – 北太平洋横断の緊急代替空港',
+          '強風・荒天が多い（アリューシャン低気圧の影響）',
+          '施設: 限定的 – 燃料入手要確認',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Cold Bay Airport +1-907-532-2485',
+        ]
+      },
+    ]
+  },
+
+  PASY: {
+    fullName: 'EARECKSON AS (SHEMYA)',
+    iata: 'SYA',
+    utc: '-12/-11(DST)',
+    ops: 'H24 (US Military)',
+    curfew: 'Nil',
+    fuel: 'JP-8 / JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '米空軍シェミア島基地 – 民間機使用には事前許可必要',
+          'RWY: 10/28',
+          'アリューシャン列島最西端近く – 北太平洋横断の重要代替空港',
+          '強風・濃霧: 年間を通じて悪天候が多い',
+          '⚠️ タイムゾーン: UTC-12（日付変更線付近）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'Eareckson AS Operations: +1-907-392-3800',
+        ]
+      },
+    ]
+  },
+
+  PGUM: {
+    fullName: 'GUAM, A.B. Won Pat INTL',
+    iata: 'GUM',
+    utc: '+10(ChST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 06L/24R, 06R/24L',
+          'ILS: RWY 06L/R, 24L/R',
+          'ATIS: 127.1 MHz',
+          '台風リスク: 6-12月（Super Typhoon多い）– SIGMET常時確認',
+          'PHZH FIR（Honolulu）管轄',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: A.B. Won Pat International Airport +1-671-646-0300',
+        ]
+      },
+    ]
+  },
+
+  PGUA: {
+    fullName: 'ANDERSEN AFB (GUAM)',
+    iata: '—',
+    utc: '+10(ChST 年間固定)',
+    ops: 'H24 (US Military)',
+    curfew: 'Nil',
+    fuel: 'JP-8 / JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '米空軍アンダーセン基地 – 民間機使用には事前許可必要',
+          'RWY: 06L/24R, 06R/24L',
+          'グアム北部 – Won Pat INTLの北約8nm',
+          '台風: Super Typhoon通過時はNOTAM確認',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'Andersen AFB Command Post: +1-671-366-1110',
+        ]
+      },
+    ]
+  },
+
+  PGSN: {
+    fullName: 'SAIPAN, Francisco C. Ada INTL',
+    iata: 'SPN',
+    utc: '+10(ChST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 07/25',
+          'ILS: RWY 07/25',
+          'ATIS: 135.3 MHz',
+          '台風リスク: 北マリアナ諸島 – SIGMET確認',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Commonwealth Ports Authority +1-670-664-3500',
+        ]
+      },
+    ]
+  },
+
+  PKMJ: {
+    fullName: 'MAJURO, Marshall Islands INTL',
+    iata: 'MAJ',
+    utc: '+12(MHT 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 07/25',
+          '標高: ほぼ海面レベル（最高点3m）– 海抜が非常に低い',
+          'KZAK（Oakland Oceanic）FIR管轄',
+          '施設: 限定的 – 燃料・整備事前確認',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Marshall Islands Airports Authority +692-625-3283',
+        ]
+      },
+    ]
+  },
+
+  PKWA: {
+    fullName: 'KWAJALEIN, Bucholz AAF',
+    iata: 'KWA',
+    utc: '+12(MHT 年間固定)',
+    ops: 'H24 (US Military)',
+    curfew: 'Nil',
+    fuel: 'JP-8 / JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '米軍クワジェリン環礁 – 民間機使用には事前許可必要',
+          'RWY: 06/24',
+          'ミサイル試験場として使用 – NOTAMによる閉鎖あり',
+          'KZAK（Oakland Oceanic）FIR管轄',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'Bucholz AAF Operations: +1-805-355-2000',
+        ]
+      },
+    ]
+  },
+
+  PMDY: {
+    fullName: 'MIDWAY ATOLL, Henderson Field',
+    iata: 'MDY',
+    utc: '-11(SST 年間固定)',
+    ops: 'Limited',
+    curfew: 'Nil',
+    fuel: 'JET-A1（要事前手配）',
+    rffs: 'Cat 5',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '米魚類野生生物保護局管轄 – 通常は商業運航なし',
+          'RWY: 06/24',
+          '緊急時のみ使用 – 燃料・施設は非常に限定的',
+          '事前許可（Prior Permission Required）必須',
+          'KZAK（Oakland Oceanic）FIR管轄',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'Midway Atoll NWR: +1-808-220-2100',
+        ]
+      },
+    ]
+  },
+
+  PWAK: {
+    fullName: 'WAKE ISLAND, Wake Island Airfield',
+    iata: 'AWK',
+    utc: '+12(WAKT 年間固定)',
+    ops: 'H24 (US Military)',
+    curfew: 'Nil',
+    fuel: 'JP-8（要事前手配）',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '米軍ウェーク島 – 民間機緊急時は使用可能だが事前許可推奨',
+          'RWY: 10/28',
+          '太平洋横断ルートの中間点 – 重要な緊急代替',
+          'KZAK（Oakland Oceanic）FIR管轄',
+          '台風リスク: シーズン中は閉鎖になることあり',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'Wake Island Airfield Operations: +1-808-471-7110',
+        ]
+      },
+    ]
+  },
+
+  AYPY: {
+    fullName: 'PORT MORESBY, Jacksons INTL',
+    iata: 'POM',
+    utc: '+10(PGT 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 14L/32R, 14R/32L',
+          'ILS: RWY 14L/32R',
+          'ATIS: 128.3 MHz',
+          '熱帯気候 – 雷雨・積乱雲に注意',
+          '標高: 146ft / Papua New Guinea YMMM FIR管轄',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: National Airports Corporation +675-324-5400',
+        ]
+      },
+    ]
+  },
+
+  YPPH: {
+    fullName: 'PERTH, International',
+    iata: 'PER',
+    utc: '+8(AWST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: 'TWY情報',
+        items: [
+          'RWY: 03/21, 06/24',
+          'ILS: 主要RWYに装備',
+          'ATIS: 126.1 MHz',
+          '西オーストラリア州: UTC+8年間固定（DST変更なし）',
+        ]
+      },
+      {
+        title: '到着',
+        items: [
+          'インド洋沿岸 – 強い南西風（Fremantle Doctor）注意',
+          'YMMM（Melbourne）FIR管轄',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Perth Airport +61-8-9478-8888',
+        ]
+      },
+    ]
+  },
+
+  YPDN: {
+    fullName: 'DARWIN, International',
+    iata: 'DRW',
+    utc: '+9:30(ACST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 11/29, 18/36',
+          'ILS: RWY 11/29',
+          'ATIS: 126.1 MHz',
+          '北部準州: UTC+9:30年間固定（DST変更なし）',
+          'モンスーンシーズン（11-4月）: 激しい雷雨・スコール注意',
+          '軍用空港共用（RAAF Darwin）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Darwin International Airport +61-8-8920-1811',
+        ]
+      },
+    ]
+  },
+
+  YBTL: {
+    fullName: 'TOWNSVILLE, Townsville INTL',
+    iata: 'TSV',
+    utc: '+10(AEST 年間固定)',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 8',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 01/19',
+          'ILS: RWY 01/19',
+          'ATIS: 126.1 MHz',
+          'クイーンズランド州: UTC+10年間固定（DST変更なし）',
+          '軍用空港共用（RAAF Townsville）',
+          'サイクロンシーズン（11-4月）注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Townsville Airport +61-7-4727-3211',
+        ]
+      },
+    ]
+  },
+
 };
