@@ -127,7 +127,7 @@ Object.entries(AIRPORTS).forEach(([code, ap]) => {
 
 // ── CAUG 2-03 Airport markers ─────────────────
 let caugAirportLayer = null;
-let caugVisible = false;
+let caugVisible = true;
 
 const AIRPORT_TYPE_COLOR = { '◎': '#3fb950', '〇': '#58a6ff', '＊': '#e3b341' };
 const AIRPORT_TYPE_LABEL = { '◎': '◎ 正規飛行場', '〇': '〇 その他の指定飛行場', '＊': '＊ Contingency Airport' };
@@ -436,7 +436,7 @@ const OFP_GROUPS = [
     routeIds: ['RJAA-CYVR', 'CYVR-RJAA'],
     airports: ['NRT', 'YVR'], defaultOff: true },
   { id: 'ofp-hnl',  shortName: 'HNL', color: '#A569BD',
-    routeIds: ['RJAA-PHNL', 'PHNL-RJBB'],
+    routeIds: ['RJAA-PHNL', 'PHNL-RJBB', 'RJAA-PHNL-2', 'RJAA-PHNL-3', 'PHNL-RJBB-2'],
     airports: ['NRT', 'KIX', 'HNL'], defaultOff: true },
   // ── North America (long-haul) ────────────────────────────────────────
   { id: 'ofp-ord',  shortName: 'ORD', color: '#E67E22',
@@ -453,7 +453,7 @@ const OFP_GROUPS = [
     airports: ['HND', 'DFW'], defaultOff: true },
   // ── Europe ───────────────────────────────────────────────────────────
   { id: 'ofp-lhr',  shortName: 'LHR', color: '#3498DB',
-    routeIds: ['RJTT-EGLL', 'EGLL-RJTT'],
+    routeIds: ['RJTT-EGLL', 'EGLL-RJTT', 'RJTT-EGLL-2', 'EGLL-RJTT-2'],
     airports: ['HND', 'LHR'], defaultOff: true },
   { id: 'ofp-cdg',  shortName: 'CDG', color: '#5B6BC8',
     routeIds: ['RJTT-LFPG', 'LFPG-RJTT'],
@@ -462,7 +462,7 @@ const OFP_GROUPS = [
     routeIds: ['RJTT-EFHK', 'EFHK-RJTT'],
     airports: ['HND', 'HEL'], defaultOff: true },
   { id: 'ofp-fra',  shortName: 'FRA', color: '#C0392B',
-    routeIds: ['RJAA-EDDF', 'EDDF-RJAA'],
+    routeIds: ['RJAA-EDDF', 'EDDF-RJAA', 'RJAA-EDDF-2', 'RJAA-EDDF-3', 'EDDF-RJAA-2'],
     airports: ['NRT', 'FRA'], defaultOff: true },
   // ── Australia ────────────────────────────────────────────────────────
   { id: 'ofp-syd',  shortName: 'SYD', color: '#27AE60',
@@ -578,6 +578,10 @@ caugBtn.addEventListener('click', () => {
   }
   caugVisible = !caugVisible;
 });
+// Initialize CAUG layer ON by default
+caugAirportLayer = buildCaugLayer();
+caugAirportLayer.addTo(map);
+caugBtn.classList.add('active');
 
 // FIR toggle button
 const firBtn = document.getElementById('fir-toggle-btn');
