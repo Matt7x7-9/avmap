@@ -178,6 +178,33 @@ function buildCaugPopupHtml(ap, color, typeLabel) {
     }
     html += `</div>`;
 
+    // Runway lengths & approach types
+    if (notes.runways && notes.runways.length > 0) {
+      html += `<div style="margin-top:8px;">`;
+      html += `<div style="font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#58a6ff;margin-bottom:4px;">Runways</div>`;
+      html += `<div style="display:flex;flex-direction:column;gap:3px;">`;
+      notes.runways.forEach(rwy => {
+        const len = rwy.len;
+        let lenColor, lenIcon;
+        if (len < 2000) {
+          lenColor = '#f85149'; lenIcon = '⚠️';
+        } else if (len < 2500) {
+          lenColor = '#e3b341'; lenIcon = '🟡';
+        } else {
+          lenColor = '#3fb950'; lenIcon = '🟢';
+        }
+        const apchBadge = rwy.apch
+          ? `<span style="margin-left:6px;font-size:10px;background:#1c3a5e;color:#79c0ff;border-radius:3px;padding:0 4px;">${rwy.apch}</span>`
+          : '';
+        html += `<div style="font-size:11px;display:flex;align-items:center;gap:4px;">`;
+        html += `<span style="color:#8b949e;min-width:48px;">RWY ${rwy.id}</span>`;
+        html += `<span style="color:${lenColor};font-weight:700;">${lenIcon} ${len.toLocaleString()}m</span>`;
+        html += apchBadge;
+        html += `</div>`;
+      });
+      html += `</div></div>`;
+    }
+
     // Sections
     notes.sections.forEach(sec => {
       html += `<div style="margin-top:8px;">`;
