@@ -69,25 +69,29 @@ FIR_BOUNDARIES.features.forEach(feature => {
       color: color,
       fillColor: color,
       fillOpacity: 0.3,
-      weight: 1.5,
+      weight: 2.5,
       dashArray: '4 3',
     });
 
     polygon.on('click', () => openFirPanel(id, feature.properties.label));
 
-    // FIR label — interactive so tapping the label also opens the panel
-    const center = polygon.getBounds().getCenter();
+    // FIR label — use arithmetic centroid of vertices for visual center
+    const latSum = coords.reduce((s, [lat]) => s + lat, 0);
+    const lngSum = coords.reduce((s, [, lng]) => s + lng, 0);
+    const centroid = L.latLng(latSum / coords.length, lngSum / coords.length);
+    const labelText = feature.properties.label;
     const label = L.divIcon({
       className: '',
-      html: `<div style="color:#8b949e;font-size:10px;font-weight:700;
+      html: `<div style="color:#c9d1d9;font-size:13px;font-weight:700;
                          letter-spacing:0.5px;white-space:nowrap;
-                         text-shadow:0 0 4px #000,0 0 4px #000;
-                         cursor:pointer;padding:6px;">
-               ℹ ${feature.properties.label}
+                         text-shadow:0 0 4px #000,0 0 4px #000,0 0 4px #000;
+                         cursor:pointer;padding:4px;
+                         transform:translate(-50%,-50%);">
+               ${labelText}
              </div>`,
       iconAnchor: [0, 0],
     });
-    const labelMarker = L.marker(center, { icon: label, interactive: true });
+    const labelMarker = L.marker(centroid, { icon: label, interactive: true });
     labelMarker.on('click', () => openFirPanel(id, feature.properties.label));
     labelMarker.addTo(firLayer);
 
