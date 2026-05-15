@@ -25,6 +25,7 @@ const CAUG_AIRPORTS = [
   { icao:"ROIG", type:"◎", name:"Ishigaki",                     coords:[24.397, 124.187] },
   { icao:"ROMY", type:"◎", name:"Miyako (Shimoji)",             coords:[24.782, 125.295] },
   { icao:"RORS", type:"＊", name:"Shimojishima",                 coords:[24.827, 125.145] },
+  { icao:"RJAW", type:"＊", name:"Iwo Jima",                    coords:[24.784, 141.323] },
 
   // ── Korea ────────────────────────────────────────────────────────
   { icao:"RKPC", type:"〇", name:"Jeju",                        coords:[33.511, 126.493] },
@@ -52,6 +53,7 @@ const CAUG_AIRPORTS = [
   { icao:"ZPPP", type:"＊", name:"Kunming Changshui",           coords:[24.992, 102.744] },
   { icao:"ZWWW", type:"＊", name:"Urumqi Diwopu",               coords:[43.907,  87.474] },
   { icao:"ZYTL", type:"◎", name:"Dalian Zhoushuizi",            coords:[38.967, 121.540] },
+  { icao:"ZSAM", type:"＊", name:"Xiamen Gaoqi",                coords:[24.544, 118.127] },
 
   // ── Hong Kong / Macau ────────────────────────────────────────────
   { icao:"VHHH", type:"◎", name:"Hong Kong International",      coords:[22.308, 113.915] },
@@ -155,6 +157,13 @@ const CAUG_AIRPORTS = [
   { icao:"LHBP", type:"＊", name:"Budapest Liszt Ferenc",        coords:[47.440,  19.261] },
   { icao:"LIMC", type:"＊", name:"Milan Malpensa",               coords:[45.630,   8.728] },
   { icao:"LBSF", type:"＊", name:"Sofia",                        coords:[42.697,  23.411] },
+  { icao:"LTFM", type:"＊", name:"Istanbul Airport",             coords:[41.275,  28.752] },
+  { icao:"LTAC", type:"＊", name:"Ankara Esenboğa",              coords:[40.128,  32.995] },
+  { icao:"LTCE", type:"＊", name:"Erzurum",                      coords:[39.957,  41.170] },
+  { icao:"EGPH", type:"＊", name:"Edinburgh",                    coords:[55.950,  -3.373] },
+  { icao:"LOWW", type:"＊", name:"Vienna",                       coords:[48.110,  16.569] },
+  { icao:"UKBB", type:"＊", name:"Kyiv Boryspil",                coords:[50.345,  30.894] },
+  { icao:"BGSF", type:"＊", name:"Kangerlussuaq (Greenland)",    coords:[67.012, -50.711] },
 
   // ── Canada ───────────────────────────────────────────────────────
   { icao:"CYVR", type:"◎", name:"Vancouver International",       coords:[49.194,-123.184] },
@@ -201,6 +210,8 @@ const CAUG_AIRPORTS = [
   { icao:"KMIA", type:"＊", name:"Miami International",           coords:[25.796, -80.287] },
   { icao:"KTPA", type:"＊", name:"Tampa International",           coords:[27.976, -82.533] },
   { icao:"KCHS", type:"＊", name:"Charleston",                    coords:[32.899, -80.041] },
+  { icao:"KATL", type:"＊", name:"Atlanta Hartsfield-Jackson",   coords:[33.637, -84.428] },
+  { icao:"KBIL", type:"＊", name:"Billings",                     coords:[45.807,-108.543] },
 
   // ── USA — Alaska / Pacific ───────────────────────────────────────
   { icao:"PANC", type:"＊", name:"Anchorage Ted Stevens",         coords:[61.174,-149.996] },
@@ -219,6 +230,7 @@ const CAUG_AIRPORTS = [
   { icao:"PHKO", type:"〇", name:"Kona",                          coords:[19.739,-156.046] },
   { icao:"PHTO", type:"〇", name:"Hilo",                          coords:[19.721,-155.049] },
   { icao:"PHJR", type:"〇", name:"Kalaeloa (Oahu)",               coords:[21.307,-158.070] },
+  { icao:"PHLI", type:"＊", name:"Lihue (Kauai)",                coords:[21.976,-159.339] },
   { icao:"PKMJ", type:"＊", name:"Majuro",                        coords:[ 7.067, 171.272] },
   { icao:"PKWA", type:"＊", name:"Kwajalein",                     coords:[ 8.720, 167.732] },
   { icao:"PMDY", type:"＊", name:"Midway Atoll",                  coords:[28.202,-177.381] },
@@ -226,6 +238,7 @@ const CAUG_AIRPORTS = [
 
   // ── Pacific / Oceania ────────────────────────────────────────────
   { icao:"AYPY", type:"＊", name:"Port Moresby (Jackson's)",      coords:[-9.443, 147.220] },
+  { icao:"PTRO", type:"＊", name:"Palau (Roman Tmetuchl Intl)", coords:[ 7.368, 134.544] },
 
   // ── Australia ────────────────────────────────────────────────────
   { icao:"YSSY", type:"◎", name:"Sydney Kingsford Smith",         coords:[-33.946, 151.177] },
@@ -236,4 +249,5 @@ const CAUG_AIRPORTS = [
   { icao:"YPPH", type:"＊", name:"Perth",                         coords:[-31.940, 115.967] },
   { icao:"YPDN", type:"＊", name:"Darwin",                        coords:[-12.408, 130.877] },
   { icao:"YBTL", type:"＊", name:"Townsville",                    coords:[-19.253, 146.765] },
+  { icao:"YBAS", type:"＊", name:"Alice Springs",                coords:[-23.807, 133.902] },
 ];

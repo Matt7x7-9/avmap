@@ -5245,4 +5245,416 @@ const CAUG_NOTES_24 = {
     ]
   },
 
+  // ── 新規追加 Contingency Airports (v75) ─────────────────────────
+
+  RJAW: {
+    fullName: '硫黄島, Iwo Jima (JMSDF)',
+    iata: 'IWO',
+    utc: '+9',
+    ops: '軍用（JMSDF）。民間使用は事前許可要',
+    curfew: '—',
+    fuel: 'JET-A1（軍調整要）',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          'JMSDF（海上自衛隊）硫黄島航空基地',
+          '緊急・ダイバート使用のみ。事前調整必須',
+          'RWY: 08/26 (3,000m)',
+          'NOTAM確認必須（訓練等による閉鎖あり）',
+          '無人島：宿泊・地上支援なし',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'JMSDF 硫黄島基地 (緊急時): 121.5 MHz',
+        ]
+      },
+    ]
+  },
+
+  ZSAM: {
+    fullName: '厦門, Xiamen Gaoqi INTL',
+    iata: 'XMN',
+    utc: '+8（中国標準時、DST無し）',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 05/23, 24L/06R（第2滑走路）',
+          'ILS: 全RWY',
+          'ATIS: 127.65 MHz',
+          '台湾海峡に近接。NOTAM/ATC指示厳守',
+          '新ターミナル（T4）2025年開業',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: 厦門高崎空港 +86-592-573-0330',
+        ]
+      },
+    ]
+  },
+
+  LTFM: {
+    fullName: 'イスタンブール, Istanbul Airport',
+    iata: 'IST',
+    utc: '+3（TRT、DST無し）',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 16L/34R, 16R/34L, 17L/35R, 17R/35L（6RWY計画、4本稼働）',
+          'ATIS: 128.4 MHz',
+          '欧州最大級のハブ。混雑注意',
+          'トルコ: UTC+3年間固定（夏時間廃止）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Istanbul Airport +90-212-444-1442',
+        ]
+      },
+    ]
+  },
+
+  LTAC: {
+    fullName: 'アンカラ, Esenboga INTL',
+    iata: 'ESB',
+    utc: '+3（TRT、DST無し）',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 03L/21R, 03R/21L',
+          'ILS: RWY 03R/21L',
+          'ATIS: 126.2 MHz',
+          '標高895m。冬季ブレーキング注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Esenboga Airport +90-312-590-4000',
+        ]
+      },
+    ]
+  },
+
+  LTCE: {
+    fullName: 'エルズルム, Erzurum Airport',
+    iata: 'ERZ',
+    utc: '+3（TRT、DST無し）',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 6',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          'RWY: 10/28 (3,000m)',
+          '標高1,758m（高高度空港）。性能計算注意',
+          '冬季: 着氷・積雪・吹雪。除雪対応あり',
+          '東トルコ内陸部。山岳地形',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Erzurum Airport +90-442-235-5300',
+        ]
+      },
+    ]
+  },
+
+  EGPH: {
+    fullName: 'エディンバラ, Edinburgh Airport',
+    iata: 'EDI',
+    utc: '+0/+1（GMT/BST）',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 06/24',
+          'ILS: RWY 06/24',
+          'ATIS: 131.35 MHz',
+          'スコットランド主要国際空港',
+          '低雲・霧・横風注意。冬季降雪あり',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Edinburgh Airport +44-844-448-8833',
+        ]
+      },
+    ]
+  },
+
+  LOWW: {
+    fullName: 'ウィーン, Vienna INTL (Schwechat)',
+    iata: 'VIE',
+    utc: '+1/+2（CET/CEST）',
+    ops: 'H24',
+    curfew: '夜間制限あり（22:00-06:00 LT）',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 11/29, 16/34',
+          'ILS: RWY 11, 16, 29, 34',
+          'ATIS: 128.2 MHz',
+          '欧州中央部ハブ。VDL Mode 2 CPDLC使用（LSAS/LOVV）',
+          '夜間騒音規制: 22:00-06:00 原則禁止',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Vienna Airport +43-1-7007-22233',
+        ]
+      },
+    ]
+  },
+
+  UKBB: {
+    fullName: 'キーウ, Boryspil INTL',
+    iata: 'KBP',
+    utc: '+2/+3（EET/EEST）',
+    ops: 'H24（ウクライナ戦時下。運航可否要確認）',
+    curfew: '夜間飛行制限あり（戦時）',
+    fuel: 'JET-A1（供給状況要確認）',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          '⚠️ ウクライナ: 2022年2月以降戦時状態',
+          '現在民間航空は停止中（軍事使用）',
+          'フライト前に最新NOTAMおよびNOTAM D確認必須',
+          'RWY: 18L/36R, 18R/36L',
+          'ILS: 全方向',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Boryspil Airport +380-44-364-4572',
+        ]
+      },
+    ]
+  },
+
+  BGSF: {
+    fullName: 'カンゲルルススアク, Kangerlussuaq Airport',
+    iata: 'SFJ',
+    utc: '-3/-2（WGT/WGST）',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          'RWY: 10/28 (2,799m)',
+          'グリーンランド主要ダイバート空港（北極ルート）',
+          '旧USAF Sondrestrom Air Base',
+          '極地気象: 強風・吹雪・ホワイトアウト注意',
+          '標高47m。周囲に山岳地形',
+          '夏季は白夜。冬季は極夜',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Kangerlussuaq Airport +299-84-1098',
+        ]
+      },
+    ]
+  },
+
+  KATL: {
+    fullName: 'アトランタ, Hartsfield-Jackson Atlanta INTL',
+    iata: 'ATL',
+    utc: '-5/-4（EST/EDT）',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '到着',
+        items: [
+          'RWY: 08L/26R, 08R/26L, 09L/27R, 09R/27L, 10/28（5本）',
+          'ATIS: 127.75 MHz（南）/ 135.0 MHz（北）',
+          '世界最多旅客数ハブ。混雑注意',
+          'デルタ航空ハブ。JAL提携便多数',
+          '内陸空港: 雷雨・着氷・積雪注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Atlanta Hartsfield-Jackson +1-404-530-6600',
+        ]
+      },
+    ]
+  },
+
+  KBIL: {
+    fullName: 'ビリングス, Billings Logan INTL',
+    iata: 'BIL',
+    utc: '-7/-6（MST/MDT）',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 6',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          'RWY: 10L/28R, 10R/28L',
+          'ILS: RWY 28R',
+          'ATIS: 135.075 MHz',
+          '標高1,088m（高高度空港）。性能計算注意',
+          'モンタナ州北極ルートダイバート候補',
+          '冬季: 積雪・着氷・吹雪注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Billings Logan Airport +1-406-247-8609',
+        ]
+      },
+    ]
+  },
+
+  PHLI: {
+    fullName: 'リフエ（カウアイ島）, Lihue Airport',
+    iata: 'LIH',
+    utc: '-10（HST、DST無し）',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 7',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          'RWY: 03/21, 17/35',
+          'ILS: RWY 03',
+          'ATIS: 127.05 MHz',
+          'カウアイ島（ハワイ諸島最古）唯一の空港',
+          '太平洋ダイバート候補（PHNL混雑時）',
+          '熱帯性気候: スコールによる視程低下注意',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Lihue Airport +1-808-274-3800',
+        ]
+      },
+    ]
+  },
+
+  PTRO: {
+    fullName: 'パラオ, Roman Tmetuchl INTL',
+    iata: 'ROR',
+    utc: '+9（PWT、DST無し）',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 6',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          'RWY: 09/27 (2,012m)',
+          'ILS: RWY 09',
+          'ATIS: 125.9 MHz',
+          '西太平洋Contingency Airport',
+          'パラオ共和国唯一の国際空港',
+          '熱帯性気候。スコール・積乱雲注意',
+          '燃料事前手配推奨（供給量制限の場合あり）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Palau Airport +680-488-2422',
+        ]
+      },
+    ]
+  },
+
+  YBAS: {
+    fullName: 'アリススプリングス, Alice Springs Airport',
+    iata: 'ASP',
+    utc: '+9:30（ACST、DST無し）',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 6',
+    prefRwy: 'Nil',
+    sections: [
+      {
+        title: '運用情報',
+        items: [
+          'RWY: 12/30 (1,762m)',
+          'ILS: RWY 12',
+          'ATIS: 127.65 MHz',
+          '標高545m。オーストラリア中央部内陸空港',
+          '極端な大陸性気候: 夏季50℃超、冬季0℃以下',
+          '高温時のペイロード/性能制限注意',
+          '軍共用（RAAF Joint Strike Fighter基地）',
+        ]
+      },
+      {
+        title: '連絡先',
+        items: [
+          'APT: Alice Springs Airport +61-8-8951-1211',
+        ]
+      },
+    ]
+  },
+
 };
