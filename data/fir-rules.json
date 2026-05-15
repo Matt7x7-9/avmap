@@ -295,7 +295,8 @@
     "hf_required": false,
     "cpdlc": "Available",
     "position_report": "At compulsory reporting points",
-    "emergency_procedure": "<b>ICAO Standard（RM Basic 2-04 §5）</b><br>Incheon FIR固有のEmergency Procedure手順はRM_JALISSUE_INT 2-03に記載なし（日本発着国際線マニュアル）。<br>・<b>Emergency</b>: Sq7700。使用中周波数またはVHF 121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>:<br>　レーダー空域：最後の高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定高度維持→FPL通り飛行。<br>　非レーダー空域：強制報告点未通報から<b>20分間</b>最終高度維持→FPL通り。<br>・<b>Unlawful Interference</b>: Sq7500<br>・<b>Distress Freq</b>: VHF 121.5 MHz / UHF 243.0 MHz",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.2（EMERG PROC - ROK）</b><br>・<b>レーダー/ADS-B故障</b>: レーダー故障→ADS-B監視に切替。両方同時故障→非レーダー標準間隔に移行（ATC指示に従う）<br>・<b>無線機故障（Radio Failure）</b>: Sq7600セット<br>　受信機正常（旋回確認可）: レーダーコントローラーによるレーダーサービス継続<br>　完全故障（受信不可）: ICAO手順に従い飛行継続。レーダー識別済みの場合、ATCは他機をベクタリングして間隔確保<br>・<b>Emergency</b>: Sq7700（事前にATC指定コードがある場合は、指示があるまでそのコードを維持）<br>・<b>Distress Freq</b>: VHF 121.5 MHz / UHF 243.0 MHz",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.2 EMERG PROC - ROK",
     "special_notes": [
       "RNAV2 required en-route above FL140 (FL290 for overflights)",
       "RNAV1 required for SID/STAR",
@@ -592,8 +593,8 @@
     "hf_required": true,
     "cpdlc": "Required",
     "emergency_procedure": "<b>ICAO Standard + Oceanic FIR</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar (oceanic): fly last assigned / expected / cruise FL.<br>　Blind-broadcast on 121.5 MHz + 123.45 MHz: callsign・FL・position・intention.<br>・<b>Oakland Oceanic</b>: Contact San Francisco ARINC on HF; squawk 7700.<br>　After radar service terminated, set transponder to code 2000 (if no discrete code assigned).",
-    "contingency_procedure": "<b>ICAO Standard (oceanic)</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred) and immediately broadcast:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point<br>　on current freq + 121.5 MHz + 123.45 MHz.<br>Notify ATC of loss of CPDLC/ADS-C or inability to meet RNP.<br>・Oakland Oceanic: Deviate within 200 NM; notify ATC of loss of CPDLC/ADS-C or RNP4/10.<br>　Ref: 2-05 PAC.8.2 (Oakland Oceanic PBCS).",
-    "cpdlc_procedure": "ADS-C and CPDLC required for PBCS operations (RNP4/RCP240/RSP180) enabling 30NM longitudinal or 23NM lateral separation. RNP10+CPDLC/ADS-C enables 50NM longitudinal separation.",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.1.2.1（CONTINGENCY PROC - NAM 洋上空域）</b><br>・ATCクリアランス優先取得。取得不能時:<br>・<b>30°以上右または左に旋回</b>→指定ルートから<b>9.3km（5NM）逸脱</b>する同方向平行トラックに乗る<br>・5NM平行トラック到達後:<br>　FL290以下: 通常使用FLから±<b>150m（500ft）</b>異なるFLへ変更<br>　FL410以上: ±<b>300m（1,000ft）</b>異なるFLへ変更<br>・<b>悪天候回避で5NM以上逸脱時（Table 1）:</b><br>　東行き（000〜179°）左偏差→<b>降下300ft</b> / 右偏差→<b>上昇300ft</b><br>　西行き（180〜359°）左偏差→<b>上昇300ft</b> / 右偏差→<b>降下300ft</b><br>・使用中周波数および<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト:<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・CPDLC/ADS-C喪失またはRNP不能時はATCへ即報<br>・ACAS/目視で相反トラフィック監視<br>・全外部灯火点灯",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.2.3.1（CPDLC-AMERICA / Oakland Oceanic FIR）</b><br><b>AFNログオン</b>: <b>KZAK</b><br><br><b>サービス内容（FANS-1/A装備機）:</b><br>・CPDLC/ADS = 全Oakland Oceanic FIR内で利用可能<br>・ADS = ポジションレポート用。FIR境界での初回報告以降、追加CPDLCポジションレポート不要<br>・<b>SLOP</b>: 0〜2.0 NM右のみ（0.1 NM刻み）。左へのWAKE DEVIATION不可<br><br><b>Guam CERAP進入時の特別手順:</b><br>・Guam CERAP空域の<b>250NM手前</b>でARINCからの通知あり<br>・Guam CERAP: <b>118.7 MHz</b>でコンタクト / <b>sq2100</b>をセット（CPDLC接続維持中でも）<br>・Guam CERAP空域内: CPDLC接続はKZAKと維持するが、Guam CERAPがARINCへの再連絡を指示するまでCPDLCでのATC通信は不可<br>・ARINC再連絡時: CPDLC接続中であることを通知しSELCALチェック実施<br><br><b>HF通信（バックアップ）:</b><br>・SF ARINC（HF）で初回接触時: SELCAL / 出発・目的地 / 機体登録番号を通報<br>・SELCAL確認後、バックアップHF周波数（ガード周波数等）の通知あり<br><br><b>データリンク障害時:</b> HF/VHFに即切替。RNPまたはCPDLC/ADS-C喪失時はATCへ即報",
     "position_report": "Position reports at lat/lon coordinates or named fixes per TDM. At Fukuoka/Oakland FIR boundary for eastbound: check on freq with SF ARINC, report altitude and ETO next position (normally 170E). Westbound: transpose beacon code to 2000.",
     "contacts": {
       "main": "San Francisco ARINC (HF)",
@@ -620,8 +621,8 @@
     "hf_required": true,
     "cpdlc": "Required",
     "emergency_procedure": "<b>ICAO Standard + Oceanic FIR</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar (oceanic): fly last assigned / expected / cruise FL.<br>　Blind-broadcast on 121.5 MHz + 123.45 MHz: callsign・FL・position・intention.<br>・<b>Anchorage Oceanic (W)</b>: Contact Anchorage ARTCC on HF; squawk 7700.<br>　If no discrete code assigned, squawk 2000.",
-    "contingency_procedure": "<b>ICAO Standard (oceanic)</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred) and immediately broadcast:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point<br>　on current freq + 121.5 MHz + 123.45 MHz.<br>Notify ATC of loss of CPDLC/ADS-C or inability to meet RNP.<br>・Anchorage Oceanic: Deviate within 200 NM; notify ATC of loss of CPDLC/ADS-C or RNP.<br>　Ref: 2-05 PAC.8.3 (Anchorage Oceanic PBCS).",
-    "cpdlc_procedure": "ADS-C and CPDLC required for PBCS operations (RNP4/RCP240/RSP180) enabling 30NM longitudinal or 23NM lateral separation. RNP10+ADS-C/CPDLC enables 50NM longitudinal separation.",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.1.2.1（CONTINGENCY PROC - NAM 洋上空域）</b><br>・ATCクリアランス優先取得。取得不能時:<br>・<b>30°以上右または左に旋回</b>→指定ルートから<b>9.3km（5NM）逸脱</b>する同方向平行トラックに乗る<br>・5NM平行トラック到達後:<br>　FL290以下: 通常使用FLから±<b>150m（500ft）</b>異なるFLへ変更<br>　FL410以上: ±<b>300m（1,000ft）</b>異なるFLへ変更<br>・<b>悪天候回避で5NM以上逸脱時（Table 1）:</b><br>　東行き（000〜179°）左偏差→<b>降下300ft</b> / 右偏差→<b>上昇300ft</b><br>　西行き（180〜359°）左偏差→<b>上昇300ft</b> / 右偏差→<b>降下300ft</b><br>・使用中周波数および<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト<br>・CPDLC/ADS-C喪失またはRNP不能時はATCへ即報<br>・ACAS/目視で相反トラフィック監視<br>・全外部灯火点灯",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.2.3.2（CPDLC-AMERICA / Anchorage FIR）</b><br><b>AFNログオン:</b><br>・<b>PAZN</b>: Anchorage Oceanic FIR / Arctic FIR北緯73°以北 / Continental FIR（57N152W〜58N167W〜63N174W以西）<br>・<b>PAZA</b>: Arctic FIR南緯73°以南 / Continental FIR（57N152W〜58N167W〜63N174W以東）<br><br><b>サービス内容:</b><br>・VHF可能エリアではVHFが主通信手段。CPDLC/ADS-CはVHFカバー外の区間で使用<br>・アラスカ空港出発機: 出発後18,000ft到達前にログオン要<br>・VHFおよびHFの常時モニタリング必須<br><br><b>接続詳細:</b><br>・ANC ARTCC VHF 129.4でHF周波数およびSELCAL確認<br>・NOPACルート（R220/M523/R580/A590）: HF経由でSF ARINCへ位置報告<br><br><b>データリンク障害時:</b> HF/VHFに即切替。RNPまたはCPDLC/ADS-C喪失時はATCへ即報",
     "position_report": "Address position reports to San Francisco ARINC when entering Anchorage/Oakland FIR. Contact ANC ARTCC on VHF 129.4 for NOPAC HF frequencies and SELCAL verification.",
     "contacts": {
       "main": "Anchorage ARTCC / San Francisco ARINC (HF)",
@@ -648,8 +649,8 @@
     "hf_required": true,
     "cpdlc": "Required",
     "emergency_procedure": "<b>ICAO Standard + Oceanic FIR</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar (oceanic): fly last assigned / expected / cruise FL.<br>　Blind-broadcast on 121.5 MHz + 123.45 MHz: callsign・FL・position・intention.<br>・<b>Anchorage Oceanic (E)</b>: Contact Anchorage ARTCC on HF; squawk 7700.<br>　If no discrete code assigned, squawk 2000.",
-    "contingency_procedure": "<b>ICAO Standard (oceanic)</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred) and immediately broadcast:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point<br>　on current freq + 121.5 MHz + 123.45 MHz.<br>Notify ATC of loss of CPDLC/ADS-C or inability to meet RNP.<br>・Anchorage Oceanic: Deviate within 200 NM; notify ATC of loss of CPDLC/ADS-C or RNP.<br>　Ref: 2-05 PAC.8.3 (Anchorage Oceanic PBCS).",
-    "cpdlc_procedure": "ADS-C and CPDLC required for PBCS operations (RNP4/RCP240/RSP180) enabling 30NM longitudinal or 23NM lateral separation.",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.1.2.1（CONTINGENCY PROC - NAM 洋上空域）</b><br>・ATCクリアランス優先取得。取得不能時:<br>・<b>30°以上右または左に旋回</b>→指定ルートから<b>9.3km（5NM）逸脱</b>する同方向平行トラックに乗る<br>・5NM平行トラック到達後:<br>　FL290以下: 通常使用FLから±<b>150m（500ft）</b>異なるFLへ変更<br>　FL410以上: ±<b>300m（1,000ft）</b>異なるFLへ変更<br>・<b>悪天候回避で5NM以上逸脱時（Table 1）:</b><br>　東行き（000〜179°）左偏差→<b>降下300ft</b> / 右偏差→<b>上昇300ft</b><br>　西行き（180〜359°）左偏差→<b>上昇300ft</b> / 右偏差→<b>降下300ft</b><br>・使用中周波数および<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト<br>・CPDLC/ADS-C喪失またはRNP不能時はATCへ即報<br>・ACAS/目視で相反トラフィック監視<br>・全外部灯火点灯",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.2.3.2（CPDLC-AMERICA / Anchorage FIR）</b><br>PAZAUはPAZAO（Western Sector）と同一Anchorage Oceanic FIR内。ログオン手順はPAZAOを参照。<br>・<b>PAZN</b>: Oceanic FIR / Arctic FIR北緯73°以北 / Continental FIR西側<br>・<b>PAZA</b>: Arctic FIR南緯73°以南 / Continental FIR東側<br>VHF可能エリアではVHFが主。CPDLC/ADS-CはVHFカバー外で使用。",
     "position_report": "Address position reports to San Francisco ARINC when entering Anchorage/Oakland FIR.",
     "contacts": {
       "main": "Anchorage ARTCC / San Francisco ARINC (HF)",
@@ -673,7 +674,7 @@
     "hf_required": true,
     "cpdlc": "Required",
     "emergency_procedure": "<b>ICAO Standard + Oceanic FIR</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar (oceanic): fly last assigned / expected / cruise FL.<br>　Blind-broadcast on 121.5 MHz + 123.45 MHz: callsign・FL・position・intention.<br>・<b>Honolulu FIR</b>: Contact Honolulu Control Facility (HCF) on HF or guard 121.5 MHz; squawk 7700.",
-    "contingency_procedure": "<b>ICAO Standard (oceanic)</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred) and immediately broadcast:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point<br>　on current freq + 121.5 MHz + 123.45 MHz.<br>Notify ATC of loss of CPDLC/ADS-C or inability to meet RNP.<br>・Honolulu FIR: Deviate within 200 NM; notify ATC of loss of CPDLC/ADS-C or RNP.<br>　Same standards as Oakland Oceanic (2-05 PAC.8.2).",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.1.2.1（CONTINGENCY PROC - NAM 洋上空域）</b><br>・ATCクリアランス優先取得。取得不能時:<br>・<b>30°以上右または左に旋回</b>→指定ルートから<b>9.3km（5NM）逸脱</b>する同方向平行トラックに乗る<br>・5NM平行トラック到達後:<br>　FL290以下: 通常使用FLから±<b>150m（500ft）</b>異なるFLへ変更<br>　FL410以上: ±<b>300m（1,000ft）</b>異なるFLへ変更<br>・<b>悪天候回避で5NM以上逸脱時（Table 1）:</b><br>　東行き（000〜179°）左偏差→<b>降下300ft</b> / 右偏差→<b>上昇300ft</b><br>　西行き（180〜359°）左偏差→<b>上昇300ft</b> / 右偏差→<b>降下300ft</b><br>・使用中周波数および<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト<br>・CPDLC/ADS-C喪失またはRNP不能時はATCへ即報<br>・ACAS/目視で相反トラフィック監視<br>・全外部灯火点灯",
     "cpdlc_procedure": "ADS-C and CPDLC required for PBCS operations enabling reduced separation. Same standards as Oakland Oceanic (RNP10 = 50NM; RNP4 = 30NM longitudinal or 23NM lateral).",
     "position_report": "Address reports to San Francisco ARINC when entering Oakland/Anchorage FIR. HCF is gateway for Japan-Hawaii PACOTS tracks 11/12 and Hawaii-Japan tracks A/B.",
     "contacts": {
@@ -701,7 +702,7 @@
     "hf_required": false,
     "cpdlc": "Optional",
     "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast intentions on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Vancouver FIR specific</b>: Contact Vancouver ACC on VHF; guard 121.5 MHz.<br>　SELCAL monitoring required for oceanic transition to Oakland/Anchorage FIR.",
-    "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・Vancouver FIR: Full radar coverage; ATC will vector conflicting traffic. Immediate ATC contact required.",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.1.2.1（CONTINGENCY PROC - NAM）</b><br>・大陸空域（レーダー）: ATCクリアランス優先取得。取得不能時は使用中周波数および121.5 MHzでブロードキャスト。ATCが他機をベクタリングして間隔確保。<br>・<b>洋上区間（OaklandまたはAnchorage FIRへの移行時）:</b><br>　<b>30°以上旋回</b>→<b>9.3km（5NM）逸脱</b>する同方向平行トラック<br>　悪天候回避で5NM以上逸脱時: 東行き左偏差→<b>降下300ft</b> / 右偏差→<b>上昇300ft</b>。西行き左偏差→<b>上昇300ft</b> / 右偏差→<b>降下300ft</b><br>・CPDLC/ADS-C喪失またはRNP不能時はATCへ即報<br>・全外部灯火点灯",
     "cpdlc_procedure": "<b>Vancouver FIR (NAV CANADA): CPDLC DCL available</b><br>CPDLC Departure Clearance (DCL) available at designated Canadian airports.<br>All JAL long-haul aircraft (787-8/-9, 777-200ER/-300ER, A350-1000) are CPDLC-equipped.<br>VHF radar coverage throughout Vancouver FIR (Class A/B/C/D/E airspace).<br>Oceanic transition to Oakland/Anchorage FIR uses SELCAL/HF.<br>Ref: 2-05 NAM.1.4.1 (CPDLC DCL procedure).",
     "position_report": "Position reports required. POWOL/YAZ to CYVR for Pacific arrivals.",
     "contacts": {
@@ -719,6 +720,62 @@
       "ADS-B OUT required in Canadian Class A, B, C airspace and Class E above 10,000 ft MSL"
     ],
     "reg_rules": "<b>Airspace (NAM.2.1):</b> Canadian Domestic Airspace (CDA) divided into Southern Control Area (SCA), Northern Control Area (NCA), and Arctic Control Area (ACA). Class A: 18,000 ft ASL and above (IFR only). Class B: 12,500-18,000 ft ASL (IFR + CVFR). Class C-G: lower levels.<br><b>RVSM (NAM.2.15):</b> FL290-FL410 (inclusive). FLAS: WB (180-359°) FL300/320/340/360/380/400; EB (000-179°) FL290/310/330/350/370/390/410. Non-RVSM: WB FL310/350/390/430; EB FL270/310(add)/350/390/450.<br><b>8.33 kHz:</b> NOT required — Canada does not mandate 8.33 kHz frequency spacing.<br><b>CMNPS Airspace (NAM.2.11):</b> Designated within ACA, NCA and portions of SCA. Requires CMNPS-certified navigation equipment. RNAV routes, DME distance requirements apply per route.<br><b>Communications (NAM.2.11.6):</b> VHF for routine; HF (Arctic Radio or Gander Radio) in northern Canada. SATCOM voice is acceptable alternative. Frequency: VHF 126.7 MHz or HF 5,680/6,706/11,232 kHz. If unable HF/SATCOM, make position reports within ~200 NM of any VHF facility.<br><b>PACOTS Gateway (PAC.7.5):</b> Pacific arrivals to Vancouver: POWOL CYVR or YAZ CYVR.<br><b>ADS-B (NAM.1.1.5):</b> Required in Class A, B, C airspace and Class E at or above 10,000 ft MSL. Indicate in FPL.<br><b>ADIZ (NAM.2.1.7):</b> Canadian ADIZ applies in designated areas. DVFR flight plan required for VFR flights entering ADIZ."
+  },
+  "CZEG": {
+    "name": "Edmonton FIR",
+    "icao": "CZEG",
+    "country": "Canada",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Available",
+    "position_report": "ADS WPR (Waypoint Position Report) in Edmonton ADS airspace (north of NCA24). Contact Edmonton ACC or Arctic Radio (North Bay FSS) on HF.",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.1.1.2（EMERG PROC - Canada）</b><br>・<b>VMCの場合</b>: VFRで速やかに着陸<br>・<b>IMCの場合（Sq7600）</b>:<br>　ルート: 最終クリアランスルート / レーダーベクタリング中は指定FIX/ルート/航空路へ直行 / 期待ルート / FPLルートの順で適用<br>　高度: 最終ATC指定高度 / 最低IFR高度 / 期待高度の中で最も高いものを使用（セグメントごと）<br>　降下タイミング: ETA（FPL或いはATC通知済み）またはEAT（直近のもの）のうち最も遅い時刻に降下開始 → ILS/GNSS等の計器進入<br>・<b>Transponder</b>: Sq7600（通信途絶）/ Sq7700（Emergency）/ Sq7500（不法干渉）<br>・<b>Arctic Radioへ転送前</b>: Sq7600セット後、使用中全周波数および121.5 MHzで状況ブロードキャスト",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.1.2.1（CONTINGENCY PROC - NAM 洋上空域）</b><br>・ATCクリアランス優先取得。取得不能時:<br>・<b>30°以上右または左に旋回</b>→指定ルートから<b>9.3km（5NM）逸脱</b>する同方向平行トラックに乗る<br>・5NM平行トラック到達後:<br>　FL290以下: 通常使用FLから±<b>150m（500ft）</b>異なるFLへ変更<br>　FL410以上: ±<b>300m（1,000ft）</b>異なるFLへ変更<br>・<b>悪天候回避で5NM以上逸脱時（Table 1）:</b><br>　東行き（000〜179°）左偏差→<b>降下300ft</b> / 右偏差→<b>上昇300ft</b><br>　西行き（180〜359°）左偏差→<b>上昇300ft</b> / 右偏差→<b>降下300ft</b><br>・<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト<br>・悪天候回避中はルート/トラック上の定点通過時に音声でポジションレポート<br>・SATCOM shadowエリアでのADS喪失に注意（大気条件・機体アンテナ位置・飛行方向により範囲変動）",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.2.3.3（CPDLC-AMERICA / Edmonton FIR）</b><br><b>AFNログオン</b>: <b>CZEG</b>（Edmonton ADS空域進入<b>10〜45分前</b>に手動ログオン）<br><br><b>適用空域:</b><br>・NCA24以北のEdmonton FIR（ADS WPR空域）<br>・初回接触はEdmonton ACC（Edmonton Center）またはArctic Radio（North Bay FSS）<br><br><b>ログオン手順:</b><br>・FMSのATC LOGON/STATUSページに「CZEG」は表示されない場合あり<br>　→ B787: ADS/ARM→ADS/ACTに変化、または「ADS CONNECTION ESTABLISHED」メッセージで接続確認<br>・Edmonton ADS空域へ/からFANS-1/A ATS DataLinkサービス中の空域を経由する場合、再AFNログオン不要（継続）<br><br><b>悪天候回避時:</b><br>・音声でATCに通知。音声ポジションレポートを定点通過毎に実施（元ルート復帰まで）<br><br><b>SATCOM shadow:</b><br>・ADS WPR空域内にSATCOM不通エリアあり（大気・アンテナ・飛行方向による）<br>・衛星通信喪失の兆候が出た場合、ADS報告も停止している可能性あり<br>・CZEG再ログオン可能な場合は試みる。不能の場合はVHF圏内から音声でポジションレポート",
+    "special_notes": [
+      "ADS WPR (Waypoint Position Report) airspace: north of NCA24 within Edmonton FIR",
+      "SATCOM shadow affects ADS reporting — re-logon CZEG if outage suspected",
+      "Logon address CZEG does NOT appear in FMS ATC LOGON/STATUS page on some aircraft — verify via ADS/ACT status",
+      "Canadian RVSM FL290-FL410; CMNPS airspace in NCA and portions of SCA",
+      "HF: Arctic Radio (North Bay) on HF 5,680/6,706/11,232 kHz; VHF 126.7 MHz",
+      "ADIZ: Canadian ADIZ applies; DVFR flight plan required for VFR flights entering CADIZ"
+    ],
+    "contacts": {
+      "main": "Edmonton ACC / Arctic Radio (North Bay FSS) on HF",
+      "emergency": "121.5 MHz / HF 5,680 / 6,706 / 11,232 kHz"
+    },
+    "reg_rules": "<b>出典: RM_JALISSUE_INT 2-03 §1.1.1.2（NAM.2 Canada）</b><br><b>空域</b>: Northern Control Area（NCA）/ Southern Control Area（SCA）/ Arctic Control Area（ACA）。Class A: 18,000ft MSL以上（IFRのみ）。Class B: 12,500〜18,000ft（IFR+CVFR）。<br><b>RVSM</b>: FL290〜FL410（inclusive）。FLAS: WB（180〜359°）FL300/320/340/360/380/400; EB（000〜179°）FL290/310/330/350/370/390/410。<br><b>CMNPS</b>: NCA・一部SCA内のデザインエリア。CMNPS認定航法機器必要。<br><b>HF通信</b>: 北カナダはVHF圏外のためHF（Arctic Radio/Gander Radio）またはSATCOM音声。周波数: VHF 126.7 MHz / HF 5,680/6,706/11,232 kHz。<br><b>PACOTS gateway</b>: 太平洋到着: POWOL CYVRまたはYAZ CYVR。<br><b>ADS-B</b>: Class A・B・C空域およびClass E 10,000ft MSL以上で義務（NAM.1.1.5）。<br><b>8.33 kHz</b>: カナダでは不要（米国のみ）。"
+  },
+  "KZWY": {
+    "name": "New York Oceanic FIR",
+    "icao": "KZWY",
+    "country": "United States",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Required",
+    "position_report": "Position reports via CPDLC or voice to New York Radio (HF). HF frequency updates required at 60W longitude. Provide FIR exit point, next controlling facility, track letter (if OTS).",
+    "emergency_procedure": "<b>ICAO Standard + FAR 91.185（EMERG PROC - NAM / USA）</b><br>・<b>Emergency</b>: Sq7700; MAYDAY on current freq or VHF 121.5 MHz<br>・<b>Radio Failure（Sq7600）:</b><br>　ルート: 最終指定ルート / レーダーベクタリング中は指定FIX/ルート/航空路へ直行 / 期待ルート / FPLルート<br>　高度: 最終指定高度 / 最低IFR高度 / 期待高度の中で最も高いもの<br>　ETA/EAT（直近の遅い方）に降下開始。計器進入・ETA+30分以内に着陸<br>・<b>Unlawful Interference</b>: Sq7500（指定コードがあればそれを維持）<br>・VHF 121.5 MHz / HF（New York Radio）常時モニター",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.1.2.1（CONTINGENCY PROC - NAM 洋上空域）</b><br>・ATCクリアランス優先取得。取得不能時:<br>・<b>30°以上右または左に旋回</b>→指定ルートから<b>9.3km（5NM）逸脱</b>する同方向平行トラックに乗る<br>・5NM平行トラック到達後:<br>　FL290以下: 通常使用FLから±<b>150m（500ft）</b>異なるFLへ変更<br>　FL410以上: ±<b>300m（1,000ft）</b>異なるFLへ変更<br>・<b>悪天候回避で5NM以上逸脱時（Table 1）:</b><br>　東行き（000〜179°）左偏差→<b>降下300ft</b> / 右偏差→<b>上昇300ft</b><br>　西行き（180〜359°）左偏差→<b>上昇300ft</b> / 右偏差→<b>降下300ft</b><br>・使用中周波数および<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト<br>・CPDLC/ADS-C喪失またはRNP不能時はATCへ即報<br>・ACAS/目視で相反トラフィック監視<br>・全外部灯火点灯",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §1.2.3.4（CPDLC-AMERICA / New York Oceanic FIR）</b><br><b>AFNログオン</b>: <b>KZWY</b>（※KZNYではない）<br><br><b>HF初回接触時の通報内容:</b><br>・CPDLC装備機である旨を通知<br>・FIR出口ポイントおよび次のコントロール機関名<br>・OTSトラックレターを伝達（OTS使用時）<br>・SELCALチェックを要請 → New YorkよりHF主波/副波周波数の割り当て<br>・<b>60W通過時</b>: New York Radioに再接触してHF周波数更新を取得（伝播条件変動のため）<br><br><b>注意事項:</b><br>・HF通信能力をNew York Radio取り扱い区域内で常時維持すること<br>・Bermuda空域通過時: KZWY通信終了（END OF SERVICE）→ New York Oceanic FIR再進入時に再ログオン（KZWYへ）<br><br><b>模範送信例:</b><br>　ランダムルート: 『New York, JL048, CPDLC, exit [FIX], [次FIR名] next, SELCAL (AB-CD).』<br>　OTSトラック: 『New York, JL6642, CPDLC NAT Track [LETTER], exit [FIX], Gander next, SELCAL (AB-CD).』<br><br><b>データリンク障害時:</b> HF/VHFに即切替。RNPまたはCPDLC/ADS-C喪失時はATCへ即報",
+    "special_notes": [
+      "Logon address is KZWY (NOT KZNY)",
+      "HF frequency updates required at 60W — propagation conditions change",
+      "Bermuda airspace overflight: CPDLC terminated; re-logon KZWY when cleared by ATC to contact New York Radio",
+      "RVSM FL290-FL410; SLOP 0 to 2.0 NM right; no ATC clearance required",
+      "NAT (North Atlantic Tracks): OTS track letter required in HF initial contact",
+      "PBCS: RNP4+RCP240+RSP180+ADS-C/CPDLC for reduced separation"
+    ],
+    "contacts": {
+      "main": "New York Radio (HF) / New York ARTCC",
+      "emergency": "121.5 MHz"
+    },
+    "reg_rules": "<b>RVSM (NAM.2.15 equivalent):</b> FL290-FL410 (inclusive). FLAS: WB (180-359°) even FL300/320/340/360/380/400; EB (000-179°) odd FL290/310/330/350/370/390/410.<br><b>SLOP:</b> 0 to 2.0 NM right of centreline in 0.1 NM increments. No ATC clearance required. Authorized throughout FAA-controlled oceanic airspace.<br><b>PBCS Separation:</b> RNP4+RCP240+RSP180+ADS-C/CPDLC = 30 NM longitudinal or 23 NM lateral separation. RNP10+CPDLC/ADS-C enables 50 NM longitudinal.<br><b>Beacon Code:</b> Squawk 2000 after radar service terminated upon entering New York Oceanic FIR (if no discrete code assigned).<br><b>Position Reports (PAC.2 equivalent):</b> At lat/lon coordinates or named fixes per TDM. HF frequency updates at 60W required due to propagation changes.<br><b>ADS-B:</b> Not the primary means in oceanic FIR — ADS-C via CPDLC is the surveillance method."
   },
   "ZBPE": {
     "name": "Beijing FIR",
