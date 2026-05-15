@@ -138,11 +138,14 @@ const AIRPORT_TYPE_LABEL = { '◎': '◎ 正規飛行場', '〇': '〇 その他
 
 function caugAirportIcon(icao, type) {
   const color = AIRPORT_TYPE_COLOR[type] || '#c9d1d9';
+  // ◎正規 > 〇その他 > ＊Contingency
+  const fontSize = type === '◎' ? 13 : type === '〇' ? 11 : 9;
+  const dotSize  = type === '◎' ? 10 : type === '〇' ? 8  : 7;
   return L.divIcon({
     className: '',
     html: `<div style="display:flex;flex-direction:column;align-items:center;pointer-events:none">
-      <div style="width:8px;height:8px;border-radius:50%;background:${color};border:1.5px solid #0d1117;box-shadow:0 0 5px ${color}88;"></div>
-      <div style="font-size:8px;font-weight:700;color:${color};text-shadow:0 0 3px #000,0 0 3px #000;margin-top:1px;white-space:nowrap;">${icao}</div>
+      <div style="width:${dotSize}px;height:${dotSize}px;border-radius:50%;background:${color};border:1.5px solid #0d1117;box-shadow:0 0 5px ${color}88;"></div>
+      <div style="font-size:${fontSize}px;font-weight:700;color:${color};text-shadow:0 0 3px #000,0 0 3px #000;margin-top:1px;white-space:nowrap;">${icao}</div>
     </div>`,
     iconSize: [40, 22],
     iconAnchor: [20, 4],
