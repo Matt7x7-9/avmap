@@ -296,7 +296,7 @@
     "cpdlc": "Available",
     "position_report": "At compulsory reporting points",
     "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.2（EMERG PROC - ROK）</b><br>・<b>レーダー/ADS-B故障</b>: レーダー故障→ADS-B監視に切替。両方同時故障→非レーダー標準間隔に移行（ATC指示に従う）<br>・<b>無線機故障（Radio Failure）</b>: Sq7600セット<br>　受信機正常（旋回確認可）: レーダーコントローラーによるレーダーサービス継続<br>　完全故障（受信不可）: ICAO手順に従い飛行継続。レーダー識別済みの場合、ATCは他機をベクタリングして間隔確保<br>・<b>Emergency</b>: Sq7700（事前にATC指定コードがある場合は、指示があるまでそのコードを維持）<br>・<b>Distress Freq</b>: VHF 121.5 MHz / UHF 243.0 MHz",
-    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.2 EMERG PROC - ROK",
+    "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)",
     "special_notes": [
       "RNAV2 required en-route above FL140 (FL290 for overflights)",
       "RNAV1 required for SID/STAR",
@@ -308,8 +308,7 @@
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.2.16（CPDLC - ROK）</b><br><b>AFNログオン:</b><br>・<b>RKDA</b>（Daegu ACC）/ <b>RKRR</b>（Incheon ACC）<br><br><b>適用条件:</b><br>・<b>FL160〜FL600</b>のフライト<br>・<b>1500〜1859 UTC</b>（ピーク時間帯）<br>・CPDLCは<b>義務ではない</b>（Not Mandatory）<br>・<b>音声通信（VHF）が主体</b>、CPDLCは補助的手段<br><br><b>ログオン手順:</b><br>・Incheon FIR進入前にRKRR（またはRKDA）へAFNログオン<br>・CPDLCサービス確立後は必要に応じてCPDLC使用可<br><br><b>データリンク障害時:</b> VHF音声に即切替（音声が主のため通常影響なし）",
-    "reg_rules": "<b>出典: RM_REGPROC ROK（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（航空路FL200〜FL600）/ Class B（Incheon・Gimpo・Jeju主要空港周辺）/ Class D（航空路MEA〜FL200）<br><b>PBN要件</b>: <b>RNAV2</b>（FL140以上の航空路。FL290以上のオーバーフライト）/ <b>RNAV1</b>（SID・STAR）<br><b>速度制限</b>: 10,000ft MSL以下は<b>250kt IAS</b>以下（B Class: 250kt / C・D Class: 250kt / 空港4NM以内2,500ft以下は200kt）<br><b>TA</b>: 14,000ft / <b>TL</b>: FL140<br><b>高度計規正（最低使用FL）</b>: QNH 1013.2hPa以上→FL140 / 1012.9〜996.3hPa→FL145 / 995.9〜979.3hPa→FL150 / 979.0〜962.4hPa→FL155 / 962.1〜945.5hPa→FL160<br><b>RVSM</b>: FL290〜FL410（1,000ft垂直間隔）<br><b>FLAS（主要ルート）</b>:<br>・<b>A593</b>（SADLI〜NIRAT）: NB（000〜179°）FL270/330/350/370/410 / SB（180〜359°）FL260/320/340/360/380<br>・<b>A586</b>（RUGMA〜CJU）: NB FL270/330/350/370/410 / SB FL260/320/340/360/380<br>・<b>G203</b>（PSN〜KALEK）: NB FL290/310/330/350/370/390/410 / SB FL300/340/380<br>・<b>G339</b>（PSN〜INVOK）: NB FL290/310/330/350/370/390/410 / SB FL320/360/400<br>・<b>A582</b>（PSN〜APELA）: NB FL290/310/330/350/370/390/410 / SB FL300/340/380<br><b>SLOP</b>: G597/Y697/B467/Y437/L512（KARBU〜KAE/ANDOL間、2200〜1300UTC）→ EB/WB共に<b>3NM右</b>オフセット。A582/Y782: EB（KALOD→BITUX）2NM右 / WB（OSPOT→TGU）3NM右<br><b>飛行計画提出</b>: 出発・FIR進入の<b>1時間以上前</b><br><b>CDR</b>: CDR1（AIP）/ CDR2（NOTAM）/ CDR3（ATC戦術クリアランス）<br><b>ATFM</b>: ATCC（Air Traffic Command Center）がIncheon FIR全域のATFMを提供",
-    "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)"
+    "reg_rules": "<b>出典: RM_REGPROC ROK（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（航空路FL200〜FL600）/ Class B（Incheon・Gimpo・Jeju主要空港周辺）/ Class D（航空路MEA〜FL200）<br><b>PBN要件</b>: <b>RNAV2</b>（FL140以上の航空路。FL290以上のオーバーフライト）/ <b>RNAV1</b>（SID・STAR）<br><b>速度制限</b>: 10,000ft MSL以下は<b>250kt IAS</b>以下（B Class: 250kt / C・D Class: 250kt / 空港4NM以内2,500ft以下は200kt）<br><b>TA</b>: 14,000ft / <b>TL</b>: FL140<br><b>高度計規正（最低使用FL）</b>: QNH 1013.2hPa以上→FL140 / 1012.9〜996.3hPa→FL145 / 995.9〜979.3hPa→FL150 / 979.0〜962.4hPa→FL155 / 962.1〜945.5hPa→FL160<br><b>RVSM</b>: FL290〜FL410（1,000ft垂直間隔）<br><b>FLAS（主要ルート）</b>:<br>・<b>A593</b>（SADLI〜NIRAT）: NB（000〜179°）FL270/330/350/370/410 / SB（180〜359°）FL260/320/340/360/380<br>・<b>A586</b>（RUGMA〜CJU）: NB FL270/330/350/370/410 / SB FL260/320/340/360/380<br>・<b>G203</b>（PSN〜KALEK）: NB FL290/310/330/350/370/390/410 / SB FL300/340/380<br>・<b>G339</b>（PSN〜INVOK）: NB FL290/310/330/350/370/390/410 / SB FL320/360/400<br>・<b>A582</b>（PSN〜APELA）: NB FL290/310/330/350/370/390/410 / SB FL300/340/380<br><b>SLOP</b>: G597/Y697/B467/Y437/L512（KARBU〜KAE/ANDOL間、2200〜1300UTC）→ EB/WB共に<b>3NM右</b>オフセット。A582/Y782: EB（KALOD→BITUX）2NM右 / WB（OSPOT→TGU）3NM右<br><b>飛行計画提出</b>: 出発・FIR進入の<b>1時間以上前</b><br><b>CDR</b>: CDR1（AIP）/ CDR2（NOTAM）/ CDR3（ATC戦術クリアランス）<br><b>ATFM</b>: ATCC（Air Traffic Command Center）がIncheon FIR全域のATFMを提供"
   },
   "WSJC": {
     "name": "Singapore FIR",
@@ -1038,7 +1037,10 @@
     "contingency_procedure": "<b>ICAO Standard (EUR)</b><br>可能な限りATCから改訂クリアランス取得。不可の場合: 右旋回優先で逸脱 / 121.5 + 123.45 MHzでブロードキャスト",
     "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §3.2.3.1.3（CPDLC-EUR / Scottish FIR）</b><br>・<b>LOGONアドレス</b>: <b>EGPX</b>（Scottish FIR）<br>・<b>データ通信</b>: ATN B1 + <b>FANS 1/A</b>（B777/B787/A350対応）<br>・<b>CPDLC空域</b>: <b>FL285以上</b> in Scottish FIR<br>・LOGONタイミング: FIR境界前ならいつでも可（地上でも可）<br>・FIR初入域時にウェルカムメッセージ受信 → ROGER/STANDBYで応答して接続確立<br>・EGTTとの違い: ウェルカムメッセージのATSU名がEGPX（Scottish Centre）になる",
     "position_report": "Standard IFR position reports; CPDLC FL285+",
-    "contacts": {"main": "Scottish Control (VHF)", "emergency": "121.5 MHz"},
+    "contacts": {
+      "main": "Scottish Control (VHF)",
+      "emergency": "121.5 MHz"
+    },
     "special_notes": [
       "FANS 1/A supported — B787/B777対応",
       "EGTTとEGPXは同一の手順（§3.2.3.1.3）で運用"
@@ -1060,7 +1062,10 @@
     "contingency_procedure": "<b>ICAO Standard (EUR)</b><br>可能な限りATCから改訂クリアランス取得。不可の場合: 右旋回優先で逸脱 / 121.5 + 123.45 MHzでブロードキャスト",
     "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §3.2.3.1.8（CPDLC-EUR / Helsinki FIR）</b><br>・<b>LOGONアドレス</b>: <b>EFIN</b>（Helsinki FIR）<br>・<b>データ通信</b>: ATN B1（FANS 1/A 非対応）<br>・<b>CPDLC空域</b>: HELSINKI FIR内 <b>FL95〜FL660</b>（HALTI/MANTO/KVARKEN CTA除外）<br>・<b>MANDATORY</b>: 対応装備・訓練済み全航空機で義務<br>・LOGONタイミング: FIR進入前（EFIN FIR内空港発は地上でのログオン可）<br>・<b>接続確立</b>: 最初の無線コンタクト後、最初のEFIN ACCセクターがCPDLC開始処理を実行<br>・転送時: WILCOで応答 → 次ユニットへ音声で連絡<br>・フリーテキストACLメッセージ: 非対応（エラーまたは無応答）",
     "position_report": "Standard IFR; CPDLC mandatory FL95+",
-    "contacts": {"main": "Helsinki Control / Helsinki ACC (VHF)", "emergency": "121.5 MHz"},
+    "contacts": {
+      "main": "Helsinki Control / Helsinki ACC (VHF)",
+      "emergency": "121.5 MHz"
+    },
     "special_notes": [
       "CPDLC MANDATORY for all capable and eligible flights (§3.2.3.1.8)",
       "ATN B1 only — FANS 1/A not supported",
@@ -1084,7 +1089,10 @@
     "contingency_procedure": "<b>ICAO Standard (EUR)</b><br>可能な限りATCから改訂クリアランス取得。不可の場合: 右旋回優先 / 121.5 + 123.45 MHzでブロードキャスト",
     "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §3.2.3.1.2（CPDLC-EUR / Maastricht UAC）</b><br>・<b>LOGONアドレス</b>: <b>EDYY</b>（Maastricht UAC）<br>・<b>データ通信</b>: ATN B1（FANS 1/A 非対応）<br>・<b>MANDATORY</b>: ATN CPDLC装備全航空機で義務<br>・<b>CPDLC空域</b>: FL245以上（Amsterdam FIR/EHAA・Brussels UIR/EBUR・Hannover UIR/EDVV）<br>・LOGONタイミング: 関連空域進入<b>15分前</b>（前方ASTUでのforward logon後は任意）<br>・<b>コールサイン</b>: FPL Item 7と同一のICAOコールサインのみ（IATAコード/先頭ゼロ不可→ログオン失敗）<br>・フリーテキスト: Maastricht UACでは使用可<br>・音声コールバック: ATCが明示的に要求した場合のみ",
     "position_report": "Standard IFR; CPDLC mandatory FL245+",
-    "contacts": {"main": "Maastricht UAC / Maastricht Control (VHF)", "emergency": "121.5 MHz"},
+    "contacts": {
+      "main": "Maastricht UAC / Maastricht Control (VHF)",
+      "emergency": "121.5 MHz"
+    },
     "special_notes": [
       "CPDLC MANDATORY for all ATN-equipped aircraft (§3.2.3.1.2)",
       "ATN B1 only — FANS 1/A not supported",
@@ -1108,7 +1116,10 @@
     "contingency_procedure": "<b>ICAO Standard (EUR)</b><br>可能な限りATCから改訂クリアランス取得。不可の場合: 右旋回優先 / 121.5 + 123.45 MHzでブロードキャスト",
     "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §3.2.3.1.2（CPDLC-EUR / Karlsruhe UAC / Rhein UIR）</b><br>・<b>LOGONアドレス</b>: <b>EDUU</b>（Karlsruhe UAC / Rhein UIR）<br>・<b>データ通信</b>: ATN B1（FANS 1/A 非対応）<br>・<b>MANDATORY</b>: ATN CPDLC装備全航空機で義務<br>・<b>CPDLC空域</b>: Rhein UIR（EDUU）内 FL245以上<br>・LOGONタイミング: 関連空域進入<b>15分前</b><br>・<b>コールサイン</b>: FPL Item 7と同一のICAOコールサインのみ（IATAコード/先頭ゼロ不可）<br>・<b>フリーテキスト禁止</b>: フリーテキストCPDLCメッセージ使用不可（エラーメッセージが返る）<br>・音声コールバック: ATCが明示的に要求した場合のみ",
     "position_report": "Standard IFR; CPDLC mandatory FL245+",
-    "contacts": {"main": "Karlsruhe Radar / Rhein Control (VHF)", "emergency": "121.5 MHz"},
+    "contacts": {
+      "main": "Karlsruhe Radar / Rhein Control (VHF)",
+      "emergency": "121.5 MHz"
+    },
     "special_notes": [
       "CPDLC MANDATORY for all ATN-equipped aircraft",
       "ATN B1 only — FANS 1/A not supported",
@@ -1132,7 +1143,10 @@
     "contingency_procedure": "<b>ICAO Standard (EUR)</b><br>可能な限りATCから改訂クリアランス取得。不可の場合: 右旋回優先 / 121.5 + 123.45 MHzでブロードキャスト",
     "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §3.2.3.1.7（CPDLC-EUR / Paris ACC）</b><br>・<b>LOGONアドレス</b>: <b>LFFF</b>（Paris ACC）<br>・<b>データ通信</b>: ATN B1（FANS 1/A 非対応）<br>・<b>CPDLC空域</b>: Paris ACC内 <b>FL195以上</b><br>・LOGONタイミング: Paris ACC進入<b>10〜25分前</b>にパイロットが開始<br>　（フランス国内空港発の場合: FL150通過時点でLOGON）<br>・<b>コールサイン</b>: FPL Item 7のICAOコールサイン完全一致（IATAコード/先頭ゼロ不可→ログオン失敗）<br>・地上でのログオン可（Paris ACC近傍の空港からの場合）<br>・<b>音声コールバック不要</b>（ATCからの明示要求時のみ）<br>・<b>CPDLC障害時</b>: ATCによる再開始不可の場合あり→パイロット自身で再ログオン必要",
     "position_report": "Standard IFR; CPDLC for ATC instructions FL195+",
-    "contacts": {"main": "Paris Control (VHF)", "emergency": "121.5 MHz"},
+    "contacts": {
+      "main": "Paris Control (VHF)",
+      "emergency": "121.5 MHz"
+    },
     "special_notes": [
       "CDG (Paris CDG) destination: logon to LFFF 10-25 min before Paris ACC entry",
       "CPDLC failure: may require manual re-logon by pilot (ATC cannot re-initiate some connections)",
@@ -1155,7 +1169,10 @@
     "contingency_procedure": "<b>ICAO Standard (EUR)</b><br>可能な限りATCから改訂クリアランス取得。不可の場合: 右旋回優先 / 121.5 + 123.45 MHzでブロードキャスト",
     "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §3.2.3.1.4（CPDLC-EUR / Copenhagen FIR）</b><br>・<b>LOGONアドレス</b>: <b>EKDK</b>（Copenhagen FIR）<br>・<b>データ通信</b>: ATN B1（FANS 1/A 非対応）<br>・<b>CPDLC空域</b>: Copenhagen FIR内 <b>FL285以上</b><br>・LOGONタイミング: FIR進入<b>10〜15分前</b>（Copenhagen FIR隣接空港発は地上でのログオン可）<br>・<b>音声コールバック不要</b><br>・CPDLCは<b>非時間的クリティカルリクエストのみ</b>（応答時間: 空中開始→最大4分以上、地上開始→最大2分）<br>・時間的即応を要する通信は音声を使用<br>・CPDLCタイムリミット超過でダウンリンクが切断された場合は音声で再送信",
     "position_report": "Standard IFR; CPDLC FL285+",
-    "contacts": {"main": "Copenhagen Control / Copenhagen ACC (VHF)", "emergency": "121.5 MHz"},
+    "contacts": {
+      "main": "Copenhagen Control / Copenhagen ACC (VHF)",
+      "emergency": "121.5 MHz"
+    },
     "special_notes": [
       "ATN B1 only — FANS 1/A not supported",
       "CPDLC response time up to 4+ min (airborne initiated) — use voice for time-critical requests"
@@ -1177,7 +1194,10 @@
     "contingency_procedure": "<b>ICAO Standard (EUR)</b><br>可能な限りATCから改訂クリアランス取得。不可の場合: 右旋回優先 / 121.5 + 123.45 MHzでブロードキャスト",
     "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §3.2.3.1.5（CPDLC-EUR / Sweden FIR）</b><br>・<b>LOGONアドレス</b>: <b>ESOS</b>（Stockholm ACC）/ <b>ESMM</b>（Malmo ACC）<br>・<b>データ通信</b>: ATN B1（FANS 1/A 非対応）<br>・<b>CPDLC空域</b>: Sweden FIR内 <b>FL285以上（北緯61度30分以南）</b>でATCの裁量により提供<br>　SWEDEN CONTROLとコンタクト中の航空機に提供（TMA内では不提供）<br>・<b>FL285以上: MANDATORY</b>、FL285未満: Mandatory非適用だが推奨<br>・LOGONタイミング: Sweden FIR進入<b>10〜15分前</b><br>・<b>音声コールバック不要</b><br>・<b>フリーテキスト禁止</b>（エラー応答が返る）<br>・TMAへの降下中はCPDLCメッセージ送信を避けること<br>・データリンクによる転送指示: WILCOで応答 → 次ユニットへ指示チャンネルで音声連絡",
     "position_report": "Standard IFR; CPDLC mandatory FL285+ south of 613000N",
-    "contacts": {"main": "Sweden Control (VHF)", "emergency": "121.5 MHz"},
+    "contacts": {
+      "main": "Sweden Control (VHF)",
+      "emergency": "121.5 MHz"
+    },
     "special_notes": [
       "ATN B1 only — FANS 1/A not supported",
       "FL285+: MANDATORY for capable aircraft; FL285 未満: 推奨だがMandatory非適用",
@@ -1232,5 +1252,15 @@
       "SELCAL推奨（洋上トラック）"
     ],
     "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>HF:</b> インド洋・南洋区域で必須。SELCAL推奨。<b>CPDLC:</b> 主要空港DCL・経路上利用可。"
+  },
+  "LSAZ": {
+    "name": "Zurich (Switzerland)",
+    "freq": [
+      {
+        "name": "Geneva/Zurich ACC",
+        "freq": ""
+      }
+    ],
+    "notes": "LSAZ – Switzerland FIR. skyguide管轄。Geneva ACCとZurich ACCの2センターで全スイス空域をカバー。"
   }
 }
