@@ -1254,13 +1254,1080 @@
     "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>HF:</b> インド洋・南洋区域で必須。SELCAL推奨。<b>CPDLC:</b> 主要空港DCL・経路上利用可。"
   },
   "LSAZ": {
-    "name": "Zurich (Switzerland)",
-    "freq": [
-      {
-        "name": "Geneva/Zurich ACC",
-        "freq": ""
-      }
+    "name": "Switzerland FIR",
+    "icao": "LSAZ",
+    "country": "Switzerland",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（LSAZ logon）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 最後の高度指定から7分間維持→FPL通り飛行。<br>・<b>Unlawful Interference</b>: Sq7500。",
+    "special_notes": [
+      "skyguide管轄: Geneva ACCとZurich ACCの2センター",
+      "RVSM適用: FL290〜FL410",
+      "ATN/VDL Mode 2によるCPDLC（欧州標準）"
     ],
-    "notes": "LSAZ – Switzerland FIR. skyguide管轄。Geneva ACCとZurich ACCの2センターで全スイス空域をカバー。"
+    "contacts": {
+      "main": "Geneva ACC / Zurich ACC 121.5",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>LSAZ CPDLC</b><br>・ATN/VDL Mode 2によるCPDLC運用。<br>・Logon: LSAZ<br>・欧州ネットワーク（ EUR CPDLC）経由で自動引継ぎ。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>空域:</b> Class A/C/D/E/G。<b>CPDLC:</b> ATN/VDL Mode 2。<b>遷移高度:</b> 14,000ft / TL: FL150。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "PAZA": {
+    "name": "Anchorage FIR",
+    "icao": "PAZA",
+    "country": "United States (Alaska)",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": true,
+    "hf_required": true,
+    "cpdlc": "Available（FANS-1/A、logon: PAZN）",
+    "position_report": "At compulsory reporting points (HF/CPDLC)",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzでMAYDAY宣言。洋上ではHF 5680/8918kHz（Pacific）またはSATCOM。<br>・<b>Radio Failure（Sq7600）</b>: 非レーダー洋上：強制報告点未通報から20分間最終高度維持→FPL通り。<br>・<b>Distress Freq</b>: VHF 121.5 / HF 5680kHz・8918kHz（Anchorage North Pacific）",
+    "special_notes": [
+      "CPDLC logon: PAZN（FANS-1/A over INMARSAT）",
+      "RNAV-10（RNP10）: 洋上経路で要件",
+      "HF必須: 洋上セクター（North Pacific）",
+      "SELCAL推奨",
+      "PBCS（RCP240/RSP180）: 50NM縦分離適用時に要件"
+    ],
+    "contacts": {
+      "main": "Anchorage Center HF 5680 / 8918 kHz（North Pacific）",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard（North Pacific）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱（トラック右側に15NM以上）<br>・使用中周波数および121.5 MHzでブロードキャスト: コールサイン・FL・位置・意図<br>・HF（5680/8918kHz）でAnchorage RadioまたはGanderにブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>Anchorage FIR CPDLC（FANS-1/A）</b><br>・Logon: <b>PAZN</b>（INMARSAT SATCOM経由）<br>・VDL不可。INMARSAT（Classic Aero / SwiftBroadband）のみ対応。<br>・洋上管制区進入前に事前Logon推奨。<br>・PBCS（RCP240+RSP180）充足時: 50NMまたはMach 0.02縦分離適用。",
+    "reg_rules": "<b>RNAV-10（RNP10）:</b> 洋上経路で必要。<b>RVSM:</b> FL290〜FL410。<b>HF:</b> 洋上セクター必須。<b>SELCAL:</b> 推奨。<b>PBCS:</b> RCP240+RSP180でFANS-1/A運用。<b>SLOP:</b> 最大2NM右オフセット可（ATC通報不要）。",
+    "emerg_proc_source": "ICAO Standard / FAA JO 7110.65"
+  },
+  "ENOB": {
+    "name": "Bodo Oceanic FIR",
+    "icao": "ENOB",
+    "country": "Norway",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Available（FANS-1/A、logon: ENOB）",
+    "position_report": "At oceanic entry / compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzでMAYDAY宣言。洋上ではHFまたはSATCOM。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り。<br>・<b>Distress HF</b>: 5616 / 8891 / 11279kHz（Bodo Radio）",
+    "special_notes": [
+      "NAT HLA（North Atlantic High Level Airspace）内に位置",
+      "PBCS（RCP240/RSP180）: Organized Track System（OTS）適用時に要件",
+      "FANS-1/A logon: ENOB",
+      "HF必須: 洋上セクター",
+      "OTS（NAT Track System）: 毎日Gander/ShanwickがNOTAMで発行"
+    ],
+    "contacts": {
+      "main": "Bodo Radio HF 5616 / 8891 kHz",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>NAT Contingency Procedure（NAT Doc 007）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・トラックから逸脱（右側へ）<br>・Mach Number Technique維持<br>・使用中周波数・121.5 MHz・HFでブロードキャスト: コールサイン・FL・トラックコード・位置・意図<br>・ACAS監視・全外部灯火点灯<br>・Bodo RadioまたはGander Radioにコンタクト試みる",
+    "cpdlc_procedure": "<b>ENOB CPDLC（FANS-1/A）</b><br>・Logon: <b>ENOB</b>（INMARSAT/MTSAT SATCOM経由）<br>・NAT HLA内でのCPDLC運用。<br>・PBCS（RCP240+RSP180）充足時: OTS内で50NMまたはMach 0.02縦分離適用。<br>・ADS-C自動報告（PCG: 27分毎）が要求される。",
+    "reg_rules": "<b>NAT HLA:</b> PBCS（RCP240+RSP180）必要。<b>RVSM:</b> FL290〜FL410（NAT内はFL285〜FL420）。<b>HF:</b> 洋上必須。<b>Mach Number Technique:</b> 適用。<b>SLOP:</b> 最大2NM右オフセット可。<b>OTS利用:</b> 毎日Gander/Shanwick発行NATトラックNOTAM参照。",
+    "emerg_proc_source": "ICAO Standard / NAT Doc 007"
+  },
+  "BIRD": {
+    "name": "Reykjavik FIR",
+    "icao": "BIRD",
+    "country": "Iceland",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Available（FANS-1/A、logon: BIRD）",
+    "position_report": "At oceanic entry / compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzでMAYDAY宣言。洋上ではHFまたはSATCOM。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り。<br>・<b>Distress HF</b>: 3016 / 5598 / 8906 / 13306kHz（Reykjavik Radio）",
+    "special_notes": [
+      "NAT HLA（北大西洋高高度空域）の一部",
+      "FANS-1/A logon: BIRD",
+      "ADS-B必須: 2020/01/16より全NAT HLA（DO-260B相当）",
+      "RCL（Route Clearance）廃止: 2026年3月より事前clearance不要",
+      "HF必須: 洋上セクター",
+      "PBCS（RCP240/RSP180）: 50NM縦分離適用時に要件"
+    ],
+    "contacts": {
+      "main": "Reykjavik Radio HF 3016 / 5598 / 8906 kHz",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>NAT Contingency Procedure（NAT Doc 007）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・トラックから逸脱（右側へ）<br>・Mach Number Technique維持<br>・使用中周波数・121.5 MHz・HFでブロードキャスト: コールサイン・FL・トラックコード・位置・意図<br>・ACAS監視・全外部灯火点灯<br>・Reykjavik RadioまたはGander Radioにコンタクト試みる",
+    "cpdlc_procedure": "<b>BIRD CPDLC（FANS-1/A）</b><br>・Logon: <b>BIRD</b>（INMARSAT SATCOM経由）<br>・NAT HLA内でのCPDLC/ADS-C運用。<br>・PBCS（RCP240+RSP180）充足時: 50NMまたはMach 0.02縦分離適用。<br>・ADS-C自動報告（PCG: 27分毎）が要求される。<br>・2026年3月以降: RCL（事前洋上クリアランス）廃止。oceanic clearanceは標準ATCレベルで付与。",
+    "reg_rules": "<b>NAT HLA:</b> PBCS（RCP240+RSP180）必要。<b>ADS-B:</b> DO-260B相当必須。<b>RVSM:</b> FL285〜FL420。<b>HF:</b> 洋上必須。<b>Mach Number Technique:</b> 適用。<b>SLOP:</b> 最大2NM右オフセット可。",
+    "emerg_proc_source": "ICAO Standard / NAT Doc 007"
+  },
+  "CZQO": {
+    "name": "Gander Oceanic FIR",
+    "icao": "CZQO",
+    "country": "Canada",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Available（FANS-1/A、logon: CZQX）",
+    "position_report": "At oceanic entry / compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzでMAYDAY宣言。洋上ではHFまたはSATCOM。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り。<br>・<b>Distress HF</b>: 3016 / 5598 / 8906 / 13306kHz（Gander Radio）",
+    "special_notes": [
+      "NAT HLA（北大西洋高高度空域）の一部",
+      "FANS-1/A CPDLC logon: CZQX（Qではなく）",
+      "OCR（Oceanic Clearance Requirement）: 2024年12月変更",
+      "Pre-departure amendments（2025年5月〜12月）: VOICE ONLYで受け付け（CPDLC不可）",
+      "ADS-B必須: NAT HLA全域",
+      "PBCS（RCP240/RSP180）: 50NM縦分離適用時に要件"
+    ],
+    "contacts": {
+      "main": "Gander Radio HF 3016 / 5598 / 8906 kHz",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>NAT Contingency Procedure（NAT Doc 007）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・トラックから逸脱（右側へ）<br>・Mach Number Technique維持<br>・使用中周波数・121.5 MHz・HFでブロードキャスト: コールサイン・FL・トラックコード・位置・意図<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>CZQO CPDLC（FANS-1/A）</b><br>・Logon: <b>CZQX</b>（INMARSAT SATCOM経由）<br>・NAT HLA内でのCPDLC/ADS-C運用。<br>・PBCS（RCP240+RSP180）充足時: 50NMまたはMach 0.02縦分離適用。<br>・ADS-C自動報告（PCG: 27分毎）が要求される。<br>・<b>注意（2025年5月〜12月）</b>: 出発前修正申請はVoiceのみ受け付け（CPDLCでの事前修正不可）。",
+    "reg_rules": "<b>NAT HLA:</b> PBCS（RCP240+RSP180）必要。<b>ADS-B:</b> DO-260B相当必須。<b>RVSM:</b> FL285〜FL420。<b>HF:</b> 洋上必須。<b>Mach Number Technique:</b> 適用。<b>SLOP:</b> 最大2NM右オフセット可。",
+    "emerg_proc_source": "ICAO Standard / NAT Doc 007"
+  },
+  "BGGL": {
+    "name": "Sondrestrom FIR (Greenland)",
+    "icao": "BGGL",
+    "country": "Denmark/Greenland",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Delegated to Gander/Reykjavik above FL195",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzでMAYDAY宣言。<br>・FL195以上: GanderまたはReykjavik管制。<br>・<b>Distress HF</b>: Gander Radio / Reykjavik Radio周波数を参照。",
+    "special_notes": [
+      "FL195以上はGander OceanicまたはReykjavik FIRに管制委託",
+      "FL195以下: Sondrestrom ACCが管轄",
+      "NAT HLAの一部（上層空域）",
+      "HF: 洋上区域では必要"
+    ],
+    "contacts": {
+      "main": "Sondrestrom ACC / Delegated to Gander/Reykjavik above FL195",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard / NAT Doc 007</b><br>FL195以上ではGander/Reykjavik管轄。<br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・トラックから逸脱<br>・121.5 MHzおよびHFでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>BGGL CPDLC</b><br>・FL195以上: Gander（logon: CZQX）またはReykjavik（logon: BIRD）の管轄となるため、それぞれのLogon先を使用。<br>・FL195以下: Sondrestrom ACCがVHF管制。CPDLC非対応。",
+    "reg_rules": "<b>FL195以上:</b> NAT HLA適用（PBCS・ADS-B・Mach Number Technique等NAT規則が適用）。<b>FL195以下:</b> Sondrestrom ACC VHF管制。<b>RVSM:</b> FL290〜FL410。",
+    "emerg_proc_source": "ICAO Standard / NAT Doc 007"
+  },
+  "EHAA": {
+    "name": "Amsterdam FIR",
+    "icao": "EHAA",
+    "country": "Netherlands",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: EDYY）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。<br>・<b>Unlawful Interference</b>: Sq7500。",
+    "special_notes": [
+      "CPDLC: EDYY（Maastricht UAC）へlogon",
+      "RVSM: FL290〜FL410",
+      "GNSS jamming注意: Baltic方面フライト時は特に注意"
+    ],
+    "contacts": {
+      "main": "Amsterdam Control 132.955",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>EHAA CPDLC</b><br>・Logon: <b>EDYY</b>（Maastricht UAC – Netherlands・Belgium・Luxembourg・North Germany上層空域を管轄）<br>・ATN/VDL Mode 2による欧州標準CPDLC。<br>・EDYY管轄内では自動引継ぎ（auto transfer）あり。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: EDYY）。<b>空域:</b> Class A/C/D。<b>遷移高度:</b> 3,000ft/TL: FL050。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "EDGG": {
+    "name": "Langen FIR (Frankfurt/Central Germany)",
+    "icao": "EDGG",
+    "country": "Germany",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: EDUU）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。<br>・<b>Unlawful Interference</b>: Sq7500。",
+    "special_notes": [
+      "CPDLC: EDUU（Karlsruhe UAC）へlogon",
+      "EDUU管轄: EDGG/EDMM/EDWW 3つのドイツFIR全て",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Langen Radar / Frankfurt Approach",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>EDGG CPDLC</b><br>・Logon: <b>EDUU</b>（Karlsruhe UAC – ドイツ3FIR全てを管轄する上層空域センター）<br>・ATN/VDL Mode 2による欧州標準CPDLC。<br>・EDGG/EDMM/EDWWはいずれもEDUU一本でLogon。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: EDUU）。<b>遷移高度:</b> 5,000ft / TL: FL070（空港・地域により異なる）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "EDMM": {
+    "name": "Munich FIR (South Germany)",
+    "icao": "EDMM",
+    "country": "Germany",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: EDUU）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。<br>・<b>Unlawful Interference</b>: Sq7500。",
+    "special_notes": [
+      "CPDLC: EDUU（Karlsruhe UAC）へlogon",
+      "EDUU管轄: EDGG/EDMM/EDWW 3つのドイツFIR全て",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Munich Radar / Munich Approach",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>EDMM CPDLC</b><br>・Logon: <b>EDUU</b>（Karlsruhe UAC）<br>・ATN/VDL Mode 2による欧州標準CPDLC。<br>・ドイツ3FIR（EDGG/EDMM/EDWW）はEDUU一本でLogon。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: EDUU）。<b>遷移高度:</b> 5,000ft / TL: FL070。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "EDWW": {
+    "name": "Bremen FIR (North Germany)",
+    "icao": "EDWW",
+    "country": "Germany",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: EDUU）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。<br>・<b>Unlawful Interference</b>: Sq7500。",
+    "special_notes": [
+      "CPDLC: EDUU（Karlsruhe UAC）へlogon",
+      "EDUU管轄: EDGG/EDMM/EDWW 3つのドイツFIR全て",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Bremen Radar",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>EDWW CPDLC</b><br>・Logon: <b>EDUU</b>（Karlsruhe UAC）<br>・ATN/VDL Mode 2による欧州標準CPDLC。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: EDUU）。<b>遷移高度:</b> 5,000ft / TL: FL065。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "LFMM": {
+    "name": "Marseille FIR",
+    "icao": "LFMM",
+    "country": "France",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: LFFF）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。<br>・<b>Unlawful Interference</b>: Sq7500。",
+    "special_notes": [
+      "CPDLC: LFFF（Paris ACC/Reims UAC）へlogon",
+      "フランス2FIR（LFFF/LFMM）はどちらもLFFFへlogon",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Marseille Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>LFMM CPDLC</b><br>・Logon: <b>LFFF</b>（Paris ACC / Reims UAC）<br>・ATN/VDL Mode 2による欧州標準CPDLC。<br>・フランス2FIR（LFFF Paris / LFMM Marseille）はいずれもLFFF一本でLogon。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: LFFF）。<b>遷移高度:</b> 5,000ft / TL: FL065。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "LFRR": {
+    "name": "Brest Oceanic FIR",
+    "icao": "LFRR",
+    "country": "France",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Available – NAT HLA内はFANS-1/A（logon: LFRR）、大陸部はATN/VDL（logon: LFFF）",
+    "position_report": "At oceanic entry / compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzでMAYDAY宣言。<br>・洋上部: HFまたはSATCOM。<br>・<b>Distress HF</b>: Shanwick Radio参照（HF 5616 / 8891 / 11279kHz等）",
+    "special_notes": [
+      "NAT HLA（北大西洋）の東側部分を管轄（Shanwick FIRと隣接）",
+      "洋上部: FANS-1/A CPDLC（logon: LFRR）",
+      "大陸部（Brest ACC）: ATN/VDL Mode 2（logon: LFFF）",
+      "HF: 洋上セクターで必須",
+      "ADS-B: NAT HLA内では必須"
+    ],
+    "contacts": {
+      "main": "Brest Control / Brest Radio HF",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>NAT Contingency Procedure（NAT Doc 007）</b><br>洋上部: NAT Doc 007準拠。<br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・トラックから逸脱（右側へ）<br>・121.5 MHz・HFでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>LFRR CPDLC</b><br>・NAT HLA内（洋上）: Logon <b>LFRR</b>（FANS-1/A、INMARSAT経由）<br>・大陸部（Brest ACC）: Logon <b>LFFF</b>（ATN/VDL Mode 2）<br>・NAT HLA内: ADS-C・PBCS（RCP240+RSP180）が50NM縦分離に必要。",
+    "reg_rules": "<b>NAT HLA部:</b> PBCS・ADS-B・Mach Number Technique等NAT規則適用。<b>大陸部:</b> ATN/VDL Mode 2 CPDLC（logon: LFFF）。<b>RVSM:</b> FL290〜FL410。",
+    "emerg_proc_source": "ICAO Standard / NAT Doc 007"
+  },
+  "EISN": {
+    "name": "Shannon FIR",
+    "icao": "EISN",
+    "country": "Ireland",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Available – NAT HLA内はFANS-1/A（logon: EISN）",
+    "position_report": "At oceanic entry / compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzでMAYDAY宣言。<br>・洋上部: HFまたはSATCOM。<br>・<b>Distress HF</b>: Shanwick Radio（HF 5616 / 8891 / 11279kHz）",
+    "special_notes": [
+      "Shanwick OAC（洋上管制）: EISN/EGTT共同運用、NAT HLAの東端",
+      "洋上部: FANS-1/A CPDLC（logon: EISN）",
+      "HF: 洋上セクターで必須",
+      "ADS-B: NAT HLA内では必須",
+      "PBCS（RCP240/RSP180）: 50NM縦分離適用時に要件"
+    ],
+    "contacts": {
+      "main": "Shannon Control / Shanwick Radio HF 5616 / 8891 kHz",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>NAT Contingency Procedure（NAT Doc 007）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・トラックから逸脱（右側へ）<br>・121.5 MHz・HFでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>EISN CPDLC（FANS-1/A）</b><br>・Logon: <b>EISN</b>（INMARSAT SATCOM経由）<br>・NAT HLA内: ADS-C・PBCS（RCP240+RSP180）が50NM縦分離に必要。<br>・大陸部（Shannon ACC）: VHF管制（CPDLC非対応またはATN/VDL）。",
+    "reg_rules": "<b>NAT HLA部:</b> PBCS・ADS-B・Mach Number Technique等NAT規則適用。<b>RVSM:</b> FL285〜FL420。<b>HF:</b> 洋上必須。",
+    "emerg_proc_source": "ICAO Standard / NAT Doc 007"
+  },
+  "LOVV": {
+    "name": "Vienna FIR",
+    "icao": "LOVV",
+    "country": "Austria",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: LOVV）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: LOVV logon",
+      "RVSM: FL290〜FL410",
+      "ATN/VDL Mode 2（欧州標準）"
+    ],
+    "contacts": {
+      "main": "Vienna Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>LOVV CPDLC</b><br>・Logon: <b>LOVV</b>（ATN/VDL Mode 2）<br>・欧州ネットワーク経由の自動引継ぎあり。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: LOVV）。<b>遷移高度:</b> 5,000ft / TL: FL070。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "LIRR": {
+    "name": "Rome FIR",
+    "icao": "LIRR",
+    "country": "Italy",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: LIRR）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: LIRR logon",
+      "RVSM: FL290〜FL410",
+      "ATN/VDL Mode 2（欧州標準）"
+    ],
+    "contacts": {
+      "main": "Roma Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>LIRR CPDLC</b><br>・Logon: <b>LIRR</b>（ATN/VDL Mode 2）<br>・欧州ネットワーク経由の自動引継ぎあり。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: LIRR）。<b>遷移高度:</b> 6,000ft / TL: FL080。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "LIMM": {
+    "name": "Milano FIR",
+    "icao": "LIMM",
+    "country": "Italy",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: LIMM）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: LIMM logon",
+      "RVSM: FL290〜FL410",
+      "ATN/VDL Mode 2（欧州標準）"
+    ],
+    "contacts": {
+      "main": "Milano Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>LIMM CPDLC</b><br>・Logon: <b>LIMM</b>（ATN/VDL Mode 2）<br>・欧州ネットワーク経由の自動引継ぎあり。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: LIMM）。<b>遷移高度:</b> 6,000ft / TL: FL080。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "LTBB": {
+    "name": "Istanbul FIR",
+    "icao": "LTBB",
+    "country": "Turkey",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: LTBB）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: LTBB logon",
+      "RVSM: FL290〜FL410",
+      "ATN/VDL Mode 2（欧州/トルコ標準）",
+      "ヨーロッパ→中央アジア経路の重要FIR"
+    ],
+    "contacts": {
+      "main": "Istanbul Control / Ankara Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>LTBB CPDLC</b><br>・Logon: <b>LTBB</b>（ATN/VDL Mode 2）<br>・欧州ネットワーク経由の引継ぎあり。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: LTBB）。<b>遷移高度:</b> 6,000ft / TL: FL080（地域により異なる）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "LKAA": {
+    "name": "Praha FIR",
+    "icao": "LKAA",
+    "country": "Czech Republic",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: LKAA）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: LKAA logon",
+      "RVSM: FL290〜FL410",
+      "ATN/VDL Mode 2（欧州標準）"
+    ],
+    "contacts": {
+      "main": "Praha Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>LKAA CPDLC</b><br>・Logon: <b>LKAA</b>（ATN/VDL Mode 2）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: LKAA）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "LHCC": {
+    "name": "Budapest FIR",
+    "icao": "LHCC",
+    "country": "Hungary",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: LHCC）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: LHCC logon",
+      "RVSM: FL290〜FL410",
+      "ATN/VDL Mode 2（欧州標準）"
+    ],
+    "contacts": {
+      "main": "Budapest Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>LHCC CPDLC</b><br>・Logon: <b>LHCC</b>（ATN/VDL Mode 2）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: LHCC）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "EPWW": {
+    "name": "Warszawa FIR",
+    "icao": "EPWW",
+    "country": "Poland",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: EPWW）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: EPWW logon",
+      "RVSM: FL290〜FL410",
+      "ATN/VDL Mode 2（欧州標準）",
+      "GNSS jamming: ロシア・ベラルーシ近接のため注意"
+    ],
+    "contacts": {
+      "main": "Warszawa Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>EPWW CPDLC</b><br>・Logon: <b>EPWW</b>（ATN/VDL Mode 2）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: EPWW）。<b>GNSS:</b> ロシア・ベラルーシ国境付近でのjamming注意。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "ESAA": {
+    "name": "Sweden FIR (Malmö/Stockholm)",
+    "icao": "ESAA",
+    "country": "Sweden",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: ESAA）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: ESAA logon",
+      "RVSM: FL290〜FL410",
+      "ATN/VDL Mode 2（欧州標準）",
+      "GNSS jamming: Baltic周辺・ロシア国境付近で頻発"
+    ],
+    "contacts": {
+      "main": "Stockholm Control / Malmö Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>ESAA CPDLC</b><br>・Logon: <b>ESAA</b>（ATN/VDL Mode 2）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: ESAA）。<b>GNSS jamming:</b> Baltic・ロシア国境付近で頻発 – IRS/conventional navaid backup推奨。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "EVRR": {
+    "name": "Riga FIR",
+    "icao": "EVRR",
+    "country": "Latvia",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: EVRR）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "GNSS jamming: ロシア近接のため頻繁・深刻",
+      "IRS/VOR/DME等conventional navaidsによるバックアップ必須",
+      "CPDLC: EVRR logon（ATN/VDL Mode 2）",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Riga Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>EVRR CPDLC</b><br>・Logon: <b>EVRR</b>（ATN/VDL Mode 2）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: EVRR）。<b>⚠️ GNSS jamming:</b> ロシア近接のため頻繁 – IRS/VOR/DMEバックアップ必須。FMC degradation/RAIM failure NOTAMを常に確認。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "EYVL": {
+    "name": "Vilnius FIR",
+    "icao": "EYVL",
+    "country": "Lithuania",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: EYVL）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "GNSS jamming: ロシア・カリーニングラード近接のため深刻",
+      "IRS/VOR/DME等conventional navaidsによるバックアップ必須",
+      "CPDLC: EYVL logon（ATN/VDL Mode 2）",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Vilnius Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>EYVL CPDLC</b><br>・Logon: <b>EYVL</b>（ATN/VDL Mode 2）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: EYVL）。<b>⚠️ GNSS jamming:</b> カリーニングラード（露）近接のため深刻 – IRS/VOR/DMEバックアップ必須。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "EETT": {
+    "name": "Tallinn FIR",
+    "icao": "EETT",
+    "country": "Estonia",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: EETT）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "GNSS jamming: ロシア近接のため頻繁・深刻",
+      "IRS/VOR/DME等conventional navaidsによるバックアップ必須",
+      "CPDLC: EETT logon（ATN/VDL Mode 2）",
+      "RVSM: FL290〜FL410"
+    ],
+    "contacts": {
+      "main": "Tallinn Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>EETT CPDLC</b><br>・Logon: <b>EETT</b>（ATN/VDL Mode 2）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: EETT）。<b>⚠️ GNSS jamming:</b> ロシア近接のため頻繁 – IRS/VOR/DMEバックアップ必須。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "LTAA": {
+    "name": "Ankara FIR",
+    "icao": "LTAA",
+    "country": "Turkey",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: LTAA）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: LTAA logon（ATN/VDL Mode 2）",
+      "RVSM: FL290〜FL410",
+      "ヨーロッパ→中央アジア経路の重要FIR（Istanbul FIR LTBB隣接）"
+    ],
+    "contacts": {
+      "main": "Ankara Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>LTAA CPDLC</b><br>・Logon: <b>LTAA</b>（ATN/VDL Mode 2）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> ATN/VDL Mode 2（logon: LTAA）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UBBA": {
+    "name": "Baku FIR",
+    "icao": "UBBA",
+    "country": "Azerbaijan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: UBBA）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: UBBA logon",
+      "RVSM: FL290〜FL410",
+      "中央アジア経路（欧州→日本）の重要FIR"
+    ],
+    "contacts": {
+      "main": "Baku Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UBBA CPDLC</b><br>・Logon: <b>UBBA</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: UBBA）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UGGG": {
+    "name": "Tbilisi FIR",
+    "icao": "UGGG",
+    "country": "Georgia",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: UGGG）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: UGGG logon",
+      "RVSM: FL290〜FL410",
+      "中央アジア経路（欧州→日本）の重要FIR"
+    ],
+    "contacts": {
+      "main": "Tbilisi Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UGGG CPDLC</b><br>・Logon: <b>UGGG</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: UGGG）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UAAA": {
+    "name": "Almaty FIR",
+    "icao": "UAAA",
+    "country": "Kazakhstan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: UAAA）",
+    "position_report": "As instructed by ATC",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域：最後の高度指定から7分間維持→FPL通り飛行。",
+    "special_notes": [
+      "CPDLC: UAAA logon",
+      "RVSM: FL290〜FL410",
+      "中央アジア経路（欧州→日本）の重要FIR",
+      "Almaty ACC管轄 – 広大な空域"
+    ],
+    "contacts": {
+      "main": "Almaty Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UAAA CPDLC</b><br>・Logon: <b>UAAA</b>",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: UAAA）。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UTDD": {
+    "name": "Dushanbe FIR",
+    "icao": "UTDD",
+    "country": "Tajikistan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Limited/Available（logon: UTDD）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "RVSM: FL290〜FL410",
+      "中央アジア経路（欧州→日本）のFIR",
+      "山岳地帯多く最低安全高度に注意"
+    ],
+    "contacts": {
+      "main": "Dushanbe Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UTDD CPDLC</b><br>・Logon: <b>UTDD</b>（利用可能な場合）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>高度:</b> 山岳地帯のため最低安全高度に注意。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "UZTR": {
+    "name": "Tashkent FIR",
+    "icao": "UZTR",
+    "country": "Uzbekistan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: UZTR）",
+    "position_report": "At compulsory reporting points",
+    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700、121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り飛行。",
+    "special_notes": [
+      "⚠️ ICAOコード変更: 旧コード UTTR → 現行 UZTR（2025年10月〜）",
+      "RVSM: FL290〜FL410",
+      "遷移高度変更: TA 13,000ft / TL FL150（改定）",
+      "中央アジア経路（欧州→日本）の重要FIR"
+    ],
+    "contacts": {
+      "main": "Tashkent Control",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路/トラックから逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>UZTR CPDLC</b><br>・Logon: <b>UZTR</b>（旧コードUTTRは使用不可 – 2025年10月以降）",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> logon UZTR（旧 UTTR から変更）。<b>遷移高度:</b> TA 13,000ft / TL FL150。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "OAKX": {
+    "name": "Kabul FIR",
+    "icao": "OAKX",
+    "country": "Afghanistan",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "None（Class G、ATC非管制）",
+    "position_report": "TIBA（Traffic Information Broadcast by Aircraft）125.2 MHz",
+    "emergency_procedure": "<b>ICAO Standard（Class G - Uncontrolled）</b><br>・<b>Emergency</b>: Sq7700。125.2 MHz（TIBA）でMAYDAY宣言。VHF 121.5 MHz。<br>・ATC管制なし – パイロット間で自己分離。<br>・近接機にも121.5 MHzでブロードキャスト。",
+    "special_notes": [
+      "⚠️ Class G（Uncontrolled）: ATCなし。パイロット自己分離",
+      "TIBA: 125.2 MHzでブロードキャスト（10分毎・報告点通過時）",
+      "PPR（Prior Permission Required）: $700 USD / フライト（NOTAM確認必須）",
+      "Afghanistan civil authority（Taliban）による非公式管轄",
+      "GNSS/通信インフラ不安定 – IRS backup推奨",
+      "高地形: 多くのルートで高い最低安全高度（15,000ft以上）"
+    ],
+    "contacts": {
+      "main": "TIBA 125.2 MHz（ATC不在）",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>OAKX Contingency（Uncontrolled Airspace）</b><br>ATCへのコンタクト不可。<br>・TIBA（125.2 MHz）で位置・高度・意図をブロードキャスト<br>・121.5 MHzでも同時ブロードキャスト<br>・ACAS完全依存（相反トラフィック監視）<br>・可能な限り早期に隣接FIR（UTDD/OPKR等）にコンタクト",
+    "cpdlc_procedure": "<b>CPDLC不可</b><br>OAKX（Kabul FIR）はClass G非管制空域のためCPDLC非対応。",
+    "reg_rules": "<b>Class G:</b> 非管制空域、ATC指示なし。<b>TIBA:</b> 125.2 MHz必須（10分毎 + 報告点通過時）。<b>PPR:</b> 約$700/フライト（事前申請必要）。<b>高高度地形:</b> 最低安全高度に十分な余裕を確保。<b>RVSM:</b> 適用（FL290〜FL410）だがATC確認不可。",
+    "emerg_proc_source": "ICAO Standard (Annex 2)"
+  },
+  "OIIX": {
+    "name": "Tehran FIR",
+    "icao": "OIIX",
+    "country": "Iran",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "⚠️ 運用停止（2026年5月 – 中東紛争）",
+    "position_report": "⚠️ 現在クローズ中",
+    "emergency_procedure": "<b>⚠️ OIIX現在クローズ（2026年5月時点）</b><br>イラン・中東紛争激化に伴い空域クローズ中。<br>ルート変更が必要。隣接FIRとの調整が必要。",
+    "special_notes": [
+      "⚠️ 空域クローズ中: 2026年5月現在、中東紛争激化に伴い閉鎖",
+      "ヨーロッパ→日本ルートでは迂回が必要（南回りまたは北回り）",
+      "最新NOTAM・SIGMET必ず確認",
+      "再開時はCPDLC: OIIX logon（ATN/FANS）"
+    ],
+    "contacts": {
+      "main": "Tehran Control（現在停止中）",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>⚠️ OIIX空域クローズ中</b><br>通常の迂回手順: 隣接FIR（OBBB/OPKR/UAAA）を経由したルートを事前申請。<br>万一予期しない空域進入となった場合は121.5 MHzでブロードキャストし即座に離脱。",
+    "cpdlc_procedure": "<b>⚠️ 現在停止中</b><br>通常時（再開後）: Logon OIIX。",
+    "reg_rules": "<b>⚠️ クローズ中（2026年5月）。</b> 通常: RVSM FL290〜FL410。ルート使用前に最新情報確認必須。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "ORBB": {
+    "name": "Baghdad FIR",
+    "icao": "ORBB",
+    "country": "Iraq",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "⚠️ 運用停止（2026年5月 – 中東紛争）",
+    "position_report": "⚠️ 現在クローズ中",
+    "emergency_procedure": "<b>⚠️ ORBB現在クローズ（2026年5月時点）</b><br>中東紛争激化に伴い空域クローズ中。<br>ルート変更が必要。隣接FIRとの調整が必要。",
+    "special_notes": [
+      "⚠️ 空域クローズ中: 2026年5月現在、中東紛争激化に伴い閉鎖",
+      "ヨーロッパ→日本/中東経由ルートでは迂回が必要",
+      "最新NOTAM・SIGMET必ず確認",
+      "再開時はCPDLC: ORBB logon"
+    ],
+    "contacts": {
+      "main": "Baghdad Control（現在停止中）",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>⚠️ ORBB空域クローズ中</b><br>隣接FIR（OIIX/OKAC/OBBB/LTAA）を経由したルートを事前申請。<br>万一予期しない空域進入となった場合は121.5 MHzでブロードキャストし即座に離脱。",
+    "cpdlc_procedure": "<b>⚠️ 現在停止中</b><br>通常時（再開後）: Logon ORBB。",
+    "reg_rules": "<b>⚠️ クローズ中（2026年5月）。</b> 通常: RVSM FL290〜FL410。ルート使用前に最新情報確認必須。",
+    "emerg_proc_source": "ICAO Standard"
+  },
+  "KZSE": {
+    "name": "Seattle ARTCC",
+    "icao": "KZSE",
+    "country": "United States",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: KUSA – US国内統一コード）",
+    "position_report": "As instructed by ATC (Radar contact maintained)",
+    "emergency_procedure": "<b>FAA Standard（AIM Chapter 6）</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzまたは使用中周波数でMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: VFR気象: VFR飛行・着陸。IFR気象（7600規則）: 最後の指定/期待/FPL高度のうち最高値維持→FPLどおり。レーダーベクター終了から直近のFix、FPLルートに戻る。<br>・<b>Distress Freq</b>: VHF 121.5 MHz",
+    "special_notes": [
+      "CPDLC: 全US ARTCCは単一logonコード KUSA を使用",
+      "VDL Mode 2のみ（FANS-1/A不可）",
+      "FPL Field 10a: J4を申告（CPDLC運用要件）",
+      "北太平洋経由→日本のルート初頭を担当"
+    ],
+    "contacts": {
+      "main": "Seattle Center (ZSE)",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>FAA Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>US ARTCC CPDLC</b><br>・Logon: <b>KUSA</b>（全20 ARTCCで共通の単一logonコード）<br>・ATN/VDL Mode 2のみ（FANS-1/Aは使用不可）<br>・FPL Field 10a: <b>J4</b>を申告<br>・自動引継ぎ（auto transfer）あり",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> VDL Mode 2（logon: KUSA）。<b>FPL:</b> Field 10a に J4。<b>遷移高度:</b> 18,000ft MSL（FL180）。",
+    "emerg_proc_source": "FAA AIM Chapter 6"
+  },
+  "KZLA": {
+    "name": "Los Angeles ARTCC",
+    "icao": "KZLA",
+    "country": "United States",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: KUSA）",
+    "position_report": "As instructed by ATC (Radar contact maintained)",
+    "emergency_procedure": "<b>FAA Standard（AIM Chapter 6）</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzまたは使用中周波数でMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: IFR気象: 最後の指定/期待/FPL高度のうち最高値維持→FPLどおり。<br>・<b>Distress Freq</b>: VHF 121.5 MHz",
+    "special_notes": [
+      "CPDLC: logon KUSA（全US ARTCC統一）",
+      "VDL Mode 2のみ",
+      "FPL Field 10a: J4",
+      "LAX・SAN等南カリフォルニア空港を管轄"
+    ],
+    "contacts": {
+      "main": "Los Angeles Center (ZLA)",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>FAA Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>US ARTCC CPDLC</b><br>・Logon: <b>KUSA</b>（全20 ARTCCで共通）<br>・ATN/VDL Mode 2のみ。FPL Field 10a: J4。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> VDL Mode 2（logon: KUSA）。<b>遷移高度:</b> 18,000ft MSL（FL180）。",
+    "emerg_proc_source": "FAA AIM Chapter 6"
+  },
+  "KZHU": {
+    "name": "Houston ARTCC",
+    "icao": "KZHU",
+    "country": "United States",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: KUSA）",
+    "position_report": "As instructed by ATC (Radar contact maintained)",
+    "emergency_procedure": "<b>FAA Standard（AIM Chapter 6）</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzまたは使用中周波数でMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: IFR気象: 最後の指定/期待/FPL高度のうち最高値維持→FPLどおり。<br>・<b>Distress Freq</b>: VHF 121.5 MHz",
+    "special_notes": [
+      "CPDLC: logon KUSA（全US ARTCC統一）",
+      "VDL Mode 2のみ",
+      "FPL Field 10a: J4",
+      "IAH・HOU等テキサス・メキシコ湾エリアを管轄"
+    ],
+    "contacts": {
+      "main": "Houston Center (ZHU)",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>FAA Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>US ARTCC CPDLC</b><br>・Logon: <b>KUSA</b>（全20 ARTCCで共通）<br>・ATN/VDL Mode 2のみ。FPL Field 10a: J4。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> VDL Mode 2（logon: KUSA）。<b>遷移高度:</b> 18,000ft MSL（FL180）。",
+    "emerg_proc_source": "FAA AIM Chapter 6"
+  },
+  "KZFW": {
+    "name": "Fort Worth ARTCC",
+    "icao": "KZFW",
+    "country": "United States",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: KUSA）",
+    "position_report": "As instructed by ATC (Radar contact maintained)",
+    "emergency_procedure": "<b>FAA Standard（AIM Chapter 6）</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzまたは使用中周波数でMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: IFR気象: 最後の指定/期待/FPL高度のうち最高値維持→FPLどおり。<br>・<b>Distress Freq</b>: VHF 121.5 MHz",
+    "special_notes": [
+      "CPDLC: logon KUSA（全US ARTCC統一）",
+      "VDL Mode 2のみ",
+      "FPL Field 10a: J4",
+      "DFW・DAL等テキサス中部エリアを管轄"
+    ],
+    "contacts": {
+      "main": "Fort Worth Center (ZFW)",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>FAA Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>US ARTCC CPDLC</b><br>・Logon: <b>KUSA</b>（全20 ARTCCで共通）<br>・ATN/VDL Mode 2のみ。FPL Field 10a: J4。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> VDL Mode 2（logon: KUSA）。<b>遷移高度:</b> 18,000ft MSL（FL180）。",
+    "emerg_proc_source": "FAA AIM Chapter 6"
+  },
+  "KZOB": {
+    "name": "Cleveland ARTCC",
+    "icao": "KZOB",
+    "country": "United States",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: KUSA）",
+    "position_report": "As instructed by ATC (Radar contact maintained)",
+    "emergency_procedure": "<b>FAA Standard（AIM Chapter 6）</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzまたは使用中周波数でMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: IFR気象: 最後の指定/期待/FPL高度のうち最高値維持→FPLどおり。<br>・<b>Distress Freq</b>: VHF 121.5 MHz",
+    "special_notes": [
+      "CPDLC: logon KUSA（全US ARTCC統一）",
+      "VDL Mode 2のみ",
+      "FPL Field 10a: J4",
+      "ORD・DTW等中部エリアを管轄"
+    ],
+    "contacts": {
+      "main": "Cleveland Center (ZOB)",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>FAA Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>US ARTCC CPDLC</b><br>・Logon: <b>KUSA</b>（全20 ARTCCで共通）<br>・ATN/VDL Mode 2のみ。FPL Field 10a: J4。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> VDL Mode 2（logon: KUSA）。<b>遷移高度:</b> 18,000ft MSL（FL180）。",
+    "emerg_proc_source": "FAA AIM Chapter 6"
+  },
+  "KZNY": {
+    "name": "New York ARTCC",
+    "icao": "KZNY",
+    "country": "United States",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: KUSA）",
+    "position_report": "As instructed by ATC (Radar contact maintained)",
+    "emergency_procedure": "<b>FAA Standard（AIM Chapter 6）</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzまたは使用中周波数でMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: IFR気象: 最後の指定/期待/FPL高度のうち最高値維持→FPLどおり。<br>・<b>Distress Freq</b>: VHF 121.5 MHz",
+    "special_notes": [
+      "CPDLC: logon KUSA（全US ARTCC統一）",
+      "VDL Mode 2のみ",
+      "FPL Field 10a: J4",
+      "JFK・EWR・LGA等北東部主要空港を管轄",
+      "NATO CPDLC境界: 大西洋沿岸付近でGander/Shanwickへのhando ff"
+    ],
+    "contacts": {
+      "main": "New York Center (ZNY)",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>FAA Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>US ARTCC CPDLC</b><br>・Logon: <b>KUSA</b>（全20 ARTCCで共通）<br>・ATN/VDL Mode 2のみ。FPL Field 10a: J4。<br>・大西洋洋上（CZQO/EISN方向）へのhandoffはFANS-1/Aに切り替え。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> VDL Mode 2（logon: KUSA）。<b>遷移高度:</b> 18,000ft MSL（FL180）。",
+    "emerg_proc_source": "FAA AIM Chapter 6"
+  },
+  "KZBW": {
+    "name": "Boston ARTCC",
+    "icao": "KZBW",
+    "country": "United States",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: KUSA）",
+    "position_report": "As instructed by ATC (Radar contact maintained)",
+    "emergency_procedure": "<b>FAA Standard（AIM Chapter 6）</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzまたは使用中周波数でMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: IFR気象: 最後の指定/期待/FPL高度のうち最高値維持→FPLどおり。<br>・<b>Distress Freq</b>: VHF 121.5 MHz",
+    "special_notes": [
+      "CPDLC: logon KUSA（全US ARTCC統一）",
+      "VDL Mode 2のみ",
+      "FPL Field 10a: J4",
+      "BOS・PWM等北東部New England地域を管轄",
+      "GanderへのOceanic handoff担当"
+    ],
+    "contacts": {
+      "main": "Boston Center (ZBW)",
+      "emergency": "121.5"
+    },
+    "contingency_procedure": "<b>FAA Standard</b><br>可能な限り事前にATCから改訂クリアランスを取得する。取得できない場合：<br>・組織的経路から逸脱<br>・使用中周波数および121.5 MHzでブロードキャスト<br>・ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>US ARTCC CPDLC</b><br>・Logon: <b>KUSA</b>（全20 ARTCCで共通）<br>・ATN/VDL Mode 2のみ。FPL Field 10a: J4。<br>・大西洋洋上（Gander CZQO方向）へのhandoffはFANS-1/A（logon: CZQX）に切り替え。",
+    "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> VDL Mode 2（logon: KUSA）。<b>遷移高度:</b> 18,000ft MSL（FL180）。",
+    "emerg_proc_source": "FAA AIM Chapter 6"
   }
 }
