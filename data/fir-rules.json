@@ -150,8 +150,8 @@
       "main": "Hong Kong Control 128.2 / 134.45",
       "emergency": "121.5"
     },
-    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
-    "cpdlc_procedure": "<b>2-03にはHong Kong FIR固有のCPDLC手順記載なし</b>。<br>§2.2.18（CPDLC-SEA）にVHHK向けの独立した項なし。HKG FIRは高密度レーダー管制環境のため、VHF音声通信が主体。<br>通信手段: <b>VHF音声（主）</b>。",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.7.8（CONTINGENCY PROC - SEA / Hong Kong / South China Sea）</b><br>・<b>悪天候回避（South China Sea）</b>:<br>　逸脱が<b>10NMを超える</b>場合→<b>300ftの高度変更</b><br>　「<b>WEATHER DEVIATION</b>」または「<b>PAN PAN</b>」を申告<br>　ATCに逸脱の規模・方向を通報<br>・大陸空域（VHF/レーダー）ではATCクリアランスを優先取得。取得不能時はICAO手順を適用<br>・（§2.1.7.8.1 General Contingency: 記載なし。洋上Weather Deviationのみ固有手順あり）",
+    "cpdlc_procedure": "<b>Hong Kong FIR（VHHK）: CPDLC非対応（§2.2.18に独立セクションなし）</b><br>HKG FIRは高密度レーダー管制環境のため、VHF音声通信が主体。<br>§2.2.18（CPDLC-SEA）にVHHK向けの独立セクションなし。<br>通信手段: <b>VHF音声（主）</b>。",
     "reg_rules": "<b>出典: RM_REGPROC SEA.3（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A / C / G（管制空域内はIFR必須）<br><b>TA</b>: 9,000ft / <b>TL</b>: FL110（QNH ≤979hPaの場合はFL120）<br><b>RVSM</b>: FL290〜FL410<br><b>CFL遵守</b>: TMA退出点に到達する前に指定CFLに達すること<br><b>監視ルート</b>（MNT）: A1 / A461 / A583 / B330 / G86 / R473 / L642 / M771 / P901",
     "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.1 EMERG PROC - SEA (HKG)"
   },
@@ -175,8 +175,8 @@
       "main": "Taipei Control 132.5",
       "emergency": "121.5"
     },
-    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
-    "cpdlc_procedure": "<b>2-03にはTaipei FIR固有のCPDLC手順記載なし</b>。<br>§2.2.18（CPDLC-SEA）にRCAA向けの独立した項なし。台北FIRはレーダー管制環境でVHF音声通信が主体。DCL（Departure Clearance via Datalink）はRCTP・RCSSで利用可能（ARINC 623-2 / EUROCAE ED-85A準拠機のみ）。<br>通信手段: <b>VHF音声（主）</b>。",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.7.7（CONTINGENCY PROC - SEA / Taiwan）</b><br>・§2.1.7.7.1 General Contingency: <b>NIL</b>（固有手順なし）<br>・§2.1.7.7.2 Weather Deviation: <b>General Proceduresを参照</b>（ICAO標準を適用）<br>　ATCクリアランス優先取得。取得不能時は使用中周波数および121.5 MHzでブロードキャスト",
+    "cpdlc_procedure": "<b>Taipei FIR（RCAA）: CPDLC非対応（§2.2.18に独立セクションなし）</b><br>台北FIRはレーダー管制環境でVHF音声通信が主体。<br>§2.2.18（CPDLC-SEA）にRCAA向けの独立セクションなし。<br>DCL（Departure Clearance via Datalink）はRCTP・RCSSで利用可能（ARINC 623-2 / EUROCAE ED-85A準拠機のみ）。<br>通信手段: <b>VHF音声（主）</b>。",
     "reg_rules": "<b>出典: RM_REGPROC SEA.5（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（FL201〜FL600）<br><b>TA</b>: 11,000ft / <b>TL</b>: FL130<br><b>RVSM</b>: FL290〜FL410<br><b>ADIZ手順</b>: 5分以上の遅延 / 20NM以上の横偏差 / 2,000ft以上の高度偏差が発生した場合、ROCAF（台湾空軍）による迎撃の可能性あり<br><b>SSR（ADIZ進入時）</b>: INT DEP 26xx / 62xx",
     "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.3 EMERG PROC - SEA (Taiwan)"
   },
@@ -189,7 +189,7 @@
     "rvsm": true,
     "rnp2": false,
     "hf_required": false,
-    "cpdlc": "Limited",
+    "cpdlc": "Available",
     "position_report": "At compulsory reporting points. HF position reports for oceanic portions.",
     "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.2（EMERG PROC - SEA / Philippines）</b><br>・VMC/IMC: <b>ICAO Standard手順</b>を適用<br>・<b>空港着陸時（無線故障）</b>:<br>　通常トラフィック・サーキットに合流し管制塔からの光信号を待機<br>　光信号なし → 管制塔横断時に着陸灯を2回明滅（軽飛行機は翼を振る）<br>　それでも光信号なし かつ 滑走路クリア → そのままアプローチ・着陸<br>　着陸後直ちに管制塔に電話連絡",
     "special_notes": [
@@ -200,7 +200,7 @@
       "main": "Manila Control 128.3",
       "emergency": "121.5"
     },
-    "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.7.5（CONTINGENCY PROC - SEA / Philippines）</b><br>・<b>ラテラルオフセット</b>: 指定ルートから<b>5.0 NM（9.3 km）</b>逸脱<br>・<b>垂直分離</b>: FL290以下→<b>500ft（150m）</b> / FL410以上→<b>1,000ft（300m）</b><br>　（FL290〜FL410間はRVSM 1,000ft通常分離を適用）<br>・ATCクリアランスを優先取得。取得不能時は上記手順を適用し、121.5 MHz＋使用中周波数でブロードキャスト",
     "cpdlc_procedure": "<b>出典: 2-03 §2.2.18.1.4（CPDLC - SEA / Manila FIR）</b><br><b>AFNログオン</b>: RPHI（NAIA出発前 または FIR進入<b>10〜25分前</b>）<br><br><b>セクター別通信主体（FANS 1/A対応機）:</b><br>・<b>EASTセクター</b>（A582, A590, G578）: <b>CPDLC</b>主 / HF副<br>・<b>NORTH/SOUTH/WESTセクター</b>（M501, G467, A583, P515, R337, A339, B462, B473, N892, L625, L628, M772, M765, W17）: <b>VHF→HF</b>主 / CPDLC副<br>※VHFエリア内ではVHFが通信主体<br><br><b>ADS-C</b>: FIR境界通過時にADSポジションレポート送信 → 全強制ポジションレポート義務を充足<br><br><b>メッセージ手順:</b><br>・Readback不要<br>・<b>WILCO</b> = クリアランス全内容への同意。<b>ROGER・AFFIRM</b>はクリアランス応答に使用不可<br>・1ダウンリンクメッセージあたりのクリアランス要求は<b>1件のみ</b><br>・フリーテキストは既定フォーマット要素が存在しない場合のみ使用<br><br><b>転送・終了:</b><br>・次FIRがデータリンク対応: FIR境界<b>30〜35分前</b>にNDA送信 → 境界でEND SERVICE<br>・次FIRがデータリンク非対応: CONTACT uplink（10分前）→ WILCO受信後 END SERVICE<br><br><b>接続障害時:</b> VHF/HF音声に即切替。復帰は管制指示で新規AFNログオン",
     "reg_rules": "<b>出典: RM_REGPROC SEA.4（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（FL200〜UNL）および洋上空域<br><b>TA</b>: 11,000ft / <b>TL</b>: FL130<br><b>RVSM</b>: FL290〜FL410<br><b>ADIZ手順</b>: 最終CRP（Compulsory Reporting Point）通過時にETAを報告。ADIZ内は<b>30分ごと</b>にポジションレポート<br><b>SSR（INT DEP）</b>: 2700〜2777<br><b>飛行計画提出</b>: 出発または FIR進入の<b>60分以上前</b><br><b>監視ルート</b>（MNT）: A582 / A590 / B462 / A461<br><b>PBCS分離</b>: RCP240/RSP180要件を満たす機に対して利用可能",
     "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.4.2 EMERG PROC - SEA (Philippines)"
@@ -317,10 +317,10 @@
     "rvsm": true,
     "rnp2": false,
     "hf_required": false,
-    "cpdlc": "Optional",
-    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast intentions on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Singapore FIR specific</b>: Contact Singapore Control on assigned VHF; guard 121.5 MHz.<br>　HF: Contact Singapore Radio on published HF frequencies if VHF unavailable.",
-    "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・Singapore FIR: SLOP (right ≤2 NM) available outside surveillance cover (2-05 SEA.1.8.1).",
-    "cpdlc_procedure": "<b>Singapore FIR: CPDLC Available (designated oceanic routes)</b><br>CPDLC is available in non-radar oceanic portions of Singapore FIR.<br>・SLOP applies outside surveillance cover only (right offset, ≤2 NM).<br>・RNP10+CPDLC logon enables 50 NM longitudinal separation.<br>Ref: JAL ISSUE 2.15 CPDLC-SEA; 2-05 SEA.1.8.1.",
+    "cpdlc": "Available",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.8（EMERG PROC - SEA / Singapore）</b><br>・<b>全通信途絶</b>: Sq7600<br>・<b>VMC・昼間</b>: VFRで最寄りの適切な空港に着陸<br>・<b>IMC・夜間</b>: 目的地へ飛行継続<br>　EATまたはETAのいずれか早い方の時刻に降下開始 → ホールドパターン<br>　<b>SAMKO Hold（4,000ft）</b>でATCの応答を待つ<br>　応答なし：KULオルタネートの場合→<b>A457 / FL200</b>、CGKオルタネートの場合→<b>B470 / FL290</b><br>・<b>Emergency</b>: Sq7700; MAYDAY宣言（使用中周波数または121.5 MHz）",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.7.1（CONTINGENCY PROC - SEA / Singapore）</b><br>・<b>ラテラルオフセット</b>: 指定ルートから<b>5.0 NM</b>逸脱（右が原則）<br>　まず少なくとも<b>30°</b>の旋回を行い、オフセット方向に向かうこと<br>・<b>垂直分離</b>:<br>　FL290以下→<b>500ft</b>（下に変更）<br>　FL290〜FL410 → RVSMレイヤー内で1,000ft分離<br>　FL410以上→<b>1,000ft</b><br>・ATCクリアランス優先取得。取得不能時は上記手順を実施し、121.5 MHzでブロードキャスト",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.2.18.1.1（CPDLC - SEA / Singapore FIR）</b><br><b>AFNログオン</b>: <b>WSJC</b>（FIR進入<b>10分前</b>までにログオン）<br><br><b>サービス内容（FANS-1/A装備機）:</b><br>　レーダー/ADS-B圏外の洋上区間でCPDLCおよびADSが利用可能<br>　対応サービス: Emergency alerting / ポジションレポートdownlink / ATCクリアランスuplink / Free text<br><br><b>ログオン手順:</b><br>1. 受信FIR入境時は<b>10分前</b>にWSJCへ手動AFNログオン<br>2. Singapore FIR内出発機: 出発前にWSJCへログオン可（VHF/HFで接続不能を通知）<br>3. レーダー/ADS-B圏外ではCPDLCが主通信手段<br>4. 最初の強制報告点でCPDLCポジションレポート送信<br><br><b>メッセージ手順:</b><br>・CPDLC対話はCPDLCで、音声対話は音声で完結<br>・<b>WILCO</b> = クリアランス全内容への同意（Readback不要）<br>・<b>AFFIRM</b>はクリアランスの承諾として不可<br>・1ダウンリンクメッセージにクリアランス要求は<b>1件のみ</b><br>・HF FL報告: 初回HF接触時にFLも通報<br><br><b>転送・終了:</b><br>・FIR境界またはレーダー圏内進入時に自動終了<br>・CONTACT [unit][freq] + END SERVICE（WILCO受信後）<br><br><b>データリンク障害時:</b> VHF/HF音声に即切替。再確立は管制指示で新規AFNログオン",
     "position_report": "Request clearance from appropriate authority not later than 10 min VHF or 20 min HF before joining or crossing airway",
     "contacts": {
       "main": "Singapore Control",
@@ -345,10 +345,10 @@
     "rvsm": true,
     "rnp2": false,
     "hf_required": false,
-    "cpdlc": "Optional",
-    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast intentions on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Lumpur FIR specific</b>: Contact Lumpur Control on assigned VHF or HF.<br>　Guard 121.5 MHz. HF backup frequencies available via Lumpur Radio.",
-    "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・KL FIR oceanic: SLOP (right ≤2 NM) on P628/L510/N571/P574/P627 in non-radar segment.",
-    "cpdlc_procedure": "<b>Kuala Lumpur FIR: CPDLC on oceanic routes</b><br>CPDLC logon enables 50 NM longitudinal separation (vs 80 NM without) in non-radar oceanic airspace.<br>Applicable routes: P628 (GIVAL–GREX), L510 (GIVAL–EMRAN), N571 (VAMPI–IGOGU),<br>P574 (ANSAX–NOPEK), P627 (RUSET–POVUS).<br>Ref: 2-05 SEA.1.8 (KL FIR SLOP section); SAS.4.2.5.",
+    "cpdlc": "Available",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.6（EMERG PROC - SEA / Malaysia / KL TMA）</b><br>・<b>全通信途絶（KL TMA内）</b>: Sq7600<br>・CPDLC/SATCOMで通信再確立を試みる<br>・<b>到着機</b>: 指定STARで進入 → 着陸方向を確認して降下<br>　RWY32R向け: <b>PUGER / KAKAK / SAROX / NIREN / GUPTA / SALAX 1G</b> のSTAR使用<br>　→ <b>EGURIホールド</b>でATCの交信回復を待つ<br>　ETAから<b>30分</b>以内に連絡取れない場合 → アプローチ開始<br>・<b>Emergency</b>: Sq7700; MAYDAY宣言（使用中周波数または121.5 MHz）",
+    "contingency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.7.3（CONTINGENCY PROC - SEA / Malaysia / Kuala Lumpur FIR）</b><br>・<b>ラテラルオフセット</b>: 指定ルートから<b>15 NM</b>逸脱（※25 NMではなく15 NM）<br>　ATCクリアランス優先取得。取得不能時に15 NMオフセットを実施<br>・<b>悪天候回避（Weather Deviation）</b>:<br>　<b>§2.1.7.2.2（Jakarta/Ujung Pandang FIR手順）を参照・適用</b><br>　逸脱が10NMを超える場合→300ftの高度変更（東行き/西行きで方向を選択）<br>・使用中周波数および121.5 MHzでブロードキャスト",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.2.18.1.5（CPDLC - SEA / Within Bay of Bengal in Kuala Lumpur FIR）</b><br><b>AFNログオン</b>: <b>WMFC</b>（FIR進入<b>10分前</b>までにログオン）<br><br><b>適用ルート（ベンガル湾内、H24）:</b><br>　N571 / P574 / P627 / L645 / P628 / B466 / L510<br><br><b>通信手段:</b><br>　データリンク確立機: <b>CPDLC</b>でポジションレポート送信可（HF RTFの代替）<br>　バックアップVHF: <b>133.4 MHz / 133.7 MHz</b>（Lumpur Radar）<br>　バックアップHF: <b>5,670 kHz / 6,556 kHz / 11,285 kHz</b><br><br><b>ログオン手順:</b><br>・出発機: 出発前にWMFCへログオン可<br>・進入機: FIR進入10分前にWMFCへログオン（接続不能時はVHF/HFで通知）<br>・PDC（Pre-Departure Clearance）はCPDLC経由では利用不可<br><br><b>メッセージ手順:</b><br>・CPDLC対話はCPDLCで完結、音声対話は音声で完結<br>・<b>WILCO</b> = クリアランス全内容への同意（Readback不要）<br>・<b>AFFIRM</b>はクリアランスの承諾として不可<br>・移管フレーズ: 「TRANSFER TO LUMPUR CONTROL ON DATA LINK [position]; MONITOR [VHF] ALTERNATE HF [Freq]」<br><br><b>転送・終了:</b><br>　次FIRがデータリンク対応: 境界30分前にNDA送信 → 境界でEND SERVICE<br>　次FIRが非対応: FIR境界でCPDLC終了<br><br><b>データリンク障害時:</b> VHF/HFに即切替。復帰は新規AFNログオン",
     "position_report": "Request clearance not later than 10 min VHF or 20 min HF before joining or crossing airway/TMA/CTR",
     "contacts": {
       "main": "Lumpur Control",
@@ -373,7 +373,7 @@
     "rnp2": false,
     "hf_required": false,
     "cpdlc": "Optional",
-    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast intentions on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Kota Kinabalu FIR specific</b>: Contact Kota Kinabalu Control on VHF; guard 121.5 MHz.<br>　HF backup when beyond VHF range.",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.4（EMERG PROC - SEA / Brunei Darussalam）</b><br>（ブルネイ上空での通信途絶手順。Kota Kinabalu FIR内ブルネイ空域に適用）<br>・<b>VMC・昼間</b>: VFR（視程3,200m以上）で<b>最寄りの適切な空港</b>に着陸<br>・<b>IMC / 夜間 / VFR条件未満</b>: <b>目的地へ飛行継続</b><br>　飛行計画（フライトプラン）に記載された代替空港を維持<br>　着陸に必要な計画・代替の詳細情報を保持すること<br>・<b>Radio Failure（Sq7600）</b>: 全チャンネルで再確立を試みる。121.5 MHz常時モニター<br>・<b>Emergency</b>: Sq7700; MAYDAY宣言（使用中周波数または121.5 MHz）",
     "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・Kota Kinabalu FIR: Oceanic contingency – broadcast on current freq + 121.5 + 123.45 MHz.",
     "cpdlc_procedure": "<b>Kota Kinabalu FIR: CPDLC limited availability</b><br>VHF radar coverage in most of the FIR. CPDLC not routinely required.<br>RNP10 operations use procedural/radar separation (10 min or 50 NM with DCPC).<br>HF communication used in remote oceanic portions east of Borneo.",
     "position_report": "Request clearance not later than 10 min VHF or 20 min HF before joining or crossing airway/TMA/CTR",
@@ -480,9 +480,9 @@
     "rnp2": false,
     "hf_required": true,
     "cpdlc": "Optional",
-    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast intentions on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Yangon FIR specific</b>: Contact Yangon ACC on VHF; guard 121.5 MHz.<br>　123.45 MHz air-to-air if unable to contact ATC.",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.7（EMERG PROC - SEA / Myanmar）</b><br>・<b>VMC</b>: <b>ICAO Standard手順</b>を適用<br>・<b>IMC</b>: <b>ICAO Standard手順</b>を適用<br>（Myanmar固有手順なし。ICAO Annex 2 / ICAO Doc 4444に準拠）<br>・<b>Radio Failure（Sq7600）</b>:<br>　レーダー環境: 現在FLを維持<br>　非レーダー: 最終指定／予定／巡航FLで飛行<br>　121.5 MHz＋123.45 MHzで意図をブロードキャスト<br>・<b>Emergency</b>: Sq7700; MAYDAY宣言（使用中周波数または121.5 MHz）",
     "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・Yangon FIR: 123.45 MHz air-to-air coordination strongly recommended for conflicting traffic.",
-    "cpdlc_procedure": "<b>Yangon FIR: CPDLC not routinely available</b><br>VHF-based FIR. CPDLC not implemented. HF used for areas beyond VHF range.<br>RVSM applicable FL290–FL410 (2-05 SEA). FLAS applied on L759, M770.",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.2.18.1.3（CPDLC-SEA / Yangon FIR）</b><br>「<b>CPDLC-SAS MYANMAR §2.2.17.2 - MYANMARを参照</b>」<br>（SASセクションのMyanmar CPDLC手順が適用。VHF-based FIRで、FIR遠隔域ではHF使用）",
     "position_report": "Standard IFR position reports required",
     "contacts": {
       "main": "Yangon ACC / Yangon Radio (HF)",
