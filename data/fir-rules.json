@@ -306,7 +306,7 @@
       "emergency": "121.5"
     },
     "contingency_procedure": "<b>ICAO Standard（2-04 RM Basic §5）</b><br>可能な限り事前にATCから改訂クリアランスを取得する。<br>取得できない場合：<br>・組織的経路/トラックから逸脱（可能なら離れる方向へ）<br>・使用中周波数および121.5 MHz（バックアップ：123.45 MHz）でブロードキャスト：<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・ACAS（装備時）および目視で相反トラフィック監視<br>・全外部灯火点灯（運航制限に準拠）",
-    "cpdlc_procedure": "<b>Incheon FIR（RKRR）はCPDLC対応FIR</b>。<br>2-03 RM_JALISSUE_INTの当該セクションにIncheon FIR向けCPDLC手順の詳細記載あり（本セッションでは未抽出）。<br>通信手段: <b>VHF音声（主）</b>、CPDLC（Available）。",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.2.16（CPDLC - ROK）</b><br><b>AFNログオン:</b><br>・<b>RKDA</b>（Daegu ACC）/ <b>RKRR</b>（Incheon ACC）<br><br><b>適用条件:</b><br>・<b>FL160〜FL600</b>のフライト<br>・<b>1500〜1859 UTC</b>（ピーク時間帯）<br>・CPDLCは<b>義務ではない</b>（Not Mandatory）<br>・<b>音声通信（VHF）が主体</b>、CPDLCは補助的手段<br><br><b>ログオン手順:</b><br>・Incheon FIR進入前にRKRR（またはRKDA）へAFNログオン<br>・CPDLCサービス確立後は必要に応じてCPDLC使用可<br><br><b>データリンク障害時:</b> VHF音声に即切替（音声が主のため通常影響なし）",
     "reg_rules": "<b>出典: RM_REGPROC ROK（Rev.26.2 / 16 APR 2026）</b><br><b>空域分類</b>: Class A（航空路FL200〜FL600）/ Class B（Incheon・Gimpo・Jeju主要空港周辺）/ Class D（航空路MEA〜FL200）<br><b>PBN要件</b>: <b>RNAV2</b>（FL140以上の航空路。FL290以上のオーバーフライト）/ <b>RNAV1</b>（SID・STAR）<br><b>速度制限</b>: 10,000ft MSL以下は<b>250kt IAS</b>以下（B Class: 250kt / C・D Class: 250kt / 空港4NM以内2,500ft以下は200kt）<br><b>TA</b>: 14,000ft / <b>TL</b>: FL140<br><b>高度計規正（最低使用FL）</b>: QNH 1013.2hPa以上→FL140 / 1012.9〜996.3hPa→FL145 / 995.9〜979.3hPa→FL150 / 979.0〜962.4hPa→FL155 / 962.1〜945.5hPa→FL160<br><b>RVSM</b>: FL290〜FL410（1,000ft垂直間隔）<br><b>FLAS（主要ルート）</b>:<br>・<b>A593</b>（SADLI〜NIRAT）: NB（000〜179°）FL270/330/350/370/410 / SB（180〜359°）FL260/320/340/360/380<br>・<b>A586</b>（RUGMA〜CJU）: NB FL270/330/350/370/410 / SB FL260/320/340/360/380<br>・<b>G203</b>（PSN〜KALEK）: NB FL290/310/330/350/370/390/410 / SB FL300/340/380<br>・<b>G339</b>（PSN〜INVOK）: NB FL290/310/330/350/370/390/410 / SB FL320/360/400<br>・<b>A582</b>（PSN〜APELA）: NB FL290/310/330/350/370/390/410 / SB FL300/340/380<br><b>SLOP</b>: G597/Y697/B467/Y437/L512（KARBU〜KAE/ANDOL間、2200〜1300UTC）→ EB/WB共に<b>3NM右</b>オフセット。A582/Y782: EB（KALOD→BITUX）2NM右 / WB（OSPOT→TGU）3NM右<br><b>飛行計画提出</b>: 出発・FIR進入の<b>1時間以上前</b><br><b>CDR</b>: CDR1（AIP）/ CDR2（NOTAM）/ CDR3（ATC戦術クリアランス）<br><b>ATFM</b>: ATCC（Air Traffic Command Center）がIncheon FIR全域のATFMを提供",
     "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)"
   },
@@ -728,8 +728,9 @@
     "rnp2": false,
     "hf_required": false,
     "cpdlc": "Optional",
-    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast intentions on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Beijing FIR specific</b>: Contact Beijing ACC on VHF; guard 121.5 MHz or 123.45 MHz.<br>　Blind-transmit: ALL freq + 121.5 + 123.45 MHz: 'TRANSMITTING BLIND [callsign] [intent]'.",
-    "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・Beijing FIR: Contingency descent – notify ATC; TCAS monitor; broadcast blind if ATC contact lost.<br>　Ref: 2-05 PRC.7.4.6 Contingency Actions.",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC",
+    "contingency_procedure": "<b>出典: RM_REGPROC PRC §7.4.6（CONTINGENCY PROC - PRC）</b><br>・ATCクリアランスを優先取得。取得不能時:<br>・<b>30°右旋回</b>→指定ルートから<b>20km（5NM）右側</b>のトラックに乗る<br>・指定ルートに平行なトラックで飛行継続<br>・新しいフライトレベルへ上昇または降下<br>・指定ルートへ復帰<br>・<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト:<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>Beijing FIR: CPDLC limited (not routinely available)</b><br>PRC CPDLC is designated primarily for western China routes (L888, Y1, Y2 in Lanzhou/Urumqi area).<br>Beijing FIR (domestic routes) uses VHF voice as primary communication.<br>No CPDLC mandate for Beijing FIR en-route operations.<br>Blind transmission on 121.5 MHz if communication lost. Ref: 2-03 §2.2.15 (CPDLC-PRC).",
     "position_report": "Report on entry to/exit from China FIRs; standard IFR position reports on ATS routes",
     "contacts": {
@@ -755,8 +756,9 @@
     "rnp2": false,
     "hf_required": false,
     "cpdlc": "Optional",
-    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast intentions on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Wuhan FIR specific</b>: Contact Wuhan ACC on VHF or 121.5 MHz; 123.45 MHz backup.<br>　Blind-transmit on all assigned freq + 121.5 + 123.45 MHz if radio failure.",
-    "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・Wuhan FIR: Contingency – notify ATC; descend by ±500 ft then ±1000 ft if needed; TCAS monitor.<br>　Ref: 2-05 PRC.7.4.6.",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC",
+    "contingency_procedure": "<b>出典: RM_REGPROC PRC §7.4.6（CONTINGENCY PROC - PRC）</b><br>・ATCクリアランスを優先取得。取得不能時:<br>・<b>30°右旋回</b>→指定ルートから<b>20km（5NM）右側</b>のトラックに乗る<br>・指定ルートに平行なトラックで飛行継続<br>・新しいフライトレベルへ上昇または降下<br>・指定ルートへ復帰<br>・<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト:<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>Wuhan FIR: CPDLC not routinely available</b><br>VHF-based domestic FIR. CPDLC not mandated. PRC CPDLC applies only on<br>western routes (L888, Y1, Y2); not applicable in Wuhan FIR.<br>Primary: VHF voice. Blind transmission on 121.5 + 123.45 MHz if contact lost.",
     "position_report": "Standard IFR position reports on ATS routes; report on entry/exit from China FIRs",
     "contacts": {
@@ -781,8 +783,9 @@
     "rnp2": false,
     "hf_required": false,
     "cpdlc": "Optional",
-    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast intentions on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Kunming FIR specific</b>: Contact Kunming ACC on VHF or 121.5 / 123.45 MHz.<br>　Blind-transmit on all assigned freq + 121.5 + 123.45 MHz if radio failure.",
-    "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・Kunming FIR: Contingency – notify ATC; TCAS monitor; broadcast blind if ATC contact lost.<br>　Ref: 2-05 PRC.7.4.6.",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC",
+    "contingency_procedure": "<b>出典: RM_REGPROC PRC §7.4.6（CONTINGENCY PROC - PRC）</b><br>・ATCクリアランスを優先取得。取得不能時:<br>・<b>30°右旋回</b>→指定ルートから<b>20km（5NM）右側</b>のトラックに乗る<br>・指定ルートに平行なトラックで飛行継続<br>・新しいフライトレベルへ上昇または降下<br>・指定ルートへ復帰<br>・<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト:<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>Kunming FIR: CPDLC limited availability</b><br>PRC CPDLC available on designated L888 route (KADKI–XKC, Lanzhou/Urumqi area).<br>Kunming FIR (domestic/China–SE Asia routes) primarily VHF voice.<br>Specific CPDLC availability depends on route; confirm pre-flight.<br>Ref: 2-03 §2.2.15 (CPDLC-PRC).",
     "position_report": "Standard IFR position reports on ATS routes; report on entry/exit from China FIRs",
     "contacts": {
@@ -808,8 +811,9 @@
     "rnp2": false,
     "hf_required": false,
     "cpdlc": "Optional",
-    "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700; declare MAYDAY on current freq or VHF 121.5 MHz.<br>・<b>Radio Failure (Sq7600)</b>:<br>　Radar env: maintain current FL.<br>　Non-radar: fly last assigned / expected / cruise FL.<br>　Blind-broadcast intentions on 121.5 MHz + 123.45 MHz (callsign, FL, position, intention).<br>・<b>Shenyang FIR specific</b>: Contact Shenyang ACC on VHF or 121.5 / 123.45 MHz.<br>　Blind-transmit on all assigned freq + 121.5 + 123.45 MHz if radio failure.",
-    "contingency_procedure": "<b>ICAO Standard</b><br>Obtain revised ATC clearance before deviating where possible.<br>If unable: deviate from track (right preferred).<br>Broadcast on current freq + 121.5 MHz + 123.45 MHz:<br>　callsign・FL・position (incl. route/track code)・intention・next reporting point.<br>・Shenyang FIR: Contingency – notify ATC; TCAS monitor; broadcast blind if ATC contact lost.<br>　Ref: 2-05 PRC.7.4.6.",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC",
+    "contingency_procedure": "<b>出典: RM_REGPROC PRC §7.4.6（CONTINGENCY PROC - PRC）</b><br>・ATCクリアランスを優先取得。取得不能時:<br>・<b>30°右旋回</b>→指定ルートから<b>20km（5NM）右側</b>のトラックに乗る<br>・指定ルートに平行なトラックで飛行継続<br>・新しいフライトレベルへ上昇または降下<br>・指定ルートへ復帰<br>・<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト:<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>Shenyang FIR: CPDLC not routinely available</b><br>VHF-based domestic FIR. CPDLC not mandated in Shenyang FIR.<br>PRC CPDLC applies only on western routes (L888, Y1, Y2); not applicable here.<br>Primary: VHF voice. Blind transmission on 121.5 + 123.45 MHz if contact lost.",
     "position_report": "Standard IFR position reports on ATS routes; report on entry/exit from China FIRs",
     "contacts": {
@@ -826,6 +830,60 @@
       "ADS-B mandatory in ADS-B control airspace; G597 AGAVO transition also applicable"
     ],
     "reg_rules": "<b>Metric FLs (PRC.7.4.4):</b> ATC clears in meters; pilot flies in feet using China RVSM conversion table. Difference never more than 30 m.<br><b>RVSM (PRC.7.4.1):</b> 8,900 m (FL291) to 12,500 m (FL411) inclusive. 300 m (1,000 ft) VSM between RVSM-approved aircraft.<br><b>FLAS (PRC.7.4.3):</b> EB (true track 0-179°): FL411/391/371/351/331/311/291. WB (true track 180-359°): FL401/381/361/341/321/301.<br><b>FL Transition at G597/AGAVO (PRC.7.4.7.5):</b> WB (entering China from Incheon): at NOPIK — FL300→9200m/FL320→9800m/FL340→10400m/FL360→11000m/FL380→11600m/FL400→12200m. EB (exiting China to Incheon): at GONAV — reverse conversion (FL291→FL290, FL311→FL310, etc.). Transition also at A593/SADLI (Shanghai ACC - Fukuoka ACC): EB FL250/290/310/390, WB FL240/280/300/400.<br><b>SLOP (PRC.7.4.5):</b> Non-radar airspace: 1 or 2 NM right only. Radar airspace: ATC approval required.<br><b>ADS-B (PRC.5):</b> Mandatory in ADS-B control airspace. B1/B2 in FPL item 10. Waiver from CAAC required if not equipped.<br><b>Contingency (PRC.7.4.6):</b> Level change: 30° right, 20 km out (5 NM right), parallel, climb/descend, return. Broadcast on 121.5 MHz and 123.45 MHz."
+  },
+  "ZWUQ": {
+    "name": "Urumqi FIR",
+    "icao": "ZWUQ",
+    "country": "People's Republic of China",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available",
+    "position_report": "FIR境界の15〜20分前にATCへ通報。各報告点通過時に即時報告。",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC",
+    "contingency_procedure": "<b>出典: RM_REGPROC PRC §7.4.6（CONTINGENCY PROC - PRC）</b><br>・ATCクリアランスを優先取得。取得不能時:<br>・<b>30°右旋回</b>→指定ルートから<b>20km（5NM）右側</b>のトラックに乗る<br>・指定ルートに平行なトラックで飛行継続<br>・新しいフライトレベルへ上昇または降下<br>・指定ルートへ復帰<br>・<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト:<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・全外部灯火点灯（運航制限に準拠）",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.2.15（CPDLC - PRC）</b><br><b>AFNログオン</b>: <b>ZWWW</b>（Urumqi ACC; 非CPDLCエリアから進入時は境界<b>15分前</b>にログオン）<br><b>ACARS Address</b>: URCE1YA<br><br><b>適用ルート:</b><br>・<b>Y1・Y2</b>（Urumqi ACC管轄）<br><br><b>ログオン手順:</b><br>・CPDLCサービス外エリアから進入する場合: 境界<b>15分前</b>にURCE1YA（Urumqi ACC）へAFNログオン<br><br><b>通信手段:</b><br>・CPDLCサービス区間: CPDLC = 主<br>・VHF/HF = 副（バックアップ）<br><br><b>データリンク障害時:</b> VHF/HF音声に即切替",
+    "special_notes": [
+      "PRC共通規制適用（メートル制FL・RVSM・SLOP・ADS-B）",
+      "Y1・Y2ルート：Urumqi ACC（ZWWW）がCPDLCサービス提供",
+      "非CPDLCエリアからの進入時は15分前にログオン（§2.2.15）",
+      "FLAS EB (0-179°): FL411/391/371/351/331/311/291; WB (180-359°): FL401/381/361/341/321/301"
+    ],
+    "contacts": {
+      "main": "Urumqi ACC (ZWWW)",
+      "emergency": "121.5 / backup 123.45"
+    },
+    "reg_rules": "<b>出典: RM_REGPROC PRC（Rev.26.2 / 16 APR 2026）</b><br>ZWUQはPRC全FIR共通規制が適用される。<br><b>空域分類</b>: Class A（6,000m〜20,000m）IFR専用<br><b>⚠️ ATCはメートル単位でクリアランス発出</b>: <b>China FLAS変換表</b>でフィートに換算して飛行<br><b>RVSM</b>: FL291〜FL411（8,900m〜12,500m）、300m（≈1,000ft）垂直間隔<br><b>SLOP</b>: 非レーダー空域→1NMまたは2NM右 / レーダー空域→ATCクリアランス要<br><b>ADS-B</b>: 全機必須（2020年12月〜）<br><b>CPDLC</b>: Y1・Y2ルートで提供。Urumqi ACC（ZWWW/URCE1YA）へ15分前logon<br><b>FIR境界通過</b>: 15〜20分前にATCへ通報"
+  },
+  "ZLHW": {
+    "name": "Lanzhou FIR",
+    "icao": "ZLHW",
+    "country": "People's Republic of China",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available",
+    "position_report": "FIR境界の15〜20分前にATCへ通報。各報告点通過時に即時報告。",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §2.1.1 EMERG PROC - PRC",
+    "contingency_procedure": "<b>出典: RM_REGPROC PRC §7.4.6（CONTINGENCY PROC - PRC）</b><br>・ATCクリアランスを優先取得。取得不能時:<br>・<b>30°右旋回</b>→指定ルートから<b>20km（5NM）右側</b>のトラックに乗る<br>・指定ルートに平行なトラックで飛行継続<br>・新しいフライトレベルへ上昇または降下<br>・指定ルートへ復帰<br>・<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト:<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・全外部灯火点灯（運航制限に準拠）",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.2.15（CPDLC - PRC）</b><br><b>AFNログオン</b>: <b>ZLLL</b>（Lanzhou ACC; 非CPDLCエリアから進入時は境界<b>15分前</b>にログオン）<br><b>ACARS Address</b>: LHWE1YA<br><br><b>適用ルート:</b><br>・<b>L888</b>（KADKI〜XKC区間、Lanzhou ACC管轄）<br><br><b>ログオン手順:</b><br>・CPDLCサービス外エリアから進入する場合: 境界<b>15分前</b>にLHWE1YA（Lanzhou ACC）へAFNログオン<br><br><b>通信手段:</b><br>・CPDLCサービス区間: CPDLC = 主<br>・VHF/HF = 副（バックアップ）<br><br><b>データリンク障害時:</b> VHF/HF音声に即切替",
+    "special_notes": [
+      "PRC共通規制適用（メートル制FL・RVSM・SLOP・ADS-B）",
+      "L888ルート（KADKI〜XKC）：Lanzhou ACC（ZLLL）がCPDLCサービス提供",
+      "非CPDLCエリアからの進入時は15分前にログオン（§2.2.15）",
+      "FLAS EB (0-179°): FL411/391/371/351/331/311/291; WB (180-359°): FL401/381/361/341/321/301"
+    ],
+    "contacts": {
+      "main": "Lanzhou ACC (ZLLL)",
+      "emergency": "121.5 / backup 123.45"
+    },
+    "reg_rules": "<b>出典: RM_REGPROC PRC（Rev.26.2 / 16 APR 2026）</b><br>ZLHWはPRC全FIR共通規制が適用される。<br><b>空域分類</b>: Class A（6,000m〜20,000m）IFR専用<br><b>⚠️ ATCはメートル単位でクリアランス発出</b>: <b>China FLAS変換表</b>でフィートに換算して飛行<br><b>RVSM</b>: FL291〜FL411（8,900m〜12,500m）、300m（≈1,000ft）垂直間隔<br><b>SLOP</b>: 非レーダー空域→1NMまたは2NM右 / レーダー空域→ATCクリアランス要<br><b>ADS-B</b>: 全機必須（2020年12月〜）<br><b>CPDLC</b>: L888ルート（KADKI〜XKC）で提供。Lanzhou ACC（ZLLL/LHWE1YA）へ15分前logon<br><b>FIR境界通過</b>: 15〜20分前にATCへ通報"
   },
   "YBBB": {
     "name": "Brisbane FIR",
