@@ -712,6 +712,8 @@ function openRouteFirPanel(route) {
 function openFirPanel(firId, firLabel) {
   const rules = FIR_RULES[firId];
   const savedNote = userNotes[firId] || '';
+  const firFeature = FIR_BOUNDARIES.features.find(f => f.properties.id === firId);
+  const firColor = firFeature ? firFeature.properties.color : '#58a6ff';
 
   // Build My Note tab HTML (shared between both cases)
   const allNotesCount = Object.keys(userNotes).filter(k => userNotes[k]).length;
@@ -746,7 +748,7 @@ function openFirPanel(firId, firLabel) {
       <div class="panel-drag-handle"></div>
       <div class="panel-header">
         <div>
-          <div class="panel-fir-name">${firLabel}</div>
+          <div class="panel-fir-name" style="color:${firColor};">${firLabel}</div>
           <div class="panel-country">${firId}</div>
         </div>
         <button id="panel-close">✕</button>
@@ -790,7 +792,7 @@ function openFirPanel(firId, firLabel) {
     <div class="panel-drag-handle"></div>
     <div class="panel-header">
       <div>
-        <div class="panel-fir-name">${rules.name}</div>
+        <div class="panel-fir-name" style="color:${firColor};">${rules.name}</div>
         <div class="panel-country">${rules.country} — ${firId}</div>
       </div>
       <button id="panel-close">✕</button>
