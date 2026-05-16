@@ -397,7 +397,7 @@ function ofpPolyline(routeId, color, dashed) {
       });
       if (offset === 0) {
         firMarker.bindTooltip(
-          `<span class="fir-tip-fir">${w.fir}</span> FIR`,
+          `<span class="fir-tip-fir" style="color:${color};">${w.fir}</span> FIR`,
           { className: 'fir-tip', direction: 'top', offset: [0, -8] }
         );
       }
