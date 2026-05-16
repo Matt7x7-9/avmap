@@ -84,7 +84,8 @@ FIR_BOUNDARIES.features.forEach(feature => {
       className: '',
       html: `<div style="color:${color};font-size:15px;font-weight:700;
                          letter-spacing:0.5px;white-space:nowrap;
-                         text-shadow:0 0 5px #000,0 0 5px #000,0 0 5px #000;
+                         filter:brightness(1.8);
+                         text-shadow:0 0 4px #fff,0 0 4px #fff,0 0 4px #fff;
                          cursor:pointer;padding:4px;
                          transform:translate(-50%,-50%);">
                ${labelText}
