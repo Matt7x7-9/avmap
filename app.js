@@ -82,9 +82,9 @@ FIR_BOUNDARIES.features.forEach(feature => {
     const labelText = feature.properties.label;
     const label = L.divIcon({
       className: '',
-      html: `<div style="color:#c9d1d9;font-size:13px;font-weight:700;
+      html: `<div style="color:${color};font-size:15px;font-weight:700;
                          letter-spacing:0.5px;white-space:nowrap;
-                         text-shadow:0 0 4px #000,0 0 4px #000,0 0 4px #000;
+                         text-shadow:0 0 5px #000,0 0 5px #000,0 0 5px #000;
                          cursor:pointer;padding:4px;
                          transform:translate(-50%,-50%);">
                ${labelText}
