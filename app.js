@@ -532,6 +532,7 @@ const headerBody = document.getElementById('header-body');
 headerCollapseBtn.addEventListener('click', () => {
   headerBody.classList.toggle('collapsed');
   headerCollapseBtn.classList.toggle('collapsed');
+  setTimeout(() => map.invalidateSize(), 260);
 });
 
 // ── Route toggle buttons ──────────────────────
