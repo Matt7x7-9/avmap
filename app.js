@@ -526,6 +526,14 @@ OFP_GROUPS.forEach(group => {
   routeLayers[group.id] = layer;
 });
 
+// ── Header collapse ───────────────────────────
+const headerCollapseBtn = document.getElementById('header-collapse-btn');
+const headerBody = document.getElementById('header-body');
+headerCollapseBtn.addEventListener('click', () => {
+  headerBody.classList.toggle('collapsed');
+  headerCollapseBtn.classList.toggle('collapsed');
+});
+
 // ── Route toggle buttons ──────────────────────
 const toggleContainer = document.getElementById('route-toggles');
 
