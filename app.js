@@ -952,3 +952,71 @@ function attachPanelListeners(firId) {
 map.on('click', () => {
   document.getElementById('fir-panel').classList.add('hidden');
 });
+
+// ── GPS Current Position ──────────────────────
+let gpsWatchId   = null;
+let gpsMarker    = null;
+let gpsFollowing = false;
+
+const gpsBtn = document.getElementById('gps-btn');
+
+const gpsDotIcon = L.divIcon({
+  className: '',
+  html: '<div class="gps-dot"></div>',
+  iconAnchor: [0, 0],
+});
+
+function startGps() {
+  if (!('geolocation' in navigator)) {
+    alert('このブラウザはGeolocationに対応していません');
+    return;
+  }
+  gpsFollowing = true;
+  gpsBtn.classList.add('active');
+  gpsBtn.textContent = '📍 追従中';
+
+  gpsWatchId = navigator.geolocation.watchPosition(
+    pos => {
+      const latlng = [pos.coords.latitude, pos.coords.longitude];
+      if (!gpsMarker) {
+        gpsMarker = L.marker(latlng, { icon: gpsDotIcon, interactive: false, zIndexOffset: 1000 }).addTo(map);
+      } else {
+        gpsMarker.setLatLng(latlng);
+      }
+      if (gpsFollowing) {
+        map.setView(latlng, map.getZoom());
+      }
+    },
+    err => {
+      console.warn('GPS error:', err.message);
+      if (err.code === 1) alert('位置情報へのアクセスを許可してください');
+    },
+    { enableHighAccuracy: true, maximumAge: 5000, timeout: 15000 }
+  );
+
+  // 手動パン時は追従を一時停止
+  map.on('dragstart.gps', () => { gpsFollowing = false; gpsBtn.textContent = '📍'; });
+}
+
+function stopGps() {
+  if (gpsWatchId !== null) {
+    navigator.geolocation.clearWatch(gpsWatchId);
+    gpsWatchId = null;
+  }
+  if (gpsMarker) {
+    map.removeLayer(gpsMarker);
+    gpsMarker = null;
+  }
+  gpsFollowing = false;
+  map.off('dragstart.gps');
+  gpsBtn.classList.remove('active');
+  gpsBtn.textContent = '📍';
+}
+
+gpsBtn.addEventListener('click', () => {
+  if (gpsWatchId !== null) {
+    stopGps();
+  } else {
+    startGps();
+  }
+});

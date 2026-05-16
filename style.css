@@ -95,6 +95,43 @@ body {
   color: #0d1117;
 }
 
+#gps-btn {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1.5px solid #8b949e;
+  background: transparent;
+  color: #8b949e;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+#gps-btn.active {
+  border-color: #58a6ff;
+  color: #58a6ff;
+  background: rgba(88, 166, 255, 0.15);
+}
+
+/* GPS position dot */
+.gps-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #58a6ff;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 0 rgba(88, 166, 255, 0.6);
+  animation: gps-pulse 2s ease-out infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes gps-pulse {
+  0%   { box-shadow: 0 0 0 0   rgba(88, 166, 255, 0.6); }
+  70%  { box-shadow: 0 0 0 12px rgba(88, 166, 255, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(88, 166, 255, 0); }
+}
+
 /* ── Map ── */
 #map {
   flex: 1;
