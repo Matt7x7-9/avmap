@@ -386,8 +386,8 @@ function ofpPolyline(routeId, color, dashed) {
         icon: L.divIcon({
           className: '',
           html: `<div class="fir-wpt-label">
-                   <div class="fir-diamond"></div>
-                   <span class="fir-wpt-name">${displayName}</span>
+                   <div class="fir-diamond" style="background:${color};border-color:rgba(0,0,0,0.5);"></div>
+                   <span class="fir-wpt-name" style="color:${color};">${displayName}</span>
                  </div>`,
           iconSize: [80, 14],
           iconAnchor: [5, 7],
