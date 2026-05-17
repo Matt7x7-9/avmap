@@ -42,7 +42,8 @@ let userNotes = JSON.parse(localStorage.getItem('fir-user-notes') || '{}');
 
 // ── Cloud Sync (GitHub Gist) ──────────────────
 const GIST_FILENAME = 'avmap-notes.json';
-let _gistPushTimer = null;
+let _gistPushTimer  = null;
+let _pendingPush    = false;   // オフライン中に未送信の変更があるか
 
 function cloudConfig() {
   return {
@@ -51,13 +52,15 @@ function cloudConfig() {
   };
 }
 
-function setCloudBtn(state) {          // 'idle' | 'syncing' | 'ok' | 'err'
+function setCloudBtn(state) {   // 'idle' | 'offline' | 'syncing' | 'ok' | 'err'
   const btn = document.getElementById('cloud-btn');
   if (!btn) return;
-  btn.className = btn.className.replace(/\s*(cloud-ok|cloud-err|cloud-syncing)/g, '');
-  if (state === 'ok')      btn.classList.add('cloud-ok');
-  else if (state === 'err') btn.classList.add('cloud-err');
+  btn.className = btn.className.replace(/\s*(cloud-ok|cloud-err|cloud-syncing|cloud-offline)/g, '');
+  if      (state === 'ok')      btn.classList.add('cloud-ok');
+  else if (state === 'err')     btn.classList.add('cloud-err');
   else if (state === 'syncing') btn.classList.add('cloud-syncing');
+  else if (state === 'offline') btn.classList.add('cloud-offline');
+  // 'idle' = クラスなし（グレー）
 }
 
 async function fetchFromGist() {
@@ -100,33 +103,64 @@ async function pushToGist() {
 function scheduleGistPush() {
   const { token } = cloudConfig();
   if (!token) return;
+  _pendingPush = true;
   clearTimeout(_gistPushTimer);
+
+  if (!navigator.onLine) {
+    // オフライン中: ローカル保存済み・オンライン復帰時に自動プッシュ
+    setCloudBtn('offline');
+    return;
+  }
+
   setCloudBtn('syncing');
   _gistPushTimer = setTimeout(async () => {
     try {
       await pushToGist();
+      _pendingPush = false;
       setCloudBtn('ok');
     } catch (e) {
       console.warn('Gist push failed:', e);
-      setCloudBtn('err');
+      // ネットワーク系エラーは offline 扱い、認証エラー(401/403)は err
+      setCloudBtn(e.message.includes('401') || e.message.includes('403') ? 'err' : 'offline');
     }
   }, 2000);
 }
 
+// オンライン復帰時: 未送信データを自動プッシュ
+window.addEventListener('online', () => {
+  setCloudBtn('idle');
+  if (_pendingPush) scheduleGistPush();
+});
+
+window.addEventListener('offline', () => {
+  if (cloudConfig().token) setCloudBtn('offline');
+});
+
 async function initCloudSync() {
   const { token, gistId } = cloudConfig();
   if (!token || !gistId) return;
+
+  // オフライン時はローカルをそのまま使う（エラーにしない）
+  if (!navigator.onLine) {
+    setCloudBtn('offline');
+    return;
+  }
+
   try {
     setCloudBtn('syncing');
     const remote = await fetchFromGist();
     if (remote && typeof remote === 'object') {
-      Object.assign(userNotes, remote);
-      localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
+      // リモートにあってローカルに無いキーだけマージ（ローカルの変更を守る）
+      let changed = false;
+      Object.entries(remote).forEach(([k, v]) => {
+        if (!userNotes[k]) { userNotes[k] = v; changed = true; }
+      });
+      if (changed) localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
     }
     setCloudBtn('ok');
   } catch (e) {
     console.warn('Cloud init failed:', e);
-    setCloudBtn('err');
+    setCloudBtn(e.message.includes('401') || e.message.includes('403') ? 'err' : 'offline');
   }
 }
 

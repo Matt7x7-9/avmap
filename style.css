@@ -173,6 +173,11 @@ body {
   color: #3fb950;
 }
 
+#cloud-btn.cloud-offline {
+  border-color: #e3b341;
+  color: #e3b341;
+}
+
 #cloud-btn.cloud-err {
   border-color: #f85149;
   color: #f85149;
