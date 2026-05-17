@@ -30,14 +30,26 @@ body {
 
 #header-body {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 6px;
   padding: 0 12px 8px;
   overflow: hidden;
   transition: max-height 0.25s ease, opacity 0.25s ease, padding 0.25s ease;
   max-height: 200px;
   opacity: 1;
+}
+
+#header-row1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#header-row2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 #header-body.collapsed {
@@ -816,5 +828,4 @@ body {
   pointer-events: none;
   letter-spacing: 0.3px;
   white-space: nowrap;
-  align-self: center;
 }

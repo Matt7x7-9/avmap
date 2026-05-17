@@ -15,16 +15,22 @@
 
   <div id="header">
     <div id="header-top">
-      <span class="app-title">✈ AVMAP</span>
+      <div style="display:flex;align-items:baseline;gap:6px;">
+        <span class="app-title">✈ AVMAP</span>
+        <span id="app-version">v102</span>
+      </div>
       <button id="header-collapse-btn">▲</button>
     </div>
     <div id="header-body">
-      <div id="route-toggles"></div>
-      <button id="caug-toggle-btn">Airport</button>
-      <button id="fir-toggle-btn">FIR</button>
-      <button id="gps-btn">📍</button>
-      <button id="cloud-btn">☁</button>
-      <span id="app-version">v101</span>
+      <div id="header-row1">
+        <div id="route-toggles"></div>
+        <button id="caug-toggle-btn">Airport</button>
+        <button id="fir-toggle-btn">FIR</button>
+      </div>
+      <div id="header-row2">
+        <button id="gps-btn">📍</button>
+        <button id="cloud-btn">☁</button>
+      </div>
     </div>
   </div>
 
