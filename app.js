@@ -488,7 +488,7 @@ const OFP_GROUPS = [
     airports: ['HND', 'DFW'], defaultOff: true },
   // ── Europe ───────────────────────────────────────────────────────────
   { id: 'ofp-lhr',  shortName: 'LHR', color: '#3498DB',
-    routeIds: ['EGLL-RJTT', 'RJTT-EGLL-2', 'EGLL-RJTT-2'],
+    routeIds: ['EGLL-RJTT', 'RJTT-EGLL-2', 'EGLL-RJTT-2', 'EGLL-RJTT-3'],
     airports: ['HND', 'LHR'], defaultOff: true },
   { id: 'ofp-cdg',  shortName: 'CDG', color: '#5B6BC8',
     routeIds: ['LFPG-RJTT', 'RJTT-LFPG-2'],
@@ -497,7 +497,7 @@ const OFP_GROUPS = [
     routeIds: ['RJTT-EFHK-2'],
     airports: ['HND', 'HEL'], defaultOff: true },
   { id: 'ofp-fra',  shortName: 'FRA', color: '#C0392B',
-    routeIds: ['EDDF-RJAA', 'RJAA-EDDF-2', 'RJAA-EDDF-3', 'EDDF-RJAA-2', 'EDDF-RJAA-3'],
+    routeIds: ['EDDF-RJAA', 'RJAA-EDDF-2', 'RJAA-EDDF-3', 'EDDF-RJAA-2', 'EDDF-RJAA-3', 'EDDF-RJAA-4', 'EDDF-RJAA-5', 'RJAA-EDDF-4'],
     airports: ['NRT', 'FRA'], defaultOff: true },
   // ── Australia ────────────────────────────────────────────────────────
   { id: 'ofp-syd',  shortName: 'SYD', color: '#27AE60',
