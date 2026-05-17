@@ -1,4 +1,4 @@
-const CACHE = 'avmap-v88';
+const CACHE = 'avmap-v89';
 const PRECACHE = [
   './',
   './index.html',

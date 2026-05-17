@@ -662,63 +662,96 @@ document.addEventListener('keydown', e => {
 // ── Route FIR Memo Panel ─────────────────────
 // OFP空港マーカーをタップ → ルートが通過するFIR一覧＋メモ付箋を右サイドに表示
 function openRouteMemoPanel(group) {
-  // 全routeIdからFIR waypoints を順番通り収集（重複除去）
-  const firList = [];
-  const seen = new Set();
+  // 往路（Japan dep）と復路（Japan arr）でFIRを別々に収集
+  const outFirs = [], retFirs = [];
+  const seenOut = new Set(), seenRet = new Set();
+
   group.routeIds.forEach(rid => {
     const route = OFP_ROUTES[rid];
     if (!route) return;
+    const isOut = isJapanDep(rid);
+    const list = isOut ? outFirs : retFirs;
+    const seen = isOut ? seenOut : seenRet;
     route.waypoints.forEach(w => {
-      if (w.fir && !seen.has(w.fir)) {
-        seen.add(w.fir);
-        firList.push(w.fir);
-      }
+      if (w.fir && !seen.has(w.fir)) { seen.add(w.fir); list.push(w.fir); }
     });
   });
 
   const panel = document.getElementById('route-memo-panel');
+  const hasOut = outFirs.length > 0;
+  const hasRet = retFirs.length > 0;
 
-  if (firList.length === 0) {
+  if (!hasOut && !hasRet) {
     panel.innerHTML = `
       <div class="memo-panel-header">
         <div class="memo-panel-title" style="color:${group.color}">✈ ${group.shortName}</div>
         <button class="memo-panel-close" id="memo-close">✕</button>
       </div>
       <div style="font-size:11px;color:#8b949e;line-height:1.5;">
-        FIRアノテーションがありません。<br>OFPルートに fir: を追加すると表示されます。
-      </div>
-    `;
+        FIRアノテーションがありません。<br>routes_ofp.js に fir: を追加すると表示されます。
+      </div>`;
     panel.classList.remove('hidden');
     document.getElementById('memo-close').addEventListener('click', () => panel.classList.add('hidden'));
     return;
   }
 
-  const firItemsHtml = firList.map(firId => {
-    const feature = FIR_BOUNDARIES.features.find(f => f.properties.id === firId);
-    const firLabel = feature ? feature.properties.label : firId;
-    const firColor = feature ? feature.properties.color : group.color;
-    const note = userNotes[firId] || '';
-    return `<div class="memo-fir-item">
-      <div class="memo-fir-name" style="color:${firColor}">${firLabel}</div>
-      <textarea class="memo-fir-ta${note.trim() ? ' has-note' : ''}"
-                data-fir="${firId}"
-                rows="3"
-                placeholder="メモ…">${note}</textarea>
-    </div>`;
-  }).join('');
+  function buildFirItems(firIds) {
+    return firIds.map(firId => {
+      const feature = FIR_BOUNDARIES.features.find(f => f.properties.id === firId);
+      const firLabel = feature ? feature.properties.label : firId;
+      const firColor = feature ? feature.properties.color : group.color;
+      const note = userNotes[firId] || '';
+      return `<div class="memo-fir-item">
+        <div class="memo-fir-name" style="color:${firColor}">${firLabel}</div>
+        <textarea class="memo-fir-ta${note.trim() ? ' has-note' : ''}"
+                  data-fir="${firId}" rows="3" placeholder="メモ…">${note}</textarea>
+      </div>`;
+    }).join('');
+  }
+
+  // 両方向ある場合はタブ、片方のみの場合はそのまま表示
+  const bothDirs = hasOut && hasRet;
+  const tabsHtml = bothDirs ? `
+    <div class="memo-tabs">
+      <button class="memo-tab active" data-dir="out">往路</button>
+      <button class="memo-tab" data-dir="ret">復路</button>
+    </div>` : '';
+
+  const outHtml = hasOut ? `
+    <div class="memo-tab-content active" id="memo-dir-out">
+      ${buildFirItems(outFirs)}
+    </div>` : '';
+
+  const retHtml = hasRet ? `
+    <div class="memo-tab-content${!hasOut ? ' active' : ''}" id="memo-dir-ret">
+      ${buildFirItems(retFirs)}
+    </div>` : '';
 
   panel.innerHTML = `
     <div class="memo-panel-header">
       <div class="memo-panel-title" style="color:${group.color}">✈ ${group.shortName}</div>
       <button class="memo-panel-close" id="memo-close">✕</button>
     </div>
-    ${firItemsHtml}
+    ${tabsHtml}
+    ${outHtml}
+    ${retHtml}
   `;
   panel.classList.remove('hidden');
 
   document.getElementById('memo-close').addEventListener('click', () => panel.classList.add('hidden'));
 
-  // 入力即保存（既存の userNotes / localStorage と共有）
+  // タブ切り替え
+  panel.querySelectorAll('.memo-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      panel.querySelectorAll('.memo-tab').forEach(t => t.classList.remove('active'));
+      panel.querySelectorAll('.memo-tab-content').forEach(c => c.classList.remove('active'));
+      tab.classList.add('active');
+      const target = document.getElementById('memo-dir-' + tab.dataset.dir);
+      if (target) target.classList.add('active');
+    });
+  });
+
+  // 入力即保存（userNotes / localStorage と共有）
   panel.querySelectorAll('.memo-fir-ta').forEach(ta => {
     ta.addEventListener('input', () => {
       userNotes[ta.dataset.fir] = ta.value;
