@@ -497,7 +497,7 @@ const OFP_GROUPS = [
     routeIds: ['RJTT-EFHK-2'],
     airports: ['HND', 'HEL'], defaultOff: true },
   { id: 'ofp-fra',  shortName: 'FRA', color: '#C0392B',
-    routeIds: ['EDDF-RJAA', 'RJAA-EDDF-2', 'RJAA-EDDF-3', 'EDDF-RJAA-2'],
+    routeIds: ['EDDF-RJAA', 'RJAA-EDDF-2', 'RJAA-EDDF-3', 'EDDF-RJAA-2', 'EDDF-RJAA-3'],
     airports: ['NRT', 'FRA'], defaultOff: true },
   // ── Australia ────────────────────────────────────────────────────────
   { id: 'ofp-syd',  shortName: 'SYD', color: '#27AE60',
