@@ -520,8 +520,16 @@ OFP_GROUPS.forEach(group => {
     const line = ofpPolyline(rid, group.color, dashed);
     if (line) line.addTo(layer);
   });
+  // OFP group airports: per-group markers → tap opens route FIR memo panel
   group.airports.forEach(code => {
-    if (airportMarkers[code]) airportMarkers[code].forEach(m => m.addTo(layer));
+    const ap = AIRPORTS[code];
+    if (!ap) return;
+    const [lat, baseLng] = ap.coords;
+    [-360, 0, 360].forEach(offset => {
+      const m = L.marker([lat, baseLng + offset], { icon: airportIcon(code) });
+      m.on('click', e => { L.DomEvent.stopPropagation(e); openRouteMemoPanel(group); });
+      m.addTo(layer);
+    });
   });
   routeLayers[group.id] = layer;
 });
@@ -650,6 +658,75 @@ document.addEventListener('keydown', e => {
     firBtn.click();
   }
 });
+
+// ── Route FIR Memo Panel ─────────────────────
+// OFP空港マーカーをタップ → ルートが通過するFIR一覧＋メモ付箋を右サイドに表示
+function openRouteMemoPanel(group) {
+  // 全routeIdからFIR waypoints を順番通り収集（重複除去）
+  const firList = [];
+  const seen = new Set();
+  group.routeIds.forEach(rid => {
+    const route = OFP_ROUTES[rid];
+    if (!route) return;
+    route.waypoints.forEach(w => {
+      if (w.fir && !seen.has(w.fir)) {
+        seen.add(w.fir);
+        firList.push(w.fir);
+      }
+    });
+  });
+
+  const panel = document.getElementById('route-memo-panel');
+
+  if (firList.length === 0) {
+    panel.innerHTML = `
+      <div class="memo-panel-header">
+        <div class="memo-panel-title" style="color:${group.color}">✈ ${group.shortName}</div>
+        <button class="memo-panel-close" id="memo-close">✕</button>
+      </div>
+      <div style="font-size:11px;color:#8b949e;line-height:1.5;">
+        FIRアノテーションがありません。<br>OFPルートに fir: を追加すると表示されます。
+      </div>
+    `;
+    panel.classList.remove('hidden');
+    document.getElementById('memo-close').addEventListener('click', () => panel.classList.add('hidden'));
+    return;
+  }
+
+  const firItemsHtml = firList.map(firId => {
+    const feature = FIR_BOUNDARIES.features.find(f => f.properties.id === firId);
+    const firLabel = feature ? feature.properties.label : firId;
+    const firColor = feature ? feature.properties.color : group.color;
+    const note = userNotes[firId] || '';
+    return `<div class="memo-fir-item">
+      <div class="memo-fir-name" style="color:${firColor}">${firLabel}</div>
+      <textarea class="memo-fir-ta${note.trim() ? ' has-note' : ''}"
+                data-fir="${firId}"
+                rows="3"
+                placeholder="メモ…">${note}</textarea>
+    </div>`;
+  }).join('');
+
+  panel.innerHTML = `
+    <div class="memo-panel-header">
+      <div class="memo-panel-title" style="color:${group.color}">✈ ${group.shortName}</div>
+      <button class="memo-panel-close" id="memo-close">✕</button>
+    </div>
+    ${firItemsHtml}
+  `;
+  panel.classList.remove('hidden');
+
+  document.getElementById('memo-close').addEventListener('click', () => panel.classList.add('hidden'));
+
+  // 入力即保存（既存の userNotes / localStorage と共有）
+  panel.querySelectorAll('.memo-fir-ta').forEach(ta => {
+    ta.addEventListener('input', () => {
+      userNotes[ta.dataset.fir] = ta.value;
+      localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
+      ta.classList.toggle('has-note', ta.value.trim().length > 0);
+    });
+  });
+}
 
 // ── Route FIR List Panel ──────────────────────
 // ルートラインをタップ → 通過FIR一覧を表示
@@ -960,9 +1037,10 @@ function attachPanelListeners(firId) {
   }
 }
 
-// Close panel on map click
+// Close panels on map click
 map.on('click', () => {
   document.getElementById('fir-panel').classList.add('hidden');
+  document.getElementById('route-memo-panel').classList.add('hidden');
 });
 
 // ── GPS Current Position ──────────────────────

@@ -556,6 +556,98 @@ body {
 
 .leaflet-control-attribution a { color: #555 !important; }
 
+/* ── Route FIR Memo Panel (right-side sticky note) ── */
+#route-memo-panel {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  max-height: 68vh;
+  overflow-y: auto;
+  background: rgba(13, 17, 23, 0.97);
+  border: 1px solid #30363d;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  padding: 10px 12px;
+  z-index: 1800;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.45);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+#route-memo-panel.hidden {
+  transform: translateY(-50%) translateX(110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.memo-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #21262d;
+}
+
+.memo-panel-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.memo-panel-close {
+  background: none;
+  border: none;
+  color: #8b949e;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+}
+
+.memo-fir-item {
+  margin-bottom: 10px;
+}
+
+.memo-fir-name {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  filter: brightness(1.7);
+  text-shadow: 0 0 4px #000, 0 0 4px #000;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.memo-fir-ta {
+  width: 100%;
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  padding: 5px 7px;
+  font-size: 11px;
+  color: #c9d1d9;
+  resize: none;
+  font-family: inherit;
+  min-height: 40px;
+  line-height: 1.45;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.memo-fir-ta:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+.memo-fir-ta.has-note {
+  background: #1c2128;
+  border-color: #30363d;
+}
+
 /* ── Route FIR list ── */
 .fir-list-item {
   border-bottom: 1px solid #21262d;
