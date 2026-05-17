@@ -154,6 +154,112 @@ body {
   background: rgba(88, 166, 255, 0.15);
 }
 
+/* Cloud sync button */
+#cloud-btn {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1.5px solid #8b949e;
+  background: transparent;
+  color: #8b949e;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+#cloud-btn.cloud-ok {
+  border-color: #3fb950;
+  color: #3fb950;
+}
+
+#cloud-btn.cloud-err {
+  border-color: #f85149;
+  color: #f85149;
+}
+
+#cloud-btn.cloud-syncing {
+  border-color: #58a6ff;
+  color: #58a6ff;
+  animation: cloud-pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes cloud-pulse {
+  from { opacity: 0.5; }
+  to   { opacity: 1.0; }
+}
+
+/* Cloud sync modal */
+#cloud-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2999;
+}
+
+#cloud-backdrop.hidden { display: none; }
+
+#cloud-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(320px, 90vw);
+  background: rgba(13, 17, 23, 0.99);
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 16px;
+  z-index: 3000;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+
+#cloud-panel.hidden { display: none; }
+
+.cp-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #58a6ff;
+  margin-bottom: 5px;
+}
+
+.cloud-input {
+  width: 100%;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 12px;
+  color: #c9d1d9;
+  font-family: monospace;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.cloud-input:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+.cp-sync-btn {
+  width: 100%;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1.5px solid #58a6ff;
+  background: transparent;
+  color: #58a6ff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.cp-sync-btn:active,
+.cp-sync-btn:disabled {
+  background: rgba(88,166,255,0.15);
+}
+
 /* GPS position dot */
 .gps-dot {
   width: 16px;

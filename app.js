@@ -40,6 +40,176 @@ const activeRoutes = new Set();
 let firVisible = true;
 let userNotes = JSON.parse(localStorage.getItem('fir-user-notes') || '{}');
 
+// ── Cloud Sync (GitHub Gist) ──────────────────
+const GIST_FILENAME = 'avmap-notes.json';
+let _gistPushTimer = null;
+
+function cloudConfig() {
+  return {
+    token:  localStorage.getItem('avmap-gh-token') || '',
+    gistId: localStorage.getItem('avmap-gist-id')  || '',
+  };
+}
+
+function setCloudBtn(state) {          // 'idle' | 'syncing' | 'ok' | 'err'
+  const btn = document.getElementById('cloud-btn');
+  if (!btn) return;
+  btn.className = btn.className.replace(/\s*(cloud-ok|cloud-err|cloud-syncing)/g, '');
+  if (state === 'ok')      btn.classList.add('cloud-ok');
+  else if (state === 'err') btn.classList.add('cloud-err');
+  else if (state === 'syncing') btn.classList.add('cloud-syncing');
+}
+
+async function fetchFromGist() {
+  const { token, gistId } = cloudConfig();
+  if (!token || !gistId) return null;
+  const res = await fetch(`https://api.github.com/gists/${gistId}`, {
+    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const data = await res.json();
+  const content = data.files?.[GIST_FILENAME]?.content;
+  return content ? JSON.parse(content) : null;
+}
+
+async function pushToGist() {
+  const { token, gistId } = cloudConfig();
+  if (!token) return null;
+  const body = {
+    description: 'AVMAP FIR Notes',
+    public: false,
+    files: { [GIST_FILENAME]: { content: JSON.stringify(userNotes, null, 2) } },
+  };
+  const url    = gistId ? `https://api.github.com/gists/${gistId}` : 'https://api.github.com/gists';
+  const method = gistId ? 'PATCH' : 'POST';
+  const res = await fetch(url, {
+    method,
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github+json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const data = await res.json();
+  if (!gistId) localStorage.setItem('avmap-gist-id', data.id);
+  return data;
+}
+
+function scheduleGistPush() {
+  const { token } = cloudConfig();
+  if (!token) return;
+  clearTimeout(_gistPushTimer);
+  setCloudBtn('syncing');
+  _gistPushTimer = setTimeout(async () => {
+    try {
+      await pushToGist();
+      setCloudBtn('ok');
+    } catch (e) {
+      console.warn('Gist push failed:', e);
+      setCloudBtn('err');
+    }
+  }, 2000);
+}
+
+async function initCloudSync() {
+  const { token, gistId } = cloudConfig();
+  if (!token || !gistId) return;
+  try {
+    setCloudBtn('syncing');
+    const remote = await fetchFromGist();
+    if (remote && typeof remote === 'object') {
+      Object.assign(userNotes, remote);
+      localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
+    }
+    setCloudBtn('ok');
+  } catch (e) {
+    console.warn('Cloud init failed:', e);
+    setCloudBtn('err');
+  }
+}
+
+function openCloudPanel() {
+  const { token, gistId } = cloudConfig();
+  const panel = document.getElementById('cloud-panel');
+  const backdrop = document.getElementById('cloud-backdrop');
+  panel.classList.remove('hidden');
+  backdrop.classList.remove('hidden');
+
+  panel.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <div style="font-size:13px;font-weight:700;color:#58a6ff;">☁ Cloud Sync</div>
+      <button id="cp-close" style="background:none;border:none;color:#8b949e;font-size:18px;cursor:pointer;line-height:1;padding:0 2px;">✕</button>
+    </div>
+    <div style="font-size:11px;color:#8b949e;margin-bottom:14px;line-height:1.6;">
+      GitHub Gist にメモを自動保存・同期します。<br>
+      <a id="cp-token-link" href="https://github.com/settings/tokens/new?scopes=gist&description=AVMAP+Notes" target="_blank" style="color:#58a6ff;">Personal Access Token を発行</a>（gist スコープのみ選択）
+    </div>
+
+    <div style="margin-bottom:10px;">
+      <div class="cp-label">GitHub Token</div>
+      <input id="cp-token" class="cloud-input" type="password" value="${token}" placeholder="ghp_xxxxxxxxxxxx" autocomplete="off">
+    </div>
+    <div style="margin-bottom:16px;">
+      <div class="cp-label">Gist ID <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#8b949e;">(初回は空白 → 自動作成)</span></div>
+      <input id="cp-gist" class="cloud-input" type="text" value="${gistId}" placeholder="自動設定されます" autocomplete="off">
+    </div>
+
+    <button id="cp-sync" class="cp-sync-btn">☁ 今すぐ同期</button>
+    <div id="cp-status" style="font-size:11px;text-align:center;margin-top:8px;min-height:16px;color:#8b949e;"></div>
+  `;
+
+  function setMsg(msg, color) {
+    const el = document.getElementById('cp-status');
+    if (el) { el.textContent = msg; el.style.color = color || '#8b949e'; }
+  }
+
+  function close() {
+    panel.classList.add('hidden');
+    backdrop.classList.add('hidden');
+  }
+
+  document.getElementById('cp-close').addEventListener('click', close);
+  backdrop.addEventListener('click', close, { once: true });
+
+  document.getElementById('cp-sync').addEventListener('click', async () => {
+    const tok  = document.getElementById('cp-token').value.trim();
+    const gid  = document.getElementById('cp-gist').value.trim();
+    if (!tok) { setMsg('⚠ Token を入力してください', '#e3b341'); return; }
+
+    localStorage.setItem('avmap-gh-token', tok);
+    if (gid) localStorage.setItem('avmap-gist-id', gid);
+    else     localStorage.removeItem('avmap-gist-id');
+
+    const btn = document.getElementById('cp-sync');
+    btn.disabled = true;
+    setCloudBtn('syncing');
+
+    try {
+      if (localStorage.getItem('avmap-gist-id')) {
+        setMsg('📥 Gist から読み込み中…', '#58a6ff');
+        const remote = await fetchFromGist();
+        if (remote) {
+          Object.assign(userNotes, remote);
+          localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
+        }
+      }
+      setMsg('📤 アップロード中…', '#58a6ff');
+      await pushToGist();
+      const newId = localStorage.getItem('avmap-gist-id');
+      document.getElementById('cp-gist').value = newId || '';
+      setMsg('✅ 同期完了！', '#3fb950');
+      setCloudBtn('ok');
+    } catch (e) {
+      setMsg(`⚠ エラー: ${e.message}`, '#f85149');
+      setCloudBtn('err');
+    } finally {
+      btn.disabled = false;
+    }
+  });
+}
+
 // ── FIR boundaries ────────────────────────────
 // Colors are pre-computed via graph coloring in fir-boundaries.js properties
 // Adjacent FIRs get different colors automatically
@@ -757,6 +927,7 @@ function openRouteMemoPanel(group) {
       userNotes[ta.dataset.fir] = ta.value;
       localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
       ta.classList.toggle('has-note', ta.value.trim().length > 0);
+      scheduleGistPush();
     });
   });
 }
@@ -1011,6 +1182,7 @@ function attachPanelListeners(firId) {
     saveBtn.addEventListener('click', () => {
       userNotes[firId] = textarea.value;
       localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
+      scheduleGistPush();
       const noteTab = panel.querySelector('[data-tab="mynote"]');
       if (noteTab) noteTab.textContent = 'My Note' + (textarea.value ? ' ●' : '');
       saveBtn.classList.add('saved');
@@ -1056,6 +1228,7 @@ function attachPanelListeners(firId) {
         if (typeof parsed !== 'object' || Array.isArray(parsed)) throw new Error();
         Object.assign(userNotes, parsed);
         localStorage.setItem('fir-user-notes', JSON.stringify(userNotes));
+        scheduleGistPush();
         // Refresh current FIR note textarea
         if (textarea) textarea.value = userNotes[firId] || '';
         const noteTab = panel.querySelector('[data-tab="mynote"]');
@@ -1143,3 +1316,10 @@ gpsBtn.addEventListener('click', () => {
     startGps();
   }
 });
+
+// ── Cloud Sync button ─────────────────────────
+const cloudBtn = document.getElementById('cloud-btn');
+cloudBtn.addEventListener('click', openCloudPanel);
+
+// 起動時クラウド同期
+initCloudSync();
