@@ -107,12 +107,12 @@ function airportIcon(icao) {
   return L.divIcon({
     className: '',
     html: `<div style="
-      width:10px;height:10px;border-radius:50%;
+      width:14px;height:14px;border-radius:50%;
       background:#f0f6fc;border:2px solid #0d1117;
-      box-shadow:0 0 6px rgba(255,255,255,0.4);
+      box-shadow:0 0 8px rgba(255,255,255,0.5);
     "></div>`,
-    iconSize: [10, 10],
-    iconAnchor: [5, 5],
+    iconSize: [14, 14],
+    iconAnchor: [7, 7],
   });
 }
 
