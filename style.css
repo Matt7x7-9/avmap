@@ -24,33 +24,30 @@ body {
 #header-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 8px;
   padding: 6px 12px;
+}
+
+#header-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 #header-body {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 6px;
+  flex-wrap: wrap;
   padding: 0 12px 8px;
   overflow: hidden;
   transition: max-height 0.25s ease, opacity 0.25s ease, padding 0.25s ease;
-  max-height: 200px;
+  max-height: 120px;
   opacity: 1;
 }
 
-#header-row1 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-#header-row2 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 
 #header-body.collapsed {
   max-height: 0;
