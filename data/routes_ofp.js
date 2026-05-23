@@ -1392,22 +1392,6 @@ const OFP_ROUTES = {
   },
 
   // ── BKK ↔ NRT ────────────────────────────────────────────────────
-  "RJAA-VTBS": {
-    label: "NRT→BKK",
-    color: "#F1C40F",
-    ofpSource: "JAL707 2026-05-05",
-    waypoints: [
-      { name: "RJAA",  airway: "DCT",    coords: [35.765, 140.385] },
-      { name: "IGURU", airway: "Y17",    fir: "RCAA", coords: [23.570, 124.000] },
-      { name: "KAPLI", airway: "Y17",    fir: "VHHK", coords: [21.167, 117.500] },
-      { name: "IKELA", airway: "Y17",    fir: "ZJSA", coords: [18.662, 112.245] },
-      { name: "BUNTA", airway: "Y17",    fir: "VVHM", coords: [16.833, 109.395] },
-      { name: "FIRWPT",airway: "Y17",    fir: "VLVT", coords: [15.468, 107.138] },
-      { name: "BUTRA", airway: "Y17",    fir: "VTBB", coords: [15.251, 105.358] },
-      { name: "VTBS",  airway: "DCT",    coords: [13.690, 100.750] },
-    ]
-  },
-
   "VTBS-RJAA": {
     label: "BKK→NRT",
     color: "#F1C40F",
@@ -1615,22 +1599,6 @@ const OFP_ROUTES = {
 
   // ── HNL ↔ KIX / NRT ──────────────────────────────────────────────
   // 注意: 西経は +360° して東向きに表示
-  "PHNL-RJBB": {
-    label: "HNL→KIX",
-    color: "#A569BD",
-    ofpSource: "JAL799 2026-05-05",
-    waypoints: [
-      { name: "PHNL",  airway: "DCT",    coords: [21.318, 202.080] },  // 158°W
-      { name: "BOOKE", airway: "BOOKE8", coords: [21.463, 201.550] },  // 158.5°W
-      { name: "LIH",   airway: "BOOKE8", coords: [21.965, 200.662] },  // 159°W
-      { name: "LI100", airway: "BOOKE8", coords: [23.358, 199.663] },  // 160°W
-      { name: "LI123", airway: "BOOKE8", coords: [23.677, 199.432] },
-      { name: "THOMA", airway: "DCT",    coords: [23.943, 199.237] },  // 161°W
-      { name: "FIRWPT",airway: "DCT",    fir: "RJJJ",  coords: [29.061, 165.000] },
-      { name: "RJBB",  airway: "DCT",    coords: [34.427, 135.244] },
-    ]
-  },
-
   "RJAA-PHNL": {
     label: "NRT→HNL",
     color: "#7D3C98",
