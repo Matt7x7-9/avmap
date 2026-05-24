@@ -547,7 +547,7 @@ function normalizeWaypointLngs(waypoints) {
 // Returns a LayerGroup containing the polyline + FIR-boundary diamond markers.
 // Polar/Transpolar routes (Japan↔Europe via North Pole) are handled via
 // sequential longitude normalization to avoid crossing-line artifacts.
-function ofpPolyline(routeId, color, dashed) {
+function ofpPolyline(routeId, color, dashed, ofpGroup) {
   const route = OFP_ROUTES[routeId];
   if (!route) return null;
 
@@ -575,12 +575,24 @@ function ofpPolyline(routeId, color, dashed) {
       opacity: dashed ? 0.6 : 0.85,
       dashArray: dashed ? '6 4' : null,
       smoothFactor: 1,
-    });
-    line.on('click', (e) => {
-      L.DomEvent.stopPropagation(e);
-      openRouteFirPanel(route);
+      interactive: false,
     });
     line.addTo(group);
+
+    // 不可視の太いヒットエリア（タップ幅拡大）
+    const hitArea = L.polyline(coords, {
+      color: 'transparent',
+      weight: 20,
+      opacity: 0,
+      smoothFactor: 1,
+    });
+    hitArea.on('click', (e) => {
+      L.DomEvent.stopPropagation(e);
+      map.closePopup();
+      if (ofpGroup) openRouteMemoPanel(ofpGroup);
+      else openRouteFirPanel(route);
+    });
+    hitArea.addTo(group);
 
     // FIR boundary crossing markers — diamond + WPT name label
     // ツールチップはメインコピー（offset=0）のみ（パフォーマンス最適化）
@@ -721,7 +733,7 @@ OFP_GROUPS.forEach(group => {
   group.routeIds.forEach(rid => {
     // 日本発 → 実線、日本着 → 点線（出発ICAOで判定）
     const dashed = !isJapanDep(rid);
-    const line = ofpPolyline(rid, group.color, dashed);
+    const line = ofpPolyline(rid, group.color, dashed, group);
     if (line) line.addTo(layer);
   });
   // OFP group airports: per-group markers → tap opens route FIR memo panel
