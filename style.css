@@ -821,7 +821,7 @@ body {
 /* ── App version indicator ── */
 #app-version {
   font-size: 10px;
-  color: rgba(255,255,255,0.3);
+  color: #ffffff;
   pointer-events: none;
   letter-spacing: 0.3px;
   white-space: nowrap;
