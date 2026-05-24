@@ -604,7 +604,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'RWY 21',
-    runways: [{'id':'03L/21R', 'len':3700, 'apch':'ILS 03L/21R'}, {'id':'03R/21L', 'len':3500, 'apch':'ILS 03R/21L'}],
+    runways: [{'id':'03L/21R', 'len':3700, 'apch':'ILS or RNP 03L / ILS (CAT2) or RNP 21R'}, {'id':'03R/21L', 'len':3500, 'apch':'RNP or VOR 03R / ILS or RNP 21L'}],
     sections: [
       {
         title: 'TWY情報',
@@ -644,7 +644,7 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    runways: [{'id':'18/36', 'len':3505, 'apch':'ILS Cat II 18/36'}],
+    runways: [{'id':'18/36', 'len':3505, 'apch':'ILS or RNP 18 / RNP or VOR 36'}],
     sections: [
       {
         title: '地形',
