@@ -730,8 +730,8 @@ OFP_GROUPS.forEach(group => {
     if (!ap) return;
     const [lat, baseLng] = ap.coords;
     [-360, 0, 360].forEach(offset => {
-      const m = L.marker([lat, baseLng + offset], { icon: airportIcon(code) });
-      m.on('click', e => { L.DomEvent.stopPropagation(e); openRouteMemoPanel(group); });
+      const m = L.marker([lat, baseLng + offset], { icon: airportIcon(code), zIndexOffset: 1000 });
+      m.on('click', e => { L.DomEvent.stopPropagation(e); map.closePopup(); openRouteMemoPanel(group); });
       m.addTo(layer);
     });
   });
