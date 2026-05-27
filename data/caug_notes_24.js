@@ -940,6 +940,34 @@ const CAUG_NOTES_24 = {
               '⚠️ VT(R)-2 KING PALACE: Strictly prohibited (do NOT enter)',
               'Wildlife Area: North apron boundary, avoid low altitude passes',
               'MSA around BKK: Carefully plan climb/descent on assigned SID/STAR',
+              'Simultaneous Parallel Runway Ops (SDPA/SIPA): Possible when traffic permits',
+              '  → SDPA: Dependent parallel approaches (min spacing 1000 ft)',
+              '  → SIPA: Independent parallel approaches (RMC available)',
+            ]
+          },
+          {
+            title: 'Low Visibility Operations',
+            items: [
+              '⚠️ ILS CAT II Procedures: Available 24/7 when weather requires',
+              '  → RVR minimum: 550m for RWY 01L/01R, 350m others',
+              '  → Reduced landing rate: 40/hour during CAT II ops',
+              '  → Pilots notified of LVP activation via ATIS',
+              'LVP Conditions: RVR <1500m or visibility <1000m',
+              'Stop Bars: Used at F1-F13, F21-F30, F31-F33 during LVP',
+              'Expedited procedures: Ensure rapid runway vacating (fast-exit mandatory)',
+            ]
+          },
+          {
+            title: 'Communications & Equipment Failure',
+            items: [
+              '⚠️ Radio Failure Procedure: If unable to establish contact with ATC',
+              '  → Continue to nearest suitable aerodrome (DMC/alternate)',
+              '  → For 15-20 pax: Land at nearest suitable airport',
+              '  → For 20+ pax: Specific alternate planning required',
+              '⚠️ Transponder Failure: Report immediately if possible',
+              '  → If unable to advise ATC: proceed as cleared, attempt other comms',
+              '  → Land at nearest suitable aerodrome',
+              'Mode S Operations: Mandatory on ground for all aircraft',
             ]
           },
         ]
@@ -981,6 +1009,30 @@ const CAUG_NOTES_24 = {
               'APU before Block-Out: Restart up to 10 min before push clearance',
               'Ground power: 115V/400Hz universal plugs available',
               'Services: PAX steps, tugs/tow bars, water/lavatory service all available',
+              'No Tail Pushes: Strictly prohibited at VTBS (use nose-in only)',
+              'Immediate Building Position Lights: Available for night positioning',
+            ]
+          },
+          {
+            title: 'Speed Control & Altitude Restrictions ⚠️',
+            items: [
+              'Speed Control: Applied at all times unless ATC authorized otherwise',
+              'Published Speed Restrictions: Strictly adhere to STAR procedures',
+              '⚠️ Low Level Altitude Limit: 1000ft minimum (apply caution in descent)',
+              'Altitude Restrictions: Issued with descent clearance (honor exactly)',
+              'ILS CAT II Approach: Specific speed/descent rate requirements',
+              'Go-Around: If unstable below 500ft due to wind shear risk',
+            ]
+          },
+          {
+            title: 'RWY Occupancy & Minimum Equipment',
+            items: [
+              'Minimum Runway Occupancy Time: 30-50 min depending on RWY (see tables)',
+              '  → Expedite runway vacating after landing (use fast-exit TWY)',
+              '  → Minimum landing rate: 40/hour during normal ops',
+              'Reduced Communication Workload: During CAT II ops',
+              'Runway Occupancy Tables: RWY 01L (19R) requires TRA/TBA coordination',
+              'Aircraft Equipment: Must meet CAT II certification requirements',
             ]
           },
         ]
@@ -1044,6 +1096,40 @@ const CAUG_NOTES_24 = {
               '  → Coordinate with ATC for low-level routing if necessary',
               'Short-field Performance: Standard runway lengths adequate for B787',
               'Flap Retraction: Confirm positive climb gradient before retraction',
+            ]
+          },
+          {
+            title: 'Noise Abatement & Special Restrictions',
+            items: [
+              '⚠️ Thrust Reverse Usage: Restricted on RWYs 19R/01L during noise procedures',
+              '⚠️ APU Operations: APU running required after push-back (until taxi clearance)',
+              '⚠️ Ground Power Supply: Required during parking (electrical load)',
+              'Noise Abatement Takeoff: Follow reduced power procedures if issued',
+              'Flight Path: Stay on SID track until passing MSA; no shortcuts',
+              '⚠️ Runway Surface: Concrete in good condition; standard performance assumed',
+            ]
+          },
+          {
+            title: 'RWY Occupancy & Parallel Ops Procedures',
+            items: [
+              'Minimum Runway Occupancy Time: 25-45 min depending on RWY (see tables)',
+              'Simultaneous Operations Possible: SDPA/SIPA when authorized',
+              '  → SDPA: Dependent parallel deps (RMC aware of traffic)',
+              '  → SIPA: Independent parallel deps (fully autonomous separation)',
+              'South Flow (RWY 19/20): RWY 19 DEP+ARR, RWY 20 segregated',
+              'North Flow (RWY 01/02): RWY 01 DEP+ARR, RWY 02 segregated',
+              'Crew Coordination: Critical during parallel ops (monitor tower frequencies)',
+            ]
+          },
+          {
+            title: 'Fuel Dumping & In-Flight Procedures',
+            items: [
+              '⚠️ Fuel Dumping Area: Designated area south of airport (avoid populated areas)',
+              'Fuel Dump Clearance: Must obtain ATC clearance before initiating dump',
+              'Minimum Altitude: 4000ft for fuel dump operations',
+              'Arrival Planning: Consider fuel state vs. dumping time if heavy landing required',
+              'Alternative Airports: Plan alternates with adequate fuel reserves',
+              'In-Flight Management: Min landing fuel per procedures; declare early if needed',
             ]
           },
         ]
