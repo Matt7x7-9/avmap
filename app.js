@@ -911,16 +911,17 @@ function openRouteMemoPanel(group) {
     return;
   }
 
-  function buildFirItems(firIds) {
+  function buildFirItems(firIds, dir) {
     return firIds.map(firId => {
       const feature = FIR_BOUNDARIES.features.find(f => f.properties.id === firId);
       const firLabel = feature ? feature.properties.label : firId;
       const firColor = feature ? feature.properties.color : group.color;
-      const note = userNotes[firId] || '';
+      const key = dir + ':' + firId;
+      const note = userNotes[key] || '';
       return `<div class="memo-fir-item">
         <div class="memo-fir-name" style="color:${firColor}">${firLabel}</div>
         <textarea class="memo-fir-ta${note.trim() ? ' has-note' : ''}"
-                  data-fir="${firId}" rows="3" placeholder="メモ…">${note}</textarea>
+                  data-fir="${key}" rows="3" placeholder="メモ…">${note}</textarea>
       </div>`;
     }).join('');
   }
@@ -935,12 +936,12 @@ function openRouteMemoPanel(group) {
 
   const outHtml = hasOut ? `
     <div class="memo-tab-content active" id="memo-dir-out">
-      ${buildFirItems(outFirs)}
+      ${buildFirItems(outFirs, 'out')}
     </div>` : '';
 
   const retHtml = hasRet ? `
     <div class="memo-tab-content${!hasOut ? ' active' : ''}" id="memo-dir-ret">
-      ${buildFirItems(retFirs)}
+      ${buildFirItems(retFirs, 'ret')}
     </div>` : '';
 
   panel.innerHTML = `
