@@ -524,25 +524,46 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'RWY 25',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+      note: '通常 Cat C より大きな間隔が要求される'
+    },
     runways: [
-      {id:'07L/25R', len:3800, apch:'ILS (CAT II/III) or RNP'},
-      {id:'07C/25C', len:3800, apch:'ILS (CAT II/III) or RNP'},
-      {id:'07R/25L', len:3800, apch:'ILS (CAT II) or RNP'},
+      {id:'07L/25R', len:3800, apch:'ILS (CAT II/III) or RNP', side:'North'},
+      {id:'07C/25C', len:3800, apch:'ILS (CAT II/III) or RNP', side:'Center'},
+      {id:'07R/25L', len:3800, apch:'ILS (CAT II) or RNP', side:'South'},
     ],
+    transitionAltitude: {
+      TL: 'FL110 (QNH ≥1013) / FL120 (QNH <1013)',
+      TA: '11000 ft'
+    },
     tabs: [
       {
         id: 'gen',
         label: 'General',
         sections: [
           {
-            title: 'RWY Operations',
+            title: 'RWY Operations & Configuration',
             items: [
-              '【0000-1459 UTC】Three-RWY ops: 07L arr, 07C dep (N/NE/E), 07R mixed',
-              '【1500-1759 UTC】07C/25C arr, 07R/25L dep (segregated)',
+              '【0000-1459 UTC】Three-RWY ops: 07L (North) arr, 07C (Center) dep, 07R (South) mixed',
+              '【1500-1759 UTC】07C/25C (Center) arr, 07R/25L (South) dep (segregated)',
               '【1800-2259 UTC】Single RWY only (North or Center)',
               '【2300-2359 UTC】Dual RWY resumes (maintenance rotation)',
               'South apron/Business parking → assign 07R/25L; others → 07L/25R',
               'Independent parallel dep (07C+07R): report assigned SID to Tower on first contact',
+              'Wake Turbulence Separation: Category D (B787) requires larger spacing than Cat C',
+            ]
+          },
+          {
+            title: 'Surrounding Terrain & MSA ⚠️',
+            items: [
+              '⚠️ NE 17nm: Chihsing Mountain (3675ft) — affects MSA',
+              '⚠️ NE 11nm: Kuangyin Mountain (2008ft)',
+              '⚠️ S 30nm: Mountain range (8000ft class)',
+              '⚠️ Lantau Island: terrain proximity to RWY 25L approaches causes wind shear (W/NW >20kt)',
+              'MSA careful planning required: review Jeppesen Chart for specific SID/STAR MSAs',
             ]
           },
           {
@@ -889,11 +910,21 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+      note: '通常 Cat C より大きな間隔が要求される'
+    },
+    transitionAltitude: {
+      TL: 'FL110 (QNH ≥1013) / FL120 (QNH <1013)',
+      TA: '11000 ft'
+    },
     runways: [
-      {id:'01L/19R', len:4000, apch:'ILS Cat II 01L/19R'},
-      {id:'01R/19L', len:3700, apch:'ILS Cat II 01R/19L'},
-      {id:'02R/20L', len:4000, apch:'ILS Cat I 02R/20L'},
-      {id:'02L/20R', len:3700, apch:'ILS Cat I 02L/20R'},
+      {id:'01L/19R', len:4000, apch:'ILS Cat II 01L/19R', side:'West'},
+      {id:'01R/19L', len:3700, apch:'ILS Cat II 01R/19L', side:'East'},
+      {id:'02R/20L', len:4000, apch:'ILS Cat I 02R/20L', side:'East'},
+      {id:'02L/20R', len:3700, apch:'ILS Cat I 02L/20R', side:'West'},
     ],
     tabs: [
       {
@@ -901,13 +932,36 @@ const CAUG_NOTES_24 = {
         label: 'General',
         sections: [
           {
-            title: 'RWY Operations & Wind Flows',
+            title: 'RWY Operations & Monsoon Wind Flows',
             items: [
-              '【South Flow】RWY 19/20 ops: RWY19 DEP+ARR / RWY20L DEP / RWY20R ARR (typical May-Oct, afternoon/evening)',
-              '【North Flow】RWY 01/02 ops: RWY01 DEP+ARR / RWY02R DEP / RWY02L ARR (typical Nov-Apr, morning)',
+              '【South Flow (May-Oct)】Southwest Monsoon: RWY 19/20 ops typical (afternoon/evening)',
+              '  → RWY19 (West) DEP+ARR / RWY20L (West) DEP / RWY20R (East) ARR',
+              '【North Flow (Nov-Apr)】Northeast Monsoon: RWY 01/02 ops typical (morning)',
+              '  → RWY01 (East) DEP+ARR / RWY02R (East) DEP / RWY02L (West) ARR',
               'Crosswind limit: 20 KT for all RWY',
               'PAPI: 全RWY LEFT側のみ装備、3.0° (MEHT 64ft)',
               'Runway surface: Concrete (excellent condition)',
+              'Wake Turbulence Separation: Category D (B787) requires larger spacing than Cat C',
+            ]
+          },
+          {
+            title: 'Surrounding Terrain & Airspace ⚠️',
+            items: [
+              '⚠️ Swampy wetland/rice field terrain around airport (affects weather patterns)',
+              '⚠️ S 30nm: Mountain range (2600ft class) — MSA impact',
+              '⚠️ Bangkok city center: High-rise buildings — confirm MSA on Jeppesen Chart',
+              'MSA carefully planned in SID/STAR: review chart for specific terrain clearance',
+            ]
+          },
+          {
+            title: 'Tropical Monsoon Weather Patterns ⚠️',
+            items: [
+              '【Dry Season (Nov-Apr)】Good visibility, clear weather typical',
+              '【Rainy Season (May-Oct)】Tropical thunderstorms frequent, especially evening/night',
+              '  → May: Most severe (1+ hour duration common) → plan early departures',
+              '  → Wind gusts >25 KT possible during TS activity',
+              'Low Visibility: Rare (good visibility except during TS)',
+              'NOTAM: Check for active TS warnings (SIGMET, AIRMET)',
             ]
           },
           {
@@ -1331,9 +1385,20 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+      note: '通常 Cat C より大きな間隔が要求される'
+    },
+    transitionAltitude: {
+      DEP_TA: '9000 ft (departure)',
+      ARR_TL: 'FL100 (arrival)',
+      altitudeUnit: '10ft単位チャート - 100ft単位に切り上げ適用可'
+    },
     runways: [
-      {id:'07L/25R', len:4000, apch:'ILS Cat II 07L/25R'},
-      {id:'07R/25L', len:3000, apch:'ILS Cat I 07R/25L'},
+      {id:'07L/25R', len:4000, apch:'ILS Cat II 07L/25R', primaryUse:'Arrival typical'},
+      {id:'07R/25L', len:3000, apch:'ILS Cat I 07R/25L', primaryUse:'Departure typical', note:'THR 2431ft Displaced'},
     ],
     tabs: [
       {
@@ -1343,14 +1408,51 @@ const CAUG_NOTES_24 = {
           {
             title: 'RWY Operations & Configuration',
             items: [
-              'RWY 07L/25R: 4000m primary runway (ILS Cat II)',
-              '  → Parallel runway operations: RWY 07L DEP / RWY 25R ARR (Monsoon-dependent)',
-              'RWY 07R/25L: 3000m secondary runway (ILS Cat I)',
-              '  → Typically non-preferred; used when RWY 07L/25R unavailable',
+              'RWY 07L/25R: 4000m primary runway (ILS Cat II) — typical arrival RWY',
+              '  → Monsoon-dependent: 07L DEP / 25R ARR or 07L ARR',
+              'RWY 07R/25L: 3000m secondary runway (ILS Cat I) — typical departure RWY',
+              '  → Shorter length; verify B787 performance before planning T/O',
               'PAPI: Available on both runways',
-              'Runway Surface: Concrete in good condition',
+              'Runway Surface: Non-Grooved concrete in good condition',
               'Crosswind Limit: 15 KT maximum',
-              '⚠️ Runway 07R/25L: Shorter length; verify performance before planning T/O',
+              '⚠️ Weak tailwind (<5kt) forces RWY 25 usage; ≥5kt triggers ATC discussion',
+              'Wake Turbulence Separation: Category D (B787) requires larger spacing than Cat C',
+            ]
+          },
+          {
+            title: 'Military Airspace & Restricted Areas ⚠️ CRITICAL',
+            items: [
+              '⚠️ VV(P)-4 Ho Chi Minh City: GND-3000m (市街地南側) —飛行禁止',
+              '  → Circling approach: NORTH側のみ可（南は禁止）',
+              '⚠️ VV(R)-19 Bien Hoa (North): GND-FL230 — 軍用空域',
+              '  → ATC指示に従えば支障なし',
+              '⚠️ Bien Hoa Air Base: NE 13nm (RWY09/27L,R 10,000ft) — 誤認注意',
+              '  → SGNとほぼ同方向・同長さRWY → ナビゲーション注意',
+              'SID Reassignment: KADUM→ANTRI の軍事理由での指示あり（頻繁）',
+              'Coordination: Vietnam ATC による軍事調整を常に期待',
+            ]
+          },
+          {
+            title: 'Surrounding Terrain & Geographic Hazards',
+            items: [
+              '⚠️ Landmark81 (1,540ft): Ho Chi Minh City center, SE 5nm — ビル衝突注意',
+              '⚠️ Radio tower (450ft): SE 4nm',
+              '⚠️ Obstacle (443ft): NW 2nm',
+              'Mekong Delta: North-west low-lying area (water/wetland)',
+              'MSA: Jeppesen Chart で SID/STAR の地形クリアランス確認必須',
+            ]
+          },
+          {
+            title: 'Southwest/Northeast Monsoon Weather ⚠️',
+            items: [
+              '【Rainy Season (May-Oct) SW Monsoon】Tropical thunderstorms frequent',
+              '  → May: Most severe (1+ hour duration) → early departure planning',
+              '  → 15-20min typical, but May exceeds 1hr',
+              '  → Wind: S-SE avg 5-7kt, gusts during TS activity',
+              '【Dry Season (Nov-Apr) NE Monsoon】Good visibility, cool weather',
+              '  → Wind: N-NE avg 5-7kt',
+              '  → Fog: Early morning (before 0800) <1km rare but possible Oct-Nov',
+              'Temperature: Year-round high (max 30°C+, min 21-22°C)',
             ]
           },
           {
