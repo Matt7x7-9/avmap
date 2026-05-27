@@ -11746,6 +11746,98 @@ const CAUG_NOTES_24 = {
       },
     ]
   },
+  ZHHH: {
+    fullName: '',
+    iata: '',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'04/22', len:0, apch:'VOR 04/22'},
+      {id:'04L/22R', len:0, apch:'VOR 04L/22R'},
+      {id:'04/04L', len:0, apch:'VOR 04/04L'},
+      {id:'22/22R', len:0, apch:'VOR 22/22R'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• 正式名称: 武漢天河国際空港（Wuhan Tianhe International Airport）',
+              '• ICAO: ZHHH　IATA: WUH',
+              '• 位置: N30°46\' E114°13\'　標高: 113 ft / 34 m（平地）',
+              '• 所在地: 湖北省武漢市（中国中部の主要都市。長江と漢水の合流点）',
+              '• UTC+8（中国標準時 CST、DSTなし）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 04/22: 長さ 11,483 ft（3,500 m）× 幅 148 ft（45 m）舗装',
+              '• RWY 04L/22R: 長さ 11,483 ft（3,500 m）× 幅 148 ft（45 m）舗装（第2滑走路、並行）',
+              '• 計器進入方式: ILS（Cat I）/ RNAV(GNSS) / VOR/DME',
+              '• RWY 04/04L: 北東向き離陸。武漢市街地側（騒音対策）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+              '• 言語: 英語・中国語混在。英語対応可能なコントローラーが多い',
+              '• CPDLC利用可: ZBWH FIRではCPDLC使用可能。ログオン確認してから使用',
+              '• 高度指示: メートル単位での指示あり（1,500m=4,921ft、3,000m=9,843ft等）',
+              '• 詳細指示: 速度・高度の細かい指示が多い。PNFが管理',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+
 
 
 
