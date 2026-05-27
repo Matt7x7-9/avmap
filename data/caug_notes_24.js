@@ -9378,6 +9378,2375 @@ const CAUG_NOTES_24 = {
       },
     ]
   },
+  VVCI: {
+    fullName: '',
+    iata: '',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'05L/23R', len:3048, apch:'ILS 05L/23R'},
+      {id:'05R/23L', len:2700, apch:'VOR 05R/23L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: VVCI / IATA: VCL',
+              '• 位置: Chu Lai, Quang Nam Province, Vietnam (15°24\'05\"N 108°42\'21\"E)',
+              '• 標高: 10 ft AMSL',
+              '• タイムゾーン: UTC+7 (ICT)',
+              '• Transition Altitude: 13000 ft / TL: FL140',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '（記入欄）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 05L/23R: 3048m — ILS',
+              '• RWY 05R/23L: 2700m',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  VTCC: {
+    fullName: '',
+    iata: '',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'18/36', len:170, apch:'VOR 18/36'},
+      {id:'18', len:0, apch:'ILS 18'},
+      {id:'36', len:0, apch:'ILS 36'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: VTCC / IATA: CNX',
+              '• 正式名称: Chiang Mai International Airport',
+              '• 位置: N18°46\' E98°57\'、タイ北部チェンマイ県',
+              '• 標高: 1,036 ft (316 m) AMSL — 高標高（山岳盆地）',
+              '• タイムゾーン: UTC+7（タイ標準時 ICT、DSTなし）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯モンスーン気候だが、山岳盆地のため気温は BKK より5〜10°C 低い',
+              '• 乾季（11〜4月）: 晴天が多く視程良好。ただし霧（Morning Fog）が早朝に発生することあり',
+              '• 雨季（5〜10月）: モンスーンによる大雨。CB・スコール多発',
+              '• 冬季（12〜2月）: 早朝の放射霧（Radiation Fog）が盆地に発生しやすい',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 18/36: 10,400 ft × 148 ft (3,170 m × 45 m) — 単滑走路',
+              '• RWY 18（南向き着陸）/ RWY 36（北向き着陸）',
+              '• 787での使用: RWY 18/36（主）',
+              '• ELEV 1,036 ft（高標高のため T/O・L/D Performance 計算に注意）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+              '• VTBB（バンコク FIR）管轄のため、BKK と同様の ATC 手順',
+              '• タイ英語のアクセントあり。復唱・Confirm を徹底',
+              '• 交通量は BKK より少なく比較的スムーズだが、山岳地形上のベクタリングに注意',
+              '• CPDLC: バンコク FIR では利用可能',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  YSSY: {
+    fullName: 'Sydney Kingsford Smith International Airport',
+    iata: 'SYD',
+    utc: '+10',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'16R/34L', len:0, apch:'VOR 16R/34L'},
+      {id:'16L/34R', len:0, apch:'VOR 16L/34R'},
+      {id:'07/25', len:0, apch:'VOR 07/25'},
+      {id:'RWY25', len:0, apch:'VOR RWY25'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: YSSY / IATA: SYD — Sydney Kingsford Smith International Airport（マスコット空港とも称される）',
+              '• 位置: N33°56\' E151°10\' — CBD南南西 約4nm (7km)。敷地の半分近くがBotany Bayに突き出た立地',
+              '• 標高: 21 ft (6m)',
+              '• タイムゾーン: UTC+10（冬季AEST） / UTC+11（夏季AEDT: 10月初旬〜4月初旬）',
+              '• 運用時間: 24時間（ただしCurfewあり）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• ATISは通常30分ごとに更新（変化がない時は変更されない）',
+              '• ATIS取得方法（787）: CENTER VHF → DATA → COMM-MANAGER-VHF → OTHER → 周波数131.45入力 → FLIGHT INFORMATION - ATIS REQUEST',
+              '• オーストラリアは気候が安定しているが、季節による風向変化がある（北流・南流）',
+              '• RWY16系統最終進入コース（16R/16L）付近: 都市部・住宅地の上空を通過するため騒音制限あり',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• Transition Altitude / Level: Jeppesen chart参照',
+              '• QNH運用（QFE不使用）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• STARはJeppesen chart / RM_JALISSUE_INT - 4.3.YSSY.3.1 - RUNWAY INFORMATION 参照',
+              '• STAR指示後はPRM Approach（平行滑走路同時進入）の可能性があることを念頭に置く',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS Approach: 通常使用。最終進入コースに住宅地があるため騒音考慮',
+              '• GLS PRM Approach: JAL未承認のため実施不可',
+              '• 混雑時に使用',
+              '• RWY34Rと対をなす平行滑走路でPRM運用対象',
+              '• JALが通常使用する南方向着陸RWY',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 16R/34L: 当社便通常使用（離着陸とも）。JALメインRWY',
+              '• RWY 16L/34R: 混雑状況により着陸で使用する場合がある。Wingspan制限によりLanding後のTaxi TWYに注意',
+              '• RWY 07/25: 通常T/Oに使用しない（RWY16R/34Lが横風制限等で使用不可な場合のみ）',
+              '• RWY25: Landing Beyond Thresholdは7,969ftのみ',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+              '• Clearanceに \'Standard rate\' が付加された場合は上昇/降下500fpm以上が必要',
+              '• PRM Approach実施要件: 機長・副操縦士ともにSYD当局HP掲載資料を学習した上で実施可能',
+              '• GLS PRM APCHはJAL未承認のため実施不可',
+              '（乗員各自で記入）',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  YMML: {
+    fullName: '',
+    iata: '',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'PAPI', len:0, apch:'VOR PAPI'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: YMML / IATA: MEL',
+              '• Melbourne International Airport（タラマリン空港）',
+              '• 位置: メルボルン市北部、都心から22km（Tullamarine地区）',
+              '• オーストラリア第2位の発着数。SYD-MEL間年間700万人超（東京-福岡線に匹敵）',
+              '• 時刻: UTC+10（夏時間: UTC+11 / AEDT）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 16/34（主滑走路）',
+              '•   RWY 16: 勾配 -0.80%（下降）',
+              '•   RWY 34: 勾配 +0.78%（上昇）',
+              '• RWY 09/27（副滑走路）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  YBBN: {
+    fullName: 'Brisbane Airport',
+    iata: 'BNE',
+    utc: '+10',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+      TA: '10,000 ft',
+    },
+    runways: [
+      {id:'01L/19R', len:0, apch:'VOR 01L/19R'},
+      {id:'01R/19L', len:0, apch:'VOR 01R/19L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: YBBN / IATA: BNE — Brisbane Airport',
+              '• 位置: クイーンズランド州ブリスベン（N27°23\' E153°07\'）',
+              '• 標高: 15 ft / 5 m',
+              '• タイムゾーン: UTC+10 (AEST) — サマータイムなし（クイーンズランド州）',
+              '• 運用時間: H24',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 亜熱帯性気候。夏季（12〜2月）は高温多湿、CB・スコールあり',
+              '• 冬季（6〜8月）は比較的温暖・乾燥。気温0°C以下になることは稀だが高度補正は必要な場合あり',
+              '• 南東からの貿易風が卓越',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• Transition Altitude: 10,000 ft',
+              '• Brisbane CTR: 135.2 MHz',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR: RNAV 1 以上（Jeppesen参照）',
+              '• Brisbane Approach → Brisbane Tower',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV 進入利用可（Jeppesen参照）',
+              '• ILS / RNAV 進入利用可',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 01L/19R: 長い方（メインRWY）',
+              '• RWY 01R/19L: 短い方',
+              '• Preferential RWY: See Jeppesen（通常 01L/19R）',
+              '• RFFS Category 9',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  YBCS: {
+    fullName: 'Cairns Airport',
+    iata: 'CNS',
+    utc: '+10',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'15', len:0, apch:'VOR 15'},
+      {id:'33', len:0, apch:'VOR 33'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: YBCS / IATA: CNS — Cairns Airport',
+              '• 位置: オーストラリア・クイーンズランド州北部（N16°53\' E145°45\'）',
+              '• 標高: 10 ft / 3 m',
+              '• タイムゾーン: UTC+10 (AEST) — サマータイムなし（クイーンズランド州）',
+              '• 運用時間: H24',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯性気候。乾季（5〜10月）と雨季（11〜4月）に明確に分かれる',
+              '• 雨季はスコール・CB多発。TS Advice System 作動時は遅延あり',
+              '• 台風（サイクロン）シーズン: 11〜4月。接近時は空港クローズの可能性',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• オーストラリア: TA 10,000 ft / TL FL110（または ATC指示）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR = RNAV 1（GNSS または DME/DME/IRU）',
+              '• Preferential RWY 15進入が一般的',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• GP 3.0° / MEHT 47 ft / THR elev 1,089 ft',
+              '• ILS / RNAV 進入利用可',
+              '• Bay（海）側からのアプローチ — 視程良好時はVMCでの進入も可',
+              '• GP 3.0° / MEHT 39 ft / THR elev 906 ft',
+              '• 南西方向の山岳地形に注意。ILS / RNAV 進入',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 15/33 — 一本のみ',
+              '• Preferential RWY: RWY 15',
+              '• RWY 15: GP 3.0° / THR 1,089 ft / MEHT 47 ft',
+              '• RWY 33: GP 3.0° / THR 906 ft / MEHT 39 ft',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  YPAD: {
+    fullName: 'Adelaide Airport',
+    iata: 'ADL',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+      TA: '10,000 ft',
+    },
+    runways: [
+      {id:'05/23', len:0, apch:'VOR 05/23'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: YPAD / IATA: ADL — Adelaide Airport',
+              '• 位置: 南オーストラリア州アデレード（S34°56\' E138°31\'）',
+              '• 標高: 20 ft / 6 m',
+              '• タイムゾーク: UTC+9.5（冬季）/ UTC+10.5（夏季 DST）',
+              '•   ※ 南オーストラリア州は DST あり（10月第1日曜〜4月第1日曜）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 地中海性気候。夏季（12〜2月）は高温乾燥（35°C超えることも）、冬季（6〜8月）は温暖湿潤',
+              '• Cold Temperature Altitude Correction: OAT < 0°C 時に必要（冬季の寒波時に稀に発生）',
+              '• 強風（北西のNorth Wind: フェーン現象）は夏季の特徴的な気象',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• Transition Altitude: 10,000 ft（オーストラリア標準）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR: RNAV 1（GNSS または DME/DME/IRU）',
+              '• Adelaide Approach → Adelaide Tower',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV 進入利用可（Jeppesen参照）',
+              '• SYD (YSSY) からのDiversion: RWY05 KADOM H44 MAXEM Q60 KAKUL経由（682NM）',
+              '• ILS / RNAV 進入利用可（Jeppesen参照）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 05/23: 単一Runway（東北東〜西南西）',
+              '• Preferential RWY: See Jeppesen',
+              '• RFFS Category 9 (2015〜1345 UTC) / Category 7 (1345〜2015 UTC)',
+              '•   ※ DST期間中は1時間繰り上げ（HDS: 1HR Earlier）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  PGUM: {
+    fullName: 'Antonio B. Won Pat International Airport',
+    iata: 'GUM',
+    utc: '+10',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'06L/24R', len:0, apch:'VOR 06L/24R'},
+      {id:'06R/24L', len:0, apch:'VOR 06R/24L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: PGUM / IATA: GUM — Antonio B. Won Pat International Airport',
+              '• 位置: グアム島北部（N13°29\' E144°47\'）',
+              '• 標高: 298 ft / 91 m',
+              '• タイムゾーン: UTC+10 (ChST) — サマータイムなし',
+              '• 運用時間: H24',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯海洋性気候。台風シーズン: 6〜11月（特に8〜10月がピーク）',
+              '• スコールが多く、CBが突発的に発生することがある',
+              '• 貿易風（北東風）卓越。台風時は強風・大雨',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• Transition Level / Altitude: ATC指示に従う',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• 標準進入: ILS RWY 06L（Preferential）または ILS RWY 06R',
+              '• Tailored Arrival VSL24R 指定時: RWY 24R進入',
+              '• GUAM Approach: 124.0 MHz（参考）',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS: IGUM H24 / PAPI 3.0°',
+              '• 通常のPreferential RWY。THRはnon-displaced。',
+              '• ILS: IAWD H24 / PAPI 3.0°',
+              '• THR displaced — Landing距離に注意',
+              '• Tailored Arrival VSL24R (B787) / PAPI 3.0°',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 06L/24R: Preferential RWY 06L / 勾配 ±0.59%',
+              '• RWY 06R/24L: 勾配 ±0.70%',
+              '• THR: 06R および 24R は displaced',
+              '• PAPI: 全RWY 3.0°',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  PHNL: {
+    fullName: '',
+    iata: '',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: PHNL / IATA: HNL',
+              '• Daniel K. Inouye International Airport（旧 Honolulu International Airport）',
+              '• ハワイ州オアフ島、ホノルル',
+              '• UTC-10（JST-19）/ HST（夏時間なし）',
+              '• 24時間運用',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 貿易風（NE〜ENE）が卓越。年間を通じて温暖・快晴が多い',
+              '• ウィンドシア: 山越え気流（Koolau/Waianae山脈）による報告あり。特にクリアリング後の乱気流注意',
+              '• Vog（火山性霞）: ハワイ島方向から漂流することあり。視程低下注意',
+              '• G/S False Captureによる過大降下率事例あり（GPWS作動事例 2018年）',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• 代表的Clearance: Cleared to HNL via present position direct BOOKE, BOOKE # Arrival FL370',
+              '• Via THOMA/DANNO/CANON/SYVAD Tr. FL370 などのバリエーションあり',
+              '• No Traffic時: Descend pilot discretion maintain 8,000ft',
+              '• With Traffic時: FL240〜17,000ftの降下指示後、Traffic Clear後 Cross BOOKE at 8,000ft',
+              '• MEA未満への降下: STAR Chart上のMEAは管制官がOVERRIDE可能（FAA AIP ENR 1.5）',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV',
+              '• LAHSO: ATISで LAHSO IN EFFECT と報じられる。外航機は Negative LAHSO を通報',
+              '• Negative LAHSO通報後も、Taxi speed減速後に Hold short RWY4L/R の指示の場合あり',
+              '• Threshold距離とILS DME/VOR DMEが一致しない複数のRWYあり',
+              '• HCF APPから Maintain 170kt until 5(6)DME 等の指示 → 1000ft AAL近辺につき注意が必要',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• 長さ: 約3600m / ILS / RNAV / VOR',
+              '• LAHSO運用あり（外航機は原則Negative LAHSOを通報）',
+              '• LDA RWY 26L: D/W誘導が狭く短い / 南西風が強くOvershootリスク / Waikiki周辺高層ビル群（500ft級）によるGPWS事例あり',
+              '• ILS / RNAV',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  PHKO: {
+    fullName: 'Ellison Onizuka Kona International Airport at Keahole',
+    iata: 'KOA',
+    utc: '-10',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'17/35', len:353, apch:'VOR 17/35'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: PHKO / IATA: KOA — Ellison Onizuka Kona International Airport at Keahole',
+              '• 位置: ハワイ島（ビッグアイランド）西岸コナ — N19°44\' W156°02\'',
+              '• 標高: 47 ft / 14 m',
+              '• タイムゾーン: UTC-10（Hawaii-Aleutian Standard Time）— DSTなし',
+              '• 運用形態: 民間空港（H24）。国際線・国内線運航',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯性気候。コナ地域は乾燥した晴れが多い（ハワイ島の雨陰側）',
+              '• コナストーム（Kona Storm）: 冬季に低気圧が接近した際、南〜南西風が吹き強雨・荒天になる現象',
+              '• 通常は北東貿易風が卓越するが、コナ（西岸）は山岳の影響で穏やか',
+              '• ウィンドシア: 火山性地形（マウナロア・フアラライ）の影響でWind Shear発生することあり',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR（Jeppesen参照）',
+              '• Kona Tower 118.3 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV 進入（Jeppesen参照）',
+              '• 通常使用RWY',
+              '• ILS / RNAV 進入（Jeppesen参照）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 17/35: 11,000 ft / 3,353 m（メインRWY・アスファルト）',
+              '• Preferential RWY: RWY 17（北風優先・通常）',
+              '• ILS / RNAV 進入あり（RWY 17 / RWY 35）',
+              '• RFFS Category 8',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  PHOG: {
+    fullName: 'Kahului Airport (Maui)',
+    iata: 'OGG',
+    utc: '-10',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'02/20', len:132, apch:'VOR 02/20'},
+      {id:'05/23', len:521, apch:'VOR 05/23'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: PHOG / IATA: OGG — Kahului Airport (Maui)',
+              '• 位置: マウイ島カフルイ — N20°54\' W156°26\'',
+              '• 標高: 54 ft / 16 m',
+              '• タイムゾーン: UTC-10（Hawaii-Aleutian Standard Time）— DSTなし',
+              '• 運用形態: 民間空港（H24）。国際線・国内線運航',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯性気候。北東貿易風が卓越（年間を通じて）',
+              '• カフルイはマウイ島の北岸中央部。貿易風の影響を直接受け、風が強いことが多い',
+              '• ハレアカラ火山（3,055m）が南東に聳える。風の流れが複雑',
+              '• コナストーム: 冬季に南西風・強雨が発生することあり',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR（Jeppesen参照）',
+              '• Maui Tower 123.9 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV 進入（Jeppesen参照）',
+              '• 通常使用RWY。北から進入',
+              '• ILS / RNAV 進入（Jeppesen参照）',
+              '• 南からの進入 — ハレアカラの雲・乱気流に注意',
+              '• RNAV 進入（Jeppesen参照）— 短RWY（4,990ft）のためB787は通常不使用',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 02/20: 6,995 ft / 2,132 m（主RWY・アスファルト）',
+              '• RWY 05/23: 4,990 ft / 1,521 m（短RWY）',
+              '• Preferential RWY: RWY 02（通常）',
+              '• ILS / RNAV 進入あり（RWY 02 / RWY 20）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  PHTO: {
+    fullName: 'Hilo International Airport',
+    iata: 'ITO',
+    utc: '-10',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'03/21', len:991, apch:'VOR 03/21'},
+      {id:'08/26', len:132, apch:'VOR 08/26'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: PHTO / IATA: ITO — Hilo International Airport',
+              '• 位置: ハワイ島（ビッグアイランド）東岸ヒロ — N19°43\' W155°03\'',
+              '• 標高: 38 ft / 12 m',
+              '• タイムゾーン: UTC-10（Hawaii-Aleutian Standard Time）— DSTなし',
+              '• 運用形態: 民間空港（H24）。国際線・国内線運航',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯雨林気候。ハワイ州で最も雨の多い都市の一つ（年間降水量3,000mm超）',
+              '• 北東貿易風が卓越。ハレアカラ・マウナケア・マウナロアを越えた風が降水をもたらす',
+              '• 低雲・霧が頻繁に発生。特に朝・夕方・雨天時は視程悪化',
+              '• コナストーム: 冬季の南西風時は強雨・荒天',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR（Jeppesen参照）',
+              '• Hilo Tower 118.1 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV 進入（Jeppesen参照）',
+              '• 通常使用RWY。北東貿易風に向かう進入',
+              '• ILS / RNAV 進入（Jeppesen参照）',
+              '• RNAV 進入（Jeppesen参照）— 副RWY',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 03/21: 9,812 ft / 2,991 m（メインRWY・アスファルト）',
+              '• RWY 08/26: 6,994 ft / 2,132 m',
+              '• Preferential RWY: RWY 03（通常）',
+              '• ILS / RNAV 進入あり（RWY 03 / RWY 21）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  PMDY: {
+    fullName: 'Henderson Field (Midway Atoll)',
+    iata: 'MDY',
+    utc: '-11',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'06/24', len:377, apch:'VOR 06/24'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: PMDY / IATA: MDY — Henderson Field (Midway Atoll)',
+              '• 位置: ミッドウェー環礁（北太平洋）— N28°12\' W177°22\'',
+              '• 標高: 13 ft / 4 m',
+              '• タイムゾーン: UTC-11（Midway Standard Time）— DSTなし',
+              '• 運用形態: 米魚類野生生物局（US Fish & Wildlife Service）管理。定期便なし。',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 亜熱帯性気候。年間を通じて比較的穏やかだが、冬季（11〜3月）は強風・波浪',
+              '• 台風シーズン（6〜11月）は衰退期の台風・熱帯低気圧が接近することあり',
+              '• スコール・CBが発生することあり',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• NDB / RNAV 進入（Jeppesen参照）',
+              '• 非精密進入のみ。気象最低値に注意',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 06/24: 约7,800 ft / 2,377 m（アスファルト）',
+              '• 単一滑走路。非精密進入（NDB / RNAV）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  PWAK: {
+    fullName: 'Wake Island Airfield',
+    iata: 'AWK',
+    utc: '+12',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'10/28', len:987, apch:'VOR 10/28'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: PWAK / IATA: AWK — Wake Island Airfield',
+              '• 位置: ウェーク島（北太平洋、グアム東方約1,500NM / N19°17\' E166°38\'）',
+              '• 標高: 14 ft / 4 m',
+              '• タイムゾーン: UTC+12',
+              '• 運用形態: 米軍管理（US Air Force）。民間機は緊急時のみ使用可',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯海洋性気候。年間を通じて温暖・多湿',
+              '• 北東貿易風卓越。台風シーズン（6〜11月）はサイクロン直撃リスクあり',
+              '• スコール・CBが突発的に発生することがある',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS進入利用可（軍用。民間機も使用可能）',
+              '• Jeppesen軍用Chartを参照',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 10/28: 約9,800 ft / 2,987 m（アスファルト）',
+              '• 単一滑走路。ILS・精密進入あり（軍用）',
+              '• PAPI: 3.0°（推定）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  PKMA: {
+    fullName: 'Bucholz Army Airfield (Kwajalein)',
+    iata: 'KWA',
+    utc: '+12',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'06/24', len:440, apch:'VOR 06/24'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: PKMA / IATA: KWA — Bucholz Army Airfield (Kwajalein)',
+              '• 位置: クワジャリン環礁（マーシャル諸島）— N08°43\' E167°44\'',
+              '• 標高: 9 ft / 3 m',
+              '• タイムゾーン: UTC+12',
+              '• 運用形態: 米陸軍管理（Ronald Reagan Ballistic Missile Defense Test Site）。民間機は緊急時のみ使用可',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯海洋性気候。年間を通じて温暖・多湿',
+              '• 北東貿易風卓越。台風シーズン（6〜11月）はサイクロンリスクあり',
+              '• スコール・CBが突発的に発生',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• 計器進入利用可（軍用）',
+              '• Jeppesen軍用Chartを参照',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 06/24: 約8,000 ft / 2,440 m（アスファルト）',
+              '• 単一滑走路。軍用計器進入あり',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  PKMJ: {
+    fullName: 'Amata Kabua International Airport (Majuro)',
+    iata: 'MAJ',
+    utc: '+12',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'07/25', len:408, apch:'VOR 07/25'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: PKMJ / IATA: MAJ — Amata Kabua International Airport (Majuro)',
+              '• 位置: マジュロ環礁（マーシャル諸島）— N07°04\' E171°16\'',
+              '• 標高: 22 ft / 7 m',
+              '• タイムゾーン: UTC+12',
+              '• 運用形態: 民間空港。国際線・国内線運航あり',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯海洋性気候。年間を通じて温暖・多湿（年間降水量3,000mm超）',
+              '• 北東貿易風卓越（11〜4月）。台風シーズン（6〜11月）はサイクロンリスクあり',
+              '• CB・スコールが突発的に発生。視程の急変に注意',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• Majuro Radio 118.3 MHz（FSS: Flight Service Station）',
+              '• ATC非常駐型（FSS運用）のため手順に注意',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV 進入（Jeppesen参照）',
+              '• 海上からのアプローチ。水平線に対してglide pathを維持',
+              '• ILS / RNAV 進入（Jeppesen参照）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 07/25: 約7,900 ft / 2,408 m（アスファルト）',
+              '• 単一滑走路。ILS / RNAV 進入あり',
+              '• PAPI: RWY 07 / RWY 25 ともにあり',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  AYPY: {
+    fullName: '',
+    iata: '',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'14L/32R', len:3000, apch:'VOR 14L/32R'},
+      {id:'14R/32L', len:2438, apch:'VOR 14R/32L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: AYPY / IATA: POM',
+              '• 空港名: Jacksons International Airport',
+              '• 位置: パプアニューギニア、ポートモレスビー南東約10km',
+              '• 標高: 146ft (45m)',
+              '• 時刻: UTC+10（夏時間なし）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯性気候 / スコール多発（特に午後）',
+              '• 乾季: 5〜10月 / 雨季: 11〜4月',
+              '• 霧・低視程: 早朝に発生することあり',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS RWY14L: CAT I / DA 380ft / RVR 550m',
+              '• VOR/DME RWY14L',
+              '• VOR/DME RWY32R',
+              '• RNAV(GNSS) RWY32R',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 14L/32R: 3000m × 45m（主滑走路）ILS RWY14L',
+              '• RWY 14R/32L: 2438m × 45m',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  KSEA: {
+    fullName: 'Seattle-Tacoma International Airport',
+    iata: 'SEA',
+    utc: '-8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'16L/34R', len:627, apch:'VOR 16L/34R'},
+      {id:'16C/34C', len:743, apch:'VOR 16C/34C'},
+      {id:'16R/34L', len:926, apch:'VOR 16R/34L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: KSEA / IATA: SEA — Seattle-Tacoma International Airport',
+              '• 位置: ワシントン州シータック市 — N47°27\' W122°18\'',
+              '• 標高: 433 ft / 132 m',
+              '• タイムゾーン: UTC-8 (PST) / 夏時間 UTC-7 (PDT)',
+              '• 運用形態: 民間空港（H24）。国際線・国内線運航',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 太平洋岸海洋性気候。冬季雨・低雲・霧多発（10〜3月）',
+              '• 夏季（6〜9月）: 比較的安定、霧少ない、視程良好',
+              '• 卓越風: 南西風。稀にEast Windが吹くと視程悪化',
+              '• レーニア山（4,392m）が南東に聳える — 東向き経路でMSA高い',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR: HAWKZ / GLASR / SUMMA 等（Jeppesen参照）',
+              '• Seattle Approach: 120.1 / 124.2 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV（メイン精密進入、南向き）',
+              '• 通常使用RWY',
+              '• ILS / RNAV（並行RWY同時運用時）',
+              '• 3本並行RWY同時着陸 → 管制指示を明確に聴取',
+              '• 北向き（北風時・離陸主体、着陸もあり）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 16L/34R: 3,627m（メインRWY）',
+              '• RWY 16C/34C: 2,743m（中央RWY）',
+              '• RWY 16R/34L: 2,926m（西側RWY）',
+              '• Preferential RWY: 16系統（南向き着陸）が通常。北風時は34系統',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  KSFO: {
+    fullName: 'San Francisco International Airport',
+    iata: 'SFO',
+    utc: '-8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'28L/10R', len:618, apch:'VOR 28L/10R'},
+      {id:'28R/10L', len:231, apch:'VOR 28R/10L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: KSFO / IATA: SFO — San Francisco International Airport',
+              '• 位置: カリフォルニア州サンマテオ郡（SF南約21km） — N37°37\' W122°22\'',
+              '• 標高: 13 ft / 4 m',
+              '• タイムゾーン: UTC-8 (PST) / 夏時間 UTC-7 (PDT)',
+              '• 運用形態: 民間空港（H24）。国際線・国内線運航',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• サンフランシスコ湾に突き出した半島上に位置',
+              '• 夏季（6〜9月）: 朝霧（カールの霧）が有名 — 午前中霧、午後晴れるパターン',
+              '• 冬季（11〜3月）: 雨・低雲多発',
+              '• Bay Area特有の西風: 午後に強まる（特に夏季）',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR: BDEGA / SERFR / DYAMD 等（Jeppesen参照）',
+              '• NorCal Approach: 135.65 / 120.35 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS CAT III / RNAV（北側メインRWY、PRM同時並行進入あり）',
+              '• 通常使用RWY。Final上に住宅地・Bay Bridgeあり',
+              '• ILS CAT III / RNAV（南側平行RWY、PRM）',
+              '• RWY28Lと同時平行進入運用 — Breakout指示に即時対応',
+              '• 東向き（夜間・東風時・28混雑時）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 28L/10R: 3,618m（北側・メインRWY）',
+              '• RWY 28R/10L: 3,231m（南側・平行RWY）',
+              '• Preferential RWY: 28系統（西向き）が通常。夜間・東風時は10系統',
+              '• ILS CAT III: 28L / 28R（Low Visibility対応）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  KLAX: {
+    fullName: 'Los Angeles International Airport',
+    iata: 'LAX',
+    utc: '-8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'24L/06R', len:685, apch:'VOR 24L/06R'},
+      {id:'24R/06L', len:135, apch:'VOR 24R/06L'},
+      {id:'25L/07R', len:685, apch:'VOR 25L/07R'},
+      {id:'25R/07L', len:137, apch:'VOR 25R/07L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: KLAX / IATA: LAX — Los Angeles International Airport',
+              '• 位置: カリフォルニア州ロサンゼルス市（ベニスビーチ近郊） — N33°57\' W118°24\'',
+              '• 標高: 125 ft / 38 m',
+              '• タイムゾーン: UTC-8 (PST) / 夏時間 UTC-7 (PDT)',
+              '• 運用形態: 民間空港（H24）。国際線・国内線運航（米国屈指の大規模空港）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 地中海性気候。年間を通じて温暖・乾燥',
+              '• 海岸霧（Marine Layer）: 夏季朝に霧・低雲が発生、午前中に晴れる',
+              '• Santa Ana Wind: 秋〜冬に東風（乾燥・強風）が吹く、視程は良好だがWind Shear注意',
+              '• 交通量: 米国屈指の混雑空港。遅延多発',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR: SADDE / SEAVU / RIIVR 等（Jeppesen参照）',
+              '• SoCal Approach: 124.5 / 135.4 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV（北側メインRWY、西向き着陸）',
+              '• 通常の国際線使用RWY',
+              '• ILS / RNAV（南側メインRWY、西向き着陸）',
+              '• 内側RWY（短い）— 大型機は通常使用しない',
+              '• 東向き（Santa Ana Wind時・稀）— Final上に住宅地',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 24L/06R: 3,685m（北側・メインRWY）',
+              '• RWY 24R/06L: 3,135m（北側内側RWY）',
+              '• RWY 25L/07R: 3,685m（南側・メインRWY）',
+              '• RWY 25R/07L: 3,137m（南側内側RWY）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  KSAN: {
+    fullName: 'San Diego International Airport (Lindbergh Field)',
+    iata: 'SAN',
+    utc: '-8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'27/09', len:865, apch:'VOR 27/09'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: KSAN / IATA: SAN — San Diego International Airport (Lindbergh Field)',
+              '• 位置: カリフォルニア州サンディエゴ市（市街地至近） — N32°44\' W117°11\'',
+              '• 標高: 17 ft / 5 m',
+              '• タイムゾーン: UTC-8 (PST) / 夏時間 UTC-7 (PDT)',
+              '• 運用形態: 民間空港（H24）。国際線・国内線運航',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 地中海性気候。年間を通じて温暖・乾燥（「アメリカ最良の気候」とも）',
+              '• Marine Layer（海霧）: 夏季朝に発生、午前中に晴れる',
+              '• Santa Ana Wind: 秋〜冬に東風（強風・乾燥・視程良好）',
+              '• メキシコ国境から約30kmと非常に近い',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR: DEEEP / POGGI 等（Jeppesen参照）',
+              '• SoCal Approach: 124.35 / 132.7 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• 通常使用RWY。西向き着陸（太平洋側から進入）',
+              '• VOR/DME or RNAV Approach: Final短い（約4NM）— 高度管理が重要',
+              '• Circling: 市街地上空のためCircling Minimumが高い',
+              '• 東向き（稀）— Santa Ana Wind時',
+              '• Final上に市街地・軍施設 — 特別注意',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 27/09: 2,865m（唯一のRWY）',
+              '• Preferential RWY: 27（西向き着陸）が通常。東風時のみ09',
+              '• ILS: RWY27（VGSI: PAPI）',
+              '• RFFS Category 9',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  KORD: {
+    fullName: 'Chicago O\'Hare International Airport',
+    iata: 'ORD',
+    utc: '-6',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'10L/28R', len:962, apch:'VOR 10L/28R'},
+      {id:'10C/28C', len:288, apch:'VOR 10C/28C'},
+      {id:'10R/28L', len:463, apch:'VOR 10R/28L'},
+      {id:'09L/27R', len:286, apch:'VOR 09L/27R'},
+      {id:'09R/27L', len:48, apch:'VOR 09R/27L'},
+      {id:'04L/22R', len:438, apch:'VOR 04L/22R'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: KORD / IATA: ORD — Chicago O\'Hare International Airport',
+              '• 位置: イリノイ州シカゴ市北西部 — N41°58\' W87°54\'',
+              '• 標高: 672 ft / 205 m',
+              '• タイムゾーン: UTC-6 (CST) / 夏時間 UTC-5 (CDT)',
+              '• 運用形態: 民間空港（H24）。国際線・国内線運航（米国最大級のハブ空港）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 大陸性気候。四季の変化が激しい',
+              '• 冬季（12〜3月）: 降雪・氷雪・Blizzard。De-icing必須、RWY閉鎖あり',
+              '• 春・秋: 強風・雷雨・竜巻シーズン（4〜5月、9〜10月）',
+              '• 夏季: 雷雨・突風多発、視程急悪化',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR: PAITN / ACITO / LEWKE 等（Jeppesen参照）',
+              '• Chicago Approach: 124.0 / 133.5 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV（メインRWY、最長3,962m）',
+              '• 通常の国際線使用RWY',
+              '• ILS / RNAV — 並行RWY同時運用',
+              '• 交差RWY — 南北風時に使用',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 10L/28R: 3,962m（東西・メインRWY）',
+              '• RWY 10C/28C: 3,288m',
+              '• RWY 10R/28L: 2,463m',
+              '• RWY 09L/27R: 2,286m（短め）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  KJFK: {
+    fullName: 'New York John F. Kennedy International Airport',
+    iata: 'JFK',
+    utc: '-5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'04L/22R', len:560, apch:'VOR 04L/22R'},
+      {id:'04R/22L', len:460, apch:'VOR 04R/22L'},
+      {id:'13L/31R', len:48, apch:'VOR 13L/31R'},
+      {id:'13R/31L', len:560, apch:'VOR 13R/31L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: KJFK / IATA: JFK — New York John F. Kennedy International Airport',
+              '• 位置: ニューヨーク州クイーンズ区（ジャマイカ湾岸） — N40°38\' W73°46\'',
+              '• 標高: 13 ft / 4 m',
+              '• タイムゾーン: UTC-5 (EST) / 夏時間 UTC-4 (EDT)',
+              '• 運用形態: 民間空港（H24）。国際線・国内線運航（米国最大の国際線ハブ）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 大西洋岸の大陸性気候。四季がはっきりしている',
+              '• 冬季（12〜3月）: 降雪・Nor\'easter・氷雪。De-icing必須',
+              '• 夏季: 雷雨・突風・霧（大西洋からの海霧）',
+              '• 台風・ハリケーンの影響を受けることあり（ Sandy 2012等）',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR: CAMRN / LENDY / PARCH 等（Jeppesen参照）',
+              '• NY Approach: 125.7 / 127.4 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV（北西向き、メイン使用）',
+              '• Final: ジャマイカ湾上空から進入',
+              '• ILS / RNAV（南向き）— 南西風時',
+              '• ILS / RNAV（南東向き）— 北西風時',
+              '• 北向き（稀）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 04L/22R: 2,560m',
+              '• RWY 04R/22L: 3,460m（メイン）',
+              '• RWY 13L/31R: 3,048m',
+              '• RWY 13R/31L: 2,560m',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  KBOS: {
+    fullName: 'Boston Logan International Airport',
+    iata: 'BOS',
+    utc: '-5',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'04L/22R', len:48, apch:'VOR 04L/22R'},
+      {id:'04R/22L', len:621, apch:'VOR 04R/22L'},
+      {id:'09/27', len:743, apch:'VOR 09/27'},
+      {id:'15R/33L', len:524, apch:'VOR 15R/33L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: KBOS / IATA: BOS — Boston Logan International Airport',
+              '• 位置: マサチューセッツ州ボストン市（ボストン港内半島） — N42°21\' W71°00\'',
+              '• 標高: 20 ft / 6 m',
+              '• タイムゾーン: UTC-5 (EST) / 夏時間 UTC-4 (EDT)',
+              '• 運用形態: 民間空港（H24）。国際線・国内線運航',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 大西洋岸の大陸性気候。四季がはっきりしている',
+              '• 冬季（12〜3月）: 降雪・Nor\'easter（北東嵐）— 大雪・強風・高波',
+              '• 夏季: 霧・低雲あり（大西洋からの海霧）、雷雨も発生',
+              '• 秋: ハリケーンの影響を受けることあり',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR: ROBUC / SSONE / JERSS 等（Jeppesen参照）',
+              '• Boston Approach: 124.4 / 133.0 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV（メインRWY、北向き着陸）',
+              '• Final: ボストン湾上空から進入',
+              '• ILS / RNAV（南向き着陸）',
+              '• 市街地上空 Final — Noise Abatement考慮',
+              '• ILS / RNAV（東西RWY、風次第で使用）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 04L/22R: 3,048m（メイン）',
+              '• RWY 04R/22L: 2,621m',
+              '• RWY 09/27: 2,743m（東西）',
+              '• RWY 15R/33L: 1,524m（短め・限定使用）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  KDFW: {
+    fullName: 'Dallas Fort Worth International Airport',
+    iata: 'DFW',
+    utc: '-6',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'17L/35R', len:85, apch:'VOR 17L/35R'},
+      {id:'17C/35C', len:85, apch:'VOR 17C/35C'},
+      {id:'17R/35L', len:743, apch:'VOR 17R/35L'},
+      {id:'18L/36R', len:85, apch:'VOR 18L/36R'},
+      {id:'18R/36L', len:743, apch:'VOR 18R/36L'},
+      {id:'13R/31L', len:0, apch:'VOR 13R/31L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: KDFW / IATA: DFW — Dallas Fort Worth International Airport',
+              '• 位置: テキサス州ダラス・フォートワース間（グレープバイン市） — N32°53\' W97°02\'',
+              '• 標高: 607 ft / 185 m',
+              '• タイムゾーン: UTC-6 (CST) / 夏時間 UTC-5 (CDT)',
+              '• 運用形態: 民間空港（H24）。国際線・国内線運航（米国最大級の空港面積）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 大陸性半乾燥気候。テキサス平原に位置',
+              '• 冬季（12〜2月）: 氷雨（Freezing Rain）・Ice Storm — DFW最大の気象Threat',
+              '• 春（3〜5月）: 竜巻シーズン（Tornado Alley）。雷雨・ひょう（Hail）・突風',
+              '• 夏季（6〜8月）: 酷暑（35〜42℃）・雷雨',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• RNAV STAR: FINGR / TRRCH / TARRR 等（Jeppesen参照）',
+              '• Fort Worth Approach: 124.3 / 126.25 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS / RNAV（南向き、メインRWY群）',
+              '• 通常の国際線使用RWY',
+              '• ILS / RNAV（北向き）',
+              '• ILS / RNAV（西側南向き）',
+              '• 東西風時（稀）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 17L/35R: 4,085m（最長・メイン）',
+              '• RWY 17C/35C: 4,085m',
+              '• RWY 17R/35L: 2,743m',
+              '• RWY 18L/36R: 4,085m',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+
 
 
 
