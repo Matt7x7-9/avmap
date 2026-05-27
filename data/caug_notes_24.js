@@ -968,6 +968,22 @@ const CAUG_NOTES_24 = {
               '  → If unable to advise ATC: proceed as cleared, attempt other comms',
               '  → Land at nearest suitable aerodrome',
               'Mode S Operations: Mandatory on ground for all aircraft',
+              'Data Link Communication: DCL (Departure Clearance Uplink) may replace voice',
+              '  → System messages via THAIS/FMS; comply with all clearances',
+            ]
+          },
+          {
+            title: 'Docking & Parking Systems',
+            items: [
+              '⚠️ VDGS (Visual Docking Guidance Systems): Available at major stands',
+              '  → Provides real-time visual guidance to correct parking position',
+              '  → Red/Green indicators on system display for pilot alignment',
+              '  → System failure: Use marshaller, follow hand signals only',
+              'Parking Stand Coordinates: Precise N/S & E/W grid provided per stand',
+              'Ground Power & Services: Availability varies by stand location',
+              '  → Power failures: APU must remain running or external power required',
+              'Tug/Tow Bar: Both available; coordinate with ground crew',
+              'PAX Bridge: Available at designated stands (G, F, E series priority)',
             ]
           },
         ]
@@ -991,12 +1007,27 @@ const CAUG_NOTES_24 = {
           {
             title: 'Descent & Approach Procedures',
             items: [
-              'Descent rate: Min 500ft/min assumed by ATC',
-              'PAPI (all RWY): 3-dot on LEFT side = 3.0° glide slope',
+              'Descent rate: Min 500ft/min assumed by ATC (lower rate requires notification)',
+              'PAPI (all RWY): 3-dot on LEFT side = 3.0° glide slope (MEHT 50ft)',
               'Visual Approach: Possible during good weather; request if available',
-              'Long finals: Monitor for conflicting traffic (busy airfield)',
+              'Long finals: Monitor for conflicting traffic (busy airfield 40/hour landing rate)',
               'Go-Around: If unstable below 500ft, execute immediately (wind shear risk)',
               'Windshear alerts: Listen for ATC reports; adjust approach if received',
+              '⚠️ RWY 19 with West wind: Significant turbulence possible (Lantau island effect)',
+            ]
+          },
+          {
+            title: 'ILS/RNP Approach Minimums & Landing Distances',
+            items: [
+              'RWY 01L/19R (ILS Cat II): RVR 550m minimum, Cat III capable',
+              '  → Landing distances: 600m, 750m, 1000m, 1600m, 2000m, 3200m available',
+              'RWY 01R/19L (ILS Cat II): RVR 550m minimum',
+              '  → Landing distances: Similar to 01L/19R configuration',
+              'RWY 02R/20L (ILS Cat I): RVR 800m minimum',
+              '  → RNP Rwy 20R available with precision approach capability',
+              'RWY 02L/20R (ILS Cat I): RVR 800m minimum',
+              '  → RNAV Rwy 01 approach available with speed restrictions',
+              'Missed Approach: Procedures differ per RWY; review approach chart',
             ]
           },
           {
@@ -1068,10 +1099,31 @@ const CAUG_NOTES_24 = {
             items: [
               'SID Verification: Confirm assigned SID with TWR on frequency change',
               'Departure Routing: TWR → APP (East/West/South/North sector) → BKK Control',
+              'Available SIDs: EASTE, LEBIM, TUMGA (1C/1D variants per RWY)',
               'SID Climb Gradients: Verify aircraft performance vs. procedure requirements',
+              '  → EASTE: Initial climb 074°, various altitude restrictions by waypoint',
+              '  → LEBIM: Initial climb via SID, crossing altitude restrictions',
+              '  → TUMGA: Initial climb, significant altitude step requirements',
               'Terrain Clearance: Most SIDs climbing toward northern highlands',
               'Transition Altitude: 3000ft (standard for Thailand)',
               'Wind Shear Reporting: If experienced, report to ATC immediately',
+              'Speed Restrictions: Published per SID waypoint (typically 250kt below FL100)',
+            ]
+          },
+          {
+            title: 'Parking Stands & Ground Support Details',
+            items: [
+              'West Apron Stands: Detailed coordinate system for all stands (N/S, E/W)',
+              '  → G-series (G1-G5): 121.95 MHz GND frequency',
+              '  → F-series (F1-F6, F21-F33): 121.95 MHz GND frequency',
+              '  → E-series (E1-E10): 121.75 MHz GND frequency (north apron)',
+              '  → D-series (D2-D7): 121.95 MHz GND frequency',
+              'VDGS (Visual Docking Guidance): Available at select stands',
+              '  → Monitor VDGS display for docking position guidance',
+              '  → System failure: Manual parking with marshaller guidance',
+              'Parking Bay Coordinates: Precise N/S and E/W coordinates available',
+              'No Tail Pushes: All stands use nose-in pushback only',
+              'Ground Services: Power, water, lavatory, PAX bridge availability varies by stand',
             ]
           },
           {
