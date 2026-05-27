@@ -1331,57 +1331,292 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 9',
     prefRwy: 'Nil',
-    sections: [
+    runways: [
+      {id:'07L/25R', len:4000, apch:'ILS Cat II 07L/25R'},
+      {id:'07R/25L', len:3000, apch:'ILS Cat I 07R/25L'},
+    ],
+    tabs: [
       {
-        title: 'COMM',
-        items: [
-          'コンパニー無線: 現地当局規制により利用不可 (N/A)',
-          'D-ATIS: TAN SON NHAT 128.0MHz H24',
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: 'RWY Operations & Configuration',
+            items: [
+              'RWY 07L/25R: 4000m primary runway (ILS Cat II)',
+              '  → Parallel runway operations: RWY 07L DEP / RWY 25R ARR (Monsoon-dependent)',
+              'RWY 07R/25L: 3000m secondary runway (ILS Cat I)',
+              '  → Typically non-preferred; used when RWY 07L/25R unavailable',
+              'PAPI: Available on both runways',
+              'Runway Surface: Concrete in good condition',
+              'Crosswind Limit: 15 KT maximum',
+              '⚠️ Runway 07R/25L: Shorter length; verify performance before planning T/O',
+            ]
+          },
+          {
+            title: 'Taxiway & Ground Operations',
+            items: [
+              'TWY S5: 45m width (exceptionally wide)',
+              'Other TWY: Standard 23m width',
+              'Ground Power: Available at all parking spots',
+              'VDGS (Visual Docking Guidance): Available at spots 09-18 (stop line +1.0m / -0.5m)',
+              'Follow-me Service: Available on request',
+              '⚠️ Apron Congestion: Limited maneuvering space; coordinate carefully with GND',
+              '⚠️ TWY Markings: Some sections lack clear visual guidance; follow ATC vectors',
+            ]
+          },
+          {
+            title: 'Weather & Hazards ⚠️',
+            items: [
+              'TS Season: May-Sep (Southwest Monsoon)',
+              '  → May: Particularly severe (1+ hours of intense activity common)',
+              '  → 15-20 min duration typical; may extend beyond',
+              'FOG: Oct-Nov early morning (light; VIS rarely at minimums)',
+              '  → Early morning: Check ATIS for rapid VIS changes',
+              'Bird Hazard: High concentration in surrounding areas',
+              '  → Request bird sweep before departure',
+              '⚠️ Military Operations: Bien Hoa (northeast 13NM) military airfield',
+              '  → Coordinate with Vietnam ATC on military airspace restrictions',
+            ]
+          },
+          {
+            title: 'Restricted Airspace & Special Procedures',
+            items: [
+              '⚠️ VVP4 HO CHI MINH CITY: GND-3000m restricted airspace',
+              '  → Overflight prohibited without ATC clearance',
+              '⚠️ VVD23-26 AIR FORCE TRAINING: Helicopter training areas',
+              '  → Mandatory coordination with military ATC on SID/STAR',
+              'Airspace Class: Class C (outer ring) / Class D (inner)',
+              'MSA around VVTS: Carefully plan climb/descent on assigned SID/STAR',
+            ]
+          },
+          {
+            title: 'Low Visibility Operations',
+            items: [
+              'ILS CAT II Procedures: Available on RWY 07L/25R',
+              '  → RVR minimum: 550m (standard)',
+              '  → Reduced landing rate: 40/hour during CAT II ops',
+              'CAT I RWY: 07R/25L CAT I minimum 800m RVR',
+              '⚠️ Transition Altitude: 3000ft (Vietnam standard)',
+              'Approach Briefing: Review all altitude restrictions; comply exactly',
+            ]
+          },
+          {
+            title: 'Communications & Equipment',
+            items: [
+              '⚠️ Company VHF: Unavailable (local ATC regulations)',
+              'D-ATIS: TAN SON NHAT 128.0 MHz (H24)',
+              'GND Frequency: Single VHF channel (coordinate all taxi/pushback)',
+              '⚠️ Radio Interference: Possible during peak traffic hours',
+              '  → Maintain vigilance on GND frequency',
+              'Mode S Operations: Mandatory for all aircraft',
+              'ATC Instructions: Follow implicitly; ATC separation is marginal',
+            ]
+          },
+          {
+            title: 'Parking & Docking Systems',
+            items: [
+              'PBB Stands: 9-16 and 17-22 (passenger boarding bridges)',
+              '⚠️ Spot 14: Uphill slope during parking (monitor stop position)',
+              'Spots 18/19: Not suitable for simultaneous B747-400 use',
+              'B787 Preferred Spots: PBB 17, 18, 9-16 (power in available)',
+              'Open Apron: Spots 29-32, 33-36 available for overflow',
+              'All Spots: Nose-in pushback compatible',
+              'VDGS Failure: Use marshallers; follow hand signals only',
+            ]
+          },
         ]
       },
       {
-        title: 'TWY/スポット',
-        items: [
-          'TWY S5: 45m / その他TWY: 23m',
-          'RWY07L/25Rホールディングポジション: ポジションマーキングのみ (サインなし)',
-          'PBB: スポット 9-16 および 17-22',
-          '⚠️ スポット14: 駐機中の上り傾斜に注意 (stop position直前)',
-          'スポット18/19: B747-400の同時使用不可',
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'RWY Assignments & Approach Selection',
+            items: [
+              'RWY 07L/25R (ILS Cat II): Primary arrival runway when available',
+              '  → Preferred for all JAL arrivals',
+              'RWY 07R/25L (ILS Cat I): Alternate when 07L/25R congested',
+              '  → Requires longer approach planning (shorter runway)',
+              'CAT I vs CAT II: No procedural difference for standard approaches',
+              'Vacate: Use fast-exit TWY if available; expedite runway clearing',
+              'Follow-me: Request if required for apron navigation',
+            ]
+          },
+          {
+            title: 'Descent & Approach Procedures',
+            items: [
+              'Descent Rate: 500 ft/min minimum standard (notify if lower required)',
+              'PAPI: 3-dot descent on LEFT side of RWY (standard 3.0°)',
+              'Visual Approach: Possible during VFR conditions (request if available)',
+              'Long Finals: Monitor for conflicting traffic (intermediate airspace busy)',
+              'Go-Around: Execute immediately if unstable below 500ft',
+              'Windshear Alerts: Listen for ATC reports; adjust approach if received',
+              '⚠️ Possible Turbulence: Southeast wind through city may cause mechanical turbulence',
+            ]
+          },
+          {
+            title: 'ILS/RNP Approach Minimums',
+            items: [
+              'RWY 07L/25R (ILS Cat II): RVR 550m minimum',
+              '  → Available 24/7 when weather requires',
+              '  → Approach chart available via FMS',
+              'RWY 07R/25L (ILS Cat I): RVR 800m minimum',
+              '  → Limited approach guidance available',
+              '  → Confirm approach chart loaded before descent',
+              'Missed Approach: Procedures differ per RWY; review before approach',
+              'Visibility Minimums: Apply CAT I/II rules per runway',
+            ]
+          },
+          {
+            title: 'Spot Assignment & Services',
+            items: [
+              'JAL Primary Spots: 17, 18, 9-16 (PBB with full services)',
+              '  → All have ground power, water, lavatory service',
+              'B787 Compatible: All PBB spots suitable for B787 operations',
+              'APU After Block-In: 5 min max before engines shut down',
+              'Ground Power: Available immediately upon spot assignment',
+              'Services: PAX steps, tugs/tow bars, water/lavatory all available',
+              'Immediate Building Position Lights: Available for night positioning',
+            ]
+          },
+          {
+            title: 'Speed Control & Altitude Restrictions ⚠️',
+            items: [
+              'Speed Control: Applied throughout approach unless ATC authorized otherwise',
+              'Published Speed Restrictions: Adhere to approach chart procedures',
+              '⚠️ Low Level Altitude Limit: 1000ft minimum (apply caution in descent)',
+              'Altitude Restrictions: Issued with descent clearance (honor exactly)',
+              'Transition Altitude: 3000ft (standard Vietnam rules)',
+              'Final Approach: Stabilized descent before 500ft mandatory',
+            ]
+          },
+          {
+            title: 'RWY Occupancy & Minimum Equipment',
+            items: [
+              'Minimum Runway Occupancy Time: 20-30 min (varies by parking location)',
+              '  → Expedite runway vacating after landing (use fast-exit if available)',
+              '  → Landing rate target: 20/hour maximum during normal ops',
+              'Aircraft Equipment: Standard ILS Cat I/II equipment required',
+              'Runway Lighting: Operational H24 (standard configuration)',
+              'Taxiway Lighting: Available; follow ATC guidance for night ops',
+            ]
+          },
         ]
       },
       {
-        title: '到着',
-        items: [
-          'フォローミーカー: リクエストで利用可',
-          'タキシング: Jeppesen 10-6参照',
-          'パーキング: PWR In全スポット; VDGS (スポット09-18: stop line +1M/-0.5M)',
-        ]
-      },
-      {
-        title: '出発',
-        items: [
-          'ATC Clearance: TAN SON NHAT DELIVERY に PB 5分前にコール',
-          'SID: KADUM DEP (Priority 1) ※軍事理由でANTRI経由指示の場合あり',
-          '      ANTRI DEP (Priority 2)',
-          'Delivery通報: callsign / destination / spot / FL',
-        ]
-      },
-      {
-        title: '気象・その他',
-        items: [
-          'TS: 雨季15-20分 (5月は激しく1時間以上継続することあり)',
-          'FOG: 10月〜11月早朝 (VISはほぼminimaまで低下せず)',
-          '高度制限: 10ft単位の場合は100ft単位に切り上げて適用',
-          '鳥害: 空港周辺に注意',
-          '最寄り軍用空港: Bien Hoa (SGNから北東13NM)',
-          '制限空域: VVP4 Ho Chi Minh City (GND〜3000m) / VVD23-26 Air force TRNG(ヘリ)',
-        ]
-      },
-      {
-        title: 'B787 地上設備',
-        items: [
-          'GND PWR / PAX STEP / TUG/BAR / WATER/LAV SVC: 全て利用可 (AVBL)',
-          'B787スポット: PBB=17,18,9-16 / Open=29-32,33-36 / 全スポットPB可',
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'Push-back & Start-up Procedures',
+            items: [
+              'ATC Clearance: Call TAN SON NHAT DELIVERY 5 minutes before pushback',
+              'Report: Callsign, destination, assigned spot, cruise flight level',
+              'GND Frequency Selection: Single channel (coordinate all movements)',
+              'Push-back Clearance: Request explicit approval before pushing',
+              'Engine Start: Coordinate timing with GND',
+              '⚠️ APU: Maintain running throughout pushback procedure',
+              'Marshaller: Required for initial pushback orientation',
+            ]
+          },
+          {
+            title: 'Taxi Routing & Ground Operations ⚠️',
+            items: [
+              'Taxi Clearance: Follow ATC vector explicitly (tight apron)',
+              '⚠️ Limited Maneuvering Space: Avoid unnecessary maneuvering',
+              'TWY S5 (45m): Use for main taxiway routing when available',
+              'Standard TWY (23m): Tighter clearances; monitor wing tips',
+              'Holding Point: RWY 07L/25R position marked but limited signage',
+              '  → Confirm with ATC before proceeding to runway',
+              'Radio Check: If unable to read GND, move forward and retry',
+            ]
+          },
+          {
+            title: 'Departure SID & Initial Climb',
+            items: [
+              'SID Primary: KADUM DEP (Priority 1 assignment)',
+              '  → Military coordination required (may be reassigned to ANTRI)',
+              'SID Alternate: ANTRI DEP (Priority 2)',
+              '  → Used when KADUM unavailable or ATC directed',
+              'SID Verification: Confirm assigned SID with TWR on first contact',
+              'Initial Routing: TWR → Saigon Control (military coordinated)',
+              'Altitude Restrictions: Honor all SID altitude crossings',
+              'Climb Gradient: Verify aircraft performance vs. SID requirements',
+              'Transition Altitude: 3000ft (climb immediately on departure)',
+              'Wind Shear Reporting: Report to ATC immediately if encountered',
+            ]
+          },
+          {
+            title: 'Military Airspace Coordination',
+            items: [
+              '⚠️ VVTS is Class D civilian airspace with military overlays',
+              '⚠️ Bien Hoa Military: Northeast 13NM (RON coordination required)',
+              'VVD23-26 Helicopter Training: Mandatory avoidance unless cleared',
+              'Military Instructions: Follow all ATC directives without delay',
+              '⚠️ Airspace Crossing: May be assigned non-standard routing for military separation',
+              'SID Deviations: Expect possible reassignment from preferred SID',
+            ]
+          },
+          {
+            title: 'Parking Stands & Turnaround Details',
+            items: [
+              'Primary Stands: PBB 17, 18, 9-16 (B787 optimized)',
+              'GND Frequency: Single VHF for all ground operations',
+              'VDGS Available: Spots 9-18 (follow visual guidance)',
+              'Back-Out Capability: All stands allow nose-in pushback',
+              'Power-Out Options: Spots 29-32, 33-36 available if needed',
+              'Turnaround Time: Budget 50-90 min typical (congestion-dependent)',
+              'Ground Services: All required services available at assigned spot',
+            ]
+          },
+          {
+            title: 'Weather & Wind Considerations',
+            items: [
+              'Crosswind Limit: 15 KT maximum for all runways',
+              'TS Season (May-Sep): Morning departures preferred',
+              '  → Afternoon risk: Severe CB development (1+ hour duration)',
+              '  → Plan alternates outside TS region if afternoon slot assigned',
+              'Wind Shear: Low-level effect possible during TS activity',
+              '  → Adjust departure profile if necessary',
+              'Bird Hazard: Request bird sweep before pushback (5 min clearance)',
+              'Temperature: High humidity/heat may require performance assessment',
+            ]
+          },
+          {
+            title: 'Engine Failure & Emergency Procedures',
+            items: [
+              'RWY 07 Failure: Initial track 070°, terrain obstacles northeastward',
+              '  → Climb to MSA (FL140 minimum) before northbound turn',
+              '  → Avoid Bien Hoa military airspace (northeast)',
+              'RWY 25 Failure: Initial track 250°, southwest toward Cambodia',
+              '  → Coordinate with ATC for low-level routing if necessary',
+              'Short-field Performance: Both runways adequate for B787 (check PERF)',
+              'Flap Retraction: Confirm positive climb before retracting flaps',
+            ]
+          },
+          {
+            title: 'Noise Abatement & Operational Restrictions',
+            items: [
+              '⚠️ Thrust Reverse: Use restricted during noise-sensitive hours',
+              'APU Operations: Secure after pushback if aircraft on external power',
+              'Ground Power Supply: Required during parking (electrical load)',
+              'Noise Abatement Takeoff: Follow reduced power if issued by ATC',
+              'Flight Path: Stay on SID track until passing MSA',
+              'Runway Surface: Concrete in good condition; standard performance',
+            ]
+          },
+          {
+            title: 'RWY Occupancy & Departure Coordination',
+            items: [
+              'Minimum Runway Occupancy Time: 18-25 min (varies by SID/routing)',
+              'Line-up to Takeoff: Standard 10-15 min wait time expected',
+              'Separation: Visual separation from landing traffic on parallel ops',
+              'South Flow Operations: Typical May-Sep (RWY 07)',
+              'North Flow Operations: Typical Oct-Apr (RWY 25)',
+              'Crew Coordination: Monitor ATC for conflicting arrivals on 25R',
+            ]
+          },
         ]
       },
     ]
