@@ -8452,6 +8452,933 @@ const CAUG_NOTES_24 = {
       },
     ]
   },
+  WMKK: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'15/33', len:0, apch:'VOR 15/33'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: WMKK / IATA: KUL',
+              '• 正式名称: Kuala Lumpur International Airport (KLIA)',
+              '• 位置: N02°44\' E101°42\'、セランゴール州セパン（クアラルンプール南方約50km）',
+              '• 標高: 69 ft (21 m) AMSL',
+              '• タイムゾーン: UTC+8（マレーシア標準時 MYT、DSTなし）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 気候帯: 熱帯雨林気候（高温多湿、年間を通じて雨季）',
+              '• 風: 地上風は2〜3ktと弱いことが多い。Monsoon Season（雨季）は南西寄り、それ以外は北東寄り',
+              '• 霧: 早朝、特に前夜強い降雨があった場合、放射冷却により発生する可能性あり',
+              '• 熱雷: Inter-Monsoon Season（3・4月および10・11月）に特に多発。1日のうちでは午後に多い',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• Transition Altitude (TA): ATIS / Jeppesen Chart参照',
+              '• Transition Level (TL): ATIS / ATC指示で確認',
+              '• QNH: hPa使用（マレーシア）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• STAR: Jeppesen Chart 20-9A参照（方面別STAR確認）',
+              '• Lumpur CTL → Lumpur APP → Lumpur TWR',
+              '• Holding: 各HOLDING FIX毎にPROCが定められている（RM_REGPROC - SEA.10.8 - HOLDING SPEEDS）',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS RWY 32R: LOC・GS確認（Jeppesen Chart参照）',
+              '• Threshold付近の白いコンクリート舗装（Stopway+距離）に注意。タッチダウン基準点の視認を確実に',
+              '• D6.0IEL・D4.0IELでの高度確認によりILS APCHが成立（ATC確認済）',
+              '• PIBOS #D Departureでの離陸機との関係注意（RWY32RへのAPCH時）',
+              '• ILS RWY 14L: LOC・GS確認（Jeppesen Chart参照）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 14L/32R（Main Runway 1）: 13,999 ft (4,267 m)',
+              '• RWY 14R/32L（Main Runway 2）: 13,999 ft (4,267 m)',
+              '• RWY 15/33: 原則としてLCC（klia2）専用',
+              '• 通常運用（Normal traffic）: 到着・出発でRWY分離（詳細はJeppesen 20-9A参照）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+              '• 国際線到着の場合、Lumpur Delivery へのコンタクトは Engine Start 10分前（2025/01/06訂正）',
+              '• Airborne後2,000ftまでにDEP Contactが必要（DEP指示がない場合でも自発的に）',
+              '• Initial ContactではSID名またはAssigned Heading、通過高度とAssigned Altitudeを通報',
+              '• Reduced Separationにより Landing Clearanceが遅くなることがある。Go-Around考慮の場面あり',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  WMKP: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'04/22', len:3300, apch:'ILS 04/22'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: WMKP / IATA: PEN',
+              '• 位置: Penang Island, Malaysia (05°17\'49\"N 100°16\'33\"E)',
+              '• 標高: 11 ft AMSL',
+              '• タイムゾーン: UTC+8 (MYT)',
+              '• Transition Altitude: 13000 ft / TL: FL145',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '（記入欄）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 04/22: 3300m — ILS',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  WMKJ: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'16/34', len:3002, apch:'ILS 16/34'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: WMKJ / IATA: JHB',
+              '• 位置: Johor Bahru, Johor, Malaysia (01°38\'21\"N 103°40\'14\"E)',
+              '• 標高: 135 ft AMSL',
+              '• タイムゾーン: UTC+8 (MYT)',
+              '• Transition Altitude: 13000 ft / TL: FL145',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '（記入欄）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 16/34: 3002m — ILS',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  WSSS: {
+    fullName: '',
+    iata: '',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: WSSS / IATA: SIN  Singapore Changi International Airport',
+              '• 位置: シンガポール東部，市街地より東約17km',
+              '• 標高: 22 ft',
+              '• 時刻: UTC+8（SGT，夏時間なし）',
+              '• 運用時間: 24時間',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯性気候。年間を通じて高温多湿（気温26〜32℃）',
+              '• 雨季: 11〜1月（NE Monsoon）/ 5〜9月（SW Monsoon）',
+              '• 午後〜夕方にかけてスコール（Sumatra Squall）が発生しやすい',
+              '• ITCZ通過時: 強風・激しい雨・雷雨',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• 南行フライト（AWY A464/A576経由）: RWY使用確認前にシンガポールATCへSTARを要求',
+              '•   Primary FREQ 133.25 MHz / Secondary FREQ 135.8 MHz',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• 全RWYにILS設置。RNP AR手順あり（CAT II相当の精度）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• 長さ: 4000m × 60m（Concrete, Grooved）/ ILS / RNAV(RNP)',
+              '• 長さ: 4000m × 60m（Concrete, Grooved）/ ILS / RNAV(RNP)',
+              '• Noise Abatement: 1600-2200UTC — アイドルリバースのみ使用可（Ship Crossing手順対象）',
+              '• 長さ: 4000m × 60m（Concrete, Grooved）/ ILS / RNAV(RNP)',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  WIII: {
+    fullName: '',
+    iata: '',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'25R', len:0, apch:'VOR 25R'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: WIII / IATA: CGK',
+              '• 正式名称: Bandar Udara Internasional Soekarno-Hatta',
+              '• 位置: S06°07\' E106°39\'、西ジャワ州タンゲラン（ジャカルタ西方約20km）',
+              '• 標高: 36 ft (11 m) AMSL',
+              '• タイムゾーン: UTC+7（インドネシア西部標準時 WIB、DSTなし）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 気候帯: 熱帯。ITC（熱帯収束帯）の動きにより季節変化',
+              '• 乾季: 5月〜10月（東寄り風卓越）',
+              '• 雨季: 11月〜4月（西寄り風卓越）',
+              '• 視程: 年間を通じてHazy（5〜8km程度）。視程障害の大半はHeavy Shower',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• Transition Altitude (TA): 確認要（Jeppesen Chart / ATIS）',
+              '• Transition Level (TL): 確認要（ATIS / NOTAM）',
+              '• QNH使用（インドネシアはhPa）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• STAR: Jeppesen Chart参照（方面別のSTARを確認）',
+              '• Jakarta CTL → Jakarta APP → Soekarno-Hatta TWR',
+              '• 周波数はJeppesen Chart 10-2/10-3参照',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS RWY 25L: LOC周波数はJeppesen Chart確認',
+              '• CAT I: DA/H確認',
+              '• 夜間到着の大半がこのRWY',
+              '• ILS RWY 25R: LOC周波数はJeppesen Chart確認',
+              '• RWY25Rは路面Bumpy Conditionの報告あり',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 25L/07R（North Runway）: 約12,008 ft (3,660 m)',
+              '• RWY 25R/07L（South Runway）: 約12,008 ft (3,660 m)',
+              '• RWY 25R: Bumpy Conditionの報告あり（着陸時注意）',
+              '• 乾季（東風）: RWY07系使用。夜間到着のほとんどはRWY25系',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+              '• DEP Freqへのcontactは管制からの指示を待ってから実施すること（Rev.26.1で厳格化）',
+              '• APCH中に大きく先のWPTへのDirectを指示され、その後Separation確保のため途中WPTへのDirectを指示されることがある（消えたWPTの再入力に時間を要する）',
+              '• ILS 25R APCH中、25LトラフィックとのSeparationのため\"Maintain 4T, Follow LOC\"指示があり、LOC CaptureしたときすでにG/Sより高くなっていた事例あり',
+              '• Callsign: TWR/GNDは「スカルノ・ハッタ タワー/グランド」（番号による区別なし）',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  WARR: {
+    fullName: '',
+    iata: '',
+    utc: '+7',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'10/28', len:3000, apch:'ILS 10/28'},
+      {id:'11/29', len:2500, apch:'VOR 11/29'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: WARR / IATA: SUB',
+              '• 位置: Surabaya, East Java, Indonesia (07°22\'52\"S 112°47\'12\"E)',
+              '• 標高: 9 ft AMSL',
+              '• タイムゾーン: UTC+7 (WIB)',
+              '• Transition Altitude: 13000 ft / TL: FL145',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '（記入欄）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 10/28: 3000m — ILS',
+              '• RWY 11/29: 2500m',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  WBGG: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'07', len:0, apch:'VOR 07'},
+      {id:'25', len:0, apch:'VOR 25'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: WBGG / IATA: KCH',
+              '• 正式名称: Kuching International Airport（クチン国際空港）',
+              '• 位置: N01°29\' E110°20\'、マレーシア・サラワク州クチン（ボルネオ島西部）',
+              '• 標高: 89 ft (27 m) AMSL',
+              '• タイムゾーン: UTC+8（マレーシア標準時 MYT、DSTなし）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• スーパー熱帯雨林気候。年間降水量3,000mm以上（世界有数の多雨地域）',
+              '• 年間を通じて高温多湿（26〜33°C）',
+              '• 季節風: 北東モンスーン（10月〜3月）、南西モンスーン（4月〜9月）',
+              '• CB・スコール: 年中発生。特に北東モンスーン期（10〜3月）は激しい降雨',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• Transition Altitude (TA): 11,000 ft（WMFC FIR内標準）',
+              '• Transition Level (TL): FL130（ATISまたはNOTAMで確認）',
+              '• QNH使用（マレーシアはhPa）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• STAR: Jeppesen Chart参照',
+              '• Kuching APP → Kuching TWR',
+              '• 周波数はJeppesen Chart確認',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS RWY 25: Jeppesen Chart参照',
+              '• FINAL: 東（内陸）方向から進入',
+              '• Go-around: 西方向（海側）',
+              '• ILS RWY 07: Jeppesen Chart参照',
+              '• FINAL: 西（海）方向から進入',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 07/25（メイン）: 約12,402 ft (3,780 m)',
+              '• RWY 07: 東方向（内陸）へ出発。北東モンスーン時の主用RWY',
+              '• RWY 25: 西方向（海側）への出発。南西モンスーン時の主用RWY',
+              '• 平行Taxiway: あり（Jeppesen Chart確認）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+              '• WMFC FIR（コタキナバル）管轄。Kuala Lumpur ACCと連携',
+              '• クチンAPPはローカルの管制。英語（マレーシア英語アクセント）',
+              '• トラフィック量: 中程度（MASwings等の地域路線、国際線は少ない）',
+              '• CPDLC対応状況: NOTAMで確認',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  WBKK: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'02', len:0, apch:'VOR 02'},
+      {id:'20', len:0, apch:'VOR 20'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: WBKK / IATA: BKI',
+              '• 正式名称: Kota Kinabalu International Airport（コタキナバル国際空港）',
+              '• 位置: N05°56\' E116°03\'、マレーシア・サバ州コタキナバル（ボルネオ島北西部）',
+              '• 標高: 10 ft (3 m) AMSL',
+              '• タイムゾーン: UTC+8（マレーシア標準時 MYT、DSTなし）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯雨林気候。年間を通じて高温多湿（25〜33°C）',
+              '• 年間降水量: 約2,400mm。雨季・乾季の区分は不明瞭で年中降水あり',
+              '• CB・スコール: 年間を通じて発生。特に午後〜夜が多い',
+              '• ウィンドシア: スコール前後に注意',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• Transition Altitude (TA): 11,000 ft（WMFC FIR内標準）',
+              '• Transition Level (TL): FL130（ATISまたはNOTAMで確認）',
+              '• QNH使用（マレーシアはhPa）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• STAR: Jeppesen Chart参照（方面別STAR）',
+              '• Kota Kinabalu ACC → Kota Kinabalu APP → Kota Kinabalu TWR',
+              '• 周波数はJeppesen Chart確認',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS RWY 02: Jeppesen Chart参照',
+              '• FINAL: 北西（海）方向へ進入。Crosswindに注意',
+              '• Go-around: 南シナ海方向（障害物少ない）',
+              '• ILS RWY 20: Jeppesen Chart参照',
+              '• FINAL: 内陸（東南）方向進入。東南方向の山岳地形に注意',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 02/20（メイン）: 約9,840 ft (3,000 m)',
+              '• RWY 02: 南シナ海方向（北西）への出発、山から離れる方向',
+              '• RWY 20: 内陸方向への進入 → 南東方向の山岳地形に注意',
+              '• 平行Taxiway: 西側に設置',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+              '• WMFC FIR（コタキナバル）管轄。Kuala Lumpur ACCと連携',
+              '• ATCはCPDLC対応状況をNOTAMで確認',
+              '• RTは英語（マレーシア英語アクセント）。復唱確認を徹底',
+              '• トラフィック量: マニラ・ジャカルタほど混雑しないが、AirAsiaのLCCが多い',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  RPLC: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'02/20', len:0, apch:'VOR 02/20'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: RPLC / IATA: CRK',
+              '• 正式名称: Clark International Airport (Diosdado Macapagal International Airport)',
+              '• 位置: N15°11\' E120°33\'、フィリピン・ルソン島パンパンガ州クラーク自由港区',
+              '• 標高: 484 ft (148 m) AMSL',
+              '• タイムゾーン: UTC+8（フィリピン標準時 PST、DSTなし）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 熱帯モンスーン気候。年間を通じて高温多湿',
+              '• 乾季: 11月〜4月（晴天多いが Hazy Condition も）',
+              '• 雨季: 5月〜10月（CB・スコール多発）',
+              '• CB・スコール: 特に雨季の午後は多発。ウィンドシア注意',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 02/20: 9,843 ft × 200 ft (3,000 m × 61 m) — 元軍用滑走路、幅広',
+              '• 787での使用: RWY 02/20（主）',
+              '• RWY 02（北向き T/O）/ RWY 20（南向き T/O）— 風向・ATC 指示による',
+              '• ELEV 484 ft（中程度の標高、Performance への影響は小さい）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+              '• フィリピン英語のアクセント。復唱・Confirm 徹底',
+              '• 空軍運用のため、急な滑走路使用制限・Holding が発生する場合あり',
+              '• RPLL（マニラ）との混信・交通調整が発生する場合あり（近接した RPHI FIR 内）',
+              '• CPDLC: 要確認（Manila FIR での利用可否はチャート参照）',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  RPVM: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'04/22', len:3300, apch:'ILS 04/22'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: RPVM / IATA: CEB',
+              '• 位置: Lapu-Lapu City, Cebu, Philippines (10°18\'26\"N 123°58\'44\"E)',
+              '• 標高: 31 ft AMSL',
+              '• タイムゾーン: UTC+8 (PST)',
+              '• Transition Altitude: 13000 ft / TL: FL150',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '（記入欄）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 04/22: 3300m — ILS',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+
 
 
 };
