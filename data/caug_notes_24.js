@@ -6558,4 +6558,571 @@ const CAUG_NOTES_24 = {
     ]
   },
 
+  // ── Phase 2: RKSS, ZGGG, RPLL (Notion + Jeppesen統合) ──
+
+  RKSS: {
+    fullName: 'SEOUL, Gimpo INTL',
+    iata: 'GMP',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8'
+    },
+    transitionAltitude: {
+      TL: 'FL140',
+      TA: '14000 ft'
+    },
+    runways: [
+      {id:'14L/32R', len:2745, apch:'ILS Cat II 14L/32R'},
+      {id:'14R/32L', len:3000, apch:'ILS Cat II 14R/32L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: 'RWY Operations & Configuration',
+            items: [
+              'RWY 14L/32R (2745m): ILS Cat II — parallel runway (left)',
+              'RWY 14R/32L (3000m): ILS Cat II — parallel runway (right)',
+              'Parallel operations possible: SDPA/SIPA under traffic conditions',
+              'Runway surface: Asphalt, good condition',
+              'Crosswind limit: 15 KT maximum',
+              'Wake Turbulence: Category D (B787) requires larger spacing than Cat C',
+            ]
+          },
+          {
+            title: 'Cold Season Operations ⚠️',
+            items: [
+              '【Winter (Nov-Mar)】Cold, dry NW wind, excellent visibility',
+              '  → Temperature often below 0°C: Monitor aircraft performance/braking',
+              '  → Rime icing possible on unheated equipment',
+              '【Summer (May-Sep)】Warm/humid, possible afternoon thunderstorms',
+              '⚠️ Winter crosswind from NW with 15-20kt gusts possible',
+              'De-icing: Available (anti-ice/de-ice fluids for ACFT)',
+            ]
+          },
+          {
+            title: 'Surrounding Terrain & Airspace',
+            items: [
+              'Seoul airspace: Class C, busy with commercial + military traffic',
+              'Seoul metropolitan area: Urban terrain, tall buildings south/east',
+              '⚠️ K-MOA (Korean Military Operating Area): Coordination required for certain SIDs',
+              'Altitude restrictions: Review SID/STAR for terrain clearance',
+              'MSA: Carefully planned via Jeppesen Chart',
+            ]
+          },
+          {
+            title: 'Communications & NAVAIDS',
+            items: [
+              'ATIS: 130.7 MHz',
+              'GND: 121.7 MHz',
+              'TWR: 118.3 MHz (14L/32R) / 119.0 MHz (14R/32L)',
+              'APP: 119.5 MHz / 120.1 MHz',
+              'VOR/DME: GMP 112.2 (Standard)',
+              'ILS: Available on both RWYs (14L, 14R, 32L, 32R)',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'RWY Assignments & Approach',
+            items: [
+              'Typical arrival RWYs: 32L/32R (from north/northeast)',
+              '  → Wind-dependent: NW/N wind favors 32; S/SE wind favors 14',
+              'Parallel independent approaches (SIPA) possible when authorized',
+              'CAT II operations: All RWYs capable; standard crew/ACFT cert required',
+              'Vacate: Use rapid-exit taxiway when available (expedite runway clearing)',
+            ]
+          },
+          {
+            title: 'Descent & Approach Procedures',
+            items: [
+              'Descent rate: 500 ft/min standard; notify if lower rate planned',
+              'Speed restrictions: Comply with SID/STAR altitude restrictions',
+              '⚠️ Cold weather: Monitor ILS performance (potential icing on LOC/GS)',
+              'Final approach: Stabilized descent by 500 ft mandatory',
+              'Go-around: Execute immediately if unstable below 500 ft',
+            ]
+          },
+          {
+            title: 'ILS/RNP Minimums & Landing',
+            items: [
+              'ILS Cat II: RVR 550m minimum (all RWYs)',
+              'Landing distances: Verify against runway length (2745m minimum 14L)',
+              '⚠️ Cold temperature: Braking action may be reduced in winter',
+              'Runway surface condition: Check METAR for contamination',
+            ]
+          },
+          {
+            title: 'Parking & Ground Services',
+            items: [
+              'Primary stands: Domestic (south) + International (north) terminals',
+              'B787 compatible stands available at both terminals',
+              'Ground power: Available (115V/400Hz)',
+              'Services: Tug/tow bars, PAX bridge, water/lavatory available',
+              'Gate assignment: ATC/GH coordination (busy airport)',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'ATC Clearance & Push-back',
+            items: [
+              'ATIS: 130.7 MHz (pre-flight info)',
+              'GND Frequency: 121.7 MHz (all push-back/taxi requests)',
+              'Push-back clearance: Request via GND; coordinate timing',
+              'Engine start: Allowed after push-back clearance obtained',
+              '⚠️ Winter: Request de-ice/anti-ice if required (coordinate early)',
+            ]
+          },
+          {
+            title: 'Taxi Routing & SID Verification',
+            items: [
+              'Taxi: Follow GND instructions; taxiway marking clear (day/night)',
+              'SID assignment: Verify on TWR first contact (TWR: 118.3 or 119.0)',
+              'Typical SIDs: INCHON, GIMPO departures (check Jeppesen for RWY-specific)',
+              '⚠️ Military coordination: K-MOA airspace requires ATC vector compliance',
+              'Speed restriction: Standard 250 KT below FL100 (unless authorized)',
+            ]
+          },
+          {
+            title: 'Departure & Climb',
+            items: [
+              'Initial climb: Follow assigned SID heading/altitude restrictions',
+              'Transition altitude: 14000 ft (climb in feet initially, then FL)',
+              'Climb performance: Cold weather may reduce climb gradient; monitor',
+              'Wind shear: Unlikely winter (stable), possible summer (TS)',
+              'En-route handoff: APP frequency after SID altitude clearance',
+            ]
+          },
+          {
+            title: 'Winter Operations & De-icing',
+            items: [
+              '⚠️ De-icing: Request fluid type/schedule with push-back clearance',
+              'Contaminated runway: Check METAR for snow/ice (winter)',
+              'Braking action: Monitor ATIS reports (winter conditions critical)',
+              'Crosswind limit: 15 KT applies year-round',
+              'Ground friction: Winter may reduce performance; plan early departure',
+            ]
+          },
+          {
+            title: 'Engine Failure Procedure',
+            items: [
+              'RWY 14 departure: Initial track 140° (stay on SID), MSA 3000 ft minimum',
+              'RWY 32 departure: Initial track 320° (stay on SID), MSA 4000 ft minimum',
+              'Terrain obstacles: East/southeast direction; stay on SID until MSA',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+
+  ZGGG: {
+    fullName: 'GUANGZHOU, Baiyun INTL',
+    iata: 'CAN',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8'
+    },
+    transitionAltitude: {
+      TL: 'FL130',
+      TA: '13000 ft',
+      note: 'PRD airspace: ATC coordination required for FL>FL300'
+    },
+    runways: [
+      {id:'01L/19R', len:3800, apch:'ILS Cat II 01L/19R'},
+      {id:'01R/19L', len:3600, apch:'ILS Cat I 01R/19L'},
+      {id:'02L/20R', len:3800, apch:'ILS Cat I 02L/20R'},
+      {id:'02R/20L', len:3600, apch:'ILS Cat I 02R/20L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: 'RWY Operations & Pearl River Delta Airspace',
+            items: [
+              'RWY 01/02 (North): ILS Cat II (01L), Cat I (01R, 02L, 02R)',
+              'RWY 19/20 (South): ILS Cat II (19R), Cat I (19L, 20R, 20L)',
+              '⚠️ Parallel operations possible: SDPA/SIPA under PRD coordination',
+              '⚠️ Pearl River Delta: Complex airspace with multiple airports (ZUH, CTU, etc.)',
+              'Runway surface: Concrete, good condition',
+              'Crosswind limit: 15 KT maximum',
+              'Wake Turbulence: Category D (B787) requires larger spacing than Cat C',
+            ]
+          },
+          {
+            title: 'PRD (Pearl River Delta) Airspace ⚠️ CRITICAL',
+            items: [
+              '⚠️ ZGGG within PRD airspace: High traffic density, tight separation standards',
+              '⚠️ Military coordination: China military airspace overlaps PRD (clearances delayed)',
+              '⚠️ SID/STAR design: Complex routing to avoid military areas',
+              '⚠️ ATC vector frequency: Multiple hand-offs (APP → Control)',
+              'Altitude restrictions: Strictly adhere (military deconfliction)',
+              'Speed restrictions: Often 250 KT below FL100 (occasionally FL140)',
+            ]
+          },
+          {
+            title: 'Tropical Monsoon Weather',
+            items: [
+              '【Summer (May-Sep)】Warm, humid, frequent thunderstorms',
+              '  → Afternoon TS common; arrange early departures when possible',
+              '  → Wind: S-SE monsoon winds 10-15 KT',
+              '【Winter (Oct-Apr)】Cool, dry NE winds, excellent visibility',
+              '  → Rare icing, stable conditions',
+              'Typhoon season: Jul-Sep highest risk (track Western Pacific systems)',
+              '⚠️ Heavy rain: Possible NOTAM for runway groove flooding (maintain speed)',
+            ]
+          },
+          {
+            title: 'Surrounding Terrain & Geographic Hazards',
+            items: [
+              'Guangzhou city center: 20nm west (metropolitan area, buildings)',
+              'Hong Kong/Macau: 80nm south (within regional airspace)',
+              'South China Sea: Coastal terrain to south/east',
+              'MSA: Terrain-dependent; review SID/STAR for ground clearance',
+              'Approach: Monitor for low-flying traffic in busy PRD',
+            ]
+          },
+          {
+            title: 'Communications & NAVAIDS',
+            items: [
+              'ATIS: 134.2 MHz',
+              'GND: 121.9 MHz',
+              'TWR: 118.1 MHz',
+              'APP: 120.3 MHz / 120.8 MHz',
+              'DEP: 119.4 MHz / 119.9 MHz',
+              'VOR/DME: GZ 115.1 (Guangzhou)',
+              'NDB: Available on approach',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'RWY Assignment & PRD STAR Procedures',
+            items: [
+              'Typical arrival RWYs: 01 or 02 (north facing) — wind-dependent',
+              '⚠️ STAR routing: Designed to avoid military airspace; ATC vector-based',
+              'CAT II operations: 01L only; standard crew/ACFT cert sufficient',
+              'CAT I operations: 01R, 02L, 02R (all require standard minimums)',
+              'Parallel approaches: SIPA possible when military ATC coordination complete',
+            ]
+          },
+          {
+            title: 'Descent & Approach',
+            items: [
+              'PRD descent clearance: Often delayed (military coordination)',
+              'Descent rate: 500 ft/min standard; notify if lower',
+              '⚠️ Speed control: Strictly 250 KT (or assigned speed below FL100+)',
+              'TS avoidance: Request deviations early if weather ahead (summer)',
+              'Windshear: Listen for ATC alerts (especially monsoon season)',
+            ]
+          },
+          {
+            title: 'ILS/RNP Minimums',
+            items: [
+              'ILS Cat II (01L): RVR 550m minimum',
+              'ILS Cat I: RVR 800m minimum (01R, 02L, 02R, 19L, 19R, 20L, 20R)',
+              'RNP approach: Available; minimums 0.3 NM lateral',
+              'Missed approach: Procedure per RWY; review chart',
+            ]
+          },
+          {
+            title: 'Parking & Services',
+            items: [
+              'Terminal assignment: T1/T2/T3 (GH directs to gate)',
+              'B787 compatible stands: Available at all terminals',
+              'Ground power: 115V/400Hz available',
+              'Services: Tugs/tow bars, PAX bridge, water/lavatory available',
+              'Turnaround: 1.5-2 hours typical (PRD congestion)',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'GND Clearance & Push-back',
+            items: [
+              'ATIS: 134.2 MHz (pre-flight)',
+              'GND: 121.9 MHz (push-back request)',
+              'Push-back: Coordinate exact time (minimize taxi idle)',
+              '⚠️ Winter time: Anti-ice not typically required (warm climate)',
+              'Engine start: After push-back clearance',
+            ]
+          },
+          {
+            title: 'SID & Military Airspace Coordination ⚠️',
+            items: [
+              '⚠️ SID routing: Complex (designed to avoid military areas)',
+              '⚠️ Military ATC: Clearance delays common (coordinate with GZ Control)',
+              'Typical SIDs: GUANGZHOU departures (check Jeppesen per RWY)',
+              'Initial climb: Follow SID strictly (terrain & airspace constraints)',
+              '⚠️ FL restriction: Often limited to FL250-FL280 initially (military airspace)',
+            ]
+          },
+          {
+            title: 'Taxi & Departure Procedures',
+            items: [
+              'Taxi: GND routing per ATC (complex taxiway layout)',
+              'TWR frequency: 118.1 MHz (line-up and departure)',
+              'SID verification: Confirm on TWR first contact',
+              'Speed restriction: 250 KT (or assigned) below FL100',
+              'Climb gradient: Verify performance against SID requirements',
+            ]
+          },
+          {
+            title: 'En-route Handoff & Climbing',
+            items: [
+              'APP handoff: After SID altitude clearance (typically FL100-FL130)',
+              'Control handoff: After APP (FL130+ entering enroute airspace)',
+              '⚠️ FL limit: PRD military may restrict to FL250-FL280; expect amendment',
+              'Climb planning: Assume lower FL ceiling; plan fuel accordingly',
+              'Transition altitude: 13000 ft (change to FL-based altitude)',
+            ]
+          },
+          {
+            title: 'Summer Monsoon Operations',
+            items: [
+              '【TS avoidance】Request early SID routing around convection',
+              '【Wind considerations】S-SE monsoon: 10-15 KT; crosswind limit 15 KT',
+              '【Performance】Hot/humid summer: Monitor takeoff distance (verify before push)',
+              '【Alternate】Always brief alternate outside PRD (CTS/PVG/HKG options)',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+
+  RPLL: {
+    fullName: 'MANILA, Ninoy Aquino INTL',
+    iata: 'MNL',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8'
+    },
+    transitionAltitude: {
+      TL: 'FL130',
+      TA: '13000 ft'
+    },
+    runways: [
+      {id:'06L/24R', len:4000, apch:'ILS Cat III 06L/24R'},
+      {id:'06R/24L', len:4000, apch:'ILS Cat II 06R/24L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: 'RWY Operations & Configuration',
+            items: [
+              'RWY 06L/24R (4000m): ILS Cat III capable — primary runway',
+              'RWY 06R/24L (4000m): ILS Cat II — parallel runway',
+              'Parallel operations possible: SDPA/SIPA when both RWYs active',
+              'Runway surface: Concrete, good condition',
+              'Crosswind limit: 15 KT maximum',
+              'Wake Turbulence: Category D (B787) requires larger spacing than Cat C',
+            ]
+          },
+          {
+            title: 'Tropical Monsoon & Typhoon Season ⚠️',
+            items: [
+              '【Southwest Monsoon (May-Oct)】Warm, frequent afternoon TS',
+              '  → Heavy rain possible; arrange early departures',
+              '  → Wind: SW avg 10-15 KT, gusts 20+ KT during TS',
+              '【Northeast Monsoon (Nov-Apr)】Cool, dry, stable weather',
+              '⚠️ Typhoon season: Jul-Sep (track systems via SIGMET/AIRMET)',
+              '⚠️ Tropical depression: May cause runway closure (flooding risk)',
+              'Visibility: Generally good except during TS/typhoon activity',
+            ]
+          },
+          {
+            title: 'Airport Location & Access',
+            items: [
+              'Manila Bay: Airport on bay islands (tropical maritime environment)',
+              'Quezon City/Metro Manila: 15nm north (major city)',
+              'Domestic terminals: T1 (Intl), T2 (Domestic)',
+              'Elevation: Sea level (29 ft AMSL) — hot/humid operations',
+              '⚠️ Salt-air corrosion: Aircraft in tropical maritime environment',
+            ]
+          },
+          {
+            title: 'Surrounding Airspace & Restrictions',
+            items: [
+              'Clark Air Base (RPLC): 60nm north (US military; civilian overflight OK)',
+              'Subic Bay: Naval base west; civilian overflight OK',
+              'South China Sea: International airspace (traffic from multiple FIRs)',
+              '⚠️ Airspace congestion: Heavy domestic/regional traffic',
+              'MSA: Review SID/STAR for terrain clearance (lowland terrain)',
+            ]
+          },
+          {
+            title: 'Communications & NAVAIDS',
+            items: [
+              'ATIS: 127.0 MHz / 127.4 MHz',
+              'GND: 121.7 MHz',
+              'TWR: 118.5 MHz (06L/24R) / 119.0 MHz (06R/24L)',
+              'APP: 119.5 MHz / 120.2 MHz',
+              'DEP: 120.6 MHz / 120.9 MHz',
+              'VOR/DME: MLA 115.2 (Manila)',
+              'NDB: Available on approach',
+              '⚠️ Radio interference: Tropical storms may affect VHF transmission',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'RWY Assignment & Approach',
+            items: [
+              'Typical arrival RWYs: 06 (from east) or 24 (from west) — wind-dependent',
+              '⚠️ Wind-dependent: NE wind favors RWY 24; SW wind favors RWY 06',
+              'CAT III operations: 06L capable (special crew/ACFT cert required)',
+              'CAT II operations: 06R standard',
+              'Parallel approaches: SIPA when both RWYs active + coordination complete',
+            ]
+          },
+          {
+            title: 'Descent & Approach Procedures',
+            items: [
+              'Descent rate: 500 ft/min standard; notify if lower',
+              '⚠️ Tropical TS: Request deviation early if weather ahead (summer)',
+              'Speed control: 250 KT below FL100 (or assigned restriction)',
+              'Approach briefing: Confirm RWY assignment + approach type (ILS/RNP)',
+              'Go-around: Execute immediately if unstable below 500 ft',
+            ]
+          },
+          {
+            title: 'ILS/CAT Operations & Minimums',
+            items: [
+              'ILS Cat III (06L): RVR 200m minimum (special certification required)',
+              'ILS Cat II (06R): RVR 550m minimum',
+              'CAT III procedure: Lower minimums; requires auto-land capability + training',
+              'Missed approach: Procedure per RWY; review chart',
+              'Landing distance: Adequate for B787 on both RWYs (4000m)',
+            ]
+          },
+          {
+            title: 'Spot Assignment & Parking',
+            items: [
+              'T1 (International): PBB gates for international carriers',
+              'T2 (Domestic): Overflow for international if T1 full',
+              'B787 compatible stands: Available at T1 (preferred)',
+              'Gate assignment: GH directs; coordinate with OPS',
+              'Ground services: Power, water, lavatory, tugs available',
+            ]
+          },
+          {
+            title: 'Monsoon Arrival Considerations',
+            items: [
+              '【TS season (May-Oct)】Request visual approach if VFR conditions available',
+              '【Runway contamination】Heavy rain may reduce braking action',
+              '【Visibility】Sudden drops during TS; brief alternate beforehand',
+              '【Windshear】Possible during TS; monitor ATIS alerts',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'ATC Clearance & Push-back Procedures',
+            items: [
+              'ATIS: 127.0 or 127.4 MHz (pre-flight information)',
+              'GND: 121.7 MHz (push-back request)',
+              'Clearance: Request via GND; coordinate push-back time/gate',
+              'Push-back: Minimize taxi time (airport congestion)',
+              'Engine start: After clearance; anti-ice typically not required (tropical)',
+            ]
+          },
+          {
+            title: 'SID & Initial Climb',
+            items: [
+              'SID assignment: Typical Manila SIDs (check Jeppesen per RWY)',
+              'Initial heading: Follow SID routing (traffic separation)',
+              'Speed restriction: 250 KT below FL100 (or assigned)',
+              'Climb gradient: Verify aircraft performance (warm/humid conditions)',
+              'Transition altitude: 13000 ft',
+            ]
+          },
+          {
+            title: 'Taxi & Line-up',
+            items: [
+              'Taxi clearance: GND routing (complex layout)',
+              'TWR contact: On taxi (118.5 MHz for 06L/24R, 119.0 for 06R/24L)',
+              'Line-up clearance: TWR frequency',
+              'Takeoff clearance: RWY-specific frequency',
+              'SID verification: Confirm on TWR first contact',
+            ]
+          },
+          {
+            title: 'En-route & Climb Procedure',
+            items: [
+              'Initial climb: Follow assigned SID (terrain clearance)',
+              'APP handoff: After SID altitude clearance',
+              'Control handoff: Enroute (FL130+)',
+              'Climb planning: Account for tropical heat (reduced climb gradient)',
+              'Alternate briefing: Outside RPLL airspace (Clark CRK or Subic SFS)',
+            ]
+          },
+          {
+            title: 'Monsoon Departure Operations ⚠️',
+            items: [
+              '【Summer TS (May-Oct)】Early departure preferred (avoid afternoon TS)',
+              '【Wind shear】Possible during TS; monitor climb performance',
+              '【Humidity】High humidity reduces performance; verify T/O dist before push',
+              '【Tropical airfield effects】Short-field performance acceptable (4000m runways)',
+              '【Alternate planning】Ensure alternate outside monsoon belt (CRK, ILO, or northbound)',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+
 };
