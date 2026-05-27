@@ -889,56 +889,167 @@ const CAUG_NOTES_24 = {
     fuel: 'JET-A1',
     rffs: 'Cat 10',
     prefRwy: 'Nil',
-    sections: [
+    runways: [
+      {id:'01L/19R', len:4000, apch:'ILS Cat II 01L/19R'},
+      {id:'01R/19L', len:3700, apch:'ILS Cat II 01R/19L'},
+      {id:'02R/20L', len:4000, apch:'ILS Cat I 02R/20L'},
+      {id:'02L/20R', len:3700, apch:'ILS Cat I 02L/20R'},
+    ],
+    tabs: [
       {
-        title: 'RWY運用',
-        items: [
-          'South Flow: RWY19 DEP+ARR / RWY20L DEP / RWY20R ARR',
-          'North Flow: RWY01 DEP+ARR / RWY02R DEP / RWY02L ARR',
-          'PAPI: 全RWY LEFT側 3.0° MEHT 64ft',
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: 'RWY Operations & Wind Flows',
+            items: [
+              '【South Flow】RWY 19/20 ops: RWY19 DEP+ARR / RWY20L DEP / RWY20R ARR (typical May-Oct, afternoon/evening)',
+              '【North Flow】RWY 01/02 ops: RWY01 DEP+ARR / RWY02R DEP / RWY02L ARR (typical Nov-Apr, morning)',
+              'Crosswind limit: 20 KT for all RWY',
+              'PAPI: 全RWY LEFT側のみ装備、3.0° (MEHT 64ft)',
+              'Runway surface: Concrete (excellent condition)',
+            ]
+          },
+          {
+            title: 'Taxiway & Ground Operations',
+            items: [
+              'TWY min width: 25m (standard)',
+              'Stop bars: Operated when VIS <1500m or during night ops',
+              'Fast-exit TWY: Available on main RWYs',
+              '⚠️ Minimum pushback path: Ensure adequate space at assigned gate (crowded apron)',
+              'Ground power: Universal plugs available (all stands)',
+            ]
+          },
+          {
+            title: 'Weather & Hazards ⚠️',
+            items: [
+              'TS Season: Apr-Oct (afternoon/evening; CB development or ITCZ passage)',
+              '  → May-Sep: Severe afternoon TS common (organize early departures)',
+              '  → Wind gust: >25KT possible during TS activity',
+              'FOG: Dec-Apr (radiative fog, 2300-0800 LT, VIS often <1000m)',
+              '  → Early morning: Check TAF/ATIS for rapid VIS changes',
+              'Bird Hazard: Airfield north side near feeding grounds',
+              '  → RWY surface & vicinity: High bird concentration',
+              '  → Bird sweep: Request & wait 5 min before departure',
+            ]
+          },
+          {
+            title: 'Restricted Airspace & Special Procedures',
+            items: [
+              '⚠️ VT(R)-1 BANGKOK CITY: Below 3000ft prohibited except on ATC clearance',
+              '⚠️ VT(R)-2 KING PALACE: Strictly prohibited (do NOT enter)',
+              'Wildlife Area: North apron boundary, avoid low altitude passes',
+              'MSA around BKK: Carefully plan climb/descent on assigned SID/STAR',
+            ]
+          },
         ]
       },
       {
-        title: 'TWY/スポット',
-        items: [
-          'TWY最小幅: 25m',
-          'ストップバー: VIS<1500m または夜間に運用',
-          'JALスポット: G1-G5, F1-F6, E1-E10, 401-403, 501-505',
-          'B787利用可能スポット: D2-D7, E1-E10, F5-F6, G2-G5',
-          '⚠️ Power Out: 全スポット不可 (NOT AVBL from any spot)',
-          'APU: Block In後5分まで / Block Out 10分前まで運用可',
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'RWY Assignments & CAT Operations',
+            items: [
+              'All RWY: ILS Cat I or Cat II capable (no Cat III)',
+              '01L/19R (ILS Cat II): Standard arrival when available',
+              '01R/19L (ILS Cat II): Alternate arrival',
+              '02R/20L (ILS Cat I): Backup arrival (North Flow)',
+              '02L/20R (ILS Cat I): Backup arrival (North Flow)',
+              'CAT II Operations: Normal crew+ACFT certification sufficient',
+              'Vacate: Use fast-exit TWY when available; expedite runway vacating',
+            ]
+          },
+          {
+            title: 'Descent & Approach Procedures',
+            items: [
+              'Descent rate: Min 500ft/min assumed by ATC',
+              'PAPI (all RWY): 3-dot on LEFT side = 3.0° glide slope',
+              'Visual Approach: Possible during good weather; request if available',
+              'Long finals: Monitor for conflicting traffic (busy airfield)',
+              'Go-Around: If unstable below 500ft, execute immediately (wind shear risk)',
+              'Windshear alerts: Listen for ATC reports; adjust approach if received',
+            ]
+          },
+          {
+            title: 'Spot Assignment & Services',
+            items: [
+              'JAL Primary Spots: G1-G5, F1-F6, E1-E10, 401-403, 501-505',
+              'B787 Capable Spots: D2-D7, E1-E10, F5-F6, G2-G5',
+              '⚠️ Power Out Spots: Some gates have intermittent power; confirm availability',
+              'APU after Block-In: 5 min max before engines shut down',
+              'APU before Block-Out: Restart up to 10 min before push clearance',
+              'Ground power: 115V/400Hz universal plugs available',
+              'Services: PAX steps, tugs/tow bars, water/lavatory service all available',
+            ]
+          },
         ]
       },
       {
-        title: '出発',
-        items: [
-          'GND周波数: Eスポット = 121.75MHz / F・G・401-525スポット = 121.95MHz',
-          '⚠️ VHF干渉: Spot E/F/G付近で121.5MHzに干渉あり (PBB近く)',
-          'DEP Transition: TWR → APP East/West/South/North → BKK Control',
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'Push-back & Start-up Procedures',
+            items: [
+              'GND Frequency Selection: Critical step due to interference',
+              '  → Spots E1-E10: 121.75 MHz (north apron)',
+              '  → Spots F1-F6, G1-G5, 401-525: 121.95 MHz (south/east apron)',
+              'Push-back Clearance: Request on assigned GND frequency',
+              'Engine Start: Coordinate timing with GND (congestion management)',
+              'APU: Secure before pushback or after engines running',
+            ]
+          },
+          {
+            title: 'VHF Interference & Taxi Routing ⚠️',
+            items: [
+              '⚠️ VHF Interference Zone: Spots E/F/G near PBB (Passenger Boarding Bridge)',
+              '  → 121.5 MHz & 121.75 MHz may experience interference',
+              '  → Switch to departure freq as soon as airborne',
+              'Taxi Routing: Follow GND clearance explicitly (tight apron)',
+              'Radio Check: If unable to read GND, move forward & retry (avoid dead zones)',
+              'TWY Congestion: BKK is busy; expect hold orders during peak hours',
+            ]
+          },
+          {
+            title: 'Departure SID & Initial Climb',
+            items: [
+              'SID Verification: Confirm assigned SID with TWR on frequency change',
+              'Departure Routing: TWR → APP (East/West/South/North sector) → BKK Control',
+              'SID Climb Gradients: Verify aircraft performance vs. procedure requirements',
+              'Terrain Clearance: Most SIDs climbing toward northern highlands',
+              'Transition Altitude: 3000ft (standard for Thailand)',
+              'Wind Shear Reporting: If experienced, report to ATC immediately',
+            ]
+          },
+          {
+            title: 'Weather & Wind Considerations',
+            items: [
+              'Crosswind Limit: 20 KT for all RWYs',
+              'TS Season (Apr-Oct): Strong afternoon activity',
+              '  → Aim for early morning departures (0500-1000 LT) when possible',
+              '  → Plan alternates outside TS region if departing afternoon',
+              'Wind Shear: Low-level jet (cool season: Nov-Mar) may cause climb-out difficulties',
+              '  → Reduce load/pax if necessary for performance margin',
+              'Bird Hazard: Request bird sweep before pushing (5 min clearance)',
+            ]
+          },
+          {
+            title: 'Engine Failure (B787 Departure)',
+            items: [
+              'Crosswind RWY ops: Most departures use RWY 19/01 (long axis)',
+              'RWY 19 Failure: Initial track northeast, terrain obstacles eastward',
+              '  → Climb to MSA (FL140 recommended) before turning enroute',
+              'RWY 01 Failure: Initial track northwest, avoid Nakhon Pathom hills (WSW)',
+              '  → Coordinate with ATC for low-level routing if necessary',
+              'Short-field Performance: Standard runway lengths adequate for B787',
+              'Flap Retraction: Confirm positive climb gradient before retraction',
+            ]
+          },
         ]
       },
-      {
-        title: '制限空域',
-        items: [
-          '⚠️ VT(R)-1 BANGKOK CITY: 3000ft以下はATC制限を除き飛行禁止',
-          '⚠️ VT(R)-2 KING PALACE: 飛行禁止 (strictly prohibited)',
-        ]
-      },
-      {
-        title: '気象・鳥害',
-        items: [
-          'TS: 4月〜10月 (午後〜深夜)。CB locally developed または ITCZ通過型',
-          'FOG: 12月〜4月 放射霧 (深夜〜早朝、VIS<1000m)',
-          '鳥害: 空港北側に鳥の餌場。RWY上/周辺に多数。バードスウィープはRQ後5分以内',
-        ]
-      },
-      {
-        title: 'B787 地上設備',
-        items: [
-          'GND PWR / PAX STEP / TUG/BAR / WATER/LAV SVC: 全て利用可 (AVBL)',
-        ]
-      },
-    ]
+    ],
+    sections: []
   },
 
   // ── ベトナム ──────────────────────────────────
