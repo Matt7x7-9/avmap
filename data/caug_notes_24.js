@@ -1071,16 +1071,16 @@ const CAUG_NOTES_24 = {
             ]
           },
           {
-            title: 'ILS/RNP Approach Minimums & Landing Distances',
+            title: 'ILS/RNP Approach Minimums & 着陸距離s',
             items: [
               'RWY 01L/19R (ILS Cat II): RVR 550m minimum, Cat III capable',
-              '  → Landing distances: 600m, 750m, 1000m, 1600m, 2000m, 3200m available',
+              '  → 着陸距離s: 600m, 750m, 1000m, 1600m, 2000m, 3200m available',
               'RWY 01R/19L (ILS Cat II): RVR 550m minimum',
-              '  → Landing distances: Similar to 01L/19R configuration',
+              '  → 着陸距離s: Similar to 01L/19R configuration',
               'RWY 02R/20L (ILS Cat I): RVR 800m minimum',
               '  → RNP Rwy 20R available with precision approach capability',
               'RWY 02L/20R (ILS Cat I): RVR 800m minimum',
-              '  → RNAV Rwy 01 approach available with speed restrictions',
+              '  → RNAV Rwy 01 approach available with 速度制限s',
               'Missed Approach: Procedures differ per RWY; review approach chart',
             ]
           },
@@ -1102,9 +1102,9 @@ const CAUG_NOTES_24 = {
             title: 'Speed Control & Altitude Restrictions ⚠️',
             items: [
               'Speed Control: Applied at all times unless ATC authorized otherwise',
-              'Published Speed Restrictions: Strictly adhere to STAR procedures',
+              'Published 速度制限s: Strictly adhere to STAR procedures',
               '⚠️ Low Level Altitude Limit: 1000ft minimum (apply caution in descent)',
-              'Altitude Restrictions: Issued with descent clearance (honor exactly)',
+              '高度制限s: Issued with descent clearance (honor exactly)',
               'ILS CAT II Approach: Specific speed/descent rate requirements',
               'Go-Around: If unstable below 500ft due to wind shear risk',
             ]
@@ -1151,17 +1151,17 @@ const CAUG_NOTES_24 = {
           {
             title: 'Departure SID & Initial Climb',
             items: [
-              'SID Verification: Confirm assigned SID with TWR on frequency change',
+              'SID確認: Confirm assigned SID with TWR on frequency change',
               'Departure Routing: TWR → APP (East/West/South/North sector) → BKK Control',
               'Available SIDs: EASTE, LEBIM, TUMGA (1C/1D variants per RWY)',
               'SID Climb Gradients: Verify aircraft performance vs. procedure requirements',
-              '  → EASTE: Initial climb 074°, various altitude restrictions by waypoint',
-              '  → LEBIM: Initial climb via SID, crossing altitude restrictions',
+              '  → EASTE: Initial climb 074°, various 高度制限s by waypoint',
+              '  → LEBIM: Initial 上昇経由 SID, crossing 高度制限s',
               '  → TUMGA: Initial climb, significant altitude step requirements',
               'Terrain Clearance: Most SIDs climbing toward northern highlands',
-              'Transition Altitude: 3000ft (standard for Thailand)',
+              '遷移高度: 3000ft (standard for Thailand)',
               'Wind Shear Reporting: If experienced, report to ATC immediately',
-              'Speed Restrictions: Published per SID waypoint (typically 250kt below FL100)',
+              '速度制限s: Published per SID waypoint (typically 250kt below FL100)',
             ]
           },
           {
@@ -1232,7 +1232,7 @@ const CAUG_NOTES_24 = {
             items: [
               '⚠️ Fuel Dumping Area: Designated area south of airport (avoid populated areas)',
               'Fuel Dump Clearance: Must obtain ATC clearance before initiating dump',
-              'Minimum Altitude: 4000ft for fuel dump operations',
+              '最低高度: 4000ft for fuel dump operations',
               'Arrival Planning: Consider fuel state vs. dumping time if heavy landing required',
               'Alternative Airports: Plan alternates with adequate fuel reserves',
               'In-Flight Management: Min landing fuel per procedures; declare early if needed',
@@ -1484,7 +1484,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'Restricted Airspace & Special Procedures',
             items: [
-              '⚠️ VVP4 HO CHI MINH CITY: GND-3000m restricted airspace',
+              '⚠️ VVP4 HO CHI MINH CITY: GND-3000m 制限空域',
               '  → Overflight prohibited without ATC clearance',
               '⚠️ VVD23-26 AIR FORCE TRAINING: Helicopter training areas',
               '  → Mandatory coordination with military ATC on SID/STAR',
@@ -1500,7 +1500,7 @@ const CAUG_NOTES_24 = {
               '  → Reduced landing rate: 40/hour during CAT II ops',
               'CAT I RWY: 07R/25L CAT I minimum 800m RVR',
               '⚠️ Transition Altitude: 3000ft (Vietnam standard)',
-              'Approach Briefing: Review all altitude restrictions; comply exactly',
+              'Approach Briefing: Review all 高度制限s; comply exactly',
             ]
           },
           {
@@ -1586,10 +1586,10 @@ const CAUG_NOTES_24 = {
             title: 'Speed Control & Altitude Restrictions ⚠️',
             items: [
               'Speed Control: Applied throughout approach unless ATC authorized otherwise',
-              'Published Speed Restrictions: Adhere to approach chart procedures',
+              'Published 速度制限s: Adhere to approach chart procedures',
               '⚠️ Low Level Altitude Limit: 1000ft minimum (apply caution in descent)',
-              'Altitude Restrictions: Issued with descent clearance (honor exactly)',
-              'Transition Altitude: 3000ft (standard Vietnam rules)',
+              '高度制限s: Issued with descent clearance (honor exactly)',
+              '遷移高度: 3000ft (standard Vietnam rules)',
               'Final Approach: Stabilized descent before 500ft mandatory',
             ]
           },
@@ -1641,11 +1641,11 @@ const CAUG_NOTES_24 = {
               '  → Military coordination required (may be reassigned to ANTRI)',
               'SID Alternate: ANTRI DEP (Priority 2)',
               '  → Used when KADUM unavailable or ATC directed',
-              'SID Verification: Confirm assigned SID with TWR on first contact',
+              'SID確認: Confirm assigned SID with TWR on first contact',
               'Initial Routing: TWR → Saigon Control (military coordinated)',
-              'Altitude Restrictions: Honor all SID altitude crossings',
+              '高度制限s: Honor all SID altitude crossings',
               'Climb Gradient: Verify aircraft performance vs. SID requirements',
-              'Transition Altitude: 3000ft (climb immediately on departure)',
+              '遷移高度: 3000ft (climb immediately on departure)',
               'Wind Shear Reporting: Report to ATC immediately if encountered',
             ]
           },
@@ -6615,7 +6615,7 @@ const CAUG_NOTES_24 = {
               'Seoul airspace: Class C, busy with commercial + military traffic',
               'Seoul metropolitan area: Urban terrain, tall buildings south/east',
               '⚠️ K-MOA (Korean Military Operating Area): Coordination required for certain SIDs',
-              'Altitude restrictions: Review SID/STAR for terrain clearance',
+              '高度制限s: Review SID/STAR for terrain clearance',
               'MSA: Carefully planned via Jeppesen Chart',
             ]
           },
@@ -6650,7 +6650,7 @@ const CAUG_NOTES_24 = {
             title: 'Descent & Approach Procedures',
             items: [
               'Descent rate: 500 ft/min standard; notify if lower rate planned',
-              'Speed restrictions: Comply with SID/STAR altitude restrictions',
+              '速度制限s: Comply with SID/STAR 高度制限s',
               '⚠️ Cold weather: Monitor ILS performance (potential icing on LOC/GS)',
               'Final approach: Stabilized descent by 500 ft mandatory',
               'Go-around: Execute immediately if unstable below 500 ft',
@@ -6660,8 +6660,8 @@ const CAUG_NOTES_24 = {
             title: 'ILS/RNP Minimums & Landing',
             items: [
               'ILS Cat II: RVR 550m minimum (all RWYs)',
-              'Landing distances: Verify against runway length (2745m minimum 14L)',
-              '⚠️ Cold temperature: Braking action may be reduced in winter',
+              '着陸距離s: Verify against runway length (2745m minimum 14L)',
+              '⚠️ 寒冷気象: Braking action may be reduced in winter',
               'Runway surface condition: Check METAR for contamination',
             ]
           },
@@ -6698,14 +6698,14 @@ const CAUG_NOTES_24 = {
               'SID assignment: Verify on TWR first contact (TWR: 118.3 or 119.0)',
               'Typical SIDs: INCHON, GIMPO departures (check Jeppesen for RWY-specific)',
               '⚠️ Military coordination: K-MOA airspace requires ATC vector compliance',
-              'Speed restriction: Standard 250 KT below FL100 (unless authorized)',
+              '速度制限: Standard 250 KT below FL100 (unless authorized)',
             ]
           },
           {
             title: 'Departure & Climb',
             items: [
-              'Initial climb: Follow assigned SID heading/altitude restrictions',
-              'Transition altitude: 14000 ft (climb in feet initially, then FL)',
+              'Initial climb: Follow assigned SID heading/高度制限s',
+              '遷移高度: 14000 ft (climb in feet initially, then FL)',
               'Climb performance: Cold weather may reduce climb gradient; monitor',
               'Wind shear: Unlikely winter (stable), possible summer (TS)',
               'En-route handoff: APP frequency after SID altitude clearance',
@@ -6783,8 +6783,8 @@ const CAUG_NOTES_24 = {
               '⚠️ Military coordination: China military airspace overlaps PRD (clearances delayed)',
               '⚠️ SID/STAR design: Complex routing to avoid military areas',
               '⚠️ ATC vector frequency: Multiple hand-offs (APP → Control)',
-              'Altitude restrictions: Strictly adhere (military deconfliction)',
-              'Speed restrictions: Often 250 KT below FL100 (occasionally FL140)',
+              '高度制限s: Strictly adhere (military deconfliction)',
+              '速度制限s: Often 250 KT below FL100 (occasionally FL140)',
             ]
           },
           {
@@ -6796,7 +6796,7 @@ const CAUG_NOTES_24 = {
               '【Winter (Oct-Apr)】Cool, dry NE winds, excellent visibility',
               '  → Rare icing, stable conditions',
               'Typhoon season: Jul-Sep highest risk (track Western Pacific systems)',
-              '⚠️ Heavy rain: Possible NOTAM for runway groove flooding (maintain speed)',
+              '⚠️ 降雨: Possible NOTAM for runway groove flooding (maintain speed)',
             ]
           },
           {
@@ -6897,8 +6897,8 @@ const CAUG_NOTES_24 = {
             items: [
               'Taxi: GND routing per ATC (complex taxiway layout)',
               'TWR frequency: 118.1 MHz (line-up and departure)',
-              'SID verification: Confirm on TWR first contact',
-              'Speed restriction: 250 KT (or assigned) below FL100',
+              'SID確認: Confirm on TWR first contact',
+              '速度制限: 250 KT (or assigned) below FL100',
               'Climb gradient: Verify performance against SID requirements',
             ]
           },
@@ -6909,7 +6909,7 @@ const CAUG_NOTES_24 = {
               'Control handoff: After APP (FL130+ entering enroute airspace)',
               '⚠️ FL limit: PRD military may restrict to FL250-FL280; expect amendment',
               'Climb planning: Assume lower FL ceiling; plan fuel accordingly',
-              'Transition altitude: 13000 ft (change to FL-based altitude)',
+              '遷移高度: 13000 ft (change to FL-based altitude)',
             ]
           },
           {
@@ -6968,7 +6968,7 @@ const CAUG_NOTES_24 = {
             title: 'Tropical Monsoon & Typhoon Season ⚠️',
             items: [
               '【Southwest Monsoon (May-Oct)】Warm, frequent afternoon TS',
-              '  → Heavy rain possible; arrange early departures',
+              '  → 降雨 possible; arrange early departures',
               '  → Wind: SW avg 10-15 KT, gusts 20+ KT during TS',
               '【Northeast Monsoon (Nov-Apr)】Cool, dry, stable weather',
               '⚠️ Typhoon season: Jul-Sep (track systems via SIGMET/AIRMET)',
@@ -6982,7 +6982,7 @@ const CAUG_NOTES_24 = {
               'Manila Bay: Airport on bay islands (tropical maritime environment)',
               'Quezon City/Metro Manila: 15nm north (major city)',
               'Domestic terminals: T1 (Intl), T2 (Domestic)',
-              'Elevation: Sea level (29 ft AMSL) — hot/humid operations',
+              '標高: Sea level (29 ft AMSL) — hot/humid operations',
               '⚠️ Salt-air corrosion: Aircraft in tropical maritime environment',
             ]
           },
@@ -7042,7 +7042,7 @@ const CAUG_NOTES_24 = {
               'ILS Cat II (06R): RVR 550m minimum',
               'CAT III procedure: Lower minimums; requires auto-land capability + training',
               'Missed approach: Procedure per RWY; review chart',
-              'Landing distance: Adequate for B787 on both RWYs (4000m)',
+              '着陸距離: Adequate for B787 on both RWYs (4000m)',
             ]
           },
           {
@@ -7059,7 +7059,7 @@ const CAUG_NOTES_24 = {
             title: 'Monsoon Arrival Considerations',
             items: [
               '【TS season (May-Oct)】Request visual approach if VFR conditions available',
-              '【Runway contamination】Heavy rain may reduce braking action',
+              '【Runway contamination】降雨 may reduce braking action',
               '【Visibility】Sudden drops during TS; brief alternate beforehand',
               '【Windshear】Possible during TS; monitor ATIS alerts',
             ]
@@ -7085,7 +7085,7 @@ const CAUG_NOTES_24 = {
             items: [
               'SID assignment: Typical Manila SIDs (check Jeppesen per RWY)',
               'Initial heading: Follow SID routing (traffic separation)',
-              'Speed restriction: 250 KT below FL100 (or assigned)',
+              '速度制限: 250 KT below FL100 (or assigned)',
               'Climb gradient: Verify aircraft performance (warm/humid conditions)',
               'Transition altitude: 13000 ft',
             ]
@@ -7097,7 +7097,7 @@ const CAUG_NOTES_24 = {
               'TWR contact: On taxi (118.5 MHz for 06L/24R, 119.0 for 06R/24L)',
               'Line-up clearance: TWR frequency',
               'Takeoff clearance: RWY-specific frequency',
-              'SID verification: Confirm on TWR first contact',
+              'SID確認: Confirm on TWR first contact',
             ]
           },
           {
@@ -7165,7 +7165,7 @@ const CAUG_NOTES_24 = {
           {
             title: '気象',
             items: [
-              '• 冬季（12〜2月）: 寒冷。Cold Temperature Altitude Correction（CTAC）が必要になる頻度が高い',
+              '• 冬季（12〜2月）: 寒冷。寒冷気象 Altitude Correction（CTAC）が必要になる頻度が高い',
               '• 秋〜春: 霧（FG）の発生あり。早朝・低温時に視程悪化に注意',
               '• 夏季（7〜8月）: 梅雨・台風による強風・降雨。SIGMET確認',
               '• 年間を通じて偏西風が強い。特に冬季は北西方向からの季節風（シベリア寒気）に注意',
@@ -7200,8 +7200,8 @@ const CAUG_NOTES_24 = {
             items: [
               '• ILS Y/Z Approach RWY15L、ILS Y/Z Approach RWY15R',
               '• \"GUKDO #H arrival, descent & maintain 13,000ft\" → SEL APP移管後10,000ft、6,000ftと順次降下',
-              '• RWY15R: \"Direct MUNAN cross MUNAN at or above 3,000ft, Cleared for ILS Z 15R APP\"',
-              '• RWY15R（東側から）: \"GUKDO 2C ARR Expect ILS Y 15R\" → \"Direct SEL\" → \"Descend via STAR to 3,000, CLR for ILS Y 15R APP\"',
+              '• RWY15R: \"Direct MUNAN cross MUNAN at or above 3,000ft, 許可 ILS Z 15R APP\"',
+              '• RWY15R（東側から）: \"GUKDO 2C ARR Expect ILS Y 15R\" → \"Direct SEL\" → \"降下経由 STAR to 3,000, CLR for ILS Y 15R APP\"',
               '• 5,000B(4,000B)と登録されているWPT: HOLDING入り後はATC許可なく当初M/A ALT以上に上昇不可',
             ]
           },
@@ -7265,7 +7265,7 @@ const CAUG_NOTES_24 = {
               '• 位置: Jeju-si, Jeju-do, South Korea (33°30\'42\"N 126°29\'33\"E)',
               '• 標高: 118 ft AMSL',
               '• タイムゾーン: UTC+9 (KST)',
-              '• Transition Altitude: 14000 ft / TL: FL150',
+              '• 遷移高度: 14000 ft / TL: FL150',
             ]
           },
           {
@@ -7349,7 +7349,7 @@ const CAUG_NOTES_24 = {
               '• 位置: Dalian, Liaoning, China (38°57\'57\"N 121°32\'20\"E)',
               '• 標高: 107 ft AMSL',
               '• タイムゾーン: UTC+8 (CST)',
-              '• Transition Altitude: 3000m (9843ft) / TL: FL100',
+              '• 遷移高度: 3000m (9843ft) / TL: FL100',
             ]
           },
           {
@@ -7885,7 +7885,7 @@ const CAUG_NOTES_24 = {
               '• 位置: Taipei City, Taiwan (25°04\'10\"N 121°33\'08\"E)',
               '• 標高: 18 ft AMSL',
               '• タイムゾーン: UTC+8 (CST)',
-              '• Transition Altitude: 11000 ft / TL: FL130',
+              '• 遷移高度: 11000 ft / TL: FL130',
             ]
           },
           {
@@ -7968,7 +7968,7 @@ const CAUG_NOTES_24 = {
               '• 位置: Taoyuan City, Taiwan (25°04\'35\"N 121°13\'38\"E)',
               '• 標高: 106 ft AMSL',
               '• タイムゾーン: UTC+8 (CST)',
-              '• Transition Altitude: 11000 ft / TL: FL130',
+              '• 遷移高度: 11000 ft / TL: FL130',
             ]
           },
           {
@@ -8051,7 +8051,7 @@ const CAUG_NOTES_24 = {
               '• 位置: Kaohsiung City, Taiwan (22°34\'26\"N 120°21\'00\"E)',
               '• 標高: 31 ft AMSL',
               '• タイムゾーン: UTC+8 (CST)',
-              '• Transition Altitude: 11000 ft / TL: FL130',
+              '• 遷移高度: 11000 ft / TL: FL130',
             ]
           },
           {
@@ -8399,7 +8399,7 @@ const CAUG_NOTES_24 = {
               '• 位置: Macau SAR, China (22°08\'58\"N 113°35\'31\"E)',
               '• 標高: 20 ft AMSL',
               '• タイムゾーン: UTC+8',
-              '• Transition Altitude: 9000 ft / TL: FL110',
+              '• 遷移高度: 9000 ft / TL: FL110',
             ]
           },
           {
@@ -8586,7 +8586,7 @@ const CAUG_NOTES_24 = {
               '• 位置: Penang Island, Malaysia (05°17\'49\"N 100°16\'33\"E)',
               '• 標高: 11 ft AMSL',
               '• タイムゾーン: UTC+8 (MYT)',
-              '• Transition Altitude: 13000 ft / TL: FL145',
+              '• 遷移高度: 13000 ft / TL: FL145',
             ]
           },
           {
@@ -8668,7 +8668,7 @@ const CAUG_NOTES_24 = {
               '• 位置: Johor Bahru, Johor, Malaysia (01°38\'21\"N 103°40\'14\"E)',
               '• 標高: 135 ft AMSL',
               '• タイムゾーン: UTC+8 (MYT)',
-              '• Transition Altitude: 13000 ft / TL: FL145',
+              '• 遷移高度: 13000 ft / TL: FL145',
             ]
           },
           {
@@ -8855,7 +8855,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• Transition Altitude (TA): 確認要（Jeppesen Chart / ATIS）',
+              '• 遷移高度 (TA): 確認要（Jeppesen Chart / ATIS）',
               '• Transition Level (TL): 確認要（ATIS / NOTAM）',
               '• QNH使用（インドネシアはhPa）',
             ]
@@ -8944,7 +8944,7 @@ const CAUG_NOTES_24 = {
               '• 位置: Surabaya, East Java, Indonesia (07°22\'52\"S 112°47\'12\"E)',
               '• 標高: 9 ft AMSL',
               '• タイムゾーン: UTC+7 (WIB)',
-              '• Transition Altitude: 13000 ft / TL: FL145',
+              '• 遷移高度: 13000 ft / TL: FL145',
             ]
           },
           {
@@ -9043,7 +9043,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• Transition Altitude (TA): 11,000 ft（WMFC FIR内標準）',
+              '• 遷移高度 (TA): 11,000 ft（WMFC FIR内標準）',
               '• Transition Level (TL): FL130（ATISまたはNOTAMで確認）',
               '• QNH使用（マレーシアはhPa）',
             ]
@@ -9147,7 +9147,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• Transition Altitude (TA): 11,000 ft（WMFC FIR内標準）',
+              '• 遷移高度 (TA): 11,000 ft（WMFC FIR内標準）',
               '• Transition Level (TL): FL130（ATISまたはNOTAMで確認）',
               '• QNH使用（マレーシアはhPa）',
             ]
@@ -9327,7 +9327,7 @@ const CAUG_NOTES_24 = {
               '• 位置: Lapu-Lapu City, Cebu, Philippines (10°18\'26\"N 123°58\'44\"E)',
               '• 標高: 31 ft AMSL',
               '• タイムゾーン: UTC+8 (PST)',
-              '• Transition Altitude: 13000 ft / TL: FL150',
+              '• 遷移高度: 13000 ft / TL: FL150',
             ]
           },
           {
@@ -9410,7 +9410,7 @@ const CAUG_NOTES_24 = {
               '• 位置: Chu Lai, Quang Nam Province, Vietnam (15°24\'05\"N 108°42\'21\"E)',
               '• 標高: 10 ft AMSL',
               '• タイムゾーン: UTC+7 (ICT)',
-              '• Transition Altitude: 13000 ft / TL: FL140',
+              '• 遷移高度: 13000 ft / TL: FL140',
             ]
           },
           {
@@ -9618,7 +9618,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'STAR',
             items: [
-              '• STARはJeppesen chart / RM_JALISSUE_INT - 4.3.YSSY.3.1 - RUNWAY INFORMATION 参照',
+              '• STARはJeppesen chart / RM_JALISSUE_INT - 4.3.YSSY.3.1 - RWY情報 参照',
               '• STAR指示後はPRM Approach（平行滑走路同時進入）の可能性があることを念頭に置く',
             ]
           },
@@ -9974,7 +9974,7 @@ const CAUG_NOTES_24 = {
             title: '気象',
             items: [
               '• 地中海性気候。夏季（12〜2月）は高温乾燥（35°C超えることも）、冬季（6〜8月）は温暖湿潤',
-              '• Cold Temperature Altitude Correction: OAT < 0°C 時に必要（冬季の寒波時に稀に発生）',
+              '• 寒冷気象 Altitude Correction: OAT < 0°C 時に必要（冬季の寒波時に稀に発生）',
               '• 強風（北西のNorth Wind: フェーン現象）は夏季の特徴的な気象',
             ]
           },
@@ -10253,7 +10253,7 @@ const CAUG_NOTES_24 = {
               '• ICAO: PHKO / IATA: KOA — Ellison Onizuka Kona International Airport at Keahole',
               '• 位置: ハワイ島（ビッグアイランド）西岸コナ — N19°44\' W156°02\'',
               '• 標高: 47 ft / 14 m',
-              '• タイムゾーン: UTC-10（Hawaii-Aleutian Standard Time）— DSTなし',
+              '• タイムゾーン: UTC-10（Hawaii-Aleutian 標準時）— DSTなし',
               '• 運用形態: 民間空港（H24）。国際線・国内線運航',
             ]
           },
@@ -10269,7 +10269,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+              '• 米国基準: 遷移高度 18,000 ft MSL（FL180）',
             ]
           },
         ]
@@ -10348,7 +10348,7 @@ const CAUG_NOTES_24 = {
               '• ICAO: PHOG / IATA: OGG — Kahului Airport (Maui)',
               '• 位置: マウイ島カフルイ — N20°54\' W156°26\'',
               '• 標高: 54 ft / 16 m',
-              '• タイムゾーン: UTC-10（Hawaii-Aleutian Standard Time）— DSTなし',
+              '• タイムゾーン: UTC-10（Hawaii-Aleutian 標準時）— DSTなし',
               '• 運用形態: 民間空港（H24）。国際線・国内線運航',
             ]
           },
@@ -10364,7 +10364,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+              '• 米国基準: 遷移高度 18,000 ft MSL（FL180）',
             ]
           },
         ]
@@ -10445,7 +10445,7 @@ const CAUG_NOTES_24 = {
               '• ICAO: PHTO / IATA: ITO — Hilo International Airport',
               '• 位置: ハワイ島（ビッグアイランド）東岸ヒロ — N19°43\' W155°03\'',
               '• 標高: 38 ft / 12 m',
-              '• タイムゾーン: UTC-10（Hawaii-Aleutian Standard Time）— DSTなし',
+              '• タイムゾーン: UTC-10（Hawaii-Aleutian 標準時）— DSTなし',
               '• 運用形態: 民間空港（H24）。国際線・国内線運航',
             ]
           },
@@ -10461,7 +10461,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+              '• 米国基準: 遷移高度 18,000 ft MSL（FL180）',
             ]
           },
         ]
@@ -10555,7 +10555,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+              '• 米国基準: 遷移高度 18,000 ft MSL（FL180）',
             ]
           },
         ]
@@ -10643,7 +10643,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+              '• 米国基準: 遷移高度 18,000 ft MSL（FL180）',
             ]
           },
         ]
@@ -10732,7 +10732,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+              '• 米国基準: 遷移高度 18,000 ft MSL（FL180）',
             ]
           },
         ]
@@ -10820,7 +10820,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL（FL180）',
+              '• 米国基準: 遷移高度 18,000 ft MSL（FL180）',
             ]
           },
         ]
@@ -11005,7 +11005,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+              '• 米国基準: 遷移高度 18,000 ft MSL (FL180)',
             ]
           },
         ]
@@ -11102,7 +11102,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+              '• 米国基準: 遷移高度 18,000 ft MSL (FL180)',
             ]
           },
         ]
@@ -11201,7 +11201,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+              '• 米国基準: 遷移高度 18,000 ft MSL (FL180)',
             ]
           },
         ]
@@ -11297,7 +11297,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+              '• 米国基準: 遷移高度 18,000 ft MSL (FL180)',
             ]
           },
         ]
@@ -11398,7 +11398,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+              '• 米国基準: 遷移高度 18,000 ft MSL (FL180)',
             ]
           },
         ]
@@ -11496,7 +11496,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+              '• 米国基準: 遷移高度 18,000 ft MSL (FL180)',
             ]
           },
         ]
@@ -11595,7 +11595,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+              '• 米国基準: 遷移高度 18,000 ft MSL (FL180)',
             ]
           },
         ]
@@ -11696,7 +11696,7 @@ const CAUG_NOTES_24 = {
           {
             title: 'TL/TA',
             items: [
-              '• 米国基準: Transition Altitude 18,000 ft MSL (FL180)',
+              '• 米国基準: 遷移高度 18,000 ft MSL (FL180)',
             ]
           },
         ]
