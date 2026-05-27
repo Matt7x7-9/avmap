@@ -248,6 +248,8 @@ function openCloudPanel() {
 // Colors are pre-computed via graph coloring in fir-boundaries.js properties
 // Adjacent FIRs get different colors automatically
 
+const firLabelMarkers = []; // Store FIR label markers for zoom-level control
+
 FIR_BOUNDARIES.features.forEach(feature => {
   const id = feature.properties.id;
   const color = feature.properties.color || '#1e2530';
@@ -299,12 +301,36 @@ FIR_BOUNDARIES.features.forEach(feature => {
     const labelMarker = L.marker(centroid, { icon: label, interactive: true });
     labelMarker.on('click', () => openFirPanel(id, feature.properties.label));
     labelMarker.addTo(firLayer);
+    firLabelMarkers.push(labelMarker); // Store for zoom control
 
     polygon.addTo(firLayer);
   });
 });
 
 firLayer.addTo(map);
+
+// ── FIR Label Zoom Control ────────────────────
+// Hide FIR labels when zoom < 5, show when zoom >= 5
+function updateFirLabelVisibility() {
+  const zoomLevel = map.getZoom();
+  firLabelMarkers.forEach(marker => {
+    if (zoomLevel < 5) {
+      if (firLayer.hasLayer(marker)) {
+        firLayer.removeLayer(marker);
+      }
+    } else {
+      if (!firLayer.hasLayer(marker)) {
+        firLayer.addLayer(marker);
+      }
+    }
+  });
+}
+
+// Initial check
+updateFirLabelVisibility();
+
+// Update on zoom change
+map.on('zoomend', updateFirLabelVisibility);
 
 // ── Airport markers ───────────────────────────
 function airportIcon(icao) {
