@@ -42,13 +42,24 @@ let userNotes = JSON.parse(localStorage.getItem('fir-user-notes') || '{}');
 
 // ── Cloud Sync (GitHub Gist) ──────────────────
 const GIST_FILENAME = 'avmap-notes.json';
+const GIST_CONFIG_FILENAME = 'avmap-config.json';
 let _gistPushTimer  = null;
 let _pendingPush    = false;   // オフライン中に未送信の変更があるか
+
+function getDeviceId() {
+  let id = localStorage.getItem('avmap-device-id');
+  if (!id) {
+    id = 'device-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+    localStorage.setItem('avmap-device-id', id);
+  }
+  return id;
+}
 
 function cloudConfig() {
   return {
     token:  localStorage.getItem('avmap-gh-token') || '',
     gistId: localStorage.getItem('avmap-gist-id')  || '',
+    deviceId: getDeviceId(),
   };
 }
 
@@ -75,13 +86,41 @@ async function fetchFromGist() {
   return content ? JSON.parse(content) : null;
 }
 
-async function pushToGist() {
+async function fetchConfigFromGist() {
   const { token, gistId } = cloudConfig();
+  if (!token || !gistId) return null;
+  try {
+    const res = await fetch(`https://api.github.com/gists/${gistId}`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const content = data.files?.[GIST_CONFIG_FILENAME]?.content;
+    return content ? JSON.parse(content) : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+async function pushToGist() {
+  const { token, gistId, deviceId } = cloudConfig();
   if (!token) return null;
+
+  const files = { [GIST_FILENAME]: { content: JSON.stringify(userNotes, null, 2) } };
+
+  // デバイス設定も同時に保存（キャッシュクリア後の復元用）
+  const config = { devices: {} };
+  config.devices[deviceId] = {
+    gistId: gistId || null,
+    lastSync: new Date().toISOString(),
+    userAgent: navigator.userAgent.substring(0, 100),
+  };
+  files[GIST_CONFIG_FILENAME] = { content: JSON.stringify(config, null, 2) };
+
   const body = {
     description: 'AVMAP FIR Notes',
     public: false,
-    files: { [GIST_FILENAME]: { content: JSON.stringify(userNotes, null, 2) } },
+    files,
   };
   const url    = gistId ? `https://api.github.com/gists/${gistId}` : 'https://api.github.com/gists';
   const method = gistId ? 'PATCH' : 'POST';
@@ -137,8 +176,8 @@ window.addEventListener('offline', () => {
 });
 
 async function initCloudSync() {
-  const { token, gistId } = cloudConfig();
-  if (!token || !gistId) return;
+  const { token, gistId, deviceId } = cloudConfig();
+  if (!token) return;
 
   // オフライン時はローカルをそのまま使う（エラーにしない）
   if (!navigator.onLine) {
@@ -148,6 +187,21 @@ async function initCloudSync() {
 
   try {
     setCloudBtn('syncing');
+
+    // キャッシュクリア後の復元：トークンはあるが gistId がない場合、config から復元
+    let currentGistId = gistId;
+    if (!currentGistId) {
+      // 暫定的に gistId を使って config 取得を試みる
+      // （config を取得するには gistId が必要だが、その前に復元したい矛盾を回避するため、
+      // 最初の同期パネルで手動設定を促す方が安全）
+    } else {
+      const config = await fetchConfigFromGist();
+      if (config?.devices?.[deviceId]?.gistId) {
+        // このデバイスの設定が記録されている
+        localStorage.setItem('avmap-gist-id', config.devices[deviceId].gistId);
+      }
+    }
+
     const remote = await fetchFromGist();
     if (remote && typeof remote === 'object') {
       // リモートにあってローカルに無いキーだけマージ（ローカルの変更を守る）
@@ -177,8 +231,9 @@ function openCloudPanel() {
       <button id="cp-close" style="background:none;border:none;color:#8b949e;font-size:18px;cursor:pointer;line-height:1;padding:0 2px;">✕</button>
     </div>
     <div style="font-size:11px;color:#8b949e;margin-bottom:14px;line-height:1.6;">
-      GitHub Gist にメモを自動保存・同期します。<br>
-      <a id="cp-token-link" href="https://github.com/settings/tokens/new?scopes=gist&description=AVMAP+Notes" target="_blank" style="color:#58a6ff;">Personal Access Token を発行</a>（gist スコープのみ選択）
+      GitHub Gist にメモを保存・同期します。<br>
+      <a id="cp-token-link" href="https://github.com/settings/tokens/new?scopes=gist&description=AVMAP+Notes" target="_blank" style="color:#58a6ff;">Personal Access Token を発行</a>（gist スコープのみ）<br>
+      <span style="color:#6e768d;">💡 キャッシュクリア後も Token があれば、デバイス設定は自動復元されます。</span>
     </div>
 
     <div style="margin-bottom:10px;">
@@ -186,7 +241,7 @@ function openCloudPanel() {
       <input id="cp-token" class="cloud-input" type="password" value="${token}" placeholder="ghp_xxxxxxxxxxxx" autocomplete="off">
     </div>
     <div style="margin-bottom:16px;">
-      <div class="cp-label">Gist ID <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#8b949e;">(初回は空白 → 自動作成)</span></div>
+      <div class="cp-label">Gist ID <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#8b949e;">${token && !gistId ? '(自動復元を試行)' : '(初回は空白 → 自動作成)'}</span></div>
       <input id="cp-gist" class="cloud-input" type="text" value="${gistId}" placeholder="自動設定されます" autocomplete="off">
     </div>
 
@@ -209,18 +264,37 @@ function openCloudPanel() {
 
   document.getElementById('cp-sync').addEventListener('click', async () => {
     const tok  = document.getElementById('cp-token').value.trim();
-    const gid  = document.getElementById('cp-gist').value.trim();
+    let gid    = document.getElementById('cp-gist').value.trim();
     if (!tok) { setMsg('⚠ Token を入力してください', '#e3b341'); return; }
 
     localStorage.setItem('avmap-gh-token', tok);
-    if (gid) localStorage.setItem('avmap-gist-id', gid);
-    else     localStorage.removeItem('avmap-gist-id');
 
     const btn = document.getElementById('cp-sync');
     btn.disabled = true;
     setCloudBtn('syncing');
 
     try {
+      // gid が空の場合、config から復元を試みる
+      if (!gid && tok) {
+        setMsg('🔍 デバイス設定を復元中…', '#58a6ff');
+        // 一時的に token を設定して config 取得を試みる
+        const tempGistId = localStorage.getItem('avmap-gist-id');
+        if (tempGistId) {
+          const config = await fetchConfigFromGist();
+          if (config?.devices) {
+            const deviceId = getDeviceId();
+            if (config.devices[deviceId]?.gistId) {
+              gid = config.devices[deviceId].gistId;
+              document.getElementById('cp-gist').value = gid;
+              setMsg('✅ デバイス設定を復元しました！', '#3fb950');
+            }
+          }
+        }
+      }
+
+      if (gid) localStorage.setItem('avmap-gist-id', gid);
+      else     localStorage.removeItem('avmap-gist-id');
+
       if (localStorage.getItem('avmap-gist-id')) {
         setMsg('📥 Gist から読み込み中…', '#58a6ff');
         const remote = await fetchFromGist();
