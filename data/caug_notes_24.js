@@ -7124,5 +7124,1334 @@ const CAUG_NOTES_24 = {
       },
     ]
   },
+  RKSI: {
+    fullName: 'Seoul/Incheon International Airport',
+    iata: 'ICN',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+      TL: 'FL140',
+      TA: '14,000 ft',
+    },
+    runways: [
+      {id:'15L/33R', len:0, apch:'VOR 15L/33R'},
+      {id:'15R/33L', len:0, apch:'VOR 15R/33L'},
+      {id:'16L/16R/34L/34R', len:0, apch:'VOR 16L/16R/34L/34R'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: RKSI / IATA: ICN — Seoul/Incheon International Airport（仁川国際空港）',
+              '• 位置: N37°27\' E126°26\'（ソウル市内から西方約50km、仁川市沖の埋立地）',
+              '• 標高: 23 ft (7 m)',
+              '• タイムゾーン: UTC+9（韓国標準時 KST、DST なし）',
+              '• 運用時間: 24時間運用',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 冬季（12〜2月）: 寒冷。Cold Temperature Altitude Correction（CTAC）が必要になる頻度が高い',
+              '• 秋〜春: 霧（FG）の発生あり。早朝・低温時に視程悪化に注意',
+              '• 夏季（7〜8月）: 梅雨・台風による強風・降雨。SIGMET確認',
+              '• 年間を通じて偏西風が強い。特に冬季は北西方向からの季節風（シベリア寒気）に注意',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• Transition Level: FL140',
+              '• Transition Altitude: 14,000 ft',
+              '• QNH: hPa使用',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• GUKDO ARR系: 日本方面からは主にGUKDO系STARを使用',
+              '• SEL APP: 119.1 / SEL ARR: 124.2（GUKDO付近でContact）',
+              '• Initial Radio Call: \"CONTACT\"指示後 → Squawk IDENT、Callsign・Type・ATISを通報',
+              '• \"MONITOR or STAND BY FOR\"指示後 → Squawk IDENTしてSEL APPをモニター',
+              '• CARGO便: CARGO FLTである旨をReportすること',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS Y/Z Approach RWY15L、ILS Y/Z Approach RWY15R',
+              '• \"GUKDO #H arrival, descent & maintain 13,000ft\" → SEL APP移管後10,000ft、6,000ftと順次降下',
+              '• RWY15R: \"Direct MUNAN cross MUNAN at or above 3,000ft, Cleared for ILS Z 15R APP\"',
+              '• RWY15R（東側から）: \"GUKDO 2C ARR Expect ILS Y 15R\" → \"Direct SEL\" → \"Descend via STAR to 3,000, CLR for ILS Y 15R APP\"',
+              '• 5,000B(4,000B)と登録されているWPT: HOLDING入り後はATC許可なく当初M/A ALT以上に上昇不可',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 15L/33R: Main RWY（主にARRで使用。Landing Main RWYは15L/33R）',
+              '• RWY 15R/33L: 補助RWY',
+              '• RWY 16L/16R/34L/34R: 混雑時（0030〜0230Z、1030〜1230Z等）にRWY15L/33Rと同時使用。Emergencyを除き00〜12UTCに限られる',
+              '• RWY勾配（Slope）: RM_JALISSUE_INT - 2.3.RKSI.3.1 参照',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+              '• 121.5を他空港より頻繁に使用する傾向がある → 常にMonitor',
+              '• SID/STAR飛行中に高度指示を受けても、STAR上の高度制限は無効にならない（旧ICAO方式）',
+              '• 韓国管制は米国式\"Descend via XXX ARR\"の用語も併用（韓国軍基準がFAA式のため）',
+              '• \"Cleared via XXX ARR\"と指示された場合: 経路のみの承認。高度は別途指示に従う',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  RKPC: {
+    fullName: '',
+    iata: '',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'07/25', len:3000, apch:'ILS 07/25'},
+      {id:'13/31', len:1900, apch:'VOR 13/31'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: RKPC / IATA: CJU',
+              '• 位置: Jeju-si, Jeju-do, South Korea (33°30\'42\"N 126°29\'33\"E)',
+              '• 標高: 118 ft AMSL',
+              '• タイムゾーン: UTC+9 (KST)',
+              '• Transition Altitude: 14000 ft / TL: FL150',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '（記入欄）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 07/25: 3000m — ILS両方向',
+              '• RWY 13/31: 1900m（小型機用）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  ZYTL: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'10/28', len:3300, apch:'ILS 10/28'},
+      {id:'11/29', len:3300, apch:'ILS 11/29'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: ZYTL / IATA: DLC',
+              '• 位置: Dalian, Liaoning, China (38°57\'57\"N 121°32\'20\"E)',
+              '• 標高: 107 ft AMSL',
+              '• タイムゾーン: UTC+8 (CST)',
+              '• Transition Altitude: 3000m (9843ft) / TL: FL100',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 10/28: 3300m — ILS',
+              '• RWY 11/29: 3300m — ILS',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  ZSPD: {
+    fullName: '',
+    iata: '',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: ZSPD / IATA: PVG',
+              '• Shanghai Pudong International Airport（上海浦東国際空港）',
+              '• 中国・上海市浦東新区',
+              '• UTC+8（JST-1）',
+              '• 24時間運用',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 冬季（12〜2月）: 低視程・濃霧あり → ILS Cat II/III運用の可能性',
+              '• 夏季（6〜9月）: 梅雨・雷雨・台風シーズン（7〜10月）',
+              '• 卓越風: NW（冬）/ SE（夏）',
+              '• 横風計算に注意（RWY 16/34系 vs 17/35系）',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• DUMET付近でSHA APPに移管 → STAR Clearanceが発出される',
+              '• Base付近で違うRWYへの進入変更が多い',
+              '• SHA APPでは ORBIT（360°旋回）という用語使用あり: Make Orbit Left = 左に360°旋回',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILSZ 16L（JEPP 21-1）/ DUM81A RNAV Arrival（JEPP 20-2D）',
+              '• Clearance: DUMET 81A RNAV arrival RWY16L',
+              '• Initial Approach Fix: MP1 → MP1以降MAX IAS 210ktに制限',
+              '• MP1から263°Track への Turn: Chart に FLYING NORTH OF N31°27\' IS STRICTLY PROHIBITED → 注意',
+              '• ILSZ 34R（JEPP 21-13）/ DUM91A RNAV Arrival（JEPP 20-2E）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• 長さ: 3400m / ILS / RNAV',
+              '• 日本からの到着は通常RWY16L/34Rをアサイン',
+              '• 長さ: 3400m / ILS / RNAV',
+              '• 日本への出発は通常RWY16R/34Lをアサイン',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  ZSSS: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'18L/36R', len:3300, apch:'ILS 18L/36R'},
+      {id:'18R/36L', len:3300, apch:'ILS 18R/36L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: ZSSS / IATA: SHA',
+              '• 位置: Shanghai, China (31°11\'59\"N 121°20\'00\"E)',
+              '• 標高: 10 ft AMSL',
+              '• タイムゾーン: UTC+8 (CST)',
+              '• Transition Altitude: 3000m / TL: FL100',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 18L/36R: 3300m — ILS',
+              '• RWY 18R/36L: 3300m — ILS',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  ZSHC: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'07/25', len:3600, apch:'ILS 07/25'},
+      {id:'17/35', len:3200, apch:'ILS 17/35'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: ZSHC / IATA: HGH',
+              '• 位置: Hangzhou, Zhejiang, China (30°13\'46\"N 120°25\'58\"E)',
+              '• 標高: 23 ft AMSL',
+              '• タイムゾーン: UTC+8 (CST)',
+              '• Transition Altitude: 3000m / TL: FL100',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '（記入欄）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 07/25: 3600m — ILS',
+              '• RWY 17/35: 3200m — ILS',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  ZBTJ: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'16L/34R', len:3600, apch:'ILS 16L/34R'},
+      {id:'16R/34L', len:3200, apch:'ILS 16R/34L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: ZBTJ / IATA: TSN',
+              '• 位置: Tianjin, China (39°07\'27\"N 117°20\'44\"E)',
+              '• 標高: 15 ft AMSL',
+              '• タイムゾーン: UTC+8 (CST)',
+              '• Transition Altitude: 3000m / TL: FL100',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '（記入欄）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 16L/34R: 3600m — ILS',
+              '• RWY 16R/34L: 3200m — ILS',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  ZBAA: {
+    fullName: 'Beijing Capital International Airport',
+    iata: 'PEK',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+      TL: 'FL118',
+    },
+    runways: [
+      {id:'01/19', len:0, apch:'VOR 01/19'},
+      {id:'18L/36R', len:0, apch:'VOR 18L/36R'},
+      {id:'18R/36L', len:0, apch:'VOR 18R/36L'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: ZBAA / IATA: PEK — Beijing Capital International Airport（北京首都国際空港）',
+              '• 位置: N40°04\' E116°35\'（北京市中心から北東約13nm）',
+              '• 標高: 116 ft (35 m)',
+              '• タイムゾーン: UTC+8（中国標準時 CST、DST なし）',
+              '• 運用時間: 24時間運用',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 大気汚染（スモッグ・ヘイズ）: 風が弱い日はHAZY頻発。3,000ft以上はSKY CLRでも地上付近はHAZYになりやすい',
+              '• 冬季（12〜2月）: 霧・スモッグによる低視程頻発。VIS予報より悪化するケースが多い',
+              '• 北京・天津付近に前線がある際: 雨・雪予報時はMist + HAZYが加わり、ActualのVISがForecastより大幅に悪化することあり',
+              '• RWY19/18使用時: 時間帯によっては太陽に向かう方向になり眩しさに注意',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+              '• Transition Level: FL118',
+              '• ※ 10,000ft Taskと重なるため注意。TLへの移行タイミングを事前に確認すること',
+              '• QNH: 降下時に必ずセット。中国はhPa使用',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• Company Radio: 131.5（PAMDA付近から交信可能）',
+              '• D-ATIS: MAKNO〜ANRAT間で取得可。到着前に必ず確認',
+              '• Beijing Approach: 124.7（DUMAP手前でContact）',
+              '• STAR例: \"Cleared via DUMAP 8ZA / 9ZA RNAV ARR RWY18L/19/01, Descend and maintain 5,400m (FL177)\"',
+              '• ZBAD向けトラフィックの影響でしばらく降下指示されないことが多い — Pathが高くなりやすいため早めに降下要求',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• ILS Approach RWY01（JEPPESEN参照）',
+              '• ARRでのAssignが多い（日本方面から）',
+              '• Initial ALT制限: 1,200m（ARR ATIS記載）',
+              '• PAPI: 標準角度',
+              '• ILS Approach RWY19',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 01/19: 主にARR使用。日本方面からのARRはこのRWYが多い',
+              '• RWY 18L/36R: 主にDEP使用（東行き・日本行きはこのRWYが多い）',
+              '• RWY 18R/36L: ARR/DEP兼用（西行きDEPで使用）',
+              '• 各RWY: 両側に197ft (60m)のStopwayを有する。Slopeはいずれも±0.1%程度',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+              '• Preferential Routing: 方面別でDEP RWYが分けられている（東行き=01/19・18L/36R、西行き=18R/36L）',
+              '• DCL（Datalink Clearance）利用可能。SIDとSpot以外はRead Backしなくてよい',
+              '• TCAS RA発令時: 中国当局の指示に従うこと（MELに記載）',
+              '• 降下指示でDescentRateを指定されることあり: 例 \"Descent rate 2,000 ft/min or more.\"',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  RCSS: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'10/28', len:2605, apch:'ILS 10/28'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: RCSS / IATA: TSA',
+              '• 位置: Taipei City, Taiwan (25°04\'10\"N 121°33\'08\"E)',
+              '• 標高: 18 ft AMSL',
+              '• タイムゾーン: UTC+8 (CST)',
+              '• Transition Altitude: 11000 ft / TL: FL130',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 10/28: 2605m — ILS',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  RCTP: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'05L/23R', len:3660, apch:'ILS 05L/23R'},
+      {id:'05R/23L', len:3660, apch:'ILS 05R/23L'},
+      {id:'06/24', len:3800, apch:'ILS 06/24'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: RCTP / IATA: TPE',
+              '• 位置: Taoyuan City, Taiwan (25°04\'35\"N 121°13\'38\"E)',
+              '• 標高: 106 ft AMSL',
+              '• タイムゾーン: UTC+8 (CST)',
+              '• Transition Altitude: 11000 ft / TL: FL130',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 05L/23R: 3660m — ILS',
+              '• RWY 05R/23L: 3660m — ILS',
+              '• RWY 06/24: 3800m — ILS（独立滑走路）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  RCKH: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'09/27', len:3150, apch:'ILS 09/27'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: RCKH / IATA: KHH',
+              '• 位置: Kaohsiung City, Taiwan (22°34\'26\"N 120°21\'00\"E)',
+              '• 標高: 31 ft AMSL',
+              '• タイムゾーン: UTC+8 (CST)',
+              '• Transition Altitude: 11000 ft / TL: FL130',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 09/27: 3150m — ILS両方向',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  ZSAM: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'05/23', len:3400, apch:'ILS 05/23'},
+      {id:'06/24', len:3400, apch:'ILS 06/24'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: ZSAM / IATA: XMN',
+              '• 位置: Xiamen, Fujian, China (24°32\'38\"N 118°07\'42\"E)',
+              '• 標高: 59 ft AMSL',
+              '• タイムゾーン: UTC+8 (CST)',
+              '• Transition Altitude: 3000m / TL: FL100',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '（記入欄）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 05/23: 3400m — ILS',
+              '• RWY 06/24: 3400m — ILS',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  ZPPP: {
+    fullName: '',
+    iata: '',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'03/21', len:0, apch:'VOR 03/21'},
+      {id:'01/19', len:0, apch:'VOR 01/19'},
+      {id:'03', len:0, apch:'ILS 03'},
+      {id:'01/19', len:0, apch:'VOR 01/19'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• 正式名称: 昆明長水国際空港（Kunming Changshui International Airport）',
+              '• ICAO: ZPPP　IATA: KMG',
+              '• 位置: N25°00\' E102°56\'　標高: 6,903 ft / 2,103 m（超高標高空港！）',
+              '• 所在地: 雲南省昆明市（「春城」 — 温暖な気候で知られる）',
+              '• UTC+8（中国標準時 CST、DSTなし）',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 03/21: 長さ 13,780 ft（4,200 m）× 幅 200 ft（60 m）舗装',
+              '• RWY 01/19: 長さ 13,780 ft（4,200 m）× 幅 200 ft（60 m）舗装（第2滑走路）',
+              '• PCN: 高荷重対応。787は通常問題なし',
+              '• RWY 03: ILS Cat I / RWY 21: ILS Cat I（逆進入も可）',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+              '• 言語: 英語・中国語混在。英語での対応は可能だが応答が遅い場合あり',
+              '• CPDLCなし: ZPKM FIR（昆明）はCPDLC非対応。すべて音声ATC',
+              '• 管制間隔: 中国独自の方式（日本・米国と異なる場合あり）。特にSID/STARのルーティング変更が多い',
+              '• SELCAL: 長距離飛行時はSELCAL設定を確認',
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  VVNB: {
+    fullName: '',
+    iata: '',
+    utc: '+9',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: VVNB / IATA: HAN  Noi Bai International Airport（ノイバイ国際空港）',
+              '• 位置: ハノイ市中心より北約25km',
+              '• 標高: 39 ft',
+              '• 時刻: UTC+7（ICT，夏時間なし）',
+              '• 運用時間: 24時間',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+              '• 亜熱帯性気候（南部・ホーチミンと異なり季節変化あり）',
+              '• 冬季（11〜3月）: 霧や靄が発生しやすい。朝霧で視程1km以下になることあり。気温10〜15℃',
+              '• 夏季（5〜9月）: 高温多湿。気温32〜38℃。スコール・雷雨が頻発',
+              '• 春季（3〜4月）: Crachin（細かい霧雨）が発生，視程・天井が低い',
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+              '• ILS / RNAV(GNSS) STARともに使用可',
+              '• Hanoi APP: 124.9 MHz / 119.9 MHz（NOTAM確認）',
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '• RWY方位: 110度（磁方位）/ CAT I ILS',
+              '• 北方山岳地帯への注意 — 最終進入中も地形マージンを確認',
+              '• RWY方位: 290度（磁方位）/ CAT I ILS',
+              '• こちら側は南方向に比較的障害物少ない',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• 長さ: 3800m × 45m（Concrete，Non-Grooved）/ ILS / RNAV',
+              '• Non-Grooved: 濡れ滑走路（Wet RWY）での制動距離が増加 → Wet LDRで計算すること',
+              '• 長さ: 3800m × 45m（Concrete，Non-Grooved）/ ILS / RNAV',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+  VMMC: {
+    fullName: '',
+    iata: '',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 9',
+    prefRwy: 'Nil',
+    wakeCategory: 'D',
+    b787Info: {
+      wingspan: '60.1m (197ft)',
+      tailHeight: '17.0m (55.7ft) - 787-9 / 16.9m (55.4ft) - 787-8',
+    },
+    transitionAltitude: {
+    },
+    runways: [
+      {id:'16/34', len:3360, apch:'ILS 16/34'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: '空港概要',
+            items: [
+              '• ICAO: VMMC / IATA: MFM',
+              '• 位置: Macau SAR, China (22°08\'58\"N 113°35\'31\"E)',
+              '• 標高: 20 ft AMSL',
+              '• タイムゾーン: UTC+8',
+              '• Transition Altitude: 9000 ft / TL: FL110',
+            ]
+          },
+          {
+            title: '気象',
+            items: [
+            ]
+          },
+          {
+            title: 'TL/TA',
+            items: [
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'STAR',
+            items: [
+            ]
+          },
+          {
+            title: 'Approach',
+            items: [
+              '（記入欄）',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'RWY',
+            items: [
+              '• RWY 16/34: 3360m — ILS両方向',
+              '• 注意: 海上滑走路（旅客桟橋式ターミナル）',
+              '• Displaced threshold あり',
+            ]
+          },
+          {
+            title: 'ATC',
+            items: [
+            ]
+          },
+        ]
+      },
+    ]
+  },
+
 
 };
