@@ -410,16 +410,39 @@ function buildCaugPopupHtml(ap, color, typeLabel) {
       html += `</div></div>`;
     }
 
-    // Sections
-    notes.sections.forEach(sec => {
-      html += `<div style="margin-top:8px;">`;
-      html += `<div style="font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#58a6ff;margin-bottom:3px;">${sec.title}</div>`;
-      html += `<ul style="margin:0;padding-left:12px;font-size:11px;line-height:1.55;color:#c9d1d9;">`;
-      sec.items.forEach(item => {
-        html += `<li style="margin-bottom:2px;">${item}</li>`;
+    // Sections or Tabs
+    function buildSections(sections) {
+      let s = '';
+      sections.forEach(sec => {
+        s += `<div style="margin-top:8px;">`;
+        s += `<div style="font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#58a6ff;margin-bottom:3px;">${sec.title}</div>`;
+        s += `<ul style="margin:0;padding-left:12px;font-size:11px;line-height:1.55;color:#c9d1d9;">`;
+        sec.items.forEach(item => {
+          s += `<li style="margin-bottom:2px;">${item}</li>`;
+        });
+        s += `</ul></div>`;
       });
-      html += `</ul></div>`;
-    });
+      return s;
+    }
+
+    if (notes.tabs) {
+      // タブUI (General / Arrival / Departure など)
+      html += `<div class="caug-tab-buttons" style="display:flex;gap:4px;margin-top:10px;">`;
+      notes.tabs.forEach((tab, i) => {
+        html += `<button class="caug-tab-btn${i === 0 ? ' active' : ''}" data-tab="${tab.id}"
+          style="flex:1;font-size:10px;padding:3px 0;border-radius:4px;border:1px solid #30363d;cursor:pointer;
+          background:${i === 0 ? '#1c3a5e' : 'transparent'};color:${i === 0 ? '#79c0ff' : '#8b949e'};">
+          ${tab.label}</button>`;
+      });
+      html += `</div>`;
+      notes.tabs.forEach((tab, i) => {
+        html += `<div class="caug-tab-pane" data-tab="${tab.id}" style="${i > 0 ? 'display:none' : ''}">`;
+        html += buildSections(tab.sections);
+        html += `</div>`;
+      });
+    } else {
+      html += buildSections(notes.sections);
+    }
 
     html += `<div style="font-size:10px;color:#8b949e;margin-top:8px;border-top:1px solid #30363d;padding-top:6px;">CAUG 2-03 §2.4 / 1-03 §3.2.1.1 B787</div>`;
   } else {
@@ -1289,6 +1312,25 @@ function attachPanelListeners(firId) {
     });
   }
 }
+
+// CAUG popup tab switching
+map.on('popupopen', (e) => {
+  const content = e.popup.getElement()?.querySelector('.leaflet-popup-content');
+  if (!content) return;
+  content.querySelectorAll('.caug-tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tabId = btn.dataset.tab;
+      content.querySelectorAll('.caug-tab-btn').forEach(b => {
+        b.classList.toggle('active', b === btn);
+        b.style.background = b === btn ? '#1c3a5e' : 'transparent';
+        b.style.color = b === btn ? '#79c0ff' : '#8b949e';
+      });
+      content.querySelectorAll('.caug-tab-pane').forEach(p => {
+        p.style.display = p.dataset.tab === tabId ? '' : 'none';
+      });
+    });
+  });
+});
 
 // Close panels on map click
 map.on('click', () => {

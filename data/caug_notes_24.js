@@ -513,6 +513,157 @@ const CAUG_NOTES_24 = {
     ]
   },
 
+  // ── 香港 ────────────────────────────────────
+
+  VHHH: {
+    fullName: 'HONG KONG INTL',
+    iata: 'HKG',
+    utc: '+8',
+    ops: 'H24',
+    curfew: 'Nil',
+    fuel: 'JET-A1',
+    rffs: 'Cat 10',
+    prefRwy: 'RWY 25',
+    runways: [
+      {id:'07L/25R', len:3800, apch:'ILS (CAT II/III) or RNP'},
+      {id:'07C/25C', len:3800, apch:'ILS (CAT II/III) or RNP'},
+      {id:'07R/25L', len:3800, apch:'ILS (CAT II) or RNP'},
+    ],
+    tabs: [
+      {
+        id: 'gen',
+        label: 'General',
+        sections: [
+          {
+            title: 'RWY Operations',
+            items: [
+              '【0000-1459 UTC】Three-RWY ops: 07L arr, 07C dep (N/NE/E), 07R mixed',
+              '【1500-1759 UTC】07C/25C arr, 07R/25L dep (segregated)',
+              '【1800-2259 UTC】Single RWY only (North or Center)',
+              '【2300-2359 UTC】Dual RWY resumes (maintenance rotation)',
+              'South apron/Business parking → assign 07R/25L; others → 07L/25R',
+              'Independent parallel dep (07C+07R): report assigned SID to Tower on first contact',
+            ]
+          },
+          {
+            title: 'Wind Shear & Turbulence ⚠️',
+            items: [
+              'E-SW winds >15 KT: significant WS/moderate turbulence (>30 KT: larger)',
+              'NW-NE winds >20 KT: significant WS (esp. RWY 25 approaches)',
+              'South RWY (07R/25L) most affected (Lantau hills proximity)',
+              'Cool season (Nov-Apr): NE low-level jet up to 50 KT → WS on 07 departure',
+              '⚠️ RWY 25L: NW/N winds; 25C: SW/S/SE and NW/N/NE >15 KT',
+              '⚠️ RWY 25R: strong S winds; 07R TDZ: NW/N >15 KT',
+            ]
+          },
+          {
+            title: 'Transponder & Taxi',
+            items: [
+              'Mode S: Stay on AUTO/XPNDR until fully parked (weight-on-wheel)',
+              'Taxi: Extreme CAUTION, minimum engines power only',
+              'RNP 1 mandatory (GNSS receiver required); exempt: humanitarian/SAR/state ACFT',
+            ]
+          },
+          {
+            title: 'ILS & Lighting ⚠️',
+            items: [
+              '⚠️ CAT I ops 07R/25L: GP signal may be interfered by taxiing ACFT',
+              '⚠️ False ILS capture risk: monitor profile/altitude carefully',
+              '⚠️ Do NOT arm capture modes before STELA (07R), TONIC (07C), TUTBA (07L)',
+              'Red Lightning Warning: no chocks, no push-back, APU must run (or 1x starboard engine)',
+              'TCAS alerts possible from VFR traffic in vicinity',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'arr',
+        label: 'Arrival',
+        sections: [
+          {
+            title: 'CAT Operations & RWY Assignments',
+            items: [
+              '07L/25R: CAT II/III; 07C/25C: 07C CAT II / 25C CAT II/III; 07R/25L: CAT II',
+              'Special aircrew & ACFT cert required for CAT II/III (07L, 25C)',
+              'Vacate via 1st available rapid exit TWY; don\'t stop on exit TWY',
+            ]
+          },
+          {
+            title: 'Reduced RWY Separation (RRSM)',
+            items: [
+              'Conditions: VIS ≥5km, ceiling ≥3000\', daylight, visual contact, no adverse braking',
+              '07L/25R: preceding past 2400m from THR (abeam TWY C8/C5)',
+              '07C/25C: preceding past 2400m from THR (abeam TWY F6/A8 or F3)',
+              '07R/25L: preceding past 2900m from THR (abeam TWY K6 or K2)',
+            ]
+          },
+          {
+            title: 'Descent & Delays',
+            items: [
+              'Descent rate: min 500\'/min assumed by ATC; inform if lower',
+              'Delay >20 min: NOTAM issued; ≥30 min: on ATIS',
+              '⚠️ Pearl River Delta region likely affected by same weather → consider alternates outside',
+            ]
+          },
+        ]
+      },
+      {
+        id: 'dep',
+        label: 'Departure',
+        sections: [
+          {
+            title: 'A-CDM & Clearance',
+            items: [
+              'TOBT ±5 min; TSAT window ±10 min',
+              'TOBT earlier by ≥30 min → re-file flight plan',
+              'TOBT later by ≥15 min → send DLA message',
+              'PDC data link: send RCD ≤40 min before EOBT (if no response in 5 min, voice)',
+              'Read back: Callsign, Destination, Route, SID, Squawk',
+            ]
+          },
+          {
+            title: 'Push-back & Start-up',
+            items: [
+              'Standard: BLUE/RED to taxi-lane; GREEN: S103/S108/W123 (special stands)',
+              '⚠️ S103, S108, W123: 180° push-back = ONE ENGINE ONLY (start other after push-back)',
+              'RWY 07C: During three-RWY ops (0000-1459 UTC): Radius-to-Fix SIDs (BEKOL 1X/1Z, DALOL 1X/1Z, etc.)',
+              'RWY 07C: During noise mitigating period (1500-2300 UTC): BEKOL 1Y, DALOL 1Y, LEKEN 1Y, PECAN 1Y',
+            ]
+          },
+          {
+            title: 'Departure Speed & SID Verification',
+            items: [
+              'Depart speed: cross PORPA/ROVER/HH412/HH421/PRAWN/POVEG at MIN 205 KT → NADP 2 recommended',
+              '⚠️ RWY 07C: Verify correct SID carefully (LEFT/RIGHT turn depends on RWY mode)',
+              '⚠️ Independent parallel dep (07C+07R): report assigned SID to Tower on 1st contact',
+              '⚠️ Terrain: stay on SID track until passing MSA; ATC has APM/DPM monitoring',
+            ]
+          },
+          {
+            title: 'Climb Requirements (Critical Waypoints)',
+            items: [
+              'ADLAD/BEKOL: BEKOL at or above FL157 (4800m)',
+              'RWY 25L: HH481 ≥7000\', HH482 ≥FL110',
+              'DALOL/LEKEN: SEGPO ≥FL140',
+              'DUMEP/LARIT/XEMEK: VEMSO ≥9000\', SAMED ≥FL130, LUBMO ≥FL160',
+              'PECAN: VEDVO ≥FL110, SEGPO ≥FL140, HH471 ≥9000\'',
+              'SOSLU (07C): VEMSO ≥9000\', SAMED ≥FL130, SEGPO ≥FL140',
+              '⚠️ If unable to comply: inform HK Delivery before start-up',
+            ]
+          },
+          {
+            title: 'Engine Failure (B787)',
+            items: [
+              'RWY 07L/C: Track 074° → intercept OUBD R-105 07EF1 → 07EF2 turn RIGHT to 190° → accelerate (avoid 1100\' OBST 10.6NM ENE) → at 4500\' RIGHT to LIMES',
+              'RWY 07R: Track 074° → 07RE1 turn RIGHT to 190° → same avoidance/climb to LIMES',
+            ]
+          },
+        ]
+      },
+    ],
+    sections: []
+  },
+
   // ── マカオ ────────────────────────────────────
 
   VMMC: {
