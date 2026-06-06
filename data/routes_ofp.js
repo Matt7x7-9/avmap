@@ -20,9 +20,11 @@ const OFP_ROUTES = {
       { name: "LANAT",  airway: "Y697",   fir: "RJJJ", coords: [36.224, 131.257] },
       { name: "MIDER",  airway: "Y71",    coords: [35.010, 135.496] },
       { name: "BERMA",  airway: "Y71",    coords: [34.535, 136.355] },
+      { name: "GAKKI",  airway: "Y71",    coords: [34.449, 137.408] },
       { name: "SHOOT",  airway: "Y71",    coords: [34.429, 138.018] },
       { name: "ARTIC",  airway: "Y71",    coords: [34.429, 138.483] },
       { name: "ANZAC",  airway: "XAC1A",  coords: [34.505, 139.418] },
+      { name: "WANDA",  airway: "XAC1A",  coords: [35.019, 140.199] },
       { name: "RJTT",   airway: "XAC1A",  coords: [35.332, 139.469] },
     ]
   },
