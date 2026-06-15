@@ -5728,6 +5728,49 @@ const OFP_ROUTES = {
       { name: "VTBS",   airway: "DCT",    coords: [13.687, 100.748] },
     ]
   },
+
+  // ── KIX ↔ PVG ──────────────────────────────────────────────
+  "RJBB-ZSPD": {
+    label: "KIX→PVG",
+    color: "#F1C40F",
+    ofpSource: "JAL891 2026-06-16",
+    waypoints: [
+      { name: "RJBB",   coords: [34.434, 135.233] },
+      { name: "P12",    coords: [31.200, 121.934] },
+      { name: "P14",    coords: [31.367, 121.836] },
+      { name: "P15",    coords: [31.417, 121.819] },
+      { name: "P18",    coords: [31.367, 121.734] },
+      { name: "P19",    coords: [31.318, 121.751] },
+      { name: "P22",    coords: [31.251, 121.769] },
+      { name: "ZSPD",   coords: [31.135, 121.785] },
+    ]
+  },
+
+  "ZSPD-RJBB": {
+    label: "PVG→KIX",
+    color: "#F1C40F",
+    ofpSource: "JAL894 2026-06-16",
+    waypoints: [
+      { name: "ZSPD",   coords: [31.135, 121.785] },
+      { name: "M32",    coords: [34.067, 133.985] },
+      { name: "M29",    coords: [34.068, 134.085] },
+      { name: "M22",    coords: [34.100, 134.268] },
+      { name: "M18",    coords: [34.001, 134.334] },
+      { name: "M14",    coords: [33.934, 134.434] },
+      { name: "M11",    coords: [33.902, 134.551] },
+      { name: "M2",     coords: [34.183, 134.584] },
+      { name: "P2",     coords: [34.267, 134.702] },
+      { name: "P7",     coords: [34.451, 134.969] },
+      { name: "P10",    coords: [34.551, 135.133] },
+      { name: "P11",    coords: [34.601, 135.201] },
+      { name: "P12",    coords: [34.600, 135.251] },
+      { name: "P15",    coords: [34.552, 135.350] },
+      { name: "P16",    coords: [34.518, 135.384] },
+      { name: "P17",    coords: [34.502, 135.368] },
+      { name: "P19",    coords: [34.468, 135.302] },
+      { name: "RJBB",   coords: [34.434, 135.233] },
+    ]
+  },
 };
 
 // Export for use in map
