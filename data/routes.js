@@ -48,10 +48,16 @@ const AIRPORTS = {
   MEL: { name: "メルボルン・タラマリン空港", icao: "YMML", coords: [-37.673, 144.843] },
 };
 
-// Route groups — 暫定表示用（OFPデータがない新規路線のみ）
-// OFPデータ追加後はOFP_GROUPSへ移行してここから削除する
-// ※ BKK/HKG/MNL/SGN はOFPルートに移行済みのため削除
+// Route groups — OFPルートボタン定義
 const ROUTE_GROUPS = [
-  // 現在OFPルートがすべて揃っているため空
-  // 新路線追加時はここに暫定ルートを追加、OFP取得後にofp_to_avmap.pyで正式移行
+  {
+    id: "RJBB-ZSPD",
+    shortName: "KIX→PVG",
+    color: "#F1C40F",
+  },
+  {
+    id: "ZSPD-RJBB",
+    shortName: "PVG→KIX",
+    color: "#F1C40F",
+  },
 ];
