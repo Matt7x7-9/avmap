@@ -810,8 +810,11 @@ const OFP_GROUPS = [
     routeIds: ['RJAA-CYVR', 'CYVR-RJAA'],
     airports: ['NRT', 'YVR'], defaultOff: true },
   { id: 'ofp-hnl',  shortName: 'HNL', color: '#A569BD',
-    routeIds: ['RJAA-PHNL', 'RJAA-PHNL-2', 'RJAA-PHNL-3', 'PHNL-RJBB-2'],
-    airports: ['NRT', 'KIX', 'HNL'], defaultOff: true },
+    routeIds: ['RJAA-PHNL', 'RJAA-PHNL-2', 'RJAA-PHNL-3', 'PHNL-RJBB-2', 'RJBB-PHNL', 'PHNL-RJTT'],
+    airports: ['NRT', 'KIX', 'HND', 'HNL'], defaultOff: true },
+  { id: 'ofp-sea',  shortName: 'SEA', color: '#48C9B0',
+    routeIds: ['RJAA-KSEA', 'KSEA-RJAA'],
+    airports: ['NRT', 'SEA'], defaultOff: true },
   // ── North America (long-haul) ────────────────────────────────────────
   { id: 'ofp-ord',  shortName: 'ORD', color: '#E67E22',
     routeIds: ['RJAA-KORD', 'KORD-RJAA'],
