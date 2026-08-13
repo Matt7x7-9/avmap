@@ -39,6 +39,7 @@ const AIRPORTS = {
   ORD: { name: "シカゴ・オヘア国際空港",   icao: "KORD", coords: [41.978, 272.092] },
   BOS: { name: "ボストン・ローガン国際空港", icao: "KBOS", coords: [42.363, 288.993] },
   SAN: { name: "サンディエゴ国際空港",     icao: "KSAN", coords: [32.734, 242.810] },
+  LAX: { name: "ロサンゼルス国際空港",     icao: "KLAX", coords: [33.943, 241.592] },
   DFW: { name: "ダラス・フォートワース空港", icao: "KDFW", coords: [32.897, 262.963] },
   // ── Pacific ───────────────────────────────────────
   YVR: { name: "バンクーバー国際空港",     icao: "CYVR", coords: [49.194, 236.816] },
