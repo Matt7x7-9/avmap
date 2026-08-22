@@ -919,8 +919,8 @@ ROUTE_GROUPS.forEach(group => {
   // デフォルトは非表示（ユーザーが明示的に選択するまで何も表示しない）
 });
 
-// OFP route toggle buttons
-OFP_GROUPS.forEach(group => {
+// OFP route toggle buttons（空港コードのアルファベット順で表示）
+[...OFP_GROUPS].sort((a, b) => a.shortName.localeCompare(b.shortName)).forEach(group => {
   const btn = document.createElement('button');
   btn.className = 'route-btn';
   btn.textContent = group.shortName;
