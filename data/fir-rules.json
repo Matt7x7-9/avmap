@@ -2748,5 +2748,155 @@
     "cpdlc_procedure": "<b>OPLR CPDLC</b><br>・Logon: <b>OPLR</b>",
     "reg_rules": "<b>RVSM:</b> FL290〜FL410。<b>CPDLC:</b> 利用可能（logon: OPLR）。<b>注意:</b> インド・パキスタン国境（カシミール）付近の軍事活動に注意。",
     "emerg_proc_source": "ICAO Standard"
+  },
+  "LBSR": {
+    "name": "Sofia FIR",
+    "country": "Bulgaria",
+    "icao": "LBSR",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available (EUR, upper airspace)",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §3.1.1.1（Radio communication failure procedures for ICAO EUR Region）</b><br>・SERA.14083準拠のICAO EUR標準手順を適用<br>・<b>Emergency</b>: Sq7700; MAYDAY宣言（使用中周波数またはVHF 121.5 MHz）<br>・<b>Radio Failure (Sq7600)</b>: 最終クリアランス通り飛行→FPLルート→目的地でILS/RNAV計器進入",
+    "contingency_procedure": "<b>ICAO Standard (EUR)</b><br>可能な限りATCから改訂クリアランス取得。不可の場合:<br>・右旋回優先でトラックから逸脱<br>・使用中周波数 + 121.5 MHz + 123.45 MHzでブロードキャスト",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03（CPDLC-EUR）</b><br>・ATN B1 / FANS 1/A（B787対応）<br>・上部空域でCPDLC運用。LOGONはFIR境界前に実施",
+    "position_report": "Standard IFR position reports; CPDLC available in upper airspace",
+    "contacts": {
+      "main": "Sofia Control (VHF)",
+      "emergency": "121.5"
+    },
+    "special_notes": [
+      "SERA（欧州標準航空規則）適用国",
+      "South East Common Sky Initiative FRA（フリールートエアスペース）に参加"
+    ],
+    "reg_rules": "<b>出典: RM_REGPROC EUR.28 BULGARIA（Rev.26.3 / 11 JUN 2026）</b><br><b>空域分類:</b> SERA（EUR.1.3）準拠<br><b>RVSM:</b> FL290-FL410（ICAO EUR標準）。ACAS II要<br><b>RNAV:</b> RNAV5以上の装備要（AIP GEN 1.5）<br><b>FRA:</b> South East Common Sky Initiative FRA適用",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §3.1.1.1 ICAO EUR (SERA.14083)"
+  },
+  "LRBB": {
+    "name": "Bucharest FIR",
+    "country": "Romania",
+    "icao": "LRBB",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available (Bucharest FIR upper airspace)",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §3.1.1.1（Radio communication failure procedures for ICAO EUR Region）</b><br>・SERA.14083準拠のICAO EUR標準手順を適用<br>・<b>Emergency</b>: Sq7700; MAYDAY宣言（使用中周波数またはVHF 121.5 MHz）<br>・<b>Radio Failure (Sq7600)</b>: 最終クリアランス通り飛行→FPLルート→目的地でILS/RNAV計器進入",
+    "contingency_procedure": "<b>ICAO Standard (EUR)</b><br>可能な限りATCから改訂クリアランス取得。不可の場合:<br>・右旋回優先でトラックから逸脱<br>・使用中周波数 + 121.5 MHz + 123.45 MHzでブロードキャスト",
+    "cpdlc_procedure": "<b>出典: RM_REGPROC EUR.27.2.3 / RM_JALISSUE_INT 2-03（CPDLC-EUR）</b><br>・ATN B1 / FANS 1/A<br>・Bucharest FIR上部空域でCPDLC利用可。LOGONはFIR境界前",
+    "position_report": "Standard IFR position reports; CPDLC available above upper level",
+    "contacts": {
+      "main": "Bucharest Control (VHF)",
+      "emergency": "121.5"
+    },
+    "special_notes": [
+      "SERA適用国",
+      "South East Common Sky Initiative FRA（FL205-FL660）に参加"
+    ],
+    "reg_rules": "<b>出典: RM_REGPROC EUR.27 ROMANIA（Rev.26.3 / 11 JUN 2026）</b><br><b>空域分類:</b> SERA（EUR.1.3）準拠<br><b>RVSM:</b> FL290-FL410。ACAS II要<br><b>速度制限:</b> TMA内および到着機はFL100以下 250kt IAS以下（ATC許可時を除く）<br><b>RNAV:</b> RNAV5要<br><b>FRA:</b> South East Common Sky Initiative FRA（FL205-FL660）",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §3.1.1.1 ICAO EUR (SERA.14083)"
+  },
+  "LZBB": {
+    "name": "Bratislava FIR",
+    "country": "Slovakia",
+    "icao": "LZBB",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available (EUR upper airspace)",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §3.1.1.1（Radio communication failure procedures for ICAO EUR Region）</b><br>・SERA.14083準拠のICAO EUR標準手順を適用<br>・<b>Emergency</b>: Sq7700; MAYDAY宣言（使用中周波数またはVHF 121.5 MHz）<br>・<b>Radio Failure (Sq7600)</b>: 最終クリアランス通り飛行→FPLルート→目的地でILS/RNAV計器進入",
+    "contingency_procedure": "<b>ICAO Standard (EUR)</b><br>可能な限りATCから改訂クリアランス取得。不可の場合:<br>・右旋回優先でトラックから逸脱<br>・使用中周波数 + 121.5 MHz + 123.45 MHzでブロードキャスト",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03（CPDLC-EUR）</b><br>・ATN B1 / FANS 1/A<br>・上部空域でCPDLC運用。LOGONはFIR境界前",
+    "position_report": "Standard IFR position reports; CPDLC in upper airspace",
+    "contacts": {
+      "main": "Bratislava Control (VHF)",
+      "emergency": "121.5"
+    },
+    "special_notes": [
+      "SERA適用国",
+      "SEE FRA（Czechia・Hungary・Slovakia共通フリールートエアスペース）に参加"
+    ],
+    "reg_rules": "<b>出典: RM_REGPROC EUR（Rev.26.3 / 11 JUN 2026）</b><br><b>空域分類:</b> SERA（EUR.1.3）準拠<br><b>RVSM:</b> FL290-FL410。ACAS II要<br><b>RNAV:</b> RNAV5要<br><b>FRA:</b> SEE FRA（Czechia/Hungary/Slovakia）cross-border FRA適用",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §3.1.1.1 ICAO EUR (SERA.14083)"
+  },
+  "ENOR": {
+    "name": "Norway FIR (Continental)",
+    "country": "Norway",
+    "icao": "ENOR",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available (EUR upper airspace)",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §3.1.1.1（Radio communication failure procedures for ICAO EUR Region）</b><br>・SERA.14083準拠のICAO EUR標準手順を適用<br>・<b>Emergency</b>: Sq7700; MAYDAY宣言（使用中周波数またはVHF 121.5 MHz）<br>・<b>Radio Failure (Sq7600)</b>: 最終クリアランス通り飛行→FPLルート→目的地でILS/RNAV計器進入",
+    "contingency_procedure": "<b>ICAO Standard (EUR)</b><br>可能な限りATCから改訂クリアランス取得。不可の場合:<br>・右旋回優先でトラックから逸脱<br>・使用中周波数 + 121.5 MHz + 123.45 MHzでブロードキャスト",
+    "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03（CPDLC-EUR）</b><br>・ATN B1 / FANS 1/A<br>・上部空域でCPDLC運用。LOGONはFIR境界前<br>・北大西洋(NAT)隣接：Bodø Oceanic(ENOB)へのゲートウェイFIR",
+    "position_report": "Standard IFR position reports; NAT隣接域では洋上手順に留意",
+    "contacts": {
+      "main": "Norway Control (VHF) / Bodø Radio (NAT HF)",
+      "emergency": "121.5"
+    },
+    "special_notes": [
+      "SERA適用国",
+      "北極/NATルートの欧州側入域FIR（Bodø Oceanic ENOB に隣接）"
+    ],
+    "reg_rules": "<b>出典: RM_REGPROC EUR / RM_JALISSUE_INT 2-03（Rev.26.3-26.5）</b><br><b>空域分類:</b> SERA（EUR.1.3）準拠<br><b>RVSM:</b> FL290-FL410。ACAS II要<br><b>RNAV:</b> RNAV5要<br><b>NAT隣接:</b> Bodø Oceanic(ENOB)へのゲートウェイ。洋上進入前の通信確認に留意",
+    "emerg_proc_source": "RM_JALISSUE_INT 2-03 §3.1.1.1 ICAO EUR (SERA.14083)"
+  },
+  "KZOA": {
+    "name": "Oakland ARTCC (Continental)",
+    "country": "United States",
+    "icao": "KZOA",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": false,
+    "cpdlc": "Available（logon: KUSA – US国内統一コード）",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "emergency_procedure": "<b>FAA Standard（AIM Chapter 6）</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzまたは使用中周波数でMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: VFR気象→VFR飛行・着陸。IFR気象→最後の指定/期待/FPL高度のうち最高値を維持しFPL通り飛行。",
+    "contingency_procedure": "<b>FAA Standard</b><br>可能な限り事前にATCから改訂クリアランス取得。不可の場合：組織的経路から逸脱／使用中周波数+121.5 MHzでブロードキャスト／ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>FAA Data Comm</b><br>・VDL Mode 2（logon: <b>KUSA</b> US国内統一コード）<br>・大陸空域でのCPDLC。洋上はOakland Oceanic(KZAK)側の手順",
+    "position_report": "As instructed by ATC (Radar contact maintained)",
+    "contacts": {
+      "main": "Oakland Center (VHF)",
+      "emergency": "121.5"
+    },
+    "special_notes": [
+      "Oakland Oceanic(KZAK)の大陸側ARTCC。北米西岸進入時に通過",
+      "FAA AIM準拠"
+    ],
+    "reg_rules": "<b>FAA Standard</b><br><b>RVSM:</b> FL290-FL410<br><b>CPDLC:</b> VDL Mode 2（logon: KUSA）。FPL Field 10a に J4<br><b>遷移高度:</b> 18,000ft MSL（FL180）",
+    "emerg_proc_source": "FAA AIM Chapter 6"
+  },
+  "UHPP": {
+    "name": "Petropavlovsk-Kamchatsky FIR",
+    "country": "Russia",
+    "icao": "UHPP",
+    "rvsm": true,
+    "rnp2": false,
+    "hf_required": true,
+    "cpdlc": "Limited (洋上/一部)",
+    "freq_emergency": "121.5",
+    "squawk_emergency": "7700",
+    "emergency_procedure": "<b>ICAO Standard（RM Basic 2-04 §5）</b><br>・<b>Emergency</b>: Sq7700。使用中周波数またはVHF 121.5 MHzでMAYDAY宣言。<br>・<b>Radio Failure（Sq7600）</b>: レーダー空域は最終指定高度を7分維持→FPL通り。非レーダー空域は20分維持→FPL通り。<br>・<b>注意</b>: JAL Route ManualにUHPP固有手順の詳細記載なし。ICAO標準に従う。",
+    "contingency_procedure": "<b>ICAO Standard</b><br>可能な限りATCから改訂クリアランス取得。不可の場合：組織的経路/トラックから逸脱／使用中周波数+121.5 MHzでブロードキャスト／ACAS監視・全外部灯火点灯",
+    "cpdlc_procedure": "<b>ICAO標準</b><br>・北太平洋/極東ルートの通過FIR。CPDLC/HFは洋上区で運用<br>・<b>注意</b>: JAL Route Manualに固有手順の詳細記載なし",
+    "position_report": "義務位置通報点で通報（HF）。ICAO標準の洋上手順に準拠",
+    "contacts": {
+      "main": "Petropavlovsk Control / HF",
+      "emergency": "121.5"
+    },
+    "special_notes": [
+      "北太平洋/極東ルートの通過FIR",
+      "⚠️ JAL Route Manualに固有手順の詳細記載なし → ICAO標準（RM Basic）準拠"
+    ],
+    "reg_rules": "<b>ICAO Standard（RM Basic 2-04）</b><br><b>RVSM:</b> FL290-FL410（ICAO標準）<br><b>HF:</b> 洋上/低通信量域で要<br><b>⚠️ 注意:</b> JAL Route ManualにUHPP固有の規定記載なし。詳細は運航前にNOTAM/AIP確認",
+    "emerg_proc_source": "ICAO Standard (RM Basic 2-04 §5)"
   }
 }
