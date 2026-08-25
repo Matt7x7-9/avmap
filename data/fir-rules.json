@@ -11,7 +11,12 @@
     "cpdlc": "Available (RJJJ洋上区)",
     "position_report": "At compulsory reporting points",
     "emergency_procedure": "<b>出典: RM Basic 2-04 §5（ICAO Standard）</b><br>・<b>Emergency</b>: Sq7700。使用中周波数またはVHF 121.5 MHzでMAYDAY宣言。他機に優先。<br>・<b>Radio Failure（Sq7600）</b>:<br>　レーダー空域：最後の高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定高度（または最低高度）を維持→FPL通り飛行。<br>　非レーダー空域：強制報告点未通報から<b>20分間</b>最終高度維持→FPL通り。<br>　IMC時はILS/GNSS等の計器進入→ETAまたは最終EATのうち遅い方から30分以内に着陸。<br>・<b>Unlawful Interference</b>: Sq7500（ATC指定コードがあればそれを維持）。<br>・<b>Distress Freq</b>: VHF 121.5 MHz / UHF 243.0 MHz / HF 500kHz・2182kHz・8364kHz",
-    "special_notes": [],
+    "special_notes": [
+      "高度・速度は<b>フィート/ノット</b>表記（中国と異なりメートル制なし）",
+      "<b>CDR</b>: CDR1=AIP Japan掲載の常時利用可経路 / CDR2=NOTAMで前日2100JSTまでに通知される条件付経路",
+      "<b>速度制限</b>: 管制圏・進入管制区の10,000ft以下は250kt IAS以下。ATC指示で調整あり",
+      "<b>TCAS/ACAS II</b> 装備必須（RVSM運用）"
+    ],
     "contacts": {
       "main": "Tokyo Control 132.6 / 135.7",
       "emergency": "121.5"
@@ -33,7 +38,13 @@
     "cpdlc": "Available (RJJJ洋上区)",
     "position_report": "At compulsory reporting points",
     "emergency_procedure": "<b>出典: RM Basic 2-04 §5（ICAO Standard）</b><br>・<b>Emergency</b>: Sq7700。使用中周波数またはVHF 121.5 MHzでMAYDAY宣言。他機に優先。<br>・<b>Radio Failure（Sq7600）</b>:<br>　レーダー空域：最後の高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定高度（または最低高度）を維持→FPL通り飛行。<br>　非レーダー空域：強制報告点未通報から<b>20分間</b>最終高度維持→FPL通り。<br>　IMC時はILS/GNSS等の計器進入→ETAまたは最終EATのうち遅い方から30分以内に着陸。<br>・<b>Unlawful Interference</b>: Sq7500（ATC指定コードがあればそれを維持）。<br>・<b>Distress Freq</b>: VHF 121.5 MHz / UHF 243.0 MHz / HF 500kHz・2182kHz・8364kHz",
-    "special_notes": [],
+    "special_notes": [
+      "<b>🛩 SLOP（戦略的横方向オフセット）</b><br>洋上/遠隔管制区で、ウェイク乱気流回避＆GPS高精度による正面衝突リスク低減のため中心線から右へずらす手順。<br>・<b>方向</b>: 進行方向に対し<b>右のみ</b>（左は不可）<br>・<b>量</b>: 0.1NM刻みで<b>最大2NM右</b>（中心線 / 1NM右 / 2NM右 が代表）<br>・<b>ATC</b>: <b>通報・クリアランス不要</b>（機長判断）<br>・<b>位置通報</b>: オフセット中も<b>ATSルート中心線基準</b>で報告<br>・ATCが横間隔設定のため<b>中心線復帰</b>を指示することがある<br>・オフセット中も<b>禁止/危険/制限区域の回避は機長責任</b><br>・適用: 福岡FIR洋上管制区（太平洋高高度）",
+      "<b>洋上CPDLC/ADS-C</b>: 福岡FIR洋上管制区で運用。RCP240+RSP180要件で50NM縦間隔適用",
+      "<b>RNP10（洋上）</b> 利用可能",
+      "<b>マニラFIR(RPHI)とCPDLC Auto Transfer</b> 実施（2026/02/24改訂）",
+      "<b>Large Height Deviation</b>: RVSM空域内で高度逸脱発生時は速やかにATCへ報告"
+    ],
     "contacts": {
       "main": "Fukuoka Control 133.0 / 128.7",
       "emergency": "121.5"
@@ -656,6 +667,7 @@
       "emergency": "121.5 MHz"
     },
     "special_notes": [
+      "<b>🛩 SLOP（戦略的横方向オフセット）</b><br>洋上/遠隔管制区で、ウェイク乱気流回避＆GPS高精度による正面衝突リスク低減のため中心線から右へずらす手順。<br>・<b>方向</b>: 進行方向に対し<b>右のみ</b>（左は不可）<br>・<b>量</b>: 0.1NM刻みで<b>最大2NM右</b>（中心線 / 1NM右 / 2NM右 が代表）<br>・<b>ATC</b>: <b>通報・クリアランス不要</b>（機長判断）<br>・<b>位置通報</b>: オフセット中も<b>ATSルート中心線基準</b>で報告<br>・ATCが横間隔設定のため<b>中心線復帰</b>を指示することがある<br>・オフセット中も<b>禁止/危険/制限区域の回避は機長責任</b><br>・適用: オークランド洋上（FAA管理洋上、太平洋）",
       "RVSM FL290-FL410 (inclusive). FLAS: westbound (180-359°) even FLs FL300-FL400 + odd FL410+; eastbound (000-179°) odd FLs FL290-FL410+",
       "RNP10 required for PACOTS operations. PBCS (RNP4/RCP240/RSP180 + ADS-C/CPDLC) enables 30NM longitudinal or 23NM lateral separation",
       "SLOP: 0 to 2.0 NM right of centerline in 0.1 NM increments. Authorized throughout FAA-controlled oceanic airspace including Oakland Oceanic. No ATC clearance required.",
@@ -684,6 +696,7 @@
       "emergency": "121.5 MHz"
     },
     "special_notes": [
+      "<b>🛩 SLOP（戦略的横方向オフセット）</b><br>洋上/遠隔管制区で、ウェイク乱気流回避＆GPS高精度による正面衝突リスク低減のため中心線から右へずらす手順。<br>・<b>方向</b>: 進行方向に対し<b>右のみ</b>（左は不可）<br>・<b>量</b>: 0.1NM刻みで<b>最大2NM右</b>（中心線 / 1NM右 / 2NM右 が代表）<br>・<b>ATC</b>: <b>通報・クリアランス不要</b>（機長判断）<br>・<b>位置通報</b>: オフセット中も<b>ATSルート中心線基準</b>で報告<br>・ATCが横間隔設定のため<b>中心線復帰</b>を指示することがある<br>・オフセット中も<b>禁止/危険/制限区域の回避は機長責任</b><br>・適用: アンカレッジ洋上（FAA管理洋上・PAC.10.5、太平洋高高度）",
       "RVSM FL290-FL410 (inclusive). Same FLAS as Oakland: WB even FL300-FL400 + odd FL410+; EB odd FL290-FL410+",
       "50 NM lateral separation between RNP10 or RNP4 aircraft (PAC.8.3.1)",
       "PBCS: RNP4+RCP240+RSP180+ADS-C/CPDLC = 30 NM longitudinal or 23 NM lateral separation",
@@ -712,6 +725,7 @@
       "emergency": "121.5 MHz"
     },
     "special_notes": [
+      "<b>🛩 SLOP（戦略的横方向オフセット）</b><br>洋上/遠隔管制区で、ウェイク乱気流回避＆GPS高精度による正面衝突リスク低減のため中心線から右へずらす手順。<br>・<b>方向</b>: 進行方向に対し<b>右のみ</b>（左は不可）<br>・<b>量</b>: 0.1NM刻みで<b>最大2NM右</b>（中心線 / 1NM右 / 2NM右 が代表）<br>・<b>ATC</b>: <b>通報・クリアランス不要</b>（機長判断）<br>・<b>位置通報</b>: オフセット中も<b>ATSルート中心線基準</b>で報告<br>・ATCが横間隔設定のため<b>中心線復帰</b>を指示することがある<br>・オフセット中も<b>禁止/危険/制限区域の回避は機長責任</b><br>・適用: アンカレッジ洋上（FAA管理洋上・PAC.10.5、太平洋高高度）",
       "Same rules as PAZAO (Western Sector) — same Anchorage Oceanic FIR separated for database purposes",
       "RVSM FL290-FL410; 50 NM lateral separation (RNP10/RNP4); PBCS 30NM/23NM with ADS-C/CPDLC",
       "SLOP: 0 to 2.0 NM right, 0.1 NM increments, no ATC clearance required",
@@ -737,6 +751,7 @@
       "emergency": "121.5 MHz"
     },
     "special_notes": [
+      "<b>🛩 SLOP（戦略的横方向オフセット）</b><br>洋上/遠隔管制区で、ウェイク乱気流回避＆GPS高精度による正面衝突リスク低減のため中心線から右へずらす手順。<br>・<b>方向</b>: 進行方向に対し<b>右のみ</b>（左は不可）<br>・<b>量</b>: 0.1NM刻みで<b>最大2NM右</b>（中心線 / 1NM右 / 2NM右 が代表）<br>・<b>ATC</b>: <b>通報・クリアランス不要</b>（機長判断）<br>・<b>位置通報</b>: オフセット中も<b>ATSルート中心線基準</b>で報告<br>・ATCが横間隔設定のため<b>中心線復帰</b>を指示することがある<br>・オフセット中も<b>禁止/危険/制限区域の回避は機長責任</b><br>・適用: ホノルル洋上（太平洋高高度）",
       "Honolulu Control Facility (HCF) manages airspace around Hawaii",
       "RVSM FL290-FL410 (same as Oakland Oceanic — FAA-controlled oceanic airspace)",
       "SLOP authorized throughout HCF airspace (PAC.10.5). 0 to 2.0 NM right in 0.1 NM increments. No ATC clearance required.",
@@ -1348,6 +1363,7 @@
     "position_report": "At oceanic entry / compulsory reporting points",
     "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzでMAYDAY宣言。洋上ではHFまたはSATCOM。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り。<br>・<b>Distress HF</b>: 3016 / 5598 / 8906 / 13306kHz（Reykjavik Radio）",
     "special_notes": [
+      "<b>🛩 SLOP（戦略的横方向オフセット）</b><br>洋上/遠隔管制区で、ウェイク乱気流回避＆GPS高精度による正面衝突リスク低減のため中心線から右へずらす手順。<br>・<b>方向</b>: 進行方向に対し<b>右のみ</b>（左は不可）<br>・<b>量</b>: 0.1NM刻みで<b>最大2NM右</b>（中心線 / 1NM右 / 2NM右 が代表）<br>・<b>ATC</b>: <b>通報・クリアランス不要</b>（機長判断）<br>・<b>位置通報</b>: オフセット中も<b>ATSルート中心線基準</b>で報告<br>・ATCが横間隔設定のため<b>中心線復帰</b>を指示することがある<br>・オフセット中も<b>禁止/危険/制限区域の回避は機長責任</b><br>・適用: レイキャビク（NAT北大西洋洋上）",
       "NAT HLA（北大西洋高高度空域）の一部",
       "FANS-1/A logon: BIRD",
       "ADS-B必須: 2020/01/16より全NAT HLA（DO-260B相当）",
@@ -1377,6 +1393,7 @@
     "position_report": "At oceanic entry / compulsory reporting points",
     "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzでMAYDAY宣言。洋上ではHFまたはSATCOM。<br>・<b>Radio Failure（Sq7600）</b>: 強制報告点未通報から20分間最終高度維持→FPL通り。<br>・<b>Distress HF</b>: 3016 / 5598 / 8906 / 13306kHz（Gander Radio）",
     "special_notes": [
+      "<b>🛩 SLOP（戦略的横方向オフセット）</b><br>洋上/遠隔管制区で、ウェイク乱気流回避＆GPS高精度による正面衝突リスク低減のため中心線から右へずらす手順。<br>・<b>方向</b>: 進行方向に対し<b>右のみ</b>（左は不可）<br>・<b>量</b>: 0.1NM刻みで<b>最大2NM右</b>（中心線 / 1NM右 / 2NM右 が代表）<br>・<b>ATC</b>: <b>通報・クリアランス不要</b>（機長判断）<br>・<b>位置通報</b>: オフセット中も<b>ATSルート中心線基準</b>で報告<br>・ATCが横間隔設定のため<b>中心線復帰</b>を指示することがある<br>・オフセット中も<b>禁止/危険/制限区域の回避は機長責任</b><br>・適用: ガンダー洋上（NAT北大西洋洋上）",
       "NAT HLA（北大西洋高高度空域）の一部",
       "FANS-1/A CPDLC logon: CZQX（Qではなく）",
       "OCR（Oceanic Clearance Requirement）: 2024年12月変更",
@@ -1406,6 +1423,7 @@
     "position_report": "At compulsory reporting points",
     "emergency_procedure": "<b>ICAO Standard</b><br>・<b>Emergency</b>: Sq7700。121.5 MHzでMAYDAY宣言。<br>・FL195以上: GanderまたはReykjavik管制。<br>・<b>Distress HF</b>: Gander Radio / Reykjavik Radio周波数を参照。",
     "special_notes": [
+      "<b>🛩 SLOP（戦略的横方向オフセット）</b><br>洋上/遠隔管制区で、ウェイク乱気流回避＆GPS高精度による正面衝突リスク低減のため中心線から右へずらす手順。<br>・<b>方向</b>: 進行方向に対し<b>右のみ</b>（左は不可）<br>・<b>量</b>: 0.1NM刻みで<b>最大2NM右</b>（中心線 / 1NM右 / 2NM右 が代表）<br>・<b>ATC</b>: <b>通報・クリアランス不要</b>（機長判断）<br>・<b>位置通報</b>: オフセット中も<b>ATSルート中心線基準</b>で報告<br>・ATCが横間隔設定のため<b>中心線復帰</b>を指示することがある<br>・オフセット中も<b>禁止/危険/制限区域の回避は機長責任</b><br>・適用: ゾンドレストローム/グリーンランド（NAT北大西洋洋上）",
       "FL195以上はGander OceanicまたはReykjavik FIRに管制委託",
       "FL195以下: Sondrestrom ACCが管轄",
       "NAT HLAの一部（上層空域）",

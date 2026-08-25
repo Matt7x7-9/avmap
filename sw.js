@@ -1,4 +1,4 @@
-const CACHE = 'avmap-2026.08.22.2';
+const CACHE = 'avmap-2026.08.22.3';
 const PRECACHE = [
   './',
   './index.html',
