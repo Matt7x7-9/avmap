@@ -158,7 +158,9 @@
     "special_notes": [
       "RNP2 required on RNAV routes",
       "Busy terminal area - follow ATC instructions precisely",
-      "Interface between Chinese and ICAO procedures"
+      "Interface between Chinese and ICAO procedures",
+      "<b>RVSM</b>: FL290-FL410 / <b>速度</b>: 10,000ft以下250kt IAS",
+      "<b>CPDLC/ADS-C</b>: FANS-1/A対応で運用"
     ],
     "contacts": {
       "main": "Hong Kong Control 128.2 / 134.45",
@@ -183,7 +185,9 @@
     "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.3（EMERG PROC - SEA / Taiwan）</b><br>・<b>VMC / IMC</b>: ICAO Standard手順を適用<br>・<b>レーダー誘導中のComm Failure</b>:<br>　Sq7600 → レーダー空域で<b>7分間</b>最終高度維持 → FPL復帰 → 指定NAIDまで → EATまたはETA以近に降下開始 → ILS → ETA+30分以内に着陸<br>・<b>防空警報中（Air Raid）</b>:<br>　台北FIR進入禁止（ROCAF Air Control Centerが管制）<br>　進入済み機：ROCAF指示に従い転進または即時着陸<br>　121.5 MHz / 234.0 MHzをモニター<br>　ATC各機関へ逐次状況報告<br><i>（RM_JALISSUE 2-03 Rev.26.5 11 JUN 2026 照合済・内容一致）</i>",
     "special_notes": [
       "Standard ICAO procedures",
-      "May be used as alternate routing to avoid Chinese airspace"
+      "May be used as alternate routing to avoid Chinese airspace",
+      "<b>RVSM</b>: FL290-FL410 / <b>速度</b>: 10,000ft以下250kt IAS",
+      "<b>CPDLC</b>: 台北FIRで運用（FANS-1/A）"
     ],
     "contacts": {
       "main": "Taipei Control 132.5",
@@ -208,7 +212,9 @@
     "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.2（EMERG PROC - SEA / Philippines）</b><br>・VMC/IMC: <b>ICAO Standard手順</b>を適用<br>・<b>空港着陸時（無線故障）</b>:<br>　通常トラフィック・サーキットに合流し管制塔からの光信号を待機<br>　光信号なし → 管制塔横断時に着陸灯を2回明滅（軽飛行機は翼を振る）<br>　それでも光信号なし かつ 滑走路クリア → そのままアプローチ・着陸<br>　着陸後直ちに管制塔に電話連絡<br><i>（RM_JALISSUE 2-03 Rev.26.5 11 JUN 2026 照合済・内容一致）</i>",
     "special_notes": [
       "Standard ICAO procedures",
-      "Alternate routing option (avoiding Chinese airspace)"
+      "Alternate routing option (avoiding Chinese airspace)",
+      "<b>福岡FIR(RJJJ)とCPDLC Auto Transfer</b> 実施（2026/02/24改訂）",
+      "<b>RVSM</b>: FL290-FL410 / <b>速度</b>: 10,000ft以下250kt IAS"
     ],
     "contacts": {
       "main": "Manila Control 128.3",
@@ -234,7 +240,9 @@
     "special_notes": [
       "RNP2 required on B-RNAV/RNAV routes",
       "FIR entry position report required",
-      "ATC may have limited English proficiency at times - speak slowly and clearly"
+      "ATC may have limited English proficiency at times - speak slowly and clearly",
+      "<b>ADS-C/CPDLC</b>: Ho Chi Minh FIRでFANS-1/A運用（§2.2.18.1.2）",
+      "<b>RVSM</b>: FL290-FL410 / <b>速度</b>: 10,000ft以下250kt IAS"
     ],
     "contacts": {
       "main": "Ho Chi Minh Control 132.8 / 124.9",
@@ -287,7 +295,9 @@
     "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.4.9（EMERG PROC - SEA / Thailand）</b><br>・<b>通信途絶の判断</b>: 全チャンネルで<b>2分間</b>応答なし→Sq7600。121.5含む全周波数で再確立を試みる。<br>・<b>到着機（IMC）</b>: 指定STAR or 最も直接的なルートでSTARに復帰→着陸方向確認<br>　レーダー誘導中：2分間無応答→最低扇形高度以上を維持しながらSTARに最短復帰<br>・<b>ミスドアプローチ</b>: Sq7600→ミスドアプローチホールドポイントに3,000ftでホールド→4,000ftに上昇→アプローチ<br>　または: BKK VORに直行（4,000ft）→IAF→アプローチ<br>・<b>出発機（全損）</b>: Sq7600→SID最終ウェイポイントまで→BKK VORでホールド（INB CRS 120°、1分レグ、1周後アプローチ）<br>　燃料ダンプ必要時: 8,500ftで2分→最寄りダンプエリア→BKK VOR<br>・<b>バンコクTMA通過機</b>: Sq7600。非レーダー: 強制報告点未通報から<b>10分間</b>最終高度維持→FPL通り<br>・<b>レーダー誘導下（出発/通過）</b>: Sq7600→<b>2分間</b>最終針路・速度・高度維持→FPL最短復帰<br>・着陸方向確認: ATIS/D-ATIS/ACARS/衛星電話等。ILS・進入灯が点灯している滑走路が使用中<br><i>（RM_JALISSUE 2-03 Rev.26.5 11 JUN 2026 照合済・内容一致）</i>",
     "special_notes": [
       "Standard ICAO procedures",
-      "RVSM required above FL290"
+      "RVSM required above FL290",
+      "<b>RVSM</b>: FL290-FL410 / <b>速度</b>: 10,000ft以下250kt IAS",
+      "<b>CPDLC</b>: 上空域で運用（FANS-1/A）"
     ],
     "contacts": {
       "main": "Bangkok Control 133.0 / 119.1",
