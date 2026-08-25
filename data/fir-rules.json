@@ -67,6 +67,7 @@
     "position_report": "FIR境界の15〜20分前にATCへ通報し通過許可を取得すること。ただしJALフライトは通常のポジションレポートと交信が維持されていれば不要。各報告点通過時に即時報告：コールサイン・位置・時刻・FL・状況・次点ETA。",
     "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700<br><i>（RM_JALISSUE 2-03 Rev.26.5 11 JUN 2026 照合済・内容一致）</i>",
     "special_notes": [
+      "<b>🇨🇳 メートル/フィート換算表（RVSM巡航）</b><br>ATCはメートルで指示 → 下表でフィートに換算し<b>フィートで飛行</b>：<br>8900m=FL291 / 9200m=FL301 / 9500m=FL311 / 9800m=FL321<br>10100m=FL331 / 10400m=FL341 / 10700m=FL351 / 11000m=FL361<br>11300m=FL371 / 11600m=FL381 / 11900m=FL391 / 12200m=FL401 / 12500m=FL411<br><i>出典: RM_REGPROC PRC.7.4.4（Rev.26.3）※正式なRM換算表で確認</i>",
       "RVSM airspace FL291〜FL411（中国はメートル制：ATCはメートルでクリアランス、パイロットはフィートで飛行）",
       "ATCクリアランスはメートル単位（例：9200m）→ China RVSM変換表でフィートに換算",
       "FIR境界通過時は入る側・出る側の両ACCに報告",
@@ -97,6 +98,7 @@
     "position_report": "FIR境界の15〜20分前にATCへ通報し通過許可を取得。JALは通常交信維持で不要。各報告点通過時に即時報告。",
     "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700<br><i>（RM_JALISSUE 2-03 Rev.26.5 11 JUN 2026 照合済・内容一致）</i>",
     "special_notes": [
+      "<b>🇨🇳 メートル/フィート換算表（RVSM巡航）</b><br>ATCはメートルで指示 → 下表でフィートに換算し<b>フィートで飛行</b>：<br>8900m=FL291 / 9200m=FL301 / 9500m=FL311 / 9800m=FL321<br>10100m=FL331 / 10400m=FL341 / 10700m=FL351 / 11000m=FL361<br>11300m=FL371 / 11600m=FL381 / 11900m=FL391 / 12200m=FL401 / 12500m=FL411<br><i>出典: RM_REGPROC PRC.7.4.4（Rev.26.3）※正式なRM換算表で確認</i>",
       "RVSM FL291〜FL411、メートル制（China RVSM変換表使用）",
       "R474（TEBAK：Nanning ACC - Hanoi ACC境界）でのFL変換に注意",
       "SEA SLOP：右側1NMオフセット（非レーダー空域）",
@@ -125,6 +127,7 @@
     "position_report": "FIR境界の15〜20分前にATCへ通報し通過許可取得。JALは通常交信維持で不要。各報告点通過時に即時報告。",
     "emergency_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.1.1（EMERG PROC - PRC）</b><br>・<b>通信途絶の判断</b>: 現用・代替・121.5・前後周波数すべてで応答なし→Sq7600<br>・<b>盲信送信</b>（飛行意図変更前）: 全指定周波数+121.5 MHzで2回「TRANSMITTING BLIND, [ATS機関名], [便名], [意図]（REPEAT）」<br>・<b>飛行継続（レーダー有）</b>: 最終高度指定/Sq7600設定/強制報告点未通報のうち最も遅い時刻から<b>7分間</b>最終指定速度・高度維持→FPL通り<br>・<b>飛行継続（非レーダー）</b>: 強制報告点未通報から<b>20分間</b>最終速度・高度維持→FPL通り<br>・<b>出発空港へ回航</b>: Sq7601-7600を30秒間隔で2回交互設定→最終Sq7600で着陸<br>・<b>T/O Alternateへ</b>: Sq7602-7600を30秒間隔で2回→最終Sq7600<br>・<b>Dest Alternateへ</b>: ミスドアプローチ後→ホールディングFIXで最低高度→FPL通りDest Alternateへ<br>・<b>Emergency一般</b>: Sq7700<br><i>（RM_JALISSUE 2-03 Rev.26.5 11 JUN 2026 照合済・内容一致）</i>",
     "special_notes": [
+      "<b>🇨🇳 メートル/フィート換算表（RVSM巡航）</b><br>ATCはメートルで指示 → 下表でフィートに換算し<b>フィートで飛行</b>：<br>8900m=FL291 / 9200m=FL301 / 9500m=FL311 / 9800m=FL321<br>10100m=FL331 / 10400m=FL341 / 10700m=FL351 / 11000m=FL361<br>11300m=FL371 / 11600m=FL381 / 11900m=FL391 / 12200m=FL401 / 12500m=FL411<br><i>出典: RM_REGPROC PRC.7.4.4（Rev.26.3）※正式なRM換算表で確認</i>",
       "RVSM FL291〜FL411、メートル制（China RVSM変換表使用）",
       "HK FIRとの境界付近：M503（RNAV2）使用時は別途手順あり（SEA.3.3.3）",
       "A599（LINSO：Yangon-Kunming境界）でのFL変換に注意",
@@ -311,7 +314,10 @@
     "special_notes": [
       "RNAV2 required en-route above FL140 (FL290 for overflights)",
       "RNAV1 required for SID/STAR",
-      "Japan-Korea route: QNH below FL140, 1013.2hPa at/above FL140"
+      "Japan-Korea route: QNH below FL140, 1013.2hPa at/above FL140",
+      "<b>RVSM</b>: FL290-FL410（RVSM承認機間1,000ft垂直間隔）",
+      "<b>速度制限</b>: 10,000ft以下は250kt IAS以下",
+      "<b>CPDLC</b>: 仁川FIRで運用。東京FIR(RJJJ)との境界で移管"
     ],
     "contacts": {
       "main": "Incheon Control (Incheon ACC)",
@@ -865,6 +871,7 @@
       "emergency": "121.5 MHz"
     },
     "special_notes": [
+      "<b>🇨🇳 メートル/フィート換算表（RVSM巡航）</b><br>ATCはメートルで指示 → 下表でフィートに換算し<b>フィートで飛行</b>：<br>8900m=FL291 / 9200m=FL301 / 9500m=FL311 / 9800m=FL321<br>10100m=FL331 / 10400m=FL341 / 10700m=FL351 / 11000m=FL361<br>11300m=FL371 / 11600m=FL381 / 11900m=FL391 / 12200m=FL401 / 12500m=FL411<br><i>出典: RM_REGPROC PRC.7.4.4（Rev.26.3）※正式なRM換算表で確認</i>",
       "Metric flight levels — ATC clears in meters; pilot flies using feet altimeter with China RVSM conversion table",
       "RVSM stratum: 8,900 m (FL291) to 12,500 m (FL411) inclusive",
       "FLAS (PRC.7.4.3): EB (0-179°) FL411/391/371/351/331/311/291; WB (180-359°) FL401/381/361/341/321/301",
@@ -893,6 +900,7 @@
       "emergency": "121.5 MHz"
     },
     "special_notes": [
+      "<b>🇨🇳 メートル/フィート換算表（RVSM巡航）</b><br>ATCはメートルで指示 → 下表でフィートに換算し<b>フィートで飛行</b>：<br>8900m=FL291 / 9200m=FL301 / 9500m=FL311 / 9800m=FL321<br>10100m=FL331 / 10400m=FL341 / 10700m=FL351 / 11000m=FL361<br>11300m=FL371 / 11600m=FL381 / 11900m=FL391 / 12200m=FL401 / 12500m=FL411<br><i>出典: RM_REGPROC PRC.7.4.4（Rev.26.3）※正式なRM換算表で確認</i>",
       "Same rules as ZBPE (Beijing FIR) — all China FIRs use identical RVSM/FLAS/SLOP/ADS-B regulations",
       "Metric flight levels: ATC clears in meters; pilot flies in feet using China RVSM conversion table",
       "RVSM: 8,900 m (FL291) to 12,500 m (FL411) inclusive",
@@ -920,6 +928,7 @@
       "emergency": "121.5 MHz"
     },
     "special_notes": [
+      "<b>🇨🇳 メートル/フィート換算表（RVSM巡航）</b><br>ATCはメートルで指示 → 下表でフィートに換算し<b>フィートで飛行</b>：<br>8900m=FL291 / 9200m=FL301 / 9500m=FL311 / 9800m=FL321<br>10100m=FL331 / 10400m=FL341 / 10700m=FL351 / 11000m=FL361<br>11300m=FL371 / 11600m=FL381 / 11900m=FL391 / 12200m=FL401 / 12500m=FL411<br><i>出典: RM_REGPROC PRC.7.4.4（Rev.26.3）※正式なRM換算表で確認</i>",
       "Same rules as ZBPE (Beijing FIR) — all China FIRs use identical RVSM/FLAS/SLOP/ADS-B regulations",
       "Key FIR boundary: A599 at LINSO (Yangon ACC - Kunming ACC) — FLAS transition at 40.5 NM west of GULOT",
       "Metric flight levels: ATC clears in meters; pilot flies in feet using China RVSM conversion table",
@@ -948,6 +957,7 @@
       "emergency": "121.5 MHz"
     },
     "special_notes": [
+      "<b>🇨🇳 メートル/フィート換算表（RVSM巡航）</b><br>ATCはメートルで指示 → 下表でフィートに換算し<b>フィートで飛行</b>：<br>8900m=FL291 / 9200m=FL301 / 9500m=FL311 / 9800m=FL321<br>10100m=FL331 / 10400m=FL341 / 10700m=FL351 / 11000m=FL361<br>11300m=FL371 / 11600m=FL381 / 11900m=FL391 / 12200m=FL401 / 12500m=FL411<br><i>出典: RM_REGPROC PRC.7.4.4（Rev.26.3）※正式なRM換算表で確認</i>",
       "Same rules as ZBPE (Beijing FIR) — all China FIRs use identical RVSM/FLAS/SLOP/ADS-B regulations",
       "Key boundary: G597 at AGAVO (Qingdao ACC - Incheon ACC) — FLAS transition at AGAVO/NOPIK/GONAV",
       "Metric flight levels: ATC clears in meters; pilot flies in feet using China RVSM conversion table",
@@ -974,6 +984,7 @@
     "contingency_procedure": "<b>出典: RM_REGPROC PRC §7.4.6（CONTINGENCY PROC - PRC）</b><br>・ATCクリアランスを優先取得。取得不能時:<br>・<b>30°右旋回</b>→指定ルートから<b>20km（5NM）右側</b>のトラックに乗る<br>・指定ルートに平行なトラックで飛行継続<br>・新しいフライトレベルへ上昇または降下<br>・指定ルートへ復帰<br>・<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト:<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.2.15（CPDLC - PRC）</b><br><b>AFNログオン</b>: <b>ZWWW</b>（Urumqi ACC; 非CPDLCエリアから進入時は境界<b>15分前</b>にログオン）<br><b>ACARS Address</b>: URCE1YA<br><br><b>適用ルート:</b><br>・<b>Y1・Y2</b>（Urumqi ACC管轄）<br><br><b>ログオン手順:</b><br>・CPDLCサービス外エリアから進入する場合: 境界<b>15分前</b>にURCE1YA（Urumqi ACC）へAFNログオン<br><br><b>通信手段:</b><br>・CPDLCサービス区間: CPDLC = 主<br>・VHF/HF = 副（バックアップ）<br><br><b>データリンク障害時:</b> VHF/HF音声に即切替<br><i>（RM_JALISSUE 2-03 Rev.26.5 11 JUN 2026 照合済・内容一致）</i>",
     "special_notes": [
+      "<b>🇨🇳 メートル/フィート換算表（RVSM巡航）</b><br>ATCはメートルで指示 → 下表でフィートに換算し<b>フィートで飛行</b>：<br>8900m=FL291 / 9200m=FL301 / 9500m=FL311 / 9800m=FL321<br>10100m=FL331 / 10400m=FL341 / 10700m=FL351 / 11000m=FL361<br>11300m=FL371 / 11600m=FL381 / 11900m=FL391 / 12200m=FL401 / 12500m=FL411<br><i>出典: RM_REGPROC PRC.7.4.4（Rev.26.3）※正式なRM換算表で確認</i>",
       "PRC共通規制適用（メートル制FL・RVSM・SLOP・ADS-B）",
       "Y1・Y2ルート：Urumqi ACC（ZWWW）がCPDLCサービス提供",
       "非CPDLCエリアからの進入時は15分前にログオン（§2.2.15）",
@@ -1001,6 +1012,7 @@
     "contingency_procedure": "<b>出典: RM_REGPROC PRC §7.4.6（CONTINGENCY PROC - PRC）</b><br>・ATCクリアランスを優先取得。取得不能時:<br>・<b>30°右旋回</b>→指定ルートから<b>20km（5NM）右側</b>のトラックに乗る<br>・指定ルートに平行なトラックで飛行継続<br>・新しいフライトレベルへ上昇または降下<br>・指定ルートへ復帰<br>・<b>121.5 MHz</b>（バックアップ: <b>123.45 MHz</b>）でブロードキャスト:<br>　コールサイン・FL・位置（ATSルート/トラックコード含む）・意図<br>・全外部灯火点灯（運航制限に準拠）",
     "cpdlc_procedure": "<b>出典: RM_JALISSUE_INT 2-03 §2.2.15（CPDLC - PRC）</b><br><b>AFNログオン</b>: <b>ZLLL</b>（Lanzhou ACC; 非CPDLCエリアから進入時は境界<b>15分前</b>にログオン）<br><b>ACARS Address</b>: LHWE1YA<br><br><b>適用ルート:</b><br>・<b>L888</b>（KADKI〜XKC区間、Lanzhou ACC管轄）<br><br><b>ログオン手順:</b><br>・CPDLCサービス外エリアから進入する場合: 境界<b>15分前</b>にLHWE1YA（Lanzhou ACC）へAFNログオン<br><br><b>通信手段:</b><br>・CPDLCサービス区間: CPDLC = 主<br>・VHF/HF = 副（バックアップ）<br><br><b>データリンク障害時:</b> VHF/HF音声に即切替<br><i>（RM_JALISSUE 2-03 Rev.26.5 11 JUN 2026 照合済・内容一致）</i>",
     "special_notes": [
+      "<b>🇨🇳 メートル/フィート換算表（RVSM巡航）</b><br>ATCはメートルで指示 → 下表でフィートに換算し<b>フィートで飛行</b>：<br>8900m=FL291 / 9200m=FL301 / 9500m=FL311 / 9800m=FL321<br>10100m=FL331 / 10400m=FL341 / 10700m=FL351 / 11000m=FL361<br>11300m=FL371 / 11600m=FL381 / 11900m=FL391 / 12200m=FL401 / 12500m=FL411<br><i>出典: RM_REGPROC PRC.7.4.4（Rev.26.3）※正式なRM換算表で確認</i>",
       "PRC共通規制適用（メートル制FL・RVSM・SLOP・ADS-B）",
       "L888ルート（KADKI〜XKC）：Lanzhou ACC（ZLLL）がCPDLCサービス提供",
       "非CPDLCエリアからの進入時は15分前にログオン（§2.2.15）",
