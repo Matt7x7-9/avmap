@@ -383,6 +383,50 @@ FIR_BOUNDARIES.features.forEach(feature => {
 
 firLayer.addTo(map);
 
+// ── FIR境界WPT 恒久レイヤー ────────────────────────────────────────
+const firWptLayer = L.layerGroup();
+let firWptVisible = true;
+
+const FIR_COLOR = {
+  RJJJ: '#3a7fc1', RCAA: '#1a7ab8', VHHK: '#9b59b6', ZJSA: '#7b3fa0',
+  VVHH: '#777777', VVHM: '#bb7700', VLVT: '#cc9900', VTBB: '#28a745',
+  RPHI: '#e6a020', VDPP: '#cc5500', WSJC: '#1a9050', WMFC: '#1a9050',
+  WBFC: '#2a8060', WIIF: '#1a8040', RKRR: '#4488cc',
+  KZAK: '#336699', PHZH: '#336699', VLKM: '#aa5500', VYYY: '#aa7700', VOMF: '#885500',
+};
+function firColor(icao) { return FIR_COLOR[icao] || '#666'; }
+
+(typeof FIR_BOUNDARY_WPTS !== 'undefined' ? FIR_BOUNDARY_WPTS : []).forEach(w => {
+  const col = firColor(w.fir_from);
+  const icon = L.divIcon({
+    className: '',
+    iconSize: [0, 0],
+    html: `<div style="width:10px;height:10px;background:${col};border:1.5px solid rgba(0,0,0,0.5);transform:rotate(45deg);margin-top:-5px;margin-left:-5px;"></div>
+           <div style="position:absolute;top:8px;left:8px;font-size:9px;font-weight:700;color:${col};text-shadow:0 0 3px #fff,0 0 3px #fff;white-space:nowrap;">${w.name}</div>`,
+  });
+  const marker = L.marker(w.coords, { icon });
+  marker.bindTooltip(
+    `<strong>${w.name}</strong> <span style="color:${col}">${w.fir_from}</span>→<span style="color:${firColor(w.fir_to)}">${w.fir_to}</span><br><small>${w.note}</small>`,
+    { className: 'fir-tip', direction: 'top', offset: [0, -8] }
+  );
+  marker.addTo(firWptLayer);
+});
+
+firWptLayer.addTo(map);
+
+const firWptBtn = document.getElementById('firwpt-toggle-btn');
+firWptBtn.addEventListener('click', () => {
+  if (firWptVisible) {
+    map.removeLayer(firWptLayer);
+    firWptBtn.classList.remove('active');
+  } else {
+    firWptLayer.addTo(map);
+    firWptBtn.classList.add('active');
+  }
+  firWptVisible = !firWptVisible;
+});
+firWptBtn.classList.add('active');
+
 // ── FIR Label Zoom Control ────────────────────
 // Hide FIR labels when zoom < 5, show when zoom >= 5
 function updateFirLabelVisibility() {
