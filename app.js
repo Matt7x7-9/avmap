@@ -16,19 +16,10 @@ const map = L.map('map', {
   attributionControl: true,
 });
 
-// Tile layer: dark aviation-style
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-  attribution: '© OpenStreetMap © CARTO',
-  subdomains: 'abcd',
-  maxZoom: 18,
-}).addTo(map);
-
-// Label layer on top (stays readable)
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
-  attribution: '',
-  subdomains: 'abcd',
-  maxZoom: 18,
-  pane: 'shadowPane',
+// Tile layer: Stadia Maps dark (free, no API key required)
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+  attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a> © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  maxZoom: 20,
 }).addTo(map);
 
 // ── Layer groups ──────────────────────────────
