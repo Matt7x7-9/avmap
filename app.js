@@ -405,19 +405,6 @@ function firColor(icao) { return FIR_COLOR[icao] || '#666'; }
 
 firWptLayer.addTo(map);
 
-const firWptBtn = document.getElementById('firwpt-toggle-btn');
-firWptBtn.addEventListener('click', () => {
-  if (firWptVisible) {
-    map.removeLayer(firWptLayer);
-    firWptBtn.classList.remove('active');
-  } else {
-    firWptLayer.addTo(map);
-    firWptBtn.classList.add('active');
-  }
-  firWptVisible = !firWptVisible;
-});
-firWptBtn.classList.add('active');
-
 // ── FIR Label Zoom Control ────────────────────
 // Hide FIR labels when zoom < 5, show when zoom >= 5
 function updateFirLabelVisibility() {
