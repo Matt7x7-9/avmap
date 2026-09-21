@@ -7978,8 +7978,7 @@ const CAUG_NOTES_24 = {
     },
     runways: [
       {id:'05L/23R', len:3660, apch:'ILS 05L/23R'},
-      {id:'05R/23L', len:3660, apch:'ILS 05R/23L'},
-      {id:'06/24', len:3800, apch:'ILS 06/24'},
+      {id:'05R/23L', len:3800, apch:'ILS 05R/23L'},
     ],
     tabs: [
       {
