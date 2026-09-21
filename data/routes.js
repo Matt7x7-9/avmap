@@ -16,6 +16,7 @@ const AIRPORTS = {
   CAN: { name: "広州白雲国際空港",        icao: "ZGGG", coords: [23.393, 113.308] },
   // ── Taiwan ────────────────────────────────────────
   TSA: { name: "台北松山空港",           icao: "RCSS", coords: [25.069, 121.552] },
+  TPE: { name: "台湾桃園国際空港",        icao: "RCTP", coords: [25.077, 121.233] },
   // ── Hong Kong ─────────────────────────────────────
   HKG: { name: "香港国際空港",           icao: "VHHH", coords: [22.31,  113.92]  },
   // ── Southeast Asia ────────────────────────────────
