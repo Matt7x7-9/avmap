@@ -1,4 +1,4 @@
-const CACHE = 'avmap-2026.09.21';
+const CACHE = 'avmap-2026.09.21.1';
 const PRECACHE = [
   './',
   './index.html',
@@ -32,7 +32,7 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   // Network-first for tile servers, cache-first for app files
-  if (e.request.url.includes('carto') || e.request.url.includes('openstreetmap')) {
+  if (e.request.url.includes('arcgisonline') || e.request.url.includes('carto') || e.request.url.includes('openstreetmap') || e.request.url.includes('stadiamaps')) {
     e.respondWith(
       fetch(e.request).catch(() => caches.match(e.request))
     );

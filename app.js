@@ -16,10 +16,11 @@ const map = L.map('map', {
   attributionControl: true,
 });
 
-// Tile layer: Stadia Maps dark (free, no API key required)
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-  attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a> © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  maxZoom: 20,
+// Tile layer: Esri World Dark Gray Base (keyless — github.io本番でも認証不要)
+// ※ Stadia/CARTOはいずれもAPIキー/ドメイン認証必須で本番401になるため使わない
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles © <a href="https://www.esri.com/">Esri</a> — Esri, HERE, Garmin, © OpenStreetMap contributors',
+  maxZoom: 16,
 }).addTo(map);
 
 // ── Layer groups ──────────────────────────────
