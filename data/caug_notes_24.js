@@ -946,10 +946,9 @@ const CAUG_NOTES_24 = {
       TA: '11000 ft'
     },
     runways: [
-      {id:'01L/19R', len:4000, apch:'ILS Cat II 01L/19R', side:'West'},
-      {id:'01R/19L', len:3700, apch:'ILS Cat II 01R/19L', side:'East'},
-      {id:'02R/20L', len:4000, apch:'ILS Cat I 02R/20L', side:'East'},
-      {id:'02L/20R', len:3700, apch:'ILS Cat I 02L/20R', side:'West'},
+      {id:'01/19', len:4000, apch:'ILS Cat II 01/19'},
+      {id:'02L/20R', len:3700, apch:'ILS Cat I 02L/20R'},
+      {id:'02R/20L', len:4000, apch:'ILS Cat I 02R/20L'},
     ],
     tabs: [
       {
@@ -6970,8 +6969,8 @@ const CAUG_NOTES_24 = {
       TA: '13000 ft'
     },
     runways: [
-      {id:'06L/24R', len:4000, apch:'ILS Cat III 06L/24R'},
-      {id:'06R/24L', len:4000, apch:'ILS Cat II 06R/24L'},
+      {id:'06/24', len:3737, apch:'ILS 06/24'},
+      {id:'13/31', len:2258, apch:'ILS 13/31'},
     ],
     tabs: [
       {
@@ -7360,7 +7359,6 @@ const CAUG_NOTES_24 = {
     },
     runways: [
       {id:'10/28', len:3300, apch:'ILS 10/28'},
-      {id:'11/29', len:3300, apch:'ILS 11/29'},
     ],
     tabs: [
       {
@@ -7789,9 +7787,9 @@ const CAUG_NOTES_24 = {
       TL: 'FL118',
     },
     runways: [
-      {id:'01/19', len:0, apch:'VOR 01/19'},
-      {id:'18L/36R', len:0, apch:'VOR 18L/36R'},
-      {id:'18R/36L', len:0, apch:'VOR 18R/36L'},
+      {id:'01/19', len:3800, apch:'ILS 01/19'},
+      {id:'18L/36R', len:3800, apch:'ILS 18L/36R'},
+      {id:'18R/36L', len:3200, apch:'ILS 18R/36L'},
     ],
     tabs: [
       {
@@ -8301,9 +8299,9 @@ const CAUG_NOTES_24 = {
     ]
   },
   VVNB: {
-    fullName: '',
-    iata: '',
-    utc: '+9',
+    fullName: 'HANOI, Noi Bai INTL',
+    iata: 'HAN',
+    utc: '+7',
     ops: 'H24',
     curfew: 'Nil',
     fuel: 'JET-A1',
@@ -8317,6 +8315,8 @@ const CAUG_NOTES_24 = {
     transitionAltitude: {
     },
     runways: [
+      {id:'11L/29R', len:3800, apch:'ILS 11L/29R'},
+      {id:'11R/29L', len:3200, apch:'ILS 11R/29L'},
     ],
     tabs: [
       {
