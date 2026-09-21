@@ -170,115 +170,6 @@ const CAUG_NOTES_24 = {
     ]
   },
 
-  RCKH: {
-    fullName: 'KAOHSIUNG INTL',
-    iata: 'KHH',
-    utc: '+8',
-    ops: 'H24 (ATIS 2200Z-1600Z)',
-    curfew: '—',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'RWY 09 (優先)',
-    runways: [{'id':'09/27', 'len':3150, 'apch':'ILS Cat II 09/27'}],
-    sections: [
-      {
-        title: 'COMM/NAV',
-        items: [
-          'TWR: KHH TWR H24 / GND: KHH DEP(RDR) H24 / APP: KHH APP(RDR) H24',
-          'ILS09: IKHG H24 / LLZ27: IKAS H24 / VOR/DME: TNN/HCN H24',
-        ]
-      },
-      {
-        title: 'RWY/スポット',
-        items: [
-          'TWY幅: A/E/S 30m / B/C/D/F/G 35m',
-          'PAPI: RWY09 左側 1184ft 3.0° / RWY27 左側 1294ft 3.0°',
-          'スポット: 22-23/31-32/511/516/521 → B777-300ER max / 512-514/522 → B772 max',
-          'AGS(自動誘導): SPOT 12-32に設置。Captain側で合わせること(Co-pilot側では誤差あり)',
-          'マーシャラー誘導: SPOT 3-8/33-37/511-528',
-        ]
-      },
-      {
-        title: '地形・制限',
-        items: [
-          'RWY27 THR北東〜南東約1NMに丘陵。空港から15NM内で急激に高度上昇',
-          'Mt Shou Shan(1168ft): 空港北西6NMに位置',
-          '高台: 空港の北東〜南東1〜3NMの範囲 200〜500ft',
-          '軍事: Kao Ping River東側上空飛行に注意(軍機運用)',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          '通信途絶: EMERGENCY SEA-5参照',
-          '進入: KIZINおよびその周辺で軍艦によるTA(Traffic Advisory)発生の可能性あり',
-          'Taxi: 混雑スポット周囲のクリアランス確保のためA TWY上はゆっくり走行し中心線厳守',
-          'パーキング: APU OFF upon arrival。AGSはCapitan側で合わせること',
-          'Follow me car: 要請可能',
-        ]
-      },
-      {
-        title: '出発',
-        items: [
-          'ATC Clearance: Datalink または KHH GND 5分前にコール。Call sign・駐機Bay番号・予定FLを通報',
-          'Engine Start/Pushback: Push Back終了時に全エンジン始動済みでTaxi開始できる状態であること(ATCが別途許可した場合を除く)',
-          'RWY Taxi: ATC許可なくRWYをTaxi pathとして使用しないこと',
-          'SID: RNAV SID原則。北向き: RWY09 SK1L / RWY27 LU1(RNAV)・SK1D。南向き: RWY09 HCN1A / RWY27 HCN1B',
-          'RNAV SID: RNAV 1 (GNSS or DME/DME/IRU)',
-          'Noise: Jeppesen 10-9A参照',
-        ]
-      },
-      {
-        title: 'FMS情報',
-        items: [
-          'STARの最低高度: FMSに未格納',
-          'APPTRN "FORKY": FMSに未格納',
-        ]
-      },
-    ]
-  },
-
-  RKPC: {
-    fullName: 'JEJU',
-    iata: 'CJU',
-    utc: '+9',
-    ops: 'H24',
-    curfew: '1400-2100Z',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'RWY 07/25',
-    runways: [{'id':'07/25', 'len':3180, 'apch':'ILS Cat II 07/25'}, {'id':'13/31', 'len':1910, 'apch':'ILS 13/31'}],
-    sections: [
-      {
-        title: '気象',
-        items: [
-          'LLWAS運用中: マイクロバーストを検知した場合、ATISに最低20分間 "MICROBURST ADVISORIES IN EFFECT" が放送される',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          'Noise: Jeppesen参照',
-          'Spot情報: Jeppesen参照',
-        ]
-      },
-      {
-        title: '離陸',
-        items: [
-          'Noise: Jeppesen参照',
-          'SID情報: 特記事項なし',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: +82-64-797-1670〜1 (RKPCZPZX)',
-          'MET: +82-64-742-0365 (RKPCYPYX)',
-        ]
-      },
-    ]
-  },
-
   RKPK: {
     fullName: 'BUSAN (Gimhae INTL)',
     iata: 'PUS',
@@ -299,109 +190,6 @@ const CAUG_NOTES_24 = {
       },
     ]
   },
-
-  RPLC: {
-    fullName: 'PAMPANGA (Clark INTL)',
-    iata: 'CRK',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: '—',
-    runways: [{'id':'02R/20L', 'len':3200, 'apch':'ILS 02R/20L'}],
-    sections: [
-      {
-        title: '地上設備',
-        items: [
-          'TUG/BAR: 利用可',
-          '⚠ Water/LAV: 利用可。ただしB787は水の品質問題のため補給受取禁止',
-          'Follow Me Car: 利用可',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          '到着ルート: MNLからレーダーベクター予定',
-          'ルーティング: MNL-VOTAS-OLIVA-CIA または ROSER-CRK',
-          'MNL APCHからCRK APCHへの引き継ぎ高度: 6000ft',
-          'ATC通常: ILSレンジ内でILS向けクリアランス発行',
-          'RWY02着陸後: TWY F5を右折→TWY Dを左折→Main Rampへ',
-        ]
-      },
-      {
-        title: '出発',
-        items: [
-          'ATC Clearance: 特記事項なし',
-          'SID/TKOF情報: 特記事項なし',
-          'Noise: 特記事項なし',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: +63-45-599-2888 EXT 604 (TWR)',
-          'MET: +63-45-599-2888 EXT 612',
-        ]
-      },
-    ]
-  },
-
-  RPVM: {
-    fullName: 'LAPU-LAPU (Mactan-Cebu INTL)',
-    iata: 'CEB',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'RWY 04R/22L',
-    runways: [{'id':'04L/22R', 'len':2560, 'apch':'ILS 04L'}, {'id':'04R/22L', 'len':3310, 'apch':'ILS 04R/22L'}],
-    sections: [
-      {
-        title: '地上設備',
-        items: [
-          'GND PWR / Air Starter / PAX Step: 利用可',
-          'Towing TUG: 利用可 / Towing BAR: B787は使用不可 (N/A for B787)',
-          '⚠ Water/LAV: 利用可。ただしB787は水の品質問題のため補給受取禁止',
-        ]
-      },
-      {
-        title: 'RWY/地形',
-        items: [
-          'RWY操作: RWY04L/22R はCode DおよびCode C以上の機体がTWY C上に存在する場合、T/O・LDGともに禁止',
-          'RWY勾配: RWY04R +0.12% / RWY22L -0.12% / RWY04L +0.05% / RWY22R -0.05%',
-          'PAPI: 全RWYの両側に設置 3.0%',
-          '地形: 空港西〜北西方向12NM以内で3300ftまで急上昇',
-          'レーダーパターン: 空港東側で設定。最低高度1600ft',
-          'MNLOO: MNL coverage内でJAPANAIR向け情報中継 (CEB ETA 30分前)',
-        ]
-      },
-      {
-        title: 'スポット',
-        items: [
-          'B787指定エリア: 11A / 13A / 15A / M5-M10',
-          'Power-in運用',
-        ]
-      },
-      {
-        title: '出発',
-        items: [
-          'ATC Clearance: Start-up clearance はエンジン始動10分前に要求すること',
-          'SID/TKOF/Noise: 特記事項なし',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: (到着用) +63-45-599-2888 EXT 604 TWR',
-          'MET: +63-45-599-2888 EXT 612',
-        ]
-      },
-    ]
-  },
-
-  // ── インド ────────────────────────────────────
 
   VAAH: {
     fullName: 'AHMEDABAD (Sardar Vallabhbhai Patel INTL)',
@@ -712,54 +500,6 @@ const CAUG_NOTES_24 = {
 
   // ── マカオ ────────────────────────────────────
 
-  VMMC: {
-    fullName: 'MACAU INTL',
-    iata: 'MFM',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'RWY 34 (Tail component <10kt)',
-    runways: [{'id':'16/34', 'len':3214, 'apch':'ILS Cat II 16/34'}],
-    sections: [
-      {
-        title: 'アプローチ',
-        items: [
-          'LOC RWY16: D6.5〜D4.5間にベンドあり',
-          '(LDG RWY16) Inbound CRS 215°を維持。ZAO VOR方向への逸脱禁止',
-          'VDGS設置: Jeppesen 10-1P参照',
-        ]
-      },
-      {
-        title: 'ATC Transfer (到着)',
-        items: [
-          'S (HKG ATC→ZHUHAI ATC)',
-          'Established on MCS LLZ (ZHUHAI ATC→MFM TWR)',
-          '高度計: RWY16/34 → Set MACAU QNH (HKG ATC→MFM TWR) / Set 1013.2hPa (HKG ATC→ZHUHAI ATC) → Set MACAU QNH (ZHUHAI ATC→MFM TWR)',
-        ]
-      },
-      {
-        title: 'ATC Transfer (出発)',
-        items: [
-          'Initial Right turn (MFM TWR→ZHUHAI ATC)',
-          'LKC (ZHUHAI ATC→HKG ATC)',
-          '離陸後できるだけ速やかにHKG FIR進入前にSID ALTへ上昇',
-          'RWY16/34: Set HKG QNH (MACAU TWR→HKG ATC)',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: ADMINISTRATION OF AIRPORT Ltd. +853-88982829',
-          'MET: +853-88986214 / +853-28862203(Forecast Duty)',
-        ]
-      },
-    ]
-  },
-
-  // ── インド（南部） ─────────────────────────────
-
   VOMM: {
     fullName: 'CHENNAI (Chennai INTL)',
     iata: 'MAA',
@@ -861,35 +601,6 @@ const CAUG_NOTES_24 = {
         items: [
           'APT: U-Tapao Airport Authority +66-38-245600 / VTBUZPZX',
           'MET: +66-38-245489',
-        ]
-      },
-    ]
-  },
-
-  VTCC: {
-    fullName: 'CHIANG MAI INTL',
-    iata: 'CNX',
-    utc: '+7',
-    ops: '24hrs',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    runways: [{'id':'18/36', 'len':3400, 'apch':'ILS Cat II 18/36'}],
-    sections: [
-      {
-        title: '地形',
-        items: [
-          '空港西側に高地。最高点 5528ft (空港北西5.5nm)',
-          '⚠️ IAFでの最低通過高度に注意 (地形のため)',
-        ]
-      },
-      {
-        title: 'RWY/TWY',
-        items: [
-          'RWY18: Straight-in approachは設定されていない',
-          'TWY F: 使用不可',
-          'RADARサービス: CHIANG MAI APP周波数で24時間 (PRIカバレッジ60nm / SSR 200nm)',
         ]
       },
     ]
@@ -1304,102 +1015,6 @@ const CAUG_NOTES_24 = {
     ]
   },
 
-  VVCI: {
-    fullName: 'HAI PHONG (Cat Bi INTL)',
-    iata: 'HPH',
-    utc: '+7',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET A1',
-    rffs: 'Cat 8',
-    prefRwy: '—',
-    runways: [{'id':'07/25', 'len':3050, 'apch':'ILS Cat II 07/25'}],
-    sections: [
-      {
-        title: '地上設備',
-        items: [
-          'GND PWR / Air Starter / PAX Step / Towing TUG&BAR / LAV SVC / Follow Me Car: 全て利用可',
-          '⚠️ Water SVC: N/A (利用不可)',
-        ]
-      },
-      {
-        title: 'Taxi経路',
-        items: [
-          '到着後: 着陸RWY25端→Turn Pad→RWY07/25→TWY N4→TWY N→TWY W3/W4→スタンド',
-          '  または: TWY N4→TWY N→TWY W3/W4→スタンド',
-          'Turning Pad: TWY N1 および N7',
-          '出発(スタンド5/6/8/17/19): TWY W3/W4→TWY N→TWY N4→RWY07/25→Turn Pad→離陸',
-        ]
-      },
-    ]
-  },
-
-  VVNB: {
-    fullName: 'HANOI, Noi Bai INTL',
-    iata: 'HAN',
-    utc: '+7',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    sections: [
-      {
-        title: 'COMM',
-        items: [
-          'コンパニー無線: 現地当局規制により利用不可 (N/A)',
-          '運航情報: ACARS または SATCOM 経由 (TYOOD)',
-        ]
-      },
-      {
-        title: 'RWY/TWY',
-        items: [
-          'テールウィンド10KTS超で使用RWY変更',
-          '軍用機オペレーション実施中',
-          '離陸: T/Oクリアランス後30秒以内に滑走開始',
-          '着陸: 減速後60秒以内にRWY退去',
-          '⚠️ TWY N1〜N5: 軍用ランプに接続 → 進入禁止',
-        ]
-      },
-      {
-        title: 'スポット',
-        items: [
-          'JAL指定スポット: 14〜21',
-          'PBB / VDGS: スポット 14〜27',
-          'スポット15-22/24-27: B747-400/B777-300相当まで (翼幅<65m)',
-          'スポット14: A380/AN-124相当まで (翼幅<80m)',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          'アプローチスピード制限: 12NM最終またはターニングファイナル → 最大200KT',
-          '                       5NM最終 → 最大160KT',
-          'パーキング: PWR In全スポット。VDGS primary誘導',
-          'ノーズホイール停止位置: ストップライン±0.5m超過時は空港当局インタビューの可能性',
-        ]
-      },
-      {
-        title: '出発',
-        items: [
-          'PB/ENG start 5分前にNOIBAI GND にコール (callsign / destination / spot / FL)',
-          'プッシュバック: 全スポット可 (オープンスポットはPower Out)',
-          '⚠️ RWY11L THR 180°ターン指示あり: Turning PadはコードCまで。エッジライトはRWYと共有 (踏み可)',
-        ]
-      },
-      {
-        title: '気象・その他',
-        items: [
-          'TS: ITCZ・熱帯性低気圧により4月〜9月',
-          '煙霧(FU): 6月 および 10月下旬〜11月上旬 (周辺焼き畑由来)',
-          '高度制限: 10ft単位の場合は100ft単位に切り上げて適用',
-          '鳥害: 空港周辺に注意',
-          '制限空域: VVP1 Hanoi City / VVD21 軍事(NOTAM) / VVR7/8/9 Air force TRNG',
-        ]
-      },
-    ]
-  },
-
   VVTS: {
     fullName: 'HO CHI MINH CITY, Tan Son Nhat INTL',
     iata: 'SGN',
@@ -1750,284 +1365,6 @@ const CAUG_NOTES_24 = {
 
   // ── マレーシア・インドネシア・シンガポール ──────
 
-  WMKJ: {
-    fullName: 'JOHOR BAHRU (Senai INTL)',
-    iata: 'JHB',
-    utc: '+8',
-    ops: '2230-1600Z',
-    curfew: '1600-2230Z',
-    fuel: 'JET-A1',
-    rffs: 'Cat 8',
-    prefRwy: 'Nil',
-    runways: [{'id':'16/34', 'len':3800, 'apch':'ILS Cat II 16/34'}],
-    sections: [
-      {
-        title: '地上設備',
-        items: [
-          'Towing TUG/BAR: B737-400/800・B767-200/300・B747-400・B777-200/300のみ対応するユニバーサルタウバー',
-          '⚠️ B787: タウバーなし → ダイバート着陸は可。Power In / Power Out のみで対応',
-        ]
-      },
-      {
-        title: 'スポット',
-        items: [
-          'B767/B777: スポット 1(PBB)/3(PBB)/5-7',
-          'B787: スポット 5-7 (PWR-OUT利用可)',
-          'VDGS: スポット 1/2/3/4 (B767は対象外)',
-        ]
-      },
-      {
-        title: '空域制限',
-        items: [
-          '⚠️ 禁止空域 WM(P)-228 (GND〜5000ft): 空港南方 (160°/10NM VJR) に存在',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          'SINから: RADAR Vectorを期待',
-          'KULから: TOPOR ARRIVAL経由',
-          'ダイバート機: 機体タイプをATCへ通報 → JHBのGHが利用可能タウバーに応じてスポット割り当て',
-          'ダイバート機: Cargo apronに駐機',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: +607-5994500',
-        ]
-      },
-    ]
-  },
-
-  WIII: {
-    fullName: 'JAKARTA, Soekarno-Hatta INTL',
-    iata: 'CGK',
-    utc: '+7',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    sections: [
-      {
-        title: 'COMM',
-        items: [
-          'コンパニー無線: JL CGK 131.8MHz',
-          '⚠️ GND/TWR通信が弱い場所: スポットD31/D51/D61/D71 および RWY/TWY交差部',
-          '⚠️ NAVAIDS (ILS含む): NOTAMなしに停止することあり',
-          '⚠️ CKG VOR: 40NM以遠は使用不可',
-        ]
-      },
-      {
-        title: 'RWY/TWY',
-        items: [
-          'RWY 07L/25R / 07R/25L: 通常運用',
-          '⚠️ RWY 06/24: 着陸のみ (07L/25R閉鎖時等、非正常時のT/Oは可)',
-          'TWY幅: 23m + 10m舗装肩 各側',
-          'TWY一方通行: NP2/SP2=西行き / NP1/SP1=東行き / WC1=南行き / WC2=北行き',
-          'NCY→Terminal E / NC5→Terminal F / NC4→Terminal G',
-        ]
-      },
-      {
-        title: 'スポット',
-        items: [
-          'Terminal G: G16/G19/G23/G36/G2-G6 → B773ER / G26/G29/G33 → A380',
-          'Remote Apron: R83/R85/R87/R88 → B773ER',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          'ILS同時進入: RWY25L/Rへの Simultaneous ILS APCHはVMC条件下で許可',
-          'タキシング: ATCがJeppesen 10-6の「ROUTE No.」で指示することあり (TWY名が優先)',
-          '⚠️ 夜間・雨天時: TWYセンターライン・タキシーガイドラインが見えにくい (特にランプ)',
-        ]
-      },
-      {
-        title: '出発',
-        items: [
-          'ATC Clearance: DEL/GND/TWR に PB 25分前にコール',
-          '通報: callsign / destination / spot / POB / A/C type+Reg / FL',
-          'プッシュバック手順: Jeppesen 10-9参照',
-          '⚠️ CGK→JPN: T/Oクリアランス時にTWRがSIDキャンセル・右旋回heading 070を指示する場合あり',
-        ]
-      },
-      {
-        title: 'その他',
-        items: [
-          '凧 (KITES): 最終進入エリア周辺 (特に4月〜10月)',
-          '気象: ITCZ 11月に北から南へ通過 → 5月に南から戻る',
-          '制限空域: WI(D)-10 SAR訓練 / WI(R)-2 民間航空学校訓練',
-        ]
-      },
-    ]
-  },
-
-  WMKK: {
-    fullName: 'KUALA LUMPUR INTL',
-    iata: 'KUL',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 10',
-    prefRwy: 'RWY32R/L',
-    sections: [
-      {
-        title: 'COMM',
-        items: [
-          'コンパニー無線: JAPAN AIR KUL 131.8MHz',
-          'METAR特記コード: TL=TS(中〜強) / TLO=軽いTS / J=視程内だが空港外 / JTL=遠方TS',
-        ]
-      },
-      {
-        title: 'RWY運用・閉鎖スケジュール',
-        items: [
-          'Pref RWY: 32R/L (南向き運用)',
-          'RWY14L/32R 閉鎖: 月/木/日 1530-2200UTC + 月 0300-0400UTC',
-          'RWY14R/32L 閉鎖: 火/金 1530-2200UTC + 火 0300-0400UTC',
-          'RWY15/33 閉鎖: 水/土 1530-2200UTC + 水 0300-0400UTC',
-          '再開前20分間検査。定期検査: 0200-0430/0800-1100/1400-1600/2100-2330UTC',
-          'Triple RWY DEP (2330-1400UTC): RWY32L DEP / RWY32R mixed / RWY33 mixed',
-          '独立・従属並行APCH: ATIS通報あり。サイドステップは8NM以内への変更不可',
-        ]
-      },
-      {
-        title: 'スポット',
-        items: [
-          '⚠️ B787専用スポット: C1, C2, C23, C32, C34, C36',
-          'B773ER: C4/C6/C22/C24/C25/C27/C35/C37 (APIS++) / C15/C26 (APIS)',
-          '⚠️ Power Out: 全スポット不可 (NOT AVBL from any spot)',
-          'スポットによっては3本リードインラインあり (Ref.20-9C: センターラインに従うこと)',
-        ]
-      },
-      {
-        title: 'STAR/到着',
-        items: [
-          'STAR: KUL TMA進入ウェイポイントに基づいてATCが割り当て',
-          'PMS East (STAR 1G): KAKAK/PULIP/SAROX → RWY32R/L または 14R/L',
-          'PMS West (STAR 1H): NIREN/PUGER/SALAX/GUPTA → RWY15/33',
-          '0000-1600UTC: DUAL PMS / 1600-0000UTC: Midnight STAR (3K/3J) またはPMS',
-          'ホールディング: PIBOS (AWY R208 と G582 の交差点付近)',
-        ]
-      },
-      {
-        title: '出発',
-        items: [
-          'ATC Clearance: KUL FIR外 → TSAT-10分前にLumpur Deliveryコール',
-          '東行き (M771-DUDIS / L625-AKMON / N884-LAXOR): TSAT-30分前にコール',
-          '離陸後: Lumpur Departure (135.25MHz) 2000ft通過前にコール',
-          'Departures通報: callsign / SID or RD identifier / last level (100ft単位) / assigned altitude',
-          '⚠️ AWY G582 東行き: VBA/BATU ARANG VOR 78DMEまでにFL250以上到達すること',
-        ]
-      },
-      {
-        title: '気象・その他',
-        items: [
-          'TS: 午後の熱対流型(30分程度) または SW monsoon期(JUN-SEP、数時間に及ぶことあり)',
-          'FOG: 前夜の大雨または夕方の雨の翌早朝に放射霧 (日出後すぐに消散)',
-          '鳥害: 渡り鳥の飛行経路上 (SEP-NOV北東方向、FEB-APR南東方向、高度300-3000ft)',
-          'SIN-KUL ルート: A464 (南行き KUL→SIN) / A457 (北行き SIN→KUL)',
-        ]
-      },
-    ]
-  },
-
-  WSSS: {
-    fullName: 'SINGAPORE, Changi INTL',
-    iata: 'SIN',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 10',
-    prefRwy: 'Nil',
-    sections: [
-      {
-        title: 'COMM',
-        items: [
-          'コンパニー無線: JAPAN AIR SIN 131.8MHz',
-          'CLNCのため DEL周波数の代わりにGND周波数が使用される場合あり',
-        ]
-      },
-      {
-        title: 'RWY運用・閉鎖スケジュール',
-        items: [
-          'RWY: 02L/20R / 02C/20C / 02R/20L',
-          '⚠️ RWY20R DEP: RWY20C利用可能な1600-2200UTCは禁止',
-          '定期閉鎖: 02L/20R 日/水1700-2200UTC / 02C/20C 火/金1800-2200UTC / 02R/20L 月1800-2200UTC',
-          '5分間検査: 毎日 0100-0359 / 0500-0759 / 0800-1059UTC',
-        ]
-      },
-      {
-        title: 'TWY・Follow the Greens',
-        items: [
-          '⚠️ Follow the Greens (2026年3月19日〜): 夜間/低視程時の緑色センターラインライト誘導',
-          '赤ストップバー点灯中は前進禁止。verbal clearance limit未満もATCなしに前進禁止',
-          '複数グリーンセグメントで迷ったら停止してATCに確認',
-          'TWY R/S: タキシング速度制限 20KT',
-          '到着: スタンド到着まで Transponder ON を維持',
-          '出発: PB clearance request前まで Transponder ON を維持',
-        ]
-      },
-      {
-        title: 'スポット',
-        items: [
-          'JAL: T1 C/Dベイシリーズ、West/East Cargo Apron',
-          'PWR In全スポット / VDGS全PAXスタンド設置',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          '南行き A464/A576 経由: RWY20R/C使用中かつ120DME SJ以内はSIN ATC (133.25MHz pri, 135.8MHz sec) にSTARリクエスト',
-          '依存並行アプローチ (ATIS通報): 3nm staggered separation',
-          '騒音: RWY02L/20R 1600-2200UTC はIdle Reverseのみ',
-        ]
-      },
-      {
-        title: '出発',
-        items: [
-          'ENG start: ATC通報後PB。PB終了時に全ENG始動してTaxi ready状態であること',
-          '⚠️ CHANGI 1C/1D DEP: Jeppesen initial climb "023°/203°" はTrackではなくRWY Magnetic Headingで飛行',
-          '速度制限: 4000ft AMSL以下 230KT / 10000ft AMSL以下 250KT',
-          '初期上昇: RNAV-1 GNSS SIDを適用。初期3000ftまで上昇',
-          '騒音: AWY G579 (SJ〜GUMPU) は5000ft以上を維持',
-          '出発スロット(LSWD): Delivery からSlot period/最早・最遅DEP時刻の通報あり → Expected T/O時刻を計算してreply',
-        ]
-      },
-      {
-        title: '⚠️ 船舶横断 (RWY02系統 離陸時)',
-        items: [
-          '北側shipping channelを横断する船舶がT/O障害となる場合あり (通過時間10-15分)',
-          '最小クライムグラジェント: 2500ftまで5% → その後3.3%',
-          '02L: 船舶>35m → RWY CODE 02L55 / >55m → CODE 02L140',
-          '02C: 船舶>70m → RWY CODE 02C115 / >115m → CODE 02C140',
-          '02R: 船舶>65m → RWY CODE 02R140',
-          '⚠️ 140m超の船舶: いかなるCODEも性能要件を満たせない → 通過を待つこと',
-        ]
-      },
-      {
-        title: '通信途絶 エンルートホールディング',
-        items: [
-          'HOSBA(HHA): INBD 259° Right 1min, 230KT, FL140/7000ft ALT — SIN ACC 120.3MHz',
-          'NYLON(NHA): INBD 203° Left 1min, 220KT, FL140/3000ft ALT — SIN ACC 120.3MHz',
-          'SAMKO(SHA): INBD 348° Left 1min, 220KT, FL140/4000ft ALT — SIN ACC 120.3MHz',
-        ]
-      },
-      {
-        title: '気象',
-        items: [
-          'TS: 4-5月および10-11月 (inter-monsoon期)。突風・急激なVIS低下、30分以内に回復',
-          'HZ: 年間を通じて観測 (VIS最大1500mまで低下)。SEP-OCTに最多',
-        ]
-      },
-    ]
-  },
-
-  // ── キャッシュ未収録空港 ──────────────────────
-
   VVVD: {
     fullName: 'VAN DON INTL',
     iata: 'VDO',
@@ -2056,151 +1393,6 @@ const CAUG_NOTES_24 = {
         items: [
           '⚠️ TWY B5 からの離陸: RWY03 THR方向へ左旋回。RWY21 THR方向への右旋回は禁止',
           'Water SVC: N/A',
-        ]
-      },
-    ]
-  },
-
-  WARR: {
-    fullName: 'SURABAYA (Juanda INTL)',
-    iata: 'SUB',
-    utc: '+7',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 8',
-    prefRwy: 'Nil',
-    runways: [{'id':'10/28', 'len':3000, 'apch':'ILS 10/28'}],
-    sections: [
-      {
-        title: '地上設備',
-        items: [
-          '⚠️ GND PWR / PAX Step / TUG / Water SVC: B787対応について調査中 (Under investigation)',
-        ]
-      },
-      {
-        title: '障害物・制限',
-        items: [
-          '⚠️ アンテナ 1013ft: SBR R-315° / D8.77NM に存在',
-          'STAR RWY10 NIMAS: ≥2000ft を維持',
-          'MVA: ≥2000ft',
-          '⚠️ RWY10/28: 毎日 0600-0615UTC クローズ',
-        ]
-      },
-      {
-        title: '鳥害・FOD',
-        items: [
-          '雨天後: 鳥が多数出現',
-          'アウトボードENGパワーを最小限に抑えること (FOD防止)',
-        ]
-      },
-      {
-        title: 'スポット',
-        items: [
-          'T1: スポット 4, 5 (Open), 6, 7, 8, 10, 11 (PBB)',
-          'T2: スポット A6, A7, A8 (PBB)',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          'アプローチ: RADARベクター',
-        ]
-      },
-    ]
-  },
-
-  WBGG: {
-    fullName: 'KUCHING INTL',
-    iata: 'KCH',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'RWY25 ARR / RWY07 DEP',
-    runways: [{'id':'07/25', 'len':3780, 'apch':'ILS Cat II 07/25'}],
-    sections: [
-      {
-        title: '地上設備',
-        items: [
-          '⚠️ GND PWR / PAX Step / TUG / Water SVC: B787対応について調査中 (Under investigation)',
-        ]
-      },
-      {
-        title: 'RWY情報',
-        items: [
-          'RWY: グルービングなし',
-          'Turning Pad: 230ft',
-        ]
-      },
-      {
-        title: '気象',
-        items: [
-          '午後: TSRA多い',
-          'SW monsoon期: Hazy (煙霧)',
-          'NE monsoon期: 大雨 (Heavy RA)',
-        ]
-      },
-      {
-        title: '周辺情報',
-        items: [
-          '空港位置: 市街地南方6NM',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          'アプローチ: RADARベクター',
-        ]
-      },
-    ]
-  },
-
-  WBKK: {
-    fullName: 'KOTA KINABALU INTL',
-    iata: 'BKI',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'RWY20',
-    runways: [{'id':'02/20', 'len':3780, 'apch':'ILS Cat II 02/20'}],
-    sections: [
-      {
-        title: '地上設備',
-        items: [
-          '⚠️ GND PWR / PAX Step / TUG / Water SVC: B787対応について調査中 (Under investigation)',
-        ]
-      },
-      {
-        title: 'RWY制限',
-        items: [
-          '⚠️ RWY20: 火・水曜日 1845-2115UTC クローズ',
-          '⚠️ 地形: 空港東側に高地 → 離陸後は必ず西向きターン',
-        ]
-      },
-      {
-        title: '気象',
-        items: [
-          'SW monsoon期: TS多い',
-          'NE monsoon期: RA',
-        ]
-      },
-      {
-        title: 'スポット',
-        items: [
-          'スポット 1-5: Power In / Tow Out',
-        ]
-      },
-      {
-        title: 'Taxi経路',
-        items: [
-          '到着 RWY20: H → J → APRON',
-          '到着 RWY02: E → C → J → APRON',
-          '出発 RWY20: APRON → J → C → N',
-          '出発 RWY02: APRON → J → C → K',
         ]
       },
     ]
@@ -2254,49 +1446,6 @@ const CAUG_NOTES_24 = {
     ]
   },
 
-  WMKP: {
-    fullName: 'PENANG INTL',
-    iata: 'PEN',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    runways: [{'id':'04/22', 'len':3352, 'apch':'ILS 04/22'}],
-    sections: [
-      {
-        title: '地上設備',
-        items: [
-          '⚠️ GND PWR / PAX Step / TUG / Water SVC: B787対応について調査中 (Under investigation)',
-        ]
-      },
-      {
-        title: 'TWY/地形',
-        items: [
-          '⚠️ TWY-C: B737以下のみ使用可',
-          '地形: 空港西〜北方向2NM以内に 1400ft',
-          '鳥害: 9月〜2月 (SEP-FEB)',
-          'TS時: 強いクロスウィンド注意',
-        ]
-      },
-      {
-        title: 'スポット',
-        items: [
-          'Bay 3-7, 13, 14, 15: B747-400まで',
-          'Bay 8: B747まで',
-          'Power In',
-        ]
-      },
-      {
-        title: 'SID',
-        items: [
-          'SID経路例: VPG → PR → A464 → VBA',
-        ]
-      },
-    ]
-  },
-
   ZBHH: {
     fullName: 'HOHHOT (Baita INTL)',
     iata: 'HET',
@@ -2326,39 +1475,6 @@ const CAUG_NOTES_24 = {
         items: [
           'プッシュバック: ATCクリアランス取得後5分以内に開始すること',
           '⚠️ Circle-to-land: RWY北側は禁止',
-        ]
-      },
-    ]
-  },
-
-  ZHHH: {
-    fullName: 'WUHAN (Tianhe INTL)',
-    iata: 'WUH',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    runways: [{'id':'04/22', 'len':3400, 'apch':'ILS 22'}, {'id':'05L/23R', 'len':3600, 'apch':'ILS 05L/23R'}, {'id':'05R/23L', 'len':3200, 'apch':'ILS 05R/23L'}],
-    sections: [
-      {
-        title: 'RWY',
-        items: [
-          'RWY: 04/22, 05L/23R, 05R/23L',
-          'CAT II: RWY05L/23R',
-        ]
-      },
-      {
-        title: '深夜運用',
-        items: [
-          '深夜オペレーション連絡先: +86-27-6568-7545',
-        ]
-      },
-      {
-        title: '手順',
-        items: [
-          'アプローチ/タキシング: Jeppesen参照',
         ]
       },
     ]
@@ -2403,109 +1519,6 @@ const CAUG_NOTES_24 = {
           'スポット形式: Open',
           'Power In / マーシャラー誘導あり',
           'プッシュバック: Power Out',
-        ]
-      },
-    ]
-  },
-
-  ZPPP: {
-    fullName: 'KUNMING (Changshui INTL)',
-    iata: 'KMG',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    runways: [{'id':'03/21', 'len':4000, 'apch':'ILS 03/21'}, {'id':'04/22', 'len':4500, 'apch':'ILS 04/22'}],
-    sections: [
-      {
-        title: '地上設備',
-        items: [
-          '⚠️ GND PWR / TUG: B787対応について調査中 (Under investigation)',
-          'その他設備: 利用可',
-        ]
-      },
-      {
-        title: 'Displaced THR',
-        items: [
-          'RWY03/21: 540m',
-          'RWY22R: 500m',
-          'RWY04R: 300m',
-        ]
-      },
-      {
-        title: '手順',
-        items: [
-          '到着: STAR',
-          'タキシング: Jeppesen参照',
-        ]
-      },
-    ]
-  },
-
-  ZSAM: {
-    fullName: 'XIAMEN (Gaoqi INTL)',
-    iata: 'XMN',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    runways: [{'id':'05/23', 'len':3400, 'apch':'ILS 05/23'}],
-    sections: [
-      {
-        title: 'Displaced THR',
-        items: [
-          'RWY05: 150m',
-          'RWY23: 200m + END 150m',
-        ]
-      },
-      {
-        title: 'ATC',
-        items: [
-          '中国語: 国内線はATC交信が中国語の場合あり',
-          'DCL: 音声による読み上げ復唱不要',
-        ]
-      },
-      {
-        title: 'スポット',
-        items: [
-          '翼幅65m未満対応スポット: 1L, 2L, 3L, 5L, 8, 9, 11, 15, 17, 21-23, 82-85, 205-206, 228',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          'フォローミーカー: 誘導あり',
-          'アプローチ/タキシング/騒音手順: Jeppesen参照',
-        ]
-      },
-    ]
-  },
-
-  ZSHC: {
-    fullName: 'HANGZHOU (Xiaoshan INTL)',
-    iata: 'HGH',
-    utc: '+8',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    runways: [{'id':'06/24', 'len':3400, 'apch':'ILS 06/24'}, {'id':'07/25', 'len':3600, 'apch':'ILS Cat II 07/25'}],
-    sections: [
-      {
-        title: '地上設備',
-        items: [
-          '全設備: 利用可',
-        ]
-      },
-      {
-        title: '手順',
-        items: [
-          'RWY/TWY/全手順: Jeppesen参照',
         ]
       },
     ]
@@ -2787,46 +1800,6 @@ const CAUG_NOTES_24 = {
         title: '連絡先',
         items: [
           'Kadena AB Command Post: +81-98-961-1110',
-        ]
-      },
-    ]
-  },
-
-  RKSI: {
-    fullName: 'INCHEON, Incheon INTL',
-    iata: 'ICN',
-    utc: '+9',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 10',
-    prefRwy: 'Nil',
-    runways: [{'id':'15L/33R', 'len':3750, 'apch':'ILS Cat III 15L/33R'}, {'id':'15R/33L', 'len':3750, 'apch':'ILS Cat III 15R/33L'}, {'id':'16L/34R', 'len':4000, 'apch':'ILS Cat II 16L/34R'}, {'id':'16R/34L', 'len':3750, 'apch':'ILS Cat II 16R/34L'}],
-    sections: [
-      {
-        title: 'TWY情報',
-        items: [
-          'TWY: 広大なエプロン・複数サテライトゲート – 地上誘導に従うこと',
-          'T1とT2は別ターミナル – 到着便を確認',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          'ILS運用: H24（RWY 15L/R, 33L/R）',
-          'ATIS: 126.1 MHz',
-        ]
-      },
-      {
-        title: '離陸',
-        items: [
-          'Departure: RKSI SID参照',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: Incheon International Airport Corp +82-32-741-2114',
         ]
       },
     ]
@@ -3826,95 +2799,6 @@ const CAUG_NOTES_24 = {
     ]
   },
 
-  PHOG: {
-    fullName: 'MAUI, Kahului',
-    iata: 'OGG',
-    utc: '-10(HST 年間固定)',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    runways: [{'id':'02/20', 'len':2133, 'apch':'ILS Cat II 02/20'}, {'id':'05/23', 'len':1518, 'apch':null}],
-    sections: [
-      {
-        title: '到着',
-        items: [
-          'RWY: 02/20',
-          'ILS: RWY 02/20',
-          'ATIS: 127.325 MHz',
-          'ハワイ時間: UTC-10 年間固定（DST変更なし）',
-          '貿易風: RWY 02からの着陸が多い',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: Hawaii Airports Division +1-808-872-3830',
-        ]
-      },
-    ]
-  },
-
-  PHKO: {
-    fullName: 'KONA (Big Island), Ellison Onizuka Kona INTL',
-    iata: 'KOA',
-    utc: '-10(HST 年間固定)',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 8',
-    prefRwy: 'Nil',
-    runways: [{'id':'17/35', 'len':3353, 'apch':'ILS 17/35'}],
-    sections: [
-      {
-        title: '到着',
-        items: [
-          'RWY: 17/35',
-          'ILS: RWY 17/35',
-          'ATIS: 119.15 MHz',
-          '海沿い空港 – 貿易風による突風注意',
-          '溶岩地帯の空港 – 視覚的な特殊環境',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: Hawaii Airports Division +1-808-329-9230',
-        ]
-      },
-    ]
-  },
-
-  PHTO: {
-    fullName: 'HILO (Big Island), Hilo INTL',
-    iata: 'ITO',
-    utc: '-10(HST 年間固定)',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 8',
-    prefRwy: 'Nil',
-    runways: [{'id':'08/26', 'len':2987, 'apch':'ILS Cat II 08/26'}, {'id':'03/21', 'len':1707, 'apch':null}],
-    sections: [
-      {
-        title: '到着',
-        items: [
-          'RWY: 03/21, 08/26',
-          'ILS: RWY 03/21',
-          'ATIS: 125.25 MHz',
-          '火山灰（キラウエア）: ASHTAM確認 – 活動状況によりNOTAM発令',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: Hawaii Airports Division +1-808-961-9300',
-        ]
-      },
-    ]
-  },
-
   PHJR: {
     fullName: 'OAHU, Kalaeloa (John Rodgers Field)',
     iata: 'JRF',
@@ -3943,102 +2827,6 @@ const CAUG_NOTES_24 = {
       },
     ]
   },
-
-  YBBN: {
-    fullName: 'BRISBANE, International',
-    iata: 'BNE',
-    utc: '+10(AEST 年間固定)',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 10',
-    prefRwy: 'Nil',
-    runways: [{'id':'01R/19L', 'len':3560, 'apch':'ILS 01R/19L'}, {'id':'01L/19R', 'len':3300, 'apch':'ILS Cat II 01L/19R'}],
-    sections: [
-      {
-        title: 'TWY情報',
-        items: [
-          'RWY: 01L/19R, 01R/19L',
-          'International Terminal / Domestic Terminal – 確認必要',
-          'クイーンズランド州: DST変更なし（UTC+10固定）',
-        ]
-      },
-      {
-        title: '到着',
-        items: [
-          'ILS: RWY 01L/R, 19L/R',
-          'ATIS: 126.1 MHz',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: Brisbane Airport Corporation +61-7-3406-3000',
-        ]
-      },
-    ]
-  },
-
-  YBCS: {
-    fullName: 'CAIRNS, International',
-    iata: 'CNS',
-    utc: '+10(AEST 年間固定)',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    runways: [{'id':'15/33', 'len':3197, 'apch':'ILS 15/33'}],
-    sections: [
-      {
-        title: '到着',
-        items: [
-          'RWY: 15/33',
-          'ILS: RWY 15/33',
-          'ATIS: 124.5 MHz',
-          '熱帯雨林気候 – 雷雨・積乱雲に注意',
-          'Great Barrier Reef近接 – 海上進入',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: Cairns Airport +61-7-4080-6703',
-        ]
-      },
-    ]
-  },
-
-  YPAD: {
-    fullName: 'ADELAIDE, International',
-    iata: 'ADL',
-    utc: '+9:30/+10:30(ACST/ACDT)',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    runways: [{'id':'05/23', 'len':3100, 'apch':'ILS Cat I 05/23'}, {'id':'12/30', 'len':1652, 'apch':'ILS Cat II 12/30'}],
-    sections: [
-      {
-        title: '到着',
-        items: [
-          'RWY: 05/23',
-          'ILS: RWY 05/23',
-          'ATIS: 126.1 MHz',
-          '南オーストラリア州: UTC+9:30（夏季+10:30）– 独特のタイムゾーンに注意',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: Adelaide Airport Limited +61-8-8308-9211',
-        ]
-      },
-    ]
-  },
-
-  // ── ＊ Contingency Airports ────────────────────
 
   RJCK: {
     fullName: 'KUSHIRO',
@@ -5823,36 +4611,6 @@ const CAUG_NOTES_24 = {
     ]
   },
 
-  PGUM: {
-    fullName: 'GUAM, A.B. Won Pat INTL',
-    iata: 'GUM',
-    utc: '+10(ChST 年間固定)',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 10',
-    prefRwy: 'Nil',
-    runways: [{'id':'06L/24R', 'len':3662, 'apch':'ILS Cat I 06L/24R'}, {'id':'06R/24L', 'len':3052, 'apch':'ILS 06R/24L'}],
-    sections: [
-      {
-        title: '到着',
-        items: [
-          'RWY: 06L/24R, 06R/24L',
-          'ILS: RWY 06L/R, 24L/R',
-          'ATIS: 127.1 MHz',
-          '台風リスク: 6-12月（Super Typhoon多い）– SIGMET常時確認',
-          'PHZH FIR（Honolulu）管轄',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: A.B. Won Pat International Airport +1-671-646-0300',
-        ]
-      },
-    ]
-  },
-
   PGUA: {
     fullName: 'ANDERSEN AFB (GUAM)',
     iata: '—',
@@ -5911,35 +4669,6 @@ const CAUG_NOTES_24 = {
     ]
   },
 
-  PKMJ: {
-    fullName: 'MAJURO, Marshall Islands INTL',
-    iata: 'MAJ',
-    utc: '+12(MHT 年間固定)',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 7',
-    prefRwy: 'Nil',
-    runways: [{'id':'07/25', 'len':2407, 'apch':'ILS Cat II 07/25'}],
-    sections: [
-      {
-        title: '到着',
-        items: [
-          'RWY: 07/25',
-          '標高: ほぼ海面レベル（最高点3m）– 海抜が非常に低い',
-          'KZAK（Oakland Oceanic）FIR管轄',
-          '施設: 限定的 – 燃料・整備事前確認',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: Marshall Islands Airports Authority +692-625-3283',
-        ]
-      },
-    ]
-  },
-
   PKWA: {
     fullName: 'KWAJALEIN, Bucholz AAF',
     iata: 'KWA',
@@ -5964,96 +4693,6 @@ const CAUG_NOTES_24 = {
         title: '連絡先',
         items: [
           'Bucholz AAF Operations: +1-805-355-2000',
-        ]
-      },
-    ]
-  },
-
-  PMDY: {
-    fullName: 'MIDWAY ATOLL, Henderson Field',
-    iata: 'MDY',
-    utc: '-11(SST 年間固定)',
-    ops: 'Limited',
-    curfew: 'Nil',
-    fuel: 'JET-A1（要事前手配）',
-    rffs: 'Cat 5',
-    prefRwy: 'Nil',
-    runways: [{'id':'06/24', 'len':2409, 'apch':'ILS 06/24'}],
-    sections: [
-      {
-        title: '運用情報',
-        items: [
-          '米魚類野生生物保護局管轄 – 通常は商業運航なし',
-          'RWY: 06/24',
-          '緊急時のみ使用 – 燃料・施設は非常に限定的',
-          '事前許可（Prior Permission Required）必須',
-          'KZAK（Oakland Oceanic）FIR管轄',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'Midway Atoll NWR: +1-808-220-2100',
-        ]
-      },
-    ]
-  },
-
-  PWAK: {
-    fullName: 'WAKE ISLAND, Wake Island Airfield',
-    iata: 'AWK',
-    utc: '+12(WAKT 年間固定)',
-    ops: 'H24 (US Military)',
-    curfew: 'Nil',
-    fuel: 'JP-8（要事前手配）',
-    rffs: 'Cat 7',
-    prefRwy: 'Nil',
-    runways: [{'id':'10/28', 'len':3000, 'apch':'ILS 10/28'}],
-    sections: [
-      {
-        title: '運用情報',
-        items: [
-          '米軍ウェーク島 – 民間機緊急時は使用可能だが事前許可推奨',
-          'RWY: 10/28',
-          '太平洋横断ルートの中間点 – 重要な緊急代替',
-          'KZAK（Oakland Oceanic）FIR管轄',
-          '台風リスク: シーズン中は閉鎖になることあり',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'Wake Island Airfield Operations: +1-808-471-7110',
-        ]
-      },
-    ]
-  },
-
-  AYPY: {
-    fullName: 'PORT MORESBY, Jacksons INTL',
-    iata: 'POM',
-    utc: '+10(PGT 年間固定)',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    runways: [{'id':'14L/32R', 'len':2750, 'apch':'ILS 14L/32R'}],
-    sections: [
-      {
-        title: '到着',
-        items: [
-          'RWY: 14L/32R, 14R/32L',
-          'ILS: RWY 14L/32R',
-          'ATIS: 128.3 MHz',
-          '熱帯気候 – 雷雨・積乱雲に注意',
-          '標高: 146ft / Papua New Guinea YMMM FIR管轄',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: National Airports Corporation +675-324-5400',
         ]
       },
     ]
@@ -6184,35 +4823,6 @@ const CAUG_NOTES_24 = {
         title: '連絡先',
         items: [
           'JMSDF 硫黄島基地 (緊急時): 121.5 MHz',
-        ]
-      },
-    ]
-  },
-
-  ZSAM: {
-    fullName: '厦門, Xiamen Gaoqi INTL',
-    iata: 'XMN',
-    utc: '+8（中国標準時、DST無し）',
-    ops: 'H24',
-    curfew: 'Nil',
-    fuel: 'JET-A1',
-    rffs: 'Cat 9',
-    prefRwy: 'Nil',
-    sections: [
-      {
-        title: '到着',
-        items: [
-          'RWY: 05/23, 24L/06R（第2滑走路）',
-          'ILS: 全RWY',
-          'ATIS: 127.65 MHz',
-          '台湾海峡に近接。NOTAM/ATC指示厳守',
-          '新ターミナル（T4）2025年開業',
-        ]
-      },
-      {
-        title: '連絡先',
-        items: [
-          'APT: 厦門高崎空港 +86-592-573-0330',
         ]
       },
     ]
@@ -7258,7 +5868,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   RKPC: {
-    fullName: '',
+    fullName: 'JEJU',
     iata: '',
     utc: '+9',
     ops: 'H24',
@@ -7602,7 +6212,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   ZSHC: {
-    fullName: '',
+    fullName: 'HANGZHOU (Xiaoshan INTL)',
     iata: '',
     utc: '+8',
     ops: 'H24',
@@ -8043,7 +6653,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   RCKH: {
-    fullName: '',
+    fullName: 'KAOHSIUNG INTL',
     iata: '',
     utc: '+8',
     ops: 'H24',
@@ -8124,7 +6734,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   ZSAM: {
-    fullName: '',
+    fullName: 'XIAMEN (Gaoqi INTL)',
     iata: '',
     utc: '+8',
     ops: 'H24',
@@ -8208,9 +6818,9 @@ const CAUG_NOTES_24 = {
     ]
   },
   ZPPP: {
-    fullName: '',
+    fullName: 'KUNMING (Changshui INTL)',
     iata: '',
-    utc: '+9',
+    utc: '+8',
     ops: 'H24',
     curfew: 'Nil',
     fuel: 'JET-A1',
@@ -8393,7 +7003,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   VMMC: {
-    fullName: '',
+    fullName: 'MACAU INTL',
     iata: '',
     utc: '+8',
     ops: 'H24',
@@ -8477,7 +7087,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   WMKK: {
-    fullName: '',
+    fullName: 'KUALA LUMPUR INTL',
     iata: '',
     utc: '+8',
     ops: 'H24',
@@ -8580,7 +7190,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   WMKP: {
-    fullName: '',
+    fullName: 'PENANG INTL',
     iata: '',
     utc: '+8',
     ops: 'H24',
@@ -8662,7 +7272,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   WMKJ: {
-    fullName: '',
+    fullName: 'JOHOR BAHRU (Senai INTL)',
     iata: '',
     utc: '+8',
     ops: 'H24',
@@ -8744,9 +7354,9 @@ const CAUG_NOTES_24 = {
     ]
   },
   WSSS: {
-    fullName: '',
+    fullName: 'SINGAPORE, Changi INTL',
     iata: '',
-    utc: '+9',
+    utc: '+8',
     ops: 'H24',
     curfew: 'Nil',
     fuel: 'JET-A1',
@@ -8834,7 +7444,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   WIII: {
-    fullName: '',
+    fullName: 'JAKARTA, Soekarno-Hatta INTL',
     iata: '',
     utc: '+7',
     ops: 'H24',
@@ -8937,7 +7547,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   WARR: {
-    fullName: '',
+    fullName: 'SURABAYA (Juanda INTL)',
     iata: '',
     utc: '+7',
     ops: 'H24',
@@ -9021,7 +7631,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   WBGG: {
-    fullName: '',
+    fullName: 'KUCHING INTL',
     iata: '',
     utc: '+8',
     ops: 'H24',
@@ -9125,7 +7735,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   WBKK: {
-    fullName: '',
+    fullName: 'KOTA KINABALU INTL',
     iata: '',
     utc: '+8',
     ops: 'H24',
@@ -9229,7 +7839,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   RPLC: {
-    fullName: '',
+    fullName: 'PAMPANGA (Clark INTL)',
     iata: '',
     utc: '+8',
     ops: 'H24',
@@ -9321,7 +7931,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   RPVM: {
-    fullName: '',
+    fullName: 'LAPU-LAPU (Mactan-Cebu INTL)',
     iata: '',
     utc: '+8',
     ops: 'H24',
@@ -9403,7 +8013,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   VVCI: {
-    fullName: '',
+    fullName: 'HAI PHONG (Cat Bi INTL)',
     iata: '',
     utc: '+7',
     ops: 'H24',
@@ -9487,7 +8097,7 @@ const CAUG_NOTES_24 = {
     ]
   },
   VTCC: {
-    fullName: '',
+    fullName: 'CHIANG MAI INTL',
     iata: '',
     utc: '+7',
     ops: 'H24',
@@ -9962,7 +8572,7 @@ const CAUG_NOTES_24 = {
   YPAD: {
     fullName: 'Adelaide Airport',
     iata: 'ADL',
-    utc: '+9',
+    utc: '+9:30',
     ops: 'H24',
     curfew: 'Nil',
     fuel: 'JET-A1',
@@ -10892,9 +9502,9 @@ const CAUG_NOTES_24 = {
     ]
   },
   AYPY: {
-    fullName: '',
+    fullName: 'PORT MORESBY, Jacksons INTL',
     iata: '',
-    utc: '+9',
+    utc: '+10',
     ops: 'H24',
     curfew: 'Nil',
     fuel: 'JET-A1',
@@ -11771,9 +10381,9 @@ const CAUG_NOTES_24 = {
     ]
   },
   ZHHH: {
-    fullName: '',
+    fullName: 'WUHAN (Tianhe INTL)',
     iata: '',
-    utc: '+9',
+    utc: '+8',
     ops: 'H24',
     curfew: 'Nil',
     fuel: 'JET-A1',
