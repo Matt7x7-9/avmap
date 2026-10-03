@@ -826,3 +826,13 @@ body {
   letter-spacing: 0.3px;
   white-space: nowrap;
 }
+
+/* 明るいベースマップ時のラベル縁取り */
+body.map-light .leaflet-marker-icon div[style*="text-shadow"],
+body.map-light .fir-wpt-name,
+body.map-light .memo-fir-name {
+  text-shadow:
+    -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+    0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000, 1px 0 0 #000,
+    0 0 4px #000 !important;
+}

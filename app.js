@@ -16,12 +16,25 @@ const map = L.map('map', {
   attributionControl: true,
 });
 
-// Tile layer: Esri World Dark Gray Base (keyless — github.io本番でも認証不要)
+// Base maps (Esri・keyless — github.io本番でも認証不要。既定はダーク)
 // ※ Stadia/CARTOはいずれもAPIキー/ドメイン認証必須で本番401になるため使わない
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-  attribution: 'Tiles © <a href="https://www.esri.com/">Esri</a> — Esri, HERE, Garmin, © OpenStreetMap contributors',
-  maxZoom: 16,
-}).addTo(map);
+const ESRI_ATTR = 'Tiles © <a href="https://www.esri.com/">Esri</a> — Esri, HERE, Garmin, © OpenStreetMap contributors';
+const esriTile = (name, maxZoom) => L.tileLayer(
+  `https://server.arcgisonline.com/ArcGIS/rest/services/${name}/MapServer/tile/{z}/{y}/{x}`,
+  { attribution: ESRI_ATTR, maxZoom });
+const baseMaps = {
+  'ダーク': esriTile('Canvas/World_Dark_Gray_Base', 16),
+  'ストリート': esriTile('World_Street_Map', 17),
+  '衛星': esriTile('World_Imagery', 17),
+};
+const savedBase = (() => { try { return localStorage.getItem('avmap-basemap'); } catch (e) { return null; } })();
+const initBase = baseMaps[savedBase] ? savedBase : 'ダーク';
+baseMaps[initBase].addTo(map);
+// 明るい地図(ストリート/衛星)ではラベルに濃い縁取りを付ける
+const setBaseClass = name => document.body.classList.toggle('map-light', name !== 'ダーク');
+setBaseClass(initBase);
+L.control.layers(baseMaps, null, { position: 'topright', collapsed: true }).addTo(map);
+map.on('baselayerchange', e => { setBaseClass(e.name); try { localStorage.setItem('avmap-basemap', e.name); } catch (err) {} });
 
 // ── Layer groups ──────────────────────────────
 const firLayer   = L.layerGroup();
